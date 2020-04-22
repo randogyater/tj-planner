@@ -1,0 +1,28 @@
+#catalog {
+    overflow: scroll;
+    float: left;
+    width: 15vw;
+}
+.course {
+    width: calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
+    width: -webkit-calc(100% - 10px);
+    margin: 5px;
+    border: 1px solid black;
+}
+.course--year {
+    height: calc(100% - 10px);
+    height: -moz-calc(100% - 10px);
+    height: -webkit-calc(100% - 10px);
+}
+.course--semester {
+    height: calc(50% - 7.5px);
+    height: -moz-calc(50% - 7.5px);
+    height: -webkit-calc(50% - 7.5px);
+}
+.grid__box {
+    width: 15vw;
+    height: 8vh;
+    margin: 5px;
+    border: 1px solid black;
+ }
