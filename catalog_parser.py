@@ -33,8 +33,7 @@ for line in file.read().splitlines():
             course["full_name"] = line[5:]  # full name
             course["category"] = cur_category
             course["administrative"] = False
-            course["prerequisites"] = list()
-            course["requirements_or"] = False
+            course["prerequisites"] = [list()]
         elif x == 2:
             course["id"] = line[5:]  # id
         elif x == 3:
@@ -60,10 +59,9 @@ for line in file.read().splitlines():
             x = 0
             y = 1
     if prereqs and re.match(r'\t{9}[^\t]', line):
-        course["prerequisites"].append(line[9:])
-    if prereqs and re.match(r'\t{8}[^\t]', line) and line[8:] == "or":
-        # todo handle complex requirement statements properly
-        course["requirements_or"] = True
+        course["prerequisites"][-1].append(re.sub(r' and |(,$)', "", line[9:]))
+    if prereqs and re.match(r'\t{8}[^\t]', line) and line[8:] == " or ":
+        course["prerequisites"].append(list())
     if re.match(r'\t{6}[^\t]', line) and y:
         if re.search('PDF /', line):
             y = 0
