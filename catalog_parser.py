@@ -32,7 +32,7 @@ for line in file.read().splitlines():
             course = dict()
             course["full_name"] = line[5:]  # full name
             course["category"] = cur_category
-            course["administrative"] = False
+            course["administrative"] = True if cur_category == "Administrative" else False
             course["prerequisites"] = [list()]
         elif x == 2:
             course["id"] = line[5:]  # id
@@ -76,5 +76,5 @@ for line in file.read().splitlines():
         if line[6:].startswith("Description"):
             course["description"] = line[17:]
 with open(OUTPUT, "w", encoding='utf-8') as output:
-    output.write(json.dumps(courses, indent=4, sort_keys=True))
+    output.write(json.dumps(courses, indent=4))
 # '''
