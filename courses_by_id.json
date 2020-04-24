@@ -1,5 +1,5 @@
-[
-    {
+{
+    "3184T1": {
         "full_name": "Foundations of Computer Science",
         "category": "Computer Science",
         "prerequisites": [
@@ -17,14 +17,9 @@
         },
         "tj_description": "Students are introduced to the academic discipline of computer science with emphasis on problem solving using the current College Board computer language. At this time, the language is Java. The course introduces Object Oriented Programming (OOP) and uses an Objects first approach. Skills in defining, writing, and running computer programs on a windows based networked personal computer are developed. Students work with both mathematical and non-mathematical problems. Students will also be introduced to computer graphics, Graphical User Interfaces (GUI), data storage and data processing, boolean algebra, and computer number systems. No prior computer knowledge is needed. This course is usually offered during summer school and as summer self-study for those students who wish to place out of this introductory course and begin their computer science studies with Advanced Placement Computer Science.",
         "description": "Students develop detailed knowledge of the fundamental structure of a computer system, with emphasis on problem solving and structured programming.  Skills in defining, writing, and running programs on a computer are developed through an individual approach that allows the student to work with both mathematical and non-mathematical problems.  Java will be the major programming language.",
-        "ap": "pre",
-        "dependents": [
-            "AP Computer Sci A+",
-            "AP Computer Sci A+",
-            "Cryptography"
-        ]
+        "ap": "pre"
     },
-    {
+    "3184T2": {
         "full_name": "Foundations of Computer Science Accelerated",
         "category": "Computer Science",
         "prerequisites": [
@@ -44,15 +39,15 @@
         "description": "Students develop detailed knowledge of the fundamental structure of a computer system, with emphasis on problem solving and structured programming.  Skills in defining, writing, and running programs on a computer are developed through an individual approach that allows the student to work with both mathematical and non-mathematical problems.  Java will be the major programming language.",
         "ap": "pre"
     },
-    {
+    "318561": {
         "full_name": "AP Computer Science A plus Data Structures",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "Foundations CompSci"
+                "TJA3184"
             ],
             [
-                "Foundations CompSci"
+                "TJA3184"
             ]
         ],
         "id": "318561",
@@ -76,12 +71,12 @@
             "Parallel Computing 1"
         ]
     },
-    {
+    "319916": {
         "full_name": "Computer Vision",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "AP Computer Sci A+"
+                "318561"
             ]
         ],
         "id": "319916",
@@ -98,7 +93,7 @@
         "description": "Computer Vision algorithms are at the heart of self-driving cars, modern medical imaging devices for diagnosis of disease, asteroid detection mechanisms, robotics and myriad other applications.  This course will introduce students to the foundations as well as to open problems in the field and build on their knowledge from earlier computer science and mathematics coursework.  Topics covered in the course include image filtering; boundary detection and object segmentation, recognition and detection; motion estimation and structure from motion.  Students will gain experience using MatLab, Open CV and Point Cloud Libraries and will have the opportunity to explore implementation of the algorithms on parallel architectures.",
         "ap": "post"
     },
-    {
+    "319917": {
         "full_name": "Computer Vision 2",
         "category": "Computer Science",
         "prerequisites": [
@@ -117,12 +112,12 @@
         "description": "This course is a continuation of Computer Vision 1.  Computer Vision algorithms are at the heart of self-driving cars, modern medical imaging devices for diagnosis of disease, asteroid detection mechanisms, robotics and myriad other applications.  This course will introduce students to modern approaches based on Deep Learning Models and to open problems in the field and build on their knowledge from earlier computer science and mathematics coursework.  Topics covered in the course include large neural networks trained with back propogation and their application to Computer Vision, as well as other advanced techniques.",
         "ap": "post"
     },
-    {
+    "319966": {
         "full_name": "Artificial Intelligence 1",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "AP Computer Sci A+"
+                "318561"
             ]
         ],
         "id": "319966",
@@ -142,12 +137,12 @@
             "Artificial Intel 2"
         ]
     },
-    {
+    "319967": {
         "full_name": "Artificial Intelligence 2",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "Artificial Intel 1"
+                "319966"
             ]
         ],
         "id": "319967",
@@ -164,12 +159,12 @@
         "description": "This course is unique to TJHSST and is not offered elsewhere.",
         "ap": "post"
     },
-    {
+    "3199J1": {
         "full_name": "Web Application Development",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "AP Computer Sci A+"
+                "318561"
             ]
         ],
         "id": "3199J1",
@@ -186,12 +181,12 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "post"
     },
-    {
+    "3199J2": {
         "full_name": "Mobile Application Development",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "AP Computer Sci A+"
+                "318561"
             ]
         ],
         "id": "3199J2",
@@ -208,12 +203,12 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "post"
     },
-    {
+    "3199T1": {
         "full_name": "Parallel Computing 1",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "AP Computer Sci A+"
+                "318561"
             ]
         ],
         "id": "3199T1",
@@ -233,12 +228,12 @@
             "Parallel Computing 2"
         ]
     },
-    {
+    "3199T2": {
         "full_name": "Parallel Computing 2",
         "category": "Computer Science",
         "prerequisites": [
             [
-                "Parallel Computing 1"
+                "3199T1"
             ]
         ],
         "id": "3199T2",
@@ -255,7 +250,7 @@
         "description": "This course is unique to TJHSST and is not offered elsewhere.",
         "ap": "post"
     },
-    {
+    "1130T1": {
         "full_name": "English 9",
         "category": "English",
         "prerequisites": [
@@ -279,7 +274,7 @@
             "English 10"
         ]
     },
-    {
+    "114000": {
         "full_name": "English 10 (CHUM)",
         "category": "English",
         "prerequisites": [
@@ -298,15 +293,15 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "1140T1": {
         "full_name": "English 10",
         "category": "English",
         "prerequisites": [
             [
-                "English 9"
+                "1130T1"
             ],
             [
-                "English 9"
+                "1130T1"
             ]
         ],
         "id": "1140T1",
@@ -326,12 +321,12 @@
             "English 11"
         ]
     },
-    {
+    "1150T1": {
         "full_name": "English 11 (teamed with AP US History)",
         "category": "English",
         "prerequisites": [
             [
-                "English 10"
+                "1140T1"
             ]
         ],
         "id": "1150T1",
@@ -346,14 +341,9 @@
         },
         "tj_description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research.",
         "description": "English 11 Honors deepens and advances the curiculum of English 11.  Students read and analyze a variety of literary and nonfiction texts, comparing themes of various works and analyzing expository materials to draw conclusions.  Language study extends students' vocabulary through applying understanding of connotations, denotations, word origins, and structures. Students apply their understanding of grammar, capitalization, punctuation, spelling, sentence structure, and paragraphing to varied and frequent writing assignments.  With an emphasis on persuasive writing, students apply their skills and adapt content, vocabulary, voice, and tone to a specific audience and purpose.  In the research process, students analyze, evaluate, synthesize, and organize information from a variety of sources to produce a research product.  They also refine their oral communication skills through gathering and organizing evidence to support a position in informative and persuasive presentations.",
-        "ap": "pre",
-        "dependents": [
-            "English 12",
-            "AP English Lit/Comp",
-            "AP English Lang/Comp"
-        ]
+        "ap": "pre"
     },
-    {
+    "1150T2": {
         "full_name": "English 11 (teamed with Honors US/VA History)",
         "category": "English",
         "prerequisites": [
@@ -377,12 +367,12 @@
             "AP English Lang/Comp"
         ]
     },
-    {
+    "1160T1": {
         "full_name": "English 12",
         "category": "English",
         "prerequisites": [
             [
-                "English 11"
+                "1150T2"
             ]
         ],
         "id": "1160T1",
@@ -398,12 +388,12 @@
         "description": "English 12 Honors deepens and advances the curiculum of English 12.  Students read and analyze a variety of literary texts, recognizing major forms and their stylistic elements.  Using nonfiction texts, students will analyze and synthesize information to solve problems.  Language study expands students' general and specialized vocabulary through speaking, listening, reading, and viewing.  Writing includes the production of informational, expository, and persuasive/argumentative papers, logically organized demonstrating knowledgeable judgments, and effective conclusions.  They also apply their oral communication skills to craft formal oral presentations and their listening skills to analyze the relationships among purpose, audience and content of presentations.",
         "ap": "pre"
     },
-    {
+    "119504": {
         "full_name": "AP English Literature and Composition",
         "category": "English",
         "prerequisites": [
             [
-                "English 11"
+                "1150T2"
             ]
         ],
         "id": "119504",
@@ -420,7 +410,7 @@
         "description": "Students study composition and literary analysis at a level equivalent to that of a full-year introductory college course.  Through in-depth studies of literary works, students sharpen their awareness of language and their understanding of the writer's craft.  They establish critical standards for appreciating and evaluating literature.  Students who complete this course are prepared to take the Advanced Placement examination in English Literature and Composition, and may earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.",
         "ap": "ap"
     },
-    {
+    "119561": {
         "full_name": "AP English Literature / Senior Seminar",
         "category": "English",
         "prerequisites": [
@@ -440,12 +430,12 @@
         "description": "Students study composition and literary analysis at a level equivalent to that of a full-year introductory college course.  Through in-depth studies of literary works, students sharpen their awareness of language and their understanding of the writer's craft.  They establish critical standards for appreciating and evaluating literature.  Students who complete this course are prepared to take the Advanced Placement examination in English Literature and Composition, and may earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.",
         "ap": "ap"
     },
-    {
+    "119604": {
         "full_name": "AP English 12 Language and Composition",
         "category": "English",
         "prerequisites": [
             [
-                "English 11"
+                "1150T2"
             ]
         ],
         "id": "119604",
@@ -462,7 +452,7 @@
         "description": "Students study advanced composition and analysis of language at a level equivalent to that of a full-year introductory college course.  In refining their awareness of language and the writer's craft, students write works of publishable quality.  Students who complete this course are prepared to take the Advanced Placement examination in English Language and Composition, and many earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.",
         "ap": "ap"
     },
-    {
+    "119662": {
         "full_name": "AP English Language / Global Studies",
         "category": "English",
         "prerequisites": [
@@ -482,7 +472,7 @@
         "description": "Students study advanced composition and analysis of language at a level equivalent to that of a full-year introductory college course.  In refining their awareness of language and the writer's craft, students write works of publishable quality.  Students who complete this course are prepared to take the Advanced Placement examination in English Language and Composition, and many earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.",
         "ap": "ap"
     },
-    {
+    "120000": {
         "full_name": "Journalism 1",
         "category": "English",
         "prerequisites": [
@@ -505,12 +495,12 @@
             "Journalism 2"
         ]
     },
-    {
+    "121000": {
         "full_name": "Journalism 2",
         "category": "English",
         "prerequisites": [
             [
-                "Journalism 1"
+                "120000"
             ]
         ],
         "id": "121000",
@@ -530,12 +520,12 @@
             "Journalism 3"
         ]
     },
-    {
+    "121100": {
         "full_name": "Journalism 3",
         "category": "English",
         "prerequisites": [
             [
-                "Journalism 2"
+                "121000"
             ]
         ],
         "id": "121100",
@@ -555,12 +545,12 @@
             "Journalism 4"
         ]
     },
-    {
+    "121200": {
         "full_name": "Journalism 4",
         "category": "English",
         "prerequisites": [
             [
-                "Journalism 3"
+                "121100"
             ]
         ],
         "id": "121200",
@@ -577,7 +567,7 @@
         "description": "In Journalism 4 students learn marketable publications skills; develop individual writing, layout, and design styles; and may assume editorial leadership and responsibility for producing a high school newspaper and/or student produced website.  Students also take responsibility for business and circulation management.",
         "ap": "pre"
     },
-    {
+    "121500": {
         "full_name": "Photo Journalism 1",
         "category": "English",
         "prerequisites": [
@@ -600,12 +590,12 @@
             "Photo Journalism 2"
         ]
     },
-    {
+    "121600": {
         "full_name": "Photo Journalism 2",
         "category": "English",
         "prerequisites": [
             [
-                "Photo Journalism 1"
+                "121500"
             ]
         ],
         "id": "121600",
@@ -625,12 +615,12 @@
             "Photo Journalism 3"
         ]
     },
-    {
+    "121700": {
         "full_name": "Photo Journalism 3",
         "category": "English",
         "prerequisites": [
             [
-                "Photo Journalism 2"
+                "121600"
             ]
         ],
         "id": "121700",
@@ -647,7 +637,7 @@
         "description": "In Photojournalism 3, students refine their copywriting skills and advance their computer and photography skills, develop individual style, and may assume leadership roles as members of the yearbook staff's editorial board.",
         "ap": "pre"
     },
-    {
+    "121714": {
         "full_name": "Photo Journalism 4",
         "category": "English",
         "prerequisites": [
@@ -666,7 +656,7 @@
         "description": "In Photojournalism 4, students continue to refine their copywriting skills and advance their computer and photography skills, develop individual style, and assume leadership roles.",
         "ap": "pre"
     },
-    {
+    "122000": {
         "full_name": "Broadcast Journalism 1",
         "category": "English",
         "prerequisites": [
@@ -685,7 +675,7 @@
         "description": "In this course, students will learn and practice the language and processes of broadcast journalism and reporting.  They will develop an understanding of the role and responsibilities of broadcast journalists.",
         "ap": "pre"
     },
-    {
+    "144632": {
         "full_name": "Film Study",
         "category": "English",
         "prerequisites": [
@@ -704,7 +694,7 @@
         "description": "This course involves the study of classic and award-winning films. Students critique both the artistic and technical merits of the films. They study the development of theme, plot, characterization, and setting in each production. They learn the vocabulary associated with film and use this vocabulary when discussing or writing about films. Students may create their own short films.This course will fulfill the graduation requirement for a credit in fine and practical arts.",
         "ap": "pre"
     },
-    {
+    "730000": {
         "full_name": "Health and Physical Education 9",
         "category": "Health and PE",
         "prerequisites": [
@@ -722,17 +712,14 @@
         },
         "tj_description": "Students gain knowledge and skills in a variety of individual, dual and team sports to develop competencies to promote an active lifestyle. Concepts of physical fitness and conditioning are taught. One quarter of the course includes instruction in health education topics of alcohol, tobacco, and other drug-use prevention (ATOD), and cardiopulmonary resuscitation (CPR). Parents may opt their children out of any or all ATOD use prevention lessons which are a component of Family Life Education.",
         "description": "Students gain knowledge and skills in a variety of individual, dual, and team sports/activities to develop competencies to promote an active lifestyle.  Students begin to apply personal fitness planning concepts to individualized plans.  One quarter of the course includes instruction in the health education topics of alcohol, tobacco, and other drug use prevention; emotional and social health; personal health; injury and violence prevention; disease prevention; and cardiopulmonary resuscitation and automated external defibrillation (CPR and AED).",
-        "ap": "pre",
-        "dependents": [
-            "Health and PE 10"
-        ]
+        "ap": "pre"
     },
-    {
+    "740500": {
         "full_name": "Health and Physical Education 10 with Driver Education",
         "category": "Health and PE",
         "prerequisites": [
             [
-                "Health and PE 9"
+                "730099"
             ]
         ],
         "id": "740500",
@@ -749,7 +736,7 @@
         "description": "Students demonstrate competency in a lifetime sport or activity and demonstrate personal fitness planning.  One quarter of the course includes instruction in the health education topics of personal and community health, nutrition, human growth and development, and injury and violence prevention.  One quarter of the course includes the classroom component of driver education.  The 90-minute Parent/Teen Traffic Safety Presentation (Partners for Safe Teen Driving) is offered to fulfill the requirements of juvenile licensing.  Grades from all quarters are averaged to determine the final course grade.",
         "ap": "pre"
     },
-    {
+    "763032": {
         "full_name": "Sports Medicine",
         "category": "Health and PE",
         "prerequisites": [
@@ -769,7 +756,7 @@
         "description": "Students will study and apply concepts related to medical professions, anatomy and physiology of skeletal and muscular systems, kinesiology, types of injuries, injury prevention and nutrition.  Students may not take this course in lieu of the grade 9 or grade 10 Health or Physical Education requirements.",
         "ap": "pre"
     },
-    {
+    "0110T1": {
         "full_name": "TJ Math 2.5",
         "category": "Math",
         "prerequisites": [
@@ -788,12 +775,12 @@
         "description": "This course is designed to strengthen problem solving skills using algebraic and geometric concepts previously encountered by students.  An emphasis on depth, rigor, context, and metacognition will be the highest priority in the class.  The goal is to have all students be able to think abstractly, integrate multiple concepts into a single problem, and consider the reasonableness of their solutions.  Students will encounter familiar content in unfamiliar circumstances, and will present their results in a written and oral format.  The pragmatic usage of technology is integrated throughout the course.",
         "ap": "pre"
     },
-    {
+    "313400": {
         "full_name": "Advanced Topics in Calculus",
         "category": "Math",
         "prerequisites": [
             [
-                "AP Calculus BC"
+                "317704"
             ]
         ],
         "id": "313400",
@@ -810,7 +797,7 @@
         "description": "This course is unique to TJHSST and is not available in other FCPS schools.",
         "ap": "post"
     },
-    {
+    "313753": {
         "full_name": "TJHSST Math 3",
         "category": "Math",
         "prerequisites": [
@@ -832,7 +819,7 @@
             "TJ Res Stat 1"
         ]
     },
-    {
+    "313754": {
         "full_name": "TJHSST Math 4",
         "category": "Math",
         "prerequisites": [
@@ -852,7 +839,7 @@
         "description": "Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.",
         "ap": "pre"
     },
-    {
+    "314351": {
         "full_name": "TJHSST Math 1",
         "category": "Math",
         "prerequisites": [
@@ -871,7 +858,7 @@
         "description": "Students will study geometric topics in depth, with a focus on building critical thinking and reasoning skills. Topics of study include inductive and deductive reasoning, understanding logic statements, writing proofs, parallel and perpendicular lines and their properties, congruent triangles and similarity, properties of triangles, quadrilaterals, and circles. The process standard focus will be reasoning.",
         "ap": "pre"
     },
-    {
+    "314352": {
         "full_name": "TJHSST Math 2",
         "category": "Math",
         "prerequisites": [
@@ -893,7 +880,7 @@
             "Optical Systems"
         ]
     },
-    {
+    "316055": {
         "full_name": "TJHSST Math 5",
         "category": "Math",
         "prerequisites": [
@@ -910,21 +897,14 @@
             "12": false
         },
         "description": "The study of Advanced Functions includes an extension of topics first introduced in algebra. All parent function graphs and their transformations are a focus as well as the important features of graphs such as symmetry, concavity, extrema and end behavior. Operations on functions are studied, especially composition, and finding appropriate domains is stressed. Specific functions such as exponential and logarithmic are explored and used for graphing, solving equations, and applications. Other topics of study include sequences and series, proof by math induction, and the exploration of conic sections and their applications and an introduction to the fundamentals of calculus, including limits, continuity, and the concept of the derivative. The process standard focus will be Communication. Upon conclusion of TJ Math 5, students will be advised as to which level of AP Calculus they should take the following school year.",
-        "ap": "pre",
-        "dependents": [
-            "TJ Math 6",
-            "AP Calculus AB",
-            "AP Calculus BC",
-            "Cryptography",
-            "AP Calculus AB"
-        ]
+        "ap": "pre"
     },
-    {
+    "316056": {
         "full_name": "TJHSST Math 6",
         "category": "Math",
         "prerequisites": [
             [
-                "TJ Math 5"
+                "TJA3160"
             ]
         ],
         "id": "316056",
@@ -941,12 +921,12 @@
         "description": "Insert FCPS approved course description here.",
         "ap": "pre"
     },
-    {
+    "317004": {
         "full_name": "AP Calculus AB",
         "category": "Math",
         "prerequisites": [
             [
-                "TJ Math 5"
+                "TJA3160"
             ]
         ],
         "id": "317004",
@@ -962,12 +942,12 @@
         "description": "This course emphasizes a multi-representational approach to calculus. Concepts, results, and problems are expressed graphically, numerically, analytically, and verbally.  Content includes concepts and applications of differential and integral calculus, limits, and elementary differential equations.  This course prepares students for the Calculus AB Advanced Placement examination, for which placement and/or credit may be awarded at the college level, if a qualifying score is obtained.  Content of this college-level course corresponds to the syllabus of the College Board Calculus AB Advanced Placement Program.  All students are required to take the Advanced Placement exam.",
         "ap": "ap"
     },
-    {
+    "317704": {
         "full_name": "AP Calculus BC",
         "category": "Math",
         "prerequisites": [
             [
-                "TJ Math 5"
+                "TJA3160"
             ]
         ],
         "id": "317704",
@@ -988,12 +968,12 @@
             "Matrix Algebra"
         ]
     },
-    {
+    "317860": {
         "full_name": "Multivariable Calculus",
         "category": "Math",
         "prerequisites": [
             [
-                "AP Calculus BC"
+                "317704"
             ]
         ],
         "id": "317860",
@@ -1018,17 +998,17 @@
             "Concrete Math"
         ]
     },
-    {
+    "317861": {
         "full_name": "Differential Equations",
         "category": "Math",
         "prerequisites": [
             [
-                "Multivar Calc",
-                "Matrix Algebra"
+                "317860",
+                "319800"
             ],
             [
-                "Multivar Calc",
-                "Math Techniques"
+                "317860",
+                "319862"
             ]
         ],
         "id": "317861",
@@ -1045,12 +1025,12 @@
         "description": "This course is unique to TJHSST and is not available in other FCPS schools.",
         "ap": "post"
     },
-    {
+    "317862": {
         "full_name": "Complex Variables",
         "category": "Math",
         "prerequisites": [
             [
-                "Multivar Calc"
+                "317860"
             ]
         ],
         "id": "317862",
@@ -1067,7 +1047,7 @@
         "description": "None",
         "ap": "post"
     },
-    {
+    "3190T1": {
         "full_name": "TJHSST Research & Statistics 1",
         "category": "Math",
         "prerequisites": [
@@ -1086,7 +1066,7 @@
         "description": "Students study basic probability and statistics with an emphasis on applications to scientific research. Topics studied include combinatorics, probability, descriptive statistics, and statistical distributions. The course culminates with an introduction to inferential statistics and applications of t-tests. Use of technology is integrated throughout the course. ",
         "ap": "pre"
     },
-    {
+    "3190T2": {
         "full_name": "TJHSST Research & Statistics 2",
         "category": "Math",
         "prerequisites": [
@@ -1105,12 +1085,12 @@
         "description": "Research Statistics II is an introductory course in descriptive and inferential statistics and basic probability. There are four conceptual themes: (1) Exploring data: observing patterns and departures from patterns, (2) Planning a study: deciding what and how to measure, (3) Anticipating patterns in advance: producing models using probability and simulation, (4) Statistical inference: confirming models.  This course includes all of the topics required by the AP Statistics program not covered in Research Statistics I.  Students will use statistics as a tool to solve a variety of problems in different areas, including political science, economics, sports, ecology, law, and the biological and physical sciences.  Extensive use of the calculator and computer is included.  The course emphasizes critical thinking and clear, precise writing.  Students who successfully complete the course will be prepared to take the AP Statistics examination.",
         "ap": "post"
     },
-    {
+    "319800": {
         "full_name": "Matrix Algebra",
         "category": "Math",
         "prerequisites": [
             [
-                "AP Calculus BC"
+                "317704"
             ]
         ],
         "id": "319800",
@@ -1130,12 +1110,12 @@
             "Diff Equations"
         ]
     },
-    {
+    "319862": {
         "full_name": "Mathematics Techniques for Scientists and Engineers",
         "category": "Math",
         "prerequisites": [
             [
-                "Multivar Calc"
+                "317860"
             ]
         ],
         "id": "319862",
@@ -1155,13 +1135,13 @@
             "Diff Equations"
         ]
     },
-    {
+    "3199T0": {
         "full_name": "Cryptography",
         "category": "Math",
         "prerequisites": [
             [
-                "TJ Math 5",
-                "Foundations CompSci"
+                "TJA3160",
+                "TJA3184"
             ]
         ],
         "id": "3199T0",
@@ -1178,12 +1158,12 @@
         "description": "This course is unique to TJHSST and is not available in other FCPS schools.",
         "ap": "pre"
     },
-    {
+    "3199TA": {
         "full_name": "Probability Theory",
         "category": "Math",
         "prerequisites": [
             [
-                "Multivar Calc"
+                "317860"
             ]
         ],
         "id": "3199TA",
@@ -1200,12 +1180,12 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "post"
     },
-    {
+    "3199TB": {
         "full_name": "Concrete Math",
         "category": "Math",
         "prerequisites": [
             [
-                "Multivar Calc"
+                "317860"
             ]
         ],
         "id": "3199TB",
@@ -1222,7 +1202,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "post"
     },
-    {
+    "116097": {
         "full_name": "English 12 Honors",
         "category": "Online",
         "prerequisites": [
@@ -1241,7 +1221,7 @@
         "description": "English 12 Honors deepens and advances the curiculum of English 12.  Students read and analyze a variety of literary texts, recognizing major forms and their stylistic elements.  Using nonfiction texts, students will analyze and synthesize information to solve problems.  Language study expands students' general and specialized vocabulary through speaking, listening, reading, and viewing.  Writing includes the production of informational, expository, and persuasive/argumentative papers, logically organized demonstrating knowledgeable judgments, and effective conclusions.  They also apply their oral communication skills to craft formal oral presentations and their listening skills to analyze the relationships among purpose, audience and content of presentations.",
         "ap": "pre"
     },
-    {
+    "117198": {
         "full_name": "Creative Writing 1",
         "category": "Online",
         "prerequisites": [
@@ -1260,7 +1240,7 @@
         "description": "This course provides students an opportunity for additional writing instruction beyond the standard English program.  Experimentation with many forms of writing is encouraged, with an emphasis on poetry, short stories, plays, and all forms of descriptive writing.  Students continue to expand and refine their ability to write through analyzing and evaluating their own writing and that of other students.",
         "ap": "pre"
     },
-    {
+    "117298": {
         "full_name": "Creative Writing 2",
         "category": "Online",
         "prerequisites": [
@@ -1279,7 +1259,7 @@
         "description": "This course provides students an opportunity for further exploration of creative writing.  Students continue to experiment with many forms of writing, with an emphasis on poetry, short stories, plays, and all forms of descriptive writing.  Students hone their writing skills by attempting more advanced work while also working collaboratively with other students on revision and critique.",
         "ap": "pre"
     },
-    {
+    "119593": {
         "full_name": "AP English Literature",
         "category": "Online",
         "prerequisites": [
@@ -1298,7 +1278,7 @@
         "description": "Students study composition and literary analysis at a level equivalent to that of a full-year introductory college course.  Through in-depth studies of literary works, students sharpen their awareness of language and their understanding of the writer's craft.  They establish critical standards for appreciating and evaluating literature.  Students who complete this course are prepared to take the Advanced Placement examination in English Literature and Composition, and may earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.",
         "ap": "ap"
     },
-    {
+    "119693": {
         "full_name": "AP English 12 Language and Composition",
         "category": "Online",
         "prerequisites": [
@@ -1317,7 +1297,7 @@
         "description": "None",
         "ap": "ap"
     },
-    {
+    "221997": {
         "full_name": "World History and Geography 1 Honors",
         "category": "Online",
         "prerequisites": [
@@ -1336,7 +1316,7 @@
         "description": "This is the first of a two-year, chronologically and thematically organized study of world history and geography.  In this first year, students study the world from ancient times to 1500 CE.  The course highlights the relationship between the geography and history of Europe, Africa, Asia, and Latin America.  Students examine the relationship among social, economic and geopolitical developments across time and place.  They use the processes of conceptual and critical thinking to analyze historical and contemporary issues.  Students are encouraged to think independently while developing group process skills.  World History and Geography 1 Honors satisfies the World History and Geography 1 graduation requirement.",
         "ap": "pre"
     },
-    {
+    "244097": {
         "full_name": "Virginia and United States Government Honors",
         "category": "Online",
         "prerequisites": [
@@ -1355,7 +1335,7 @@
         "description": "Virginia and United States Government Honors deepens and advances the curriculum of Virginia and United States Government. Students examine both the structure and function of American government at the national, state, and local levels. The course focuses on political decision-making, comparative political and economic systems, and the student's role as a citizen. Critical thinking, writing, research, and group-process skills are refined. Virginia and United States Government is required for graduation.",
         "ap": "pre"
     },
-    {
+    "244593": {
         "full_name": "AP US Government and Politics",
         "category": "Online",
         "prerequisites": [
@@ -1374,7 +1354,7 @@
         "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.",
         "ap": "ap"
     },
-    {
+    "280493": {
         "full_name": "AP Economics",
         "category": "Online",
         "prerequisites": [
@@ -1393,7 +1373,7 @@
         "description": "AP Microeconomics studies the behavior of individuals and businesses as they exchange goods and services in the marketplace. Students will learn why the same product costs different amounts at different stores, in different cities, and at different times. They'll also learn to spot patterns in economic behavior and how to use those patterns to explain buyer and seller behavior under different economic conditions. Microeconomics studies the economic way of thinking, understanding the nature and function of markets, the role of scarcity and competition, the influence of factors such as interest rates on business decisions, and the role of government in promoting a healthy economy. The equivalent of an introductory college-level course, AP Microeconomics prepares students for the AP Exam and for further study in business, history, and political science.",
         "ap": "ap"
     },
-    {
+    "290099": {
         "full_name": "Psychology",
         "category": "Online",
         "prerequisites": [
@@ -1412,7 +1392,7 @@
         "description": "In this course, students examine patterns and variations of human behavior and the process of individual human development.  They identify and examine the emotional, cognitive, and physical factors which influence the development of the individual human being.  Students distinguish among the major schools and systems of psychology and methods of investigation.",
         "ap": "pre"
     },
-    {
+    "290299": {
         "full_name": "AP Psychology",
         "category": "Online",
         "prerequisites": [
@@ -1432,12 +1412,12 @@
         "description": "The purpose of this course is to introduce students to the systematic and scientific study of the behavior and mental processes of human beings and other animals. Students are exposed to the psychological facts, principles, and phenomena associated with each of the major subfields within psychology. They also learn about the methods psychologists use in their science and practice. The aim of Advanced Placement Psychology is to provide the students with a learning experience equivalent to that obtained in an introductory college psychology course. College credit and/or placement may be given if a qualifying score is made on the Advanced Placement examination. The rigorous course syllabus and college level texts both suggest that students who enroll should be highly motivated and intellectually curious.",
         "ap": "ap"
     },
-    {
+    "317093": {
         "full_name": "AP Calculus AB",
         "category": "Online",
         "prerequisites": [
             [
-                "TJ Math 5"
+                "TJA3160"
             ]
         ],
         "id": "317093",
@@ -1453,7 +1433,7 @@
         "description": "This course emphasizes a multi-representational approach to calculus. Concepts, results, and problems are expressed graphically, numerically, analytically, and verbally.  Content includes concepts and applications of differential and integral calculus, limits, and elementary differential equations.  This course prepares students for the Calculus AB Advanced Placement examination, for which placement and/or credit may be awarded at the college level, if a qualifying score is obtained.  Content of this college-level course corresponds to the syllabus of the College Board Calculus AB Advanced Placement Program.  All students are required to take the Advanced Placement exam.",
         "ap": "ap"
     },
-    {
+    "425099": {
         "full_name": "Oceanography",
         "category": "Online",
         "prerequisites": [
@@ -1472,7 +1452,7 @@
         "description": "Oceanography explores geophysical and biological factors and covers topics such as the geology and geography of ocean basins, physical properties of sea water, marine chemistry, marine biology, salinity and density circulation in the oceans, waves, and tides.  The course is designed to be a survey of oceanography concepts.  This course does not count as one of the science credits for the standard diploma.  It can be used as the fourth credit for an advanced studies diploma, if the student has already taken three science courses from three different disciplines.",
         "ap": "pre"
     },
-    {
+    "553099": {
         "full_name": "Spanish 3",
         "category": "Online",
         "prerequisites": [
@@ -1489,13 +1469,9 @@
             "12": true
         },
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
-        "ap": "pre",
-        "dependents": [
-            "Spanish 4",
-            "AP Spanish Lang"
-        ]
+        "ap": "pre"
     },
-    {
+    "557093": {
         "full_name": "AP Spanish Language",
         "category": "Online",
         "prerequisites": [
@@ -1512,13 +1488,9 @@
             "12": true
         },
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Spanish Language exam.",
-        "ap": "ap",
-        "dependents": [
-            "Spanish 5",
-            "AP Spanish Lit"
-        ]
+        "ap": "ap"
     },
-    {
+    "558093": {
         "full_name": "AP Spanish Literature",
         "category": "Online",
         "prerequisites": [
@@ -1537,7 +1509,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Literature Examination, for which placement and/or credit may be awarded at the college level if a qualifying score is achieved.  Students increase their proficiency in the basic language skills and learn to analyze prose and verse passages designated in the College Board syllabus.  All students are required to take the Advanced Placement Literature exam.",
         "ap": "ap"
     },
-    {
+    "587099": {
         "full_name": "Korean 1",
         "category": "Online",
         "prerequisites": [
@@ -1559,12 +1531,12 @@
             "Korean 2"
         ]
     },
-    {
+    "587599": {
         "full_name": "Korean 2",
         "category": "Online",
         "prerequisites": [
             [
-                "Korean 1"
+                "587099"
             ]
         ],
         "id": "587599",
@@ -1583,12 +1555,12 @@
             "Korean 3"
         ]
     },
-    {
+    "588099": {
         "full_name": "Korean 3",
         "category": "Online",
         "prerequisites": [
             [
-                "Korean 2"
+                "587599"
             ]
         ],
         "id": "588099",
@@ -1604,7 +1576,7 @@
         "description": "During this fall semester course students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to interact orally and in writing.  They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts.  At this level, students comprehend the main ideas of the authentic materials that they read and hear, and they are able to identify significant details when the topics are familiar.  Students gain a deeper understanding of the world around them while studying Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre"
     },
-    {
+    "588599": {
         "full_name": "Korean 4",
         "category": "Online",
         "prerequisites": [
@@ -1623,7 +1595,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre"
     },
-    {
+    "612099": {
         "full_name": "Economics and Personal Finance",
         "category": "Online",
         "prerequisites": [
@@ -1642,13 +1614,11 @@
         "description": "Students learn how to navigate the financial decisions they must face and to make informed decisions related to career exploration, budgeting, banking, credit, insurance, spending, taxes, saving, investing, buying/leasing a vehicle, living independently, and inheritance.  Development of financial literacy skills and an understanding of economic principles will provide the basis for responsible citizenship and career success.  In addition to developing personal finance skills, students in the 36-week course will also study basic occupational skills and concepts in preparation for entry-level employment in the field of finance.",
         "ap": "pre"
     },
-    {
+    "632199": {
         "full_name": "Advanced Accounting",
         "category": "Online",
         "prerequisites": [
-            [
-                "Accounting(?)"
-            ]
+            []
         ],
         "id": "632199",
         "semester": false,
@@ -1663,7 +1633,7 @@
         "description": "Students continue to master accounting principles and procedures, adding new topics about managerial accounting, cost accounting, financial analysis, and business ethics.  Content areas include property, plant and equipment, corporate investments, bonds, notes payable and receivables, amortizations, cash flow statements, and ratio analysis for the corporate structure.  Spreadsheet analysis and accounting software applications provide the opportunity for higher-level thinking skill activities and authentic simulations enhance teamwork, decision making, and communication skills.  Students also develop an understanding of career opportunities as they complete career exploration activities.  Upon completion, students should be able to demonstrate an understanding of the principles of decision making, problem solving and critical thinking, and apply them to both business and personal financial situations.  The cooperative education (Business Cooperative Internship--679920) method is available for this course.  Students combine classroom instruction and supervised on-the-job training in an approved position with continuing supervision throughout the school year.",
         "ap": "pre"
     },
-    {
+    "730099": {
         "full_name": "Health and Physical Education 9",
         "category": "Online",
         "prerequisites": [
@@ -1685,7 +1655,7 @@
             "Health and PE 10"
         ]
     },
-    {
+    "740599": {
         "full_name": "Health and Physical Education 10 with Driver Education",
         "category": "Online",
         "prerequisites": [
@@ -1704,7 +1674,7 @@
         "description": "tudents demonstrate competency in a lifetime sport or activity and demonstrate physical fitness and an understanding of conditioning principles. One quarter of the course includes instruction in the health education. Family Life Education (FLE) lessons are the responsibility of the parent. (An FLE Packet will be provided to the parent.) The classroom component of Driver Education is not part of this course. It is the responsibility of the parent to provide that opportunity. (Virginia DMV has a list of acceptable Driver Training Courses, online, or, classroom based. Parents will submit evidence of successful completion.) All quarter grades are averaged to determine the final HPE grade.",
         "ap": "pre"
     },
-    {
+    "130200": {
         "full_name": "Advanced Oral Communication",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1723,7 +1693,7 @@
         "description": "Advanced Oral Communication is a concentrated performance-based course providing students with an opportunity to broaden their expertise in competitive Forensics and Debate events. &nbsp;Through preparation, performance, and evaluation, students will sharpen skills in chosen areas of concentration such as interpretation, original speaking, and debate.",
         "ap": "pre"
     },
-    {
+    "141032": {
         "full_name": "Theatre Arts 1",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1746,12 +1716,12 @@
             "Theatre Arts 2"
         ]
     },
-    {
+    "142032": {
         "full_name": "Theatre Arts 2",
         "category": "Performing Arts",
         "prerequisites": [
             [
-                "Theatre Arts 1"
+                "141032"
             ]
         ],
         "id": "142032",
@@ -1771,12 +1741,12 @@
             "Theatre Arts 3"
         ]
     },
-    {
+    "143032": {
         "full_name": "Theatre Arts 3",
         "category": "Performing Arts",
         "prerequisites": [
             [
-                "Theatre Arts 2"
+                "142032"
             ]
         ],
         "id": "143032",
@@ -1796,7 +1766,7 @@
             "Theatre Arts 4"
         ]
     },
-    {
+    "143532": {
         "full_name": "Tech Theatre 1",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1816,12 +1786,12 @@
         "description": "Students explore various areas of technical theatre such as lighting, costumes, sound, scenery, makeup, properties, and theatre management.  An analysis of dramatic literature leads students to an understanding of the design and production process.  Participation in co-curricular productions is strongly encouraged.  This course may be used to satisfy the graduation requirement for a credit in fine arts.",
         "ap": "pre"
     },
-    {
+    "144032": {
         "full_name": "Theatre Arts 4",
         "category": "Performing Arts",
         "prerequisites": [
             [
-                "Theatre Arts 3"
+                "143032"
             ]
         ],
         "id": "144032",
@@ -1838,7 +1808,7 @@
         "description": "Students identify areas of special interest in theatre arts, and initiate and complete major research and/or creative projects, such as playwriting, producing, directing, designing, and stage-managing. Emphasis is placed on in-depth study and completion of projects, assumption of leadership roles, and expansion of criteria for self-evaluation. Students will analyze and evaluate scripts, concentrate on vocal and physical dramatics, and undertake a special theatre project in their area of specialization. Students are expected to assume leadership positions in co-curricular theatre productions. Participation in major projects related to the co-curricular theatre productions may be required. Students must meet both the school day and after-school participation requirements to receive credit for the course. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre"
     },
-    {
+    "922604": {
         "full_name": "AP Music Theory",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1858,7 +1828,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Music Theory examination, with college credit and/or placement being awarded if a qualifying score is achieved. Students are given a solid foundation in intervals, pitch patterns, metric/rhythmic patterns, chords, and the terms that are part of a basic understanding of reading, performing, and listening to music. Analysis, elementary composition, aural skills, sight-singing, and keyboard harmony will also be studied. All students are required to take the Advanced Placement Music Theory exam.",
         "ap": "ap"
     },
-    {
+    "923315": {
         "full_name": "Symphonic Band (Intermediate Level)",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1878,7 +1848,7 @@
         "description": "Students in this course form the representative performing band for the school. Emphasis is placed on the sequential development of advanced technical skills and on the study of related literature. Based on successful completion of sequential concepts for each level, students will continue as specified in course level. Marching band techniques, rehearsals, and performances are included in this course. Students must meet both the school day and after-school participation requirements to receive credit for the course.",
         "ap": "pre"
     },
-    {
+    "923415": {
         "full_name": "Symphonic Wind Ensemble Band (Advanced/Artist Level)",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1898,7 +1868,7 @@
         "description": "Students in this course form the representative performing band for the school. Emphasis is placed on the sequential development of advanced technical skills and on the study of related literature. Based on successful completion of sequential concepts for each level, students will continue as specified in course level. Marching band techniques, rehearsals, and performances are included in this course. Students must meet both the school day and after-school participation requirements to receive credit for the course.",
         "ap": "pre"
     },
-    {
+    "923915": {
         "full_name": "Advanced Orchestra (Concert)",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1918,7 +1888,7 @@
         "description": "The course offers instruction in the development of intermediate and advanced performing skills, including individual playing and ensemble techniques, and disciplinary skills needed for performance. Students must meet both the school day and after-school participation requirements to receive credit for the course.",
         "ap": "pre"
     },
-    {
+    "924016": {
         "full_name": "Jazz Band",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1938,7 +1908,7 @@
         "description": "The instrumental jazz ensemble curriculum emphasizes improvisation and styles of the jazz idiom. Content includes the study of blues scale patterns and harmonic progressions innate in jazz music. Content also includes the study of the appropriate jazz literature and rehearsal and performance techniques from the jazz idiom. Instrumentation of the jazz ensemble is at the discretion of the instructor. Students must meet both the school day and after-school participation requirements to receive credit for the course.",
         "ap": "pre"
     },
-    {
+    "928032": {
         "full_name": "Vocal Ensemble",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1957,7 +1927,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "928915": {
         "full_name": "Advanced Mixed Chorus",
         "category": "Performing Arts",
         "prerequisites": [
@@ -1976,14 +1946,14 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "4220T1": {
         "full_name": "Geosystems",
         "category": "Science",
         "prerequisites": [
             [
-                "Biology 1",
-                "Chemistry 1",
-                "Physics 1"
+                "4310T1",
+                "4410T1",
+                "4510T1"
             ]
         ],
         "id": "4220T1",
@@ -2000,12 +1970,12 @@
         "description": "Geosystems Honors utilizes content from geology, astronomy, oceanography, and meteorology to investigate, both qualitatively and quantitatively, the major earth systems (atmosphere, hydrosphere, lithosphere, biosphere) and their dynamic inter-relationships.  Students explore concepts with the same tools professional scientists use including computers, Geographic Information Systems (GIS), Global Positioning System (GPS), image processing software, and probeware.  Students will investigate some topics at a deeper level and will participate in an externally-moderated experimental/research project either independently or in teams.",
         "ap": "pre"
     },
-    {
+    "4260T4": {
         "full_name": "Advanced Astronomy: The Solar System",
         "category": "Science",
         "prerequisites": [
             [
-                "Chemistry 1"
+                "4410T1"
             ]
         ],
         "id": "4260T4",
@@ -2022,12 +1992,12 @@
         "description": "Astronomy deals with such topics as the universe, universal laws, galaxies, stellar evolution, the solar system and its motion, and the exploration of space. This course is designed to be an in-depth and mathematical treatment of astronomy concepts. This course does not count as one of the science credits for the standard diploma. It can be used as the fourth credit for an advanced studies diploma, if the student has already taken three science courses from three different disciplines.",
         "ap": "pre"
     },
-    {
+    "4260T5": {
         "full_name": "Advanced Astronomy: The Universe",
         "category": "Science",
         "prerequisites": [
             [
-                "Chemistry 1"
+                "4410T1"
             ]
         ],
         "id": "4260T5",
@@ -2044,7 +2014,7 @@
         "description": "Astronomy deals with such topics as the universe, universal laws, galaxies, stellar evolution, the solar system and its motion, and the exploration of space. This course is designed to be an in-depth and mathematical treatment of astronomy concepts. This course does not count as one of the science credits for the standard diploma. It can be used as the fourth credit for an advanced studies diploma, if the student has already taken three science courses from three different disciplines.",
         "ap": "pre"
     },
-    {
+    "4310T1": {
         "full_name": "Biology 1",
         "category": "Science",
         "prerequisites": [
@@ -2071,7 +2041,7 @@
             "Chemistry 1 HN"
         ]
     },
-    {
+    "4320T1": {
         "full_name": "Advanced Marine Biology",
         "category": "Science",
         "prerequisites": [
@@ -2091,12 +2061,12 @@
         "description": "Oceanography deals with geophysical and biological oceanography and covers such topics as the geology and geography of ocean basins, physical properties of sea water, marine chemistry, marine biology, salinity and density circulation in the oceans, waves, and tides and oceanographic instruments, tools, and methods. The course is designed to be an in-depth treatment of oceanography concepts. This course does not count as one of the science credits for the standard diploma. It can be used as the fourth credit for an advanced studies diploma, if the student has already taken three science courses from three different disciplines.",
         "ap": "pre"
     },
-    {
+    "4320T6": {
         "full_name": "DNA Science 1",
         "category": "Science",
         "prerequisites": [
             [
-                "Chemistry 1"
+                "4410T1"
             ]
         ],
         "id": "4320T6",
@@ -2116,12 +2086,12 @@
             "DNA Science 2"
         ]
     },
-    {
+    "4320T7": {
         "full_name": "DNA Science 2",
         "category": "Science",
         "prerequisites": [
             [
-                "DNA Science 1"
+                "4320T6"
             ]
         ],
         "id": "4320T7",
@@ -2138,12 +2108,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "4320T8": {
         "full_name": "Neurobiology",
         "category": "Science",
         "prerequisites": [
             [
-                "AP Biology"
+                "437004"
             ]
         ],
         "id": "4320T8",
@@ -2160,12 +2130,12 @@
         "description": "None",
         "ap": "post"
     },
-    {
+    "437004": {
         "full_name": "AP Biology",
         "category": "Science",
         "prerequisites": [
             [
-                "Biology 1"
+                "4310T1"
             ]
         ],
         "id": "437004",
@@ -2185,7 +2155,7 @@
             "Neurobiology"
         ]
     },
-    {
+    "441000": {
         "full_name": "Chemistry 1 (CHUM)",
         "category": "Science",
         "prerequisites": [
@@ -2204,12 +2174,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "4410T1": {
         "full_name": "Chemistry 1",
         "category": "Science",
         "prerequisites": [
             [
-                "Biology 1"
+                "4310T1"
             ]
         ],
         "id": "4410T1",
@@ -2234,12 +2204,12 @@
             "Bionanotechnology"
         ]
     },
-    {
+    "4420T4": {
         "full_name": "Introductory Organic Chemistry with Instrumental Analysis",
         "category": "Science",
         "prerequisites": [
             [
-                "AP Chemistry"
+                "447004"
             ]
         ],
         "id": "4420T4",
@@ -2256,13 +2226,13 @@
         "description": "None",
         "ap": "post"
     },
-    {
+    "447004": {
         "full_name": "AP Chemistry",
         "category": "Science",
         "prerequisites": [
             [
-                "Biology 1",
-                "Chemistry 1"
+                "4310T1",
+                "4410T1"
             ]
         ],
         "id": "447004",
@@ -2282,7 +2252,7 @@
             "Intro Org Chem 1"
         ]
     },
-    {
+    "4510T1": {
         "full_name": "Physics 1",
         "category": "Science",
         "prerequisites": [
@@ -2307,15 +2277,15 @@
             "Computational Phys"
         ]
     },
-    {
+    "4520T1": {
         "full_name": "Computational Physics",
         "category": "Science",
         "prerequisites": [
             [
-                "Physics 1"
+                "4510T1"
             ],
             [
-                "Physics 1"
+                "4510T1"
             ]
         ],
         "id": "4520T1",
@@ -2332,7 +2302,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "4520T2": {
         "full_name": "Computational Physics",
         "category": "Science",
         "prerequisites": [
@@ -2351,12 +2321,12 @@
         "description": "The course is aimed at students with some experience in computer programming who want to learn how to generate their own computational models of physical systems. Students expand their knowledge of continuum systems, statistical physics, and systems with emergent properties with an emphasis on building inherently discrete computational models of continuum systems continuum and the application of partition functions to interacting systems in statistical mechanics via a hands-on, model building approach to learning. Two main topics are covered: Basic Techniques for Creating Discrete Models for Continuum Classical Systems in one and two space dimensions and an introduction to Classical Statistical Mechanics through an extensive treatment of the Ising model in two dimensions. If time allows the balance of the class will be spent creating and interpreting computational models of two state Quantum systems and their composites. No prior experience with Mathematica is assumed but students must have experience in and enjoy programming / creating their own computational models to get the most out of this course. Students spend approximately half their class time developing and testing computational models in collaboration with their peers.",
         "ap": "pre"
     },
-    {
+    "4520T8": {
         "full_name": "Introduction to Optics Systems and Phenomena",
         "category": "Science",
         "prerequisites": [
             [
-                "TJ Math 2"
+                "314352"
             ]
         ],
         "id": "4520T8",
@@ -2373,12 +2343,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "4520T9": {
         "full_name": "Relativity, Electrodynamics, and Quantum Mechanics",
         "category": "Science",
         "prerequisites": [
             [
-                "AP Physics C"
+                "457004"
             ]
         ],
         "id": "4520T9",
@@ -2395,7 +2365,7 @@
         "description": "None",
         "ap": "post"
     },
-    {
+    "457004": {
         "full_name": "AP Physics C -- Mechanics and Electricity and Magnetism",
         "category": "Science",
         "prerequisites": [
@@ -2418,12 +2388,12 @@
             "Electrodynamics"
         ]
     },
-    {
+    "4610T6": {
         "full_name": "Bionanotechnology",
         "category": "Science",
         "prerequisites": [
             [
-                "Chemistry 1"
+                "4410T1"
             ]
         ],
         "id": "4610T6",
@@ -2440,7 +2410,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "2219T1": {
         "full_name": "Ancient and Classical Civilizations",
         "category": "Social Studies",
         "prerequisites": [
@@ -2460,7 +2430,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "222100": {
         "full_name": "World History & Geography 2 (CHUM)",
         "category": "Social Studies",
         "prerequisites": [
@@ -2479,7 +2449,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "2221T1": {
         "full_name": "World History and Geography 2 Honors",
         "category": "Social Studies",
         "prerequisites": [
@@ -2503,12 +2473,12 @@
             "US/VA History"
         ]
     },
-    {
+    "231905": {
         "full_name": "AP US History",
         "category": "Social Studies",
         "prerequisites": [
             [
-                "World Hist/Geog 2"
+                "2221T1"
             ]
         ],
         "id": "231905",
@@ -2528,7 +2498,7 @@
             "AP Government"
         ]
     },
-    {
+    "2340T1": {
         "full_name": "20th Century World History",
         "category": "Social Studies",
         "prerequisites": [
@@ -2548,12 +2518,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "2360T1": {
         "full_name": "US and Virginia History Honors",
         "category": "Social Studies",
         "prerequisites": [
             [
-                "World Hist/Geog 2"
+                "2221T1"
             ]
         ],
         "id": "2360T1",
@@ -2573,7 +2543,7 @@
             "AP Government"
         ]
     },
-    {
+    "2374T1": {
         "full_name": "Physical / Cultural Anthropology",
         "category": "Social Studies",
         "prerequisites": [
@@ -2593,7 +2563,7 @@
         "description": "Students examine the cultural and physical developments and changes in human societies. This course provides students an opportunity to increase their understanding of themselves and their own culture through a variety of activities.",
         "ap": "pre"
     },
-    {
+    "239904": {
         "full_name": "AP European History",
         "category": "Social Studies",
         "prerequisites": [
@@ -2613,7 +2583,7 @@
         "description": "The Advanced Placement Program in European History covers the basic chronology of events from 1450 (the High Renaissance) to the present.  Students are expected to demonstrate a knowledge of this basic chronology and of major events and trends in the intellectual cultural, political-diplomatic, and social-economic history of modern Europe.  In addition, students are expected to demonstrate an ability to analyze historical evidence and to express that understanding and analysis in writing.  This course prepares students to take the Advanced Placement examination in European History, for which college credit and/or placement is given if a qualifying score is achieved.",
         "ap": "ap"
     },
-    {
+    "2420T1": {
         "full_name": "Law and Society",
         "category": "Social Studies",
         "prerequisites": [
@@ -2633,7 +2603,7 @@
         "description": "This course provides practical information and problem-solving opportunities regarding the law. Students develop both knowledge of the law and skills necessary for survival in our law-based society. Students engage in active learning experiences such as mock trials, moot courts, role play, case studies, simulations and small group exercises. Students explore the definition of law, citizen rights and responsibilities under the law, learn methods of dispute resolution, as well as identify and analyze public issues.",
         "ap": "pre"
     },
-    {
+    "244000": {
         "full_name": "Virginia and United States Government ",
         "category": "Social Studies",
         "prerequisites": [
@@ -2652,15 +2622,15 @@
         "description": "Students examine both the structure and function of American government at the national, state, and local levels.  The course focuses on political decision-making, comparative political and economic systems, and the student's role as a citizen.  Critical thinking, writing, research, and group-process skills are refined.  Virginia and United States Government is required for graduation.",
         "ap": "pre"
     },
-    {
+    "244504": {
         "full_name": "AP US Government and Politics",
         "category": "Social Studies",
         "prerequisites": [
             [
-                "US/VA History"
+                "2360T1"
             ],
             [
-                "AP US History"
+                "231905"
             ]
         ],
         "id": "244504",
@@ -2677,7 +2647,7 @@
         "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.",
         "ap": "ap"
     },
-    {
+    "244506": {
         "full_name": "AP US Government / Senior Seminar",
         "category": "Social Studies",
         "prerequisites": [
@@ -2697,7 +2667,7 @@
         "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.",
         "ap": "ap"
     },
-    {
+    "244561": {
         "full_name": "AP US Government / Global Studies",
         "category": "Social Studies",
         "prerequisites": [
@@ -2717,7 +2687,7 @@
         "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.",
         "ap": "ap"
     },
-    {
+    "280404": {
         "full_name": "AP Macro/Micro Economics",
         "category": "Social Studies",
         "prerequisites": [
@@ -2736,7 +2706,7 @@
         "description": "This course is designed to provide students with an understanding of the economic principles which apply to an economic system as a whole. This course is designed to provide students with an understanding of the principles of economics which apply to the functions of decision-makers, both consumers and producers, within economic systems. Topics include, national economics, international economics, the nature and functions of product markets, the study of factor markets, and the role of government in promoting greater efficiency and equity in the economy. This course prepares students to take the Advanced Placement examinations in Macro and Micro Economics, for which college credit and/or placement may be given if a qualifying score is achieved. This course fulfills the Economic and Personal Finance and virtual graduation requirements. All students are required to take both the AP Micro Economics and the AP Macro Economics exams.",
         "ap": "ap"
     },
-    {
+    "2900T1": {
         "full_name": "Psychology: Mind, Body, & Behavior",
         "category": "Social Studies",
         "prerequisites": [
@@ -2756,7 +2726,7 @@
         "description": "Students examine patterns and variations of human behavior and the process of individual human development. They identify and examine the emotional, intellectual, and physical factors which influence the development of the individual human being. Students distinguish among the major schools and systems of psychology and methods of investigation.",
         "ap": "pre"
     },
-    {
+    "290204": {
         "full_name": "AP Psychology",
         "category": "Social Studies",
         "prerequisites": [
@@ -2776,7 +2746,7 @@
         "description": "The purpose of this course is to introduce students to the systematic and scientific study of the behavior and mental processes of human beings and other animals.  Students are exposed to the psychological facts, principles, and phenomena associated with each of the major subfields within psychology.  They also learn about the methods psychologists use in their science and practice.  The aim of Advanced Placement Psychology is to provide the students with a learning experience equivalent to that obtained in an introductory college psychology course.  College credit and/or placement may be given if a qualifying score is made on the Advanced Placement examination.  The rigorous course syllabus and college level texts both suggest that students who enroll should be highly motivated and intellectually curious.",
         "ap": "ap"
     },
-    {
+    "2950T1": {
         "full_name": "Inquiry in Ideas",
         "category": "Social Studies",
         "prerequisites": [
@@ -2796,7 +2766,7 @@
         "description": "This course offers students an opportunity to investigate classical philosophical issues from both secular and religious sources. A study of philosophy will help students to value more fully the insights and structures of the great philosophies; respect the difference between systematic philosophical investigation and personal belief; develop critical skill in the analysis of the writings of the philosophers and a comprehensive understanding of similarities and differences in philosophical discussion, both religious and secular, throughout the ages; value the rich diversity of ideas and points of view on many issues; and transfer philosophical knowledge and method to the study of other disciplines and to problem solving.",
         "ap": "pre"
     },
-    {
+    "2950T2": {
         "full_name": "Religious Studies",
         "category": "Social Studies",
         "prerequisites": [
@@ -2816,7 +2786,7 @@
         "description": "In this course, students develop the background necessary for an appreciation of the basic beliefs and practices of the world's religions. Importance is placed on historical origins as well as current beliefs. Students will study Buddhism, Christianity, Confucianism, Hinduism, Islam, Judaism, Shintoism, Taoism, and other belief systems.",
         "ap": "pre"
     },
-    {
+    "2996T1": {
         "full_name": "History of Science and Ideas",
         "category": "Social Studies",
         "prerequisites": [
@@ -2836,7 +2806,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "2996T2": {
         "full_name": "America and the World Since 1989",
         "category": "Social Studies",
         "prerequisites": [
@@ -2856,7 +2826,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "2998T2": {
         "full_name": "Ethical Leadership",
         "category": "Social Studies",
         "prerequisites": [
@@ -2876,7 +2846,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "FCPSSumSch": {
         "full_name": "FCPS Summer School Course",
         "category": "Summer School",
         "prerequisites": [
@@ -2895,7 +2865,7 @@
         "description": "If you intend on taking a course via FCPS (online campus or alternative site) please indicate so by selecting this course. Please note that this does NOT guarantee approval or registration. Registration for FCPS Summer Programs will begin May 5, 2014.",
         "ap": "pre"
     },
-    {
+    "NonFCPSSum": {
         "full_name": "NonFCPS Summer School",
         "category": "Summer School",
         "prerequisites": [
@@ -2915,7 +2885,7 @@
         "description": "If you intend on taking a course outside FCPS (Loudoun, private, etc.) please indicate so by selecting this course. Please note that this does NOT guarantee approval or registration.",
         "ap": "pre"
     },
-    {
+    "TJA2219": {
         "full_name": "Ancient & Classical Civilizations",
         "category": "Summer School",
         "prerequisites": [
@@ -2934,7 +2904,7 @@
         "description": "Ancient Civilizations will be an inquiry-based, in-depth course that will offer students an opportunity to investigate the history of the ancient world's major cultures from their beginning to their decline in the post-classical era from an interdisciplinary perspective. Offered as an elective option aimed at 9th and 10th graders to complete their 4th social studies credit, the course will serve as a foundational course that purports to introduce students to research and analytical skills needed in the upper level courses.In terms of content, the course will explore the increasingly interconnected history of major civilizations and other forms of complex societies that arose in pre-classical through post-classical era Afro-Eurasia, focusing on comparative analysis of the sociopolitical, economic, religious, and cultural traditions and innovations that developed in these ancient societies as well as the webs of communication and exchange that connected these societies spatially and temporally. Investigations of cultural traditions will emphasize the development of scientific and technological breakthroughs and innovations, trace the means and routes by which they spread beyond the society in which they emerged, and the regional and cross-regional impact they wielded on the increasingly interconnected pre-modern world. In specific terms, the civilizations studied in the course will range from Mesopotamia and Egypt in the ancient world, to Greece, Rome, Persia, China, and India in the classical world, to the fall of Rome and the rise of the Islamic world in the early-post-classical world.As a foundational course focusing on inquiry learning and the development of higher order thinking, reading, and writing skills, a heavy emphasis will be based on analyzing and evaluating various types of primary and secondary sources. The course will culminate with a final research project that will integrate these skills and focus on the larger themes of the course.",
         "ap": "pre"
     },
-    {
+    "TJA2340": {
         "full_name": "20th Century World History",
         "category": "Summer School",
         "prerequisites": [
@@ -2954,7 +2924,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "TJA2996": {
         "full_name": "America and the World Since 1989",
         "category": "Summer School",
         "prerequisites": [
@@ -2974,7 +2944,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "TJA3160": {
         "full_name": "TJHSST Math 5",
         "category": "Summer School",
         "prerequisites": [
@@ -3000,7 +2970,7 @@
             "AP Calculus AB"
         ]
     },
-    {
+    "TJA3161": {
         "full_name": "TJHSST Math 6",
         "category": "Summer School",
         "prerequisites": [
@@ -3019,7 +2989,7 @@
         "description": "Semester introduction to calculus providing an overview of limits, derivatives, and applications related to those topics.",
         "ap": "pre"
     },
-    {
+    "TJA3184": {
         "full_name": "Foundations of Computer Science",
         "category": "Summer School",
         "prerequisites": [
@@ -3044,12 +3014,12 @@
             "Cryptography"
         ]
     },
-    {
+    "TJA3190": {
         "full_name": "TJHSST Research & Statistics 1",
         "category": "Summer School",
         "prerequisites": [
             [
-                "TJ Math 3"
+                "313753"
             ]
         ],
         "id": "TJA3190",
@@ -3065,12 +3035,12 @@
         "description": "Students study basic probability and statistics with an emphasis on applications to scientific research. Topics studied include combinatorics, probability, descriptive statistics, and statistical distributions. The course culminates with an introduction to inferential statistics and applications of t-tests. Use of technology is integrated throughout the course. ",
         "ap": "pre"
     },
-    {
+    "TJA4410": {
         "full_name": "Chemistry 1 Honors",
         "category": "Summer School",
         "prerequisites": [
             [
-                "Biology 1"
+                "4310T1"
             ]
         ],
         "id": "TJA4410",
@@ -3087,7 +3057,7 @@
         "description": "Chemistry 1 Honors provides students the opportunity to utilize their strong critical thinking skills and apply their mathematical knowledge as they investigate in depth the composition, properties, and reactions of matter.  Laboratory experiments and subsequent classroom analysis are integral components of the course.  Students will participate in an externally-moderated experimental/research project, either independently or in teams.",
         "ap": "pre"
     },
-    {
+    "GLOBAL": {
         "full_name": "Global Studies",
         "category": "Teamed Courses",
         "prerequisites": [
@@ -3107,7 +3077,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "SENIORSEM": {
         "full_name": "Language, Power, and Politics",
         "category": "Teamed Courses",
         "prerequisites": [
@@ -3127,7 +3097,7 @@
         "description": "None",
         "ap": "post"
     },
-    {
+    "9826J0": {
         "full_name": "Advanced Communications Data Stream",
         "category": "Technology",
         "prerequisites": [
@@ -3147,7 +3117,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9826J1": {
         "full_name": "Advanced Communications Signal Processing",
         "category": "Technology",
         "prerequisites": [
@@ -3167,18 +3137,18 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9826T0": {
         "full_name": "Audio Electronics",
         "category": "Technology",
         "prerequisites": [
             [
-                "Acc Analog Elect"
+                "9826T5"
             ],
             [
-                "Acc Digital Elect"
+                "9826T6"
             ],
             [
-                "Adv Microproc Sys"
+                "9826T1"
             ]
         ],
         "id": "9826T0",
@@ -3195,12 +3165,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9826T1": {
         "full_name": "Advanced Microprocessor System Design",
         "category": "Technology",
         "prerequisites": [
             [
-                "Acc Digital Elect"
+                "9826T6"
             ]
         ],
         "id": "9826T1",
@@ -3220,7 +3190,7 @@
             "Audio Electronics"
         ]
     },
-    {
+    "9826T5": {
         "full_name": "Advanced Analog Electronics",
         "category": "Technology",
         "prerequisites": [
@@ -3243,7 +3213,7 @@
             "Audio Electronics"
         ]
     },
-    {
+    "9826T6": {
         "full_name": "Advanced Digital Electronics",
         "category": "Technology",
         "prerequisites": [
@@ -3267,7 +3237,7 @@
             "Adv Microproc Sys"
         ]
     },
-    {
+    "9826T7": {
         "full_name": "Automation and Robotics 2 Microcontroller Based Systems",
         "category": "Technology",
         "prerequisites": [
@@ -3287,7 +3257,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9826T8": {
         "full_name": "Automation and Robotics 1 Robot Design & Prototyping",
         "category": "Technology",
         "prerequisites": [
@@ -3307,12 +3277,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9828J1": {
         "full_name": "Engineering Design",
         "category": "Technology",
         "prerequisites": [
             [
-                "Design and Tech"
+                "984060"
             ]
         ],
         "id": "9828J1",
@@ -3328,7 +3298,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre"
     },
-    {
+    "9828T0": {
         "full_name": "Prototyping 1",
         "category": "Technology",
         "prerequisites": [
@@ -3351,7 +3321,7 @@
             "Prototyping 2"
         ]
     },
-    {
+    "9828T2": {
         "full_name": "Specialized Computer Assisted Design",
         "category": "Technology",
         "prerequisites": [
@@ -3371,12 +3341,12 @@
         "description": "Students develop basic skills in drawing and study careers related to drafting through the use of Computer-Assisted Drafting (CAD) and other software applications to gain an understanding of the technical drawing processes. This course is recommended for students interested in technical drawing, interior design, fashion design, decorating, construction, architecture, or engineering careers.",
         "ap": "pre"
     },
-    {
+    "9828T4": {
         "full_name": "Prototyping 2",
         "category": "Technology",
         "prerequisites": [
             [
-                "Prototyping 1"
+                "9828T0"
             ]
         ],
         "id": "9828T4",
@@ -3393,7 +3363,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre"
     },
-    {
+    "9828T5": {
         "full_name": "Introduction to Engineering Accelerated Advanced",
         "category": "Technology",
         "prerequisites": [
@@ -3413,12 +3383,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "9828T8": {
         "full_name": "Alternate Energy Systems",
         "category": "Technology",
         "prerequisites": [
             [
-                "Energy Sys 1"
+                "9828T9"
             ]
         ],
         "id": "9828T8",
@@ -3435,7 +3405,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre"
     },
-    {
+    "9828T9": {
         "full_name": "Conventional Energy Systems",
         "category": "Technology",
         "prerequisites": [
@@ -3458,7 +3428,7 @@
             "Energy Sys 2"
         ]
     },
-    {
+    "984060": {
         "full_name": "Design and Technology",
         "category": "Technology",
         "prerequisites": [
@@ -3481,7 +3451,7 @@
             "Eng Design"
         ]
     },
-    {
+    "912032": {
         "full_name": "Art 1",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3504,12 +3474,12 @@
             "Art 2"
         ]
     },
-    {
+    "913032": {
         "full_name": "Art 2",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "Art 1"
+                "912032"
             ]
         ],
         "id": "913032",
@@ -3529,12 +3499,12 @@
             "Art 3"
         ]
     },
-    {
+    "914032": {
         "full_name": "Art 3",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "Art 2"
+                "913032"
             ]
         ],
         "id": "914032",
@@ -3554,12 +3524,12 @@
             "AP Studio Art"
         ]
     },
-    {
+    "915004": {
         "full_name": "AP Studio Art",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "Art 3"
+                "914032"
             ]
         ],
         "id": "915004",
@@ -3576,7 +3546,7 @@
         "description": "This course is designed for highly motivated, advanced art students who have demonstrated a serious interest in the study of art.  Ideally suited for students who work well independently, the course will focus on the preparation of a drawing portfolio of artworks that exhibit quality, concentration in an area of visual interest or problem solving, and breadth of experience in the formal, technical, and expressive means of an artist.  The drawing portfolio addresses a broad interpretation of drawing issues including painting, printmaking, studies for sculpture, some forms of design, and abstract and observational works.  Students will prepare and submit drawing portfolios based on objectives that reflect the format and requirements established by the College Board for Advanced Placement Studio Art.  Advanced Placement college credit and/or placement may be awarded if a qualifying exam score is achieved.  All students are required to take Advanced Placement Art: Studio Art Drawing exam.",
         "ap": "ap"
     },
-    {
+    "915104": {
         "full_name": "AP Art History",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3596,7 +3566,7 @@
         "description": "Students develop an understanding of works of art within their historical context by examining issues such as politics, religion, patronage, gender, function, and ethnicity. The course also addresses visual analysis, aesthetics, and criticism. Students should demonstrate a high degree of commitment to academic work and possess academic skills needed to pursue a program designed to meet college standards. The course is designed to prepare students for the Advanced Placement Art History examination, for which college credit and/or placement may be awarded if a qualifying score is achieved. Objectives for Advanced Placement courses reflect the format and requirements in the Advanced Placement Course Description for Artpublished by the College Board. No prior experience in art studio or art history is assumed. All students are required to take the Advanced Placement Art History exam.",
         "ap": "ap"
     },
-    {
+    "9153T0": {
         "full_name": "Art for Engineers",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3616,7 +3586,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre"
     },
-    {
+    "917560": {
         "full_name": "Ceramics 1 3-D Art",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3635,7 +3605,7 @@
         "description": "Practice and apply three-dimensional design and ceramic techniques.  Explore a variety of materials and approaches to create functional and decorative ceramic objects.  Think creatively and critically to meet challenges and solve problems in innovate ways.  Study the history of ceramics and leading contemporary ceramic artists to inform art making.  Compile and maintain a required ceramic art portfolio.",
         "ap": "pre"
     },
-    {
+    "918032": {
         "full_name": "Computer Graphics 1",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3658,12 +3628,12 @@
             "Computer Graph 2"
         ]
     },
-    {
+    "918132": {
         "full_name": "Computer Graphics 2",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "Computer Graph 1"
+                "918032"
             ]
         ],
         "id": "918132",
@@ -3680,7 +3650,7 @@
         "description": "Expand knowledge in the application of computer hardware and software to create personally expressive art. Solve complex visual problems within the areas of multimedia presentations, motion graphics/animation, graphic design, and digital imaging using Adobe Photoshop, Adobe Illustrator and Adobe Flash. Prepare a final required portfolio for evaluation. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre"
     },
-    {
+    "919332": {
         "full_name": "Photography 1",
         "category": "Visual Arts",
         "prerequisites": [
@@ -3703,12 +3673,12 @@
             "Photography 2"
         ]
     },
-    {
+    "919432": {
         "full_name": "Photography 2",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "Photography 1"
+                "919332"
             ]
         ],
         "id": "919432",
@@ -3725,7 +3695,7 @@
         "description": "Expand on the study of black and white photography and digital processes. Acquire and apply in-depth knowledge of photographic equipment, films, and specialized processes to include digital applications. Investigate leading exponents, equipment, and techniques from an historical perspective. Learn to critique, and evaluate personal artwork and photographic works of others. Examine photography and its relationship to other art forms. Prepare a portfolio of meaningful artworks that demonstrate expressive content and quality of craftsmanship.",
         "ap": "pre"
     },
-    {
+    "511000": {
         "full_name": "French 1",
         "category": "World Languages",
         "prerequisites": [
@@ -3748,12 +3718,12 @@
             "French 2"
         ]
     },
-    {
+    "512000": {
         "full_name": "French 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "French 1"
+                "511000"
             ]
         ],
         "id": "512000",
@@ -3773,12 +3743,12 @@
             "French 3"
         ]
     },
-    {
+    "513000": {
         "full_name": "French 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "French 2"
+                "512000"
             ]
         ],
         "id": "513000",
@@ -3799,12 +3769,12 @@
             "AP French Lang"
         ]
     },
-    {
+    "514000": {
         "full_name": "French 4",
         "category": "World Languages",
         "prerequisites": [
             [
-                "French 3"
+                "513000"
             ]
         ],
         "id": "514000",
@@ -3824,15 +3794,15 @@
             "French 5"
         ]
     },
-    {
+    "515000": {
         "full_name": "La Francophonie travers les medias (French 5)",
         "category": "World Languages",
         "prerequisites": [
             [
-                "AP French Lang"
+                "517004"
             ],
             [
-                "French 4"
+                "514000"
             ]
         ],
         "id": "515000",
@@ -3849,7 +3819,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "5150T1": {
         "full_name": "French 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -3869,7 +3839,7 @@
         "description": "Semester 1 of French 5",
         "ap": "pre"
     },
-    {
+    "5150T2": {
         "full_name": "French 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -3889,12 +3859,12 @@
         "description": "Semester 2 of French 5",
         "ap": "pre"
     },
-    {
+    "517004": {
         "full_name": "AP French Language",
         "category": "World Languages",
         "prerequisites": [
             [
-                "French 3"
+                "513000"
             ]
         ],
         "id": "517004",
@@ -3914,7 +3884,7 @@
             "French 5"
         ]
     },
-    {
+    "521000": {
         "full_name": "German 1",
         "category": "World Languages",
         "prerequisites": [
@@ -3937,12 +3907,12 @@
             "German 2"
         ]
     },
-    {
+    "522000": {
         "full_name": "German 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "German 1"
+                "521000"
             ]
         ],
         "id": "522000",
@@ -3962,12 +3932,12 @@
             "German 3"
         ]
     },
-    {
+    "523000": {
         "full_name": "German 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "German 2"
+                "522000"
             ]
         ],
         "id": "523000",
@@ -3987,7 +3957,7 @@
             "AP German Lang"
         ]
     },
-    {
+    "524000": {
         "full_name": "German 4",
         "category": "World Languages",
         "prerequisites": [
@@ -4007,12 +3977,12 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "525000": {
         "full_name": "German 5",
         "category": "World Languages",
         "prerequisites": [
             [
-                "AP German Lang"
+                "527004"
             ]
         ],
         "id": "525000",
@@ -4029,7 +3999,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading, and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5250T1": {
         "full_name": "German 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4049,7 +4019,7 @@
         "description": "First semester of German 5",
         "ap": "pre"
     },
-    {
+    "5250T2": {
         "full_name": "German 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4069,12 +4039,12 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading, and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "527004": {
         "full_name": "AP German Language",
         "category": "World Languages",
         "prerequisites": [
             [
-                "German 3"
+                "523000"
             ]
         ],
         "id": "527004",
@@ -4094,7 +4064,7 @@
             "German 6"
         ]
     },
-    {
+    "531000": {
         "full_name": "Latin 1",
         "category": "World Languages",
         "prerequisites": [
@@ -4117,12 +4087,12 @@
             "Latin 2"
         ]
     },
-    {
+    "532000": {
         "full_name": "Latin 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Latin 1"
+                "531000"
             ]
         ],
         "id": "532000",
@@ -4142,12 +4112,12 @@
             "Latin 3"
         ]
     },
-    {
+    "533000": {
         "full_name": "Latin 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Latin 2"
+                "532000"
             ]
         ],
         "id": "533000",
@@ -4167,12 +4137,12 @@
             "AP Latin-Vergil"
         ]
     },
-    {
+    "535000": {
         "full_name": "Latin 5",
         "category": "World Languages",
         "prerequisites": [
             [
-                "AP Latin-Vergil"
+                "537004"
             ]
         ],
         "id": "535000",
@@ -4189,7 +4159,7 @@
         "description": "Students continue their study of Latin prose and/or poetry, improving their reading proficiency as they deepen their understanding of more complex syntax. Analysis of the Latin texts as literature is emphasized. Students also develop a greater appreciation of the social and political context in which the various works were written as well as their influence upon later literature.",
         "ap": "pre"
     },
-    {
+    "5350T1": {
         "full_name": "Latin 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4209,7 +4179,7 @@
         "description": "Students continue their study of Latin prose and/or poetry, improving their reading proficiency as they deepen their understanding of more complex syntax. Analysis of the Latin texts as literature is emphasized. Students also develop a greater appreciation of the social and political context in which the various works were written as well as their influence upon later literature.",
         "ap": "pre"
     },
-    {
+    "5350T2": {
         "full_name": "Latin 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4229,12 +4199,12 @@
         "description": "Students continue their study of Latin prose and/or poetry, improving their reading proficiency as they deepen their understanding of more complex syntax. Analysis of the Latin texts as literature is emphasized. Students also develop a greater appreciation of the social and political context in which the various works were written as well as their influence upon later literature.",
         "ap": "pre"
     },
-    {
+    "537004": {
         "full_name": "AP Latin: Vergil",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Latin 3"
+                "533000"
             ]
         ],
         "id": "537004",
@@ -4254,7 +4224,7 @@
             "Latin 5"
         ]
     },
-    {
+    "541000": {
         "full_name": "Russian 1",
         "category": "World Languages",
         "prerequisites": [
@@ -4277,12 +4247,12 @@
             "Russian 2"
         ]
     },
-    {
+    "542000": {
         "full_name": "Russian 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Russian 1"
+                "541000"
             ]
         ],
         "id": "542000",
@@ -4302,12 +4272,12 @@
             "Russian 3"
         ]
     },
-    {
+    "543000": {
         "full_name": "Russian 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Russian 2"
+                "542000"
             ]
         ],
         "id": "543000",
@@ -4328,12 +4298,12 @@
             "AP Russian Lang"
         ]
     },
-    {
+    "544000": {
         "full_name": "Russian 4",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Russian 3"
+                "543000"
             ]
         ],
         "id": "544000",
@@ -4353,15 +4323,15 @@
             "Russian 5"
         ]
     },
-    {
+    "545000": {
         "full_name": "Russian 5",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Russian 4"
+                "544000"
             ],
             [
-                "AP Russian Lang"
+                "546004"
             ]
         ],
         "id": "545000",
@@ -4378,7 +4348,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5450T1": {
         "full_name": "Russian 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4398,7 +4368,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5450T2": {
         "full_name": "Russian 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4418,12 +4388,12 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "546004": {
         "full_name": "AP Russian Language",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Russian 3"
+                "543000"
             ]
         ],
         "id": "546004",
@@ -4443,7 +4413,7 @@
             "Russian 5"
         ]
     },
-    {
+    "551000": {
         "full_name": "Spanish 1",
         "category": "World Languages",
         "prerequisites": [
@@ -4466,12 +4436,12 @@
             "Spanish 2"
         ]
     },
-    {
+    "552000": {
         "full_name": "Spanish 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Spanish 1"
+                "551000"
             ]
         ],
         "id": "552000",
@@ -4491,12 +4461,12 @@
             "Spanish 3"
         ]
     },
-    {
+    "553000": {
         "full_name": "Spanish 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Spanish 2"
+                "552000"
             ]
         ],
         "id": "553000",
@@ -4517,12 +4487,12 @@
             "AP Spanish Lang"
         ]
     },
-    {
+    "554000": {
         "full_name": "Spanish 4",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Spanish 3"
+                "553000"
             ]
         ],
         "id": "554000",
@@ -4543,15 +4513,15 @@
             "AP Spanish Lit"
         ]
     },
-    {
+    "555000": {
         "full_name": "Spanish 5",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Spanish 4"
+                "554000"
             ],
             [
-                "AP Spanish Lang"
+                "557004"
             ]
         ],
         "id": "555000",
@@ -4568,7 +4538,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5550T1": {
         "full_name": "Spanish 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4588,7 +4558,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5550T2": {
         "full_name": "Spanish 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4608,12 +4578,12 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "557004": {
         "full_name": "AP Spanish Language",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Spanish 3"
+                "553000"
             ]
         ],
         "id": "557004",
@@ -4634,15 +4604,15 @@
             "AP Spanish Lit"
         ]
     },
-    {
+    "558004": {
         "full_name": "AP Spanish Literature",
         "category": "World Languages",
         "prerequisites": [
             [
-                "AP Spanish Lang"
+                "557004"
             ],
             [
-                "Spanish 4"
+                "554000"
             ]
         ],
         "id": "558004",
@@ -4659,7 +4629,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Literature Examination, for which placement and/or credit may be awarded at the college level if a qualifying score is achieved.  Students increase their proficiency in the basic language skills and learn to analyze prose and verse passages designated in the College Board syllabus.  All students are required to take the Advanced Placement Literature exam.",
         "ap": "ap"
     },
-    {
+    "581000": {
         "full_name": "Chinese 1",
         "category": "World Languages",
         "prerequisites": [
@@ -4682,12 +4652,12 @@
             "Chinese 2"
         ]
     },
-    {
+    "582000": {
         "full_name": "Chinese 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Chinese 1"
+                "581000"
             ]
         ],
         "id": "582000",
@@ -4707,12 +4677,12 @@
             "Chinese 3"
         ]
     },
-    {
+    "583000": {
         "full_name": "Chinese 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Chinese 2"
+                "582000"
             ]
         ],
         "id": "583000",
@@ -4732,12 +4702,12 @@
             "AP Chinese"
         ]
     },
-    {
+    "584004": {
         "full_name": "AP Chinese",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Chinese 3"
+                "583000"
             ]
         ],
         "id": "584004",
@@ -4754,7 +4724,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Chinese Language exam at their base school.",
         "ap": "ap"
     },
-    {
+    "585000": {
         "full_name": "Chinese 5",
         "category": "World Languages",
         "prerequisites": [
@@ -4773,7 +4743,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "5850T1": {
         "full_name": "Chinese 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4792,7 +4762,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre"
     },
-    {
+    "5850T2": {
         "full_name": "Chinese 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4811,7 +4781,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre"
     },
-    {
+    "591000": {
         "full_name": "Japanese 1",
         "category": "World Languages",
         "prerequisites": [
@@ -4834,12 +4804,12 @@
             "Japanese 2"
         ]
     },
-    {
+    "592000": {
         "full_name": "Japanese 2",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Japanese 1"
+                "591000"
             ]
         ],
         "id": "592000",
@@ -4859,12 +4829,12 @@
             "Japanese 3"
         ]
     },
-    {
+    "593000": {
         "full_name": "Japanese 3",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Japanese 2"
+                "592000"
             ]
         ],
         "id": "593000",
@@ -4885,12 +4855,12 @@
             "AP Japanese"
         ]
     },
-    {
+    "594000": {
         "full_name": "Japanese 4",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Japanese 3"
+                "593000"
             ]
         ],
         "id": "594000",
@@ -4910,15 +4880,15 @@
             "Japanese 5"
         ]
     },
-    {
+    "595000": {
         "full_name": "Japanese 5",
         "category": "World Languages",
         "prerequisites": [
             [
-                "AP Japanese"
+                "597004"
             ],
             [
-                "Japanese 4"
+                "594000"
             ]
         ],
         "id": "595000",
@@ -4935,7 +4905,7 @@
         "description": "Students study selected upper level POS themes and topics using more sophisticated communication skills in all four areas - listening, speaking, reading, and writing - with emphasis on the ability to interact orally and in writing. They participate in in-depth studies of major literary works and historical events and learn to recognize the various themes and conflicts involved. Students express abstract ideas while discussing literature, history, and current events.",
         "ap": "pre"
     },
-    {
+    "5950T1": {
         "full_name": "Japanese 5 Sem1",
         "category": "World Languages",
         "prerequisites": [
@@ -4955,7 +4925,7 @@
         "description": "None",
         "ap": "pre"
     },
-    {
+    "5950T2": {
         "full_name": "Japanese 5 Sem2",
         "category": "World Languages",
         "prerequisites": [
@@ -4975,12 +4945,12 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre"
     },
-    {
+    "597004": {
         "full_name": "AP Japanese",
         "category": "World Languages",
         "prerequisites": [
             [
-                "Japanese 3"
+                "593000"
             ]
         ],
         "id": "597004",
@@ -5000,4 +4970,4 @@
             "Japanese 5"
         ]
     }
-]
+}
