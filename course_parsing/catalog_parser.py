@@ -1,7 +1,7 @@
 import json
 import re
 
-# Parser modified and HTML data taken with permission from Matthew Cox, Sarah Gold, and Youn Qi's Planner project
+# Parser modified and HTML data taken with permission from Matthew Cox, Sarah Gold, and Youn Qi's Scheduler project
 # https://github.com/matthewjcox/scheduler/blob/ef74ab89a032428e71ec5a6bd2f57a28d79a6b79/private/update%20course%20catalog
 OUTPUT = "courses.json"
 CLEANED_HTML = "course_catalog_html_cleaned.txt"
