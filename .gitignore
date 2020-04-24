@@ -123,4 +123,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# PyCharm files
 .idea/*
+
+# Parser output
+/course_catalog_html_cleaned.txt
+/courses.txt
