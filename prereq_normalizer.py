@@ -41,6 +41,13 @@ def main():
                             new_set.append(prereq + "(?)")
                 new_prereqs.append(new_set)
             course["prerequisites"] = new_prereqs
+        if course["weight"] > 0.6: # I'm not sure about precision so use >0.6 instead of >0.5
+            if course["full_name"].startswith("AP"):
+                course["ap"] = "ap"
+            else:
+                course["ap"] = "post"
+        else:
+            course["ap"] = "pre"
     with open(ALIAS_CACHE, 'wb') as cache_file:
         pickle.dump(alias, cache_file)
     for course in data:
