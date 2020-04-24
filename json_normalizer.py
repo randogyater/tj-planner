@@ -3,7 +3,9 @@ import os
 import pickle
 
 SOURCE = "courses_cleaned.json"
+LABS = "labs.json"
 DESTINATION = "courses_by_id.json"
+LABS_DESTINATION = "labs_by_id.json"
 ALIAS_CACHE = "alias.pkl"
 
 
@@ -67,6 +69,37 @@ def main():
         result[course["id"]] = course
     with open(DESTINATION, 'w', encoding="utf-8") as output_file:
         output_file.write(json.dumps(result, indent=4))
+    with open(LABS, 'r', encoding="utf-8") as labs_file:
+        labs = json.load(labs_file)
+    labs_by_id = dict()
+    for lab in labs:
+        del lab["description"]  # Only the TJ description is meaningful
+        lab["description"] = lab["tj_description"]
+        del lab["tj_description"]
+        new_prereqs = list()
+        for prereq_set in lab["prerequisites"]:
+            new_set = list()
+            for prereq in prereq_set:
+                new_prereq = None
+                if prereq in names:
+                    new_prereq = prereq
+                elif prereq in alias:
+                    new_prereq = alias[prereq]
+                else:
+                    new_name = input("Course \"%s\" not found; enter alias: " % (prereq,))
+                    while new_name != "" and new_name not in names:
+                        new_name = input("Course \"%s\" not found; try again? " % (new_name,))
+                    if new_name != "":
+                        alias[prereq] = new_name
+                        new_prereq = new_name
+                if new_prereq is not None:
+                    new_prereq = id_map[new_prereq]
+                    new_set.append(new_prereq)
+            new_prereqs.append(new_set)
+        lab["prerequisites"] = new_prereqs
+        labs_by_id[lab["id"]] = lab
+    with open(LABS_DESTINATION, 'w', encoding="utf-8") as output_file:
+        output_file.write((json.dumps(labs_by_id, indent=4)))
 
 
 if __name__ == "__main__":
