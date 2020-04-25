@@ -22,7 +22,9 @@ def main():
                 alias = cache
     id_map = dict()
     for course in data:
-        id_map[course["short_name"]] = course["id"]
+        if course["short_name"] not in id_map:
+            id_map[course["short_name"]] = list()
+        id_map[course["short_name"]].append(course["id"])
     for course in data:
         if len(course["prerequisites"]) == 0:
             del course["prerequisites"]
@@ -44,11 +46,11 @@ def main():
                             alias[prereq] = new_name
                             new_prereq = new_name
                     if new_prereq is not None:
-                        new_prereq = id_map[new_prereq]
+                        new_prereq = id_map[new_prereq][0]
                         new_set.append(new_prereq)
                         if new_prereq not in depends:
                             depends[new_prereq] = list()
-                        depends[new_prereq].append(course["short_name"])
+                        depends[new_prereq].append(course["id"])
                 new_prereqs.append(new_set)
             course["prerequisites"] = new_prereqs
         if course["weight"] > 0.6:  # I'm not sure about precision so let's use >0.6 instead of >0.5
@@ -93,13 +95,17 @@ def main():
                         alias[prereq] = new_name
                         new_prereq = new_name
                 if new_prereq is not None:
-                    new_prereq = id_map[new_prereq]
+                    new_prereq = id_map[new_prereq][0]
                     new_set.append(new_prereq)
             new_prereqs.append(new_set)
         lab["prerequisites"] = new_prereqs
         labs_by_id[lab["id"]] = lab
     with open(LABS_DESTINATION, 'w', encoding="utf-8") as output_file:
         output_file.write((json.dumps(labs_by_id, indent=4)))
+    with open("conflicts.txt", 'w', encoding="utf-8") as file:
+        for key in id_map:
+            if len(id_map[key]) > 1:
+                file.write("CONFLICT: %s --> %s\n" % (key, id_map[key]))
 
 
 if __name__ == "__main__":

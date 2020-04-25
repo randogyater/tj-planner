@@ -17,7 +17,12 @@
         },
         "tj_description": "Students are introduced to the academic discipline of computer science with emphasis on problem solving using the current College Board computer language. At this time, the language is Java. The course introduces Object Oriented Programming (OOP) and uses an Objects first approach. Skills in defining, writing, and running computer programs on a windows based networked personal computer are developed. Students work with both mathematical and non-mathematical problems. Students will also be introduced to computer graphics, Graphical User Interfaces (GUI), data storage and data processing, boolean algebra, and computer number systems. No prior computer knowledge is needed. This course is usually offered during summer school and as summer self-study for those students who wish to place out of this introductory course and begin their computer science studies with Advanced Placement Computer Science.",
         "description": "Students develop detailed knowledge of the fundamental structure of a computer system, with emphasis on problem solving and structured programming.  Skills in defining, writing, and running programs on a computer are developed through an individual approach that allows the student to work with both mathematical and non-mathematical problems.  Java will be the major programming language.",
-        "ap": "pre"
+        "ap": "pre",
+        "dependents": [
+            "318561",
+            "318561",
+            "3199T0"
+        ]
     },
     "3184T2": {
         "full_name": "Foundations of Computer Science Accelerated",
@@ -44,10 +49,10 @@
         "category": "Computer Science",
         "prerequisites": [
             [
-                "TJA3184"
+                "3184T1"
             ],
             [
-                "TJA3184"
+                "3184T1"
             ]
         ],
         "id": "318561",
@@ -64,11 +69,11 @@
         "description": "The purpose of this course is to prepare students for the Advanced Placement Computer Science A examination, for which college credit and/or placement may be given, if a qualifying score is achieved.  Content of this college-level course corresponds to the syllabus of the College Board Advanced Placement Program for Computer Science A.  Students will design software to solve problems and use data structures, such as classes and arrays, to represent information within a program.  Students will also gain a working knowledge of the major hardware and software components of computer systems.  Java is the main vehicle for implementing solutions to problems.  All students are required to take the Advanced Placement exam.",
         "ap": "ap",
         "dependents": [
-            "Computer Vision",
-            "Artificial Intel 1",
-            "Web App Dev",
-            "Mobile App Dev",
-            "Parallel Computing 1"
+            "319916",
+            "319966",
+            "3199J1",
+            "3199J2",
+            "3199T1"
         ]
     },
     "319916": {
@@ -134,7 +139,7 @@
         "description": "This course is unique to TJHSST and is not offered elsewhere.",
         "ap": "post",
         "dependents": [
-            "Artificial Intel 2"
+            "319967"
         ]
     },
     "319967": {
@@ -225,7 +230,7 @@
         "description": "This course is unique to TJHSST and is not offered elsewhere.",
         "ap": "post",
         "dependents": [
-            "Parallel Computing 2"
+            "3199T2"
         ]
     },
     "3199T2": {
@@ -270,8 +275,8 @@
         "description": "English 9 Honors deepens and advances the curriculum of English 9.  Students read and analyze a variety of literary and nonfiction texts, exploring the characteristics of different forms and the techniques authors use to achieve their intended purpose.  Language study extends students' vocabulary through learning about connotations, denotations, word origins, and structures.  Students apply their understanding of grammar, capitalization, punctuation, spelling, sentence structure, and paragraphing to varied and frequent writing assignments.  Through narrative, expository, and persuasive writings, students build on their understanding of writing as a process of prewriting, drafting, revising, and publishing.  In the research process, students find, evaluate, and select appropriate sources to access information to create a research product.  They also develop communication skills through listening to and practicing oral presentations.  (This is a Standards of Learning aligned course, which is tested in 11th grade.)",
         "ap": "pre",
         "dependents": [
-            "English 10",
-            "English 10"
+            "1140T1",
+            "1140T1"
         ]
     },
     "114000": {
@@ -318,7 +323,7 @@
         "description": "English 10 Honors deepens and advances the curriculum of English 10.  Students read and analyze a variety of literary and nonfiction texts, comparing and contrasting the techniques authors use in literature of different cultures and eras.  Language study continues to extend students' vocabulary through learning about connotations, denotations, word origins, and structures.  Students apply their understanding of grammar, capitalization, punctuation, spelling, sentence structure, and paragraphing to varied and frequent writing assignments.  With an emphasis on expository and analytic writing, students expand their understanding of writing as a process and develop their skills in revising to address a specific audience and purpose.  In the research process, students collect, evaluate, organize, and present accurate and valid information to create a research product.  They also improve communication and collaboration skills through small and large group discussions and presentations.  (This is a Standards of Learning aligned course, which is tested in 11th grade.)",
         "ap": "pre",
         "dependents": [
-            "English 11"
+            "1150T1"
         ]
     },
     "1150T1": {
@@ -341,7 +346,12 @@
         },
         "tj_description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research.",
         "description": "English 11 Honors deepens and advances the curiculum of English 11.  Students read and analyze a variety of literary and nonfiction texts, comparing themes of various works and analyzing expository materials to draw conclusions.  Language study extends students' vocabulary through applying understanding of connotations, denotations, word origins, and structures. Students apply their understanding of grammar, capitalization, punctuation, spelling, sentence structure, and paragraphing to varied and frequent writing assignments.  With an emphasis on persuasive writing, students apply their skills and adapt content, vocabulary, voice, and tone to a specific audience and purpose.  In the research process, students analyze, evaluate, synthesize, and organize information from a variety of sources to produce a research product.  They also refine their oral communication skills through gathering and organizing evidence to support a position in informative and persuasive presentations.",
-        "ap": "pre"
+        "ap": "pre",
+        "dependents": [
+            "1160T1",
+            "119504",
+            "119604"
+        ]
     },
     "1150T2": {
         "full_name": "English 11 (teamed with Honors US/VA History)",
@@ -360,19 +370,14 @@
             "12": false
         },
         "description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research.",
-        "ap": "pre",
-        "dependents": [
-            "English 12",
-            "AP English Lit/Comp",
-            "AP English Lang/Comp"
-        ]
+        "ap": "pre"
     },
     "1160T1": {
         "full_name": "English 12",
         "category": "English",
         "prerequisites": [
             [
-                "1150T2"
+                "1150T1"
             ]
         ],
         "id": "1160T1",
@@ -393,7 +398,7 @@
         "category": "English",
         "prerequisites": [
             [
-                "1150T2"
+                "1150T1"
             ]
         ],
         "id": "119504",
@@ -435,7 +440,7 @@
         "category": "English",
         "prerequisites": [
             [
-                "1150T2"
+                "1150T1"
             ]
         ],
         "id": "119604",
@@ -492,7 +497,7 @@
         "description": "In Journalism 1 students learn the history and language of journalism; develop communication skills in writing, designing and editing for a variety of media; understand news and the process of publication; and become more critical readers and viewers of mass media. This course prepares students for continued study in journalism, photojournalism, and broadcast journalism.",
         "ap": "pre",
         "dependents": [
-            "Journalism 2"
+            "121000"
         ]
     },
     "121000": {
@@ -517,7 +522,7 @@
         "description": "In Journalism 2 students learn and apply techniques of layout, design and desktop publishing.  Students develop a more sophisticated level of journalistic writing and participate in the operation and production of the high school newspaper and/or student produced website.  Students also learn skills in business and circulation management.",
         "ap": "pre",
         "dependents": [
-            "Journalism 3"
+            "121100"
         ]
     },
     "121100": {
@@ -542,7 +547,7 @@
         "description": "In addition to enhancing their skills as reporters, students in Journalism 3 learn the role of editorial leadership, develop a personal sense of professionalism, understand the role of the newspaper in society, and become productive members of the newspaper and/or student produced website staff.  Students also learn skills in business and circulation management.",
         "ap": "pre",
         "dependents": [
-            "Journalism 4"
+            "121200"
         ]
     },
     "121200": {
@@ -587,7 +592,7 @@
         "description": "In Photojournalism 1, students learn the principles of interviewing, copywriting, photography, layout, and design.  Students will use publishing software to create pages for the school's yearbook.",
         "ap": "pre",
         "dependents": [
-            "Photo Journalism 2"
+            "121600"
         ]
     },
     "121600": {
@@ -612,7 +617,7 @@
         "description": "In Photojournalism 2, students develop their copywriting skills and advance their photography and design skills as they create pages for the school's yearbook.  They may become section editors.",
         "ap": "pre",
         "dependents": [
-            "Photo Journalism 3"
+            "121700"
         ]
     },
     "121700": {
@@ -712,14 +717,17 @@
         },
         "tj_description": "Students gain knowledge and skills in a variety of individual, dual and team sports to develop competencies to promote an active lifestyle. Concepts of physical fitness and conditioning are taught. One quarter of the course includes instruction in health education topics of alcohol, tobacco, and other drug-use prevention (ATOD), and cardiopulmonary resuscitation (CPR). Parents may opt their children out of any or all ATOD use prevention lessons which are a component of Family Life Education.",
         "description": "Students gain knowledge and skills in a variety of individual, dual, and team sports/activities to develop competencies to promote an active lifestyle.  Students begin to apply personal fitness planning concepts to individualized plans.  One quarter of the course includes instruction in the health education topics of alcohol, tobacco, and other drug use prevention; emotional and social health; personal health; injury and violence prevention; disease prevention; and cardiopulmonary resuscitation and automated external defibrillation (CPR and AED).",
-        "ap": "pre"
+        "ap": "pre",
+        "dependents": [
+            "740500"
+        ]
     },
     "740500": {
         "full_name": "Health and Physical Education 10 with Driver Education",
         "category": "Health and PE",
         "prerequisites": [
             [
-                "730099"
+                "730000"
             ]
         ],
         "id": "740500",
@@ -816,7 +824,7 @@
         "description": "Students examine functions and relations, to include quadratics, polynomials, power and square root functions, rational functions, logarithmic and exponential functions, and conics. Students study characteristics of each family of functions, such as graph sketching, transformations, and applications. Introductory linear algebra topics, such as matrices and determinants, are introduced in relation to systems of equations and inequalities. Extensions on basic function topics include factoring techniques and the Binomial Theorem. Emphasis is on modeling, logic, and interpretation of results. The process standard focus will be Problem Solving. Graphing utilities, especially graphing calculators, are integral to the course. Upon completion, students take the Algebra 2 SOL end-of-course test.",
         "ap": "pre",
         "dependents": [
-            "TJ Res Stat 1"
+            "TJA3190"
         ]
     },
     "313754": {
@@ -877,7 +885,7 @@
         "description": "Students continue the study of geometric topics, with a focus on transitioning to algebraic methods for solving problems. Topics of study include transformations, right triangle trigonometry, area of polygons and circles, surface area and volume, vectors in 2D (including component form and unit vector topics), solving equations and inequalities, linear systems up to 3D, and basic matrix algebra. Use of technology is integrated throughout the course. The process standard focus will be representation. Upon completion of this course, students take the SOL end-of-course test in Geometry.",
         "ap": "pre",
         "dependents": [
-            "Optical Systems"
+            "4520T8"
         ]
     },
     "316055": {
@@ -897,14 +905,21 @@
             "12": false
         },
         "description": "The study of Advanced Functions includes an extension of topics first introduced in algebra. All parent function graphs and their transformations are a focus as well as the important features of graphs such as symmetry, concavity, extrema and end behavior. Operations on functions are studied, especially composition, and finding appropriate domains is stressed. Specific functions such as exponential and logarithmic are explored and used for graphing, solving equations, and applications. Other topics of study include sequences and series, proof by math induction, and the exploration of conic sections and their applications and an introduction to the fundamentals of calculus, including limits, continuity, and the concept of the derivative. The process standard focus will be Communication. Upon conclusion of TJ Math 5, students will be advised as to which level of AP Calculus they should take the following school year.",
-        "ap": "pre"
+        "ap": "pre",
+        "dependents": [
+            "316056",
+            "317004",
+            "317704",
+            "3199T0",
+            "317093"
+        ]
     },
     "316056": {
         "full_name": "TJHSST Math 6",
         "category": "Math",
         "prerequisites": [
             [
-                "TJA3160"
+                "316055"
             ]
         ],
         "id": "316056",
@@ -926,7 +941,7 @@
         "category": "Math",
         "prerequisites": [
             [
-                "TJA3160"
+                "316055"
             ]
         ],
         "id": "317004",
@@ -947,7 +962,7 @@
         "category": "Math",
         "prerequisites": [
             [
-                "TJA3160"
+                "316055"
             ]
         ],
         "id": "317704",
@@ -963,9 +978,9 @@
         "description": "This course is an extension of Advanced Placement Calculus AB.  This course emphasizes a multi-representational approach to calculus. Concepts, results, and problems are expressed graphically, numerically, analytically, and verbally.  Content includes concepts and applications of differential and integral calculus, sequences and series, and elementary differential equations.  This course prepares students for the Calculus BC Advanced Placement examination, for which placement and/or credit may be awarded at the college level, if a qualifying score is obtained.   Content of this college-level course corresponds to the syllabus of the College Board Calculus BC Advanced Placement Program.  All students are required to take the Advanced Placement exam.",
         "ap": "ap",
         "dependents": [
-            "Adv Topics in Calc",
-            "Multivar Calc",
-            "Matrix Algebra"
+            "313400",
+            "317860",
+            "319800"
         ]
     },
     "317860": {
@@ -990,12 +1005,12 @@
         "description": "A third semester college-level course, Multivariable calculus is the calculus of three dimensions and includes the study of partial differentiation, multiple integrals, and line integrals. This course will receive a weighted grade and may be taken for college credit.",
         "ap": "post",
         "dependents": [
-            "Diff Equations",
-            "Diff Equations",
-            "Complex Analysis",
-            "Math Techniques",
-            "Probability Theory",
-            "Concrete Math"
+            "317861",
+            "317861",
+            "317862",
+            "319862",
+            "3199TA",
+            "3199TB"
         ]
     },
     "317861": {
@@ -1107,7 +1122,7 @@
         "description": "This college-level course includes the study of systems of linear equations, vector spaces, linear dependence, linear transformations and matrix representation, orthogonal reduction, determinants, eigenvectors and eigenvalues, and a variety of applications. This course will receive a weighted grade and may be taken for college credit.",
         "ap": "post",
         "dependents": [
-            "Diff Equations"
+            "317861"
         ]
     },
     "319862": {
@@ -1132,7 +1147,7 @@
         "description": "None",
         "ap": "post",
         "dependents": [
-            "Diff Equations"
+            "317861"
         ]
     },
     "3199T0": {
@@ -1140,8 +1155,8 @@
         "category": "Math",
         "prerequisites": [
             [
-                "TJA3160",
-                "TJA3184"
+                "316055",
+                "3184T1"
             ]
         ],
         "id": "3199T0",
@@ -1417,7 +1432,7 @@
         "category": "Online",
         "prerequisites": [
             [
-                "TJA3160"
+                "316055"
             ]
         ],
         "id": "317093",
@@ -1469,7 +1484,11 @@
             "12": true
         },
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
-        "ap": "pre"
+        "ap": "pre",
+        "dependents": [
+            "554000",
+            "557004"
+        ]
     },
     "557093": {
         "full_name": "AP Spanish Language",
@@ -1488,7 +1507,11 @@
             "12": true
         },
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Spanish Language exam.",
-        "ap": "ap"
+        "ap": "ap",
+        "dependents": [
+            "555000",
+            "558004"
+        ]
     },
     "558093": {
         "full_name": "AP Spanish Literature",
@@ -1528,7 +1551,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures.  This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing.  Students begin to explore and study the themes of Personal and Family Life, School Life, Social Life, and Community Life.",
         "ap": "pre",
         "dependents": [
-            "Korean 2"
+            "587599"
         ]
     },
     "587599": {
@@ -1552,7 +1575,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing.  They learn to function in real-life situations using more complex sentences and language structures.  They read material on familiar topics and produce short writing samples.  Students continue to explore as they study the themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "Korean 3"
+            "588099"
         ]
     },
     "588099": {
@@ -1650,10 +1673,7 @@
             "12": false
         },
         "description": "Students gain knowledge and skills in a variety of individual, dual, and team sports/activities to develop competencies to promote an active lifestyle.  Students begin to apply personal fitness planning concepts to individualized plans.  One quarter of the course includes instruction in the health education topics of alcohol, tobacco, and other drug use prevention; emotional and social health; personal health; injury and violence prevention; disease prevention; and cardiopulmonary resuscitation and automated external defibrillation (CPR and AED).",
-        "ap": "pre",
-        "dependents": [
-            "Health and PE 10"
-        ]
+        "ap": "pre"
     },
     "740599": {
         "full_name": "Health and Physical Education 10 with Driver Education",
@@ -1713,7 +1733,7 @@
         "description": "Theatre Arts 1 provides students with a survey of the theatre arts, allowing students opportunities to experience and appreciate dramatic literature, and participate in the creative processes of performance and production. The course emphasizes skill development and provides theatrical opportunities that enable students to determine personal areas of interest. Participation in co-curricular theatre productions may be arranged. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Theatre Arts 2"
+            "142032"
         ]
     },
     "142032": {
@@ -1738,7 +1758,7 @@
         "description": "Theatre Arts 2 integrates and builds upon concepts and skills from Theatre Arts 1. Through various modes of expression and performance, students investigate dramatic literature, theatrical styles, and historical periods. Students will study and respond to a variety of theatre experiences that will refine their communicative, collaborative, analytical, interpretive, and problem solving skills. Students will expand their artistic abilities and appreciation of the theatrical arts. Students must meet both the school day and after-school participation requirements to receive credit for the course. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Theatre Arts 3"
+            "143032"
         ]
     },
     "143032": {
@@ -1763,7 +1783,7 @@
         "description": "Students exhibit independence, discipline, and commitment to the theatre process through their work on assigned projects. Advanced work in acting skills and preparation, play analysis, and character interpretation are expected. Collaboration with actors and directors is augmented by special assignments and opportunities. Students must meet both the school day and after-school participation requirements to receive credit for the course. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Theatre Arts 4"
+            "144032"
         ]
     },
     "143532": {
@@ -2034,11 +2054,11 @@
         "description": "In Biology 1 Honors, students engage in scientific inquiry as they explore biological processes.  All class activities and laboratory activities focus on life processes that occur within organisms or cells as well as the characteristics of life including: reproduction, development, and adaptation to environment.  Major topics of study include molecular biology, cells, genetics, organisms, evolution and ecology.  In comparison to Biology 1, students will investigate some topics at a deeper level including biotechnology, health and environmental issues.  Students will be involved in an externally-moderated experimental/research project, either independently or in teams.  The course includes a unit on human life education that addresses the topics of human reproduction and human development.  Parents have the option of withdrawing their child from any or all topics included in the state-mandated Family Life Education portion.  Students opting-out will be provided with alternative biology lessons.  If dissections are a part of the laboratory experience, alternatives are available.",
         "ap": "pre",
         "dependents": [
-            "Geosystems",
-            "AP Biology",
-            "Chemistry 1",
-            "AP Chemistry",
-            "Chemistry 1 HN"
+            "4220T1",
+            "437004",
+            "4410T1",
+            "447004",
+            "TJA4410"
         ]
     },
     "4320T1": {
@@ -2083,7 +2103,7 @@
         "description": "None",
         "ap": "pre",
         "dependents": [
-            "DNA Science 2"
+            "4320T7"
         ]
     },
     "4320T7": {
@@ -2152,7 +2172,7 @@
         "description": "After completing the core science curriculum, students pursue a more advanced and specialized study of biology topics with the intent of passing the AP Biology exam in May, for which college credit and/or placement may be granted by an approving institution if a qualifying score is achieved. Students conduct standard first year college-level laboratory research as well as analyze and interpret biological data. Students examine biology content with a molecular focus that includes the core theme of structure and function. Highlights include biotechnology such as electrophoresis and bacterial transformation, animal behavior studies and genetic studies. If dissections are part of the laboratory experience, alternatives are available. All students are required to take the Advanced Placement exam.",
         "ap": "ap",
         "dependents": [
-            "Neurobiology"
+            "4320T8"
         ]
     },
     "441000": {
@@ -2196,12 +2216,12 @@
         "description": "Chemistry 1 Honors provides students the opportunity to utilize their strong critical thinking skills and apply their mathematical knowledge as they investigate in depth the composition, properties, and reactions of matter.  Laboratory experiments and subsequent classroom analysis are integral components of the course.  Students will participate in an externally-moderated experimental/research project, either independently or in teams.",
         "ap": "pre",
         "dependents": [
-            "Geosystems",
-            "Adv Astr Solar Sys",
-            "Adv Astr Universe",
-            "DNA Science 1",
-            "AP Chemistry",
-            "Bionanotechnology"
+            "4220T1",
+            "4260T4",
+            "4260T5",
+            "4320T6",
+            "447004",
+            "4610T6"
         ]
     },
     "4420T4": {
@@ -2249,7 +2269,7 @@
         "description": "Advanced Placement Chemistry represents a full year (two semesters) of college chemistry. The purpose of this course is to prepare students to take the Advanced Placement examination, for which college credit and/or placement may be given if a qualifying score is achieved. Advanced Placement Chemistry is a second-year, laboratory-centered course that provides an opportunity for students to undertake a more comprehensive investigation of some aspects of chemistry than is usually possible in the first-year Chemistry 1 course. It is designed for students who have completed a core science curriculum and are now ready to pursue more advanced and specialized studies. All students are required to take the Advanced Placement exam.",
         "ap": "ap",
         "dependents": [
-            "Intro Org Chem 1"
+            "4420T4"
         ]
     },
     "4510T1": {
@@ -2272,9 +2292,9 @@
         "description": "Physics 1 Honors introduces the most central concepts of physics, including the dual wave-particle nature of light, kinematics, dynamics, the conservation laws (mass, energy, and momentum), electricity, magnetism, and waves.  This course is laboratory-centered and employs the methods of scientific inquiry.  Students will be involved in an externally-moderated experimental/research project, either independently or in teams.",
         "ap": "pre",
         "dependents": [
-            "Geosystems",
-            "Computational Phys",
-            "Computational Phys"
+            "4220T1",
+            "4520T1",
+            "4520T1"
         ]
     },
     "4520T1": {
@@ -2385,7 +2405,7 @@
         "description": "Advanced Placement Physics is a second-level course which surveys a broad selection of physics topics at a level above Physics 1. It is designed for students who have completed a core science curriculum and are now ready to pursue more advanced and specialized studies in mechanics, electricity, and magnetism. AP Physics C serves as the foundation in physics for students who wish to pursue physical science or engineering degrees. Students are required to take both the Mechanics Advanced Placement exam and the Electricity and Magnetism Advanced Placement exam and may be given college credit and/or placement if a qualifying score is achieved.",
         "ap": "ap",
         "dependents": [
-            "Electrodynamics"
+            "4520T9"
         ]
     },
     "4610T6": {
@@ -2469,8 +2489,8 @@
         "description": "This is the second of a two-year, chronologically and thematically organized study of world history and geography.  In this second year, students study the world from 1500 CE through the present.  The course weaves together the skills and content of both history and geography so that students may learn how both affect  the world around them.  Regions of study include North and South America, Europe, Asia, and Africa.  Students continue to examine the relationship among social, economic, and geopolitical developments across time and place.  Students are encouraged to think independently while developing group process skills.  World History and Geography 2 is required for graduation.  Students are required to take the Standards of Learning End of Course Test.",
         "ap": "pre",
         "dependents": [
-            "AP US History",
-            "US/VA History"
+            "231905",
+            "2360T1"
         ]
     },
     "231905": {
@@ -2495,7 +2515,7 @@
         "description": "In this course students develop the factual knowledge and analytical skills necessary to deal with the issues and problems of American History.  They do in-depth analysis of major developments; become familiar with primary sources; assess historical materials, evidence, and interpretations; and learn to write research papers.  This course prepares students to take the Advanced Placement examination in American History for which college credit and/or placement may be given if a qualifying score is made.  The course is equal to a full-year introductory college course.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States History.",
         "ap": "ap",
         "dependents": [
-            "AP Government"
+            "244504"
         ]
     },
     "2340T1": {
@@ -2540,7 +2560,7 @@
         "description": "Virginia and United States History Honors deepens and advances the curriculum of Virginia and United States History.  Students examine the political, economic, social, and cultural growth of the United States, including the role of Virginia in this growth.  Students study major historical developments and their impact on contemporary society and on the individual.  Map and globe reading, critical thinking, writing, research, and group-process skills are refined.  Virginia and United States History is required for graduation.  Students are required to take the Standards of Learning End of Course Test.",
         "ap": "pre",
         "dependents": [
-            "AP Government"
+            "244504"
         ]
     },
     "2374T1": {
@@ -2961,14 +2981,7 @@
             "12": true
         },
         "description": "The study of Advanced Functions includes an extension of topics first introduced in algebra.  All parent function graphs and their transformations are a focus as well as the important features of graphs such as symmetry, concavity, extrema and end behavior. Operations on functions are studied, especially composition, and finding appropriate domains is stressed.  Specific functions such as exponential and logarithmic are explored and used for graphing, solving equations, and applications.  Other topics of study include sequences and series, proof by math induction, and the exploration of conic sections and their applications and an introduction to the fundamentals of calculus, including limits, continuity, and the concept of the derivative. The process standard focus will be Communication. Upon conclusion of TJ Math 5, students will be advised as to which level of AP Calculus they should take the following school year.",
-        "ap": "pre",
-        "dependents": [
-            "TJ Math 6",
-            "AP Calculus AB",
-            "AP Calculus BC",
-            "Cryptography",
-            "AP Calculus AB"
-        ]
+        "ap": "pre"
     },
     "TJA3161": {
         "full_name": "TJHSST Math 6",
@@ -3007,12 +3020,7 @@
         },
         "tj_description": "Students are introduced to the academic discipline of computer science with emphasis on problem solving using the current College Board computer language. At this time, the language is Java. The course introduces Object Oriented Programming (OOP) and uses an Objects first approach. Skills in defining, writing, and running computer programs on a windows based networked personal computer are developed. Students work with both mathematical and non-mathematical problems. Students will also be introduced to computer graphics, Graphical User Interfaces (GUI), data storage and data processing, boolean algebra, and computer number systems. No prior computer knowledge is needed. This course is usually offered during summer school and as summer self-study for those students who wish to place out of this introductory course and begin their computer science studies with Advanced Placement Computer Science.",
         "description": "Students develop detailed knowledge of the fundamental structure of a computer system, with emphasis on problem solving and structured programming.  Skills in defining, writing, and running programs on a computer are developed through an individual approach that allows the student to work with both mathematical and non-mathematical problems.  Java will be the major programming language.",
-        "ap": "pre",
-        "dependents": [
-            "AP Computer Sci A+",
-            "AP Computer Sci A+",
-            "Cryptography"
-        ]
+        "ap": "pre"
     },
     "TJA3190": {
         "full_name": "TJHSST Research & Statistics 1",
@@ -3187,7 +3195,7 @@
         "description": "Students learn how computer circuits work by taking an in-depth and hands-on look into digital electronics and microprocessor theory and operation. Topics include: microprocessor architecture, computer logic, digital logic circuits, machine language programming, and microprocessor interfacing. Special topics include robotics and speech synthesis and advanced electronics systems.",
         "ap": "pre",
         "dependents": [
-            "Audio Electronics"
+            "9826T0"
         ]
     },
     "9826T5": {
@@ -3210,7 +3218,7 @@
         "description": "Students explore career fields in electricity and electronics. The course includes information on electrical and electronic theory and applications, computer-aided instruction and circuit simulation, components, circuitry troubleshooting, use of test instruments and lab training devices, consumer information, and career opportunities. The course covers the fundamentals of basic electronics through complex AC and DC circuit theory. Students interested in engineering or related careers will benefit from the course.",
         "ap": "pre",
         "dependents": [
-            "Audio Electronics"
+            "9826T0"
         ]
     },
     "9826T6": {
@@ -3233,8 +3241,8 @@
         "description": "Students learn theory and circuitry of more complex systems. Semiconductor, linear, and analog electronic circuits are explored. Students develop an advanced understanding of electrical theory, develop a measure of skill in the application of electrical theory as it applies to electronics circuit development, and learn safe practices for working with electricity and electronics.",
         "ap": "pre",
         "dependents": [
-            "Audio Electronics",
-            "Adv Microproc Sys"
+            "9826T0",
+            "9826T1"
         ]
     },
     "9826T7": {
@@ -3318,7 +3326,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre",
         "dependents": [
-            "Prototyping 2"
+            "9828T4"
         ]
     },
     "9828T2": {
@@ -3425,7 +3433,7 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.",
         "ap": "pre",
         "dependents": [
-            "Energy Sys 2"
+            "9828T8"
         ]
     },
     "984060": {
@@ -3448,7 +3456,7 @@
         "description": "Design and Technology is designed as a foundation high school course in technology education. Students use core technology knowledge to solve open-ended problems and create systems. Laboratory activities engage students in the design process through projects that integrate mathematics, science, and other core subjects. Working in groups, students build and control systems in the development of technology.",
         "ap": "pre",
         "dependents": [
-            "Eng Design"
+            "9828J1"
         ]
     },
     "912032": {
@@ -3471,7 +3479,7 @@
         "description": "Be introduced to a variety of exciting opportunities in using artistic processes, learn to think conceptually and realize potential as a creative and critical thinker in order to meet the challenges of 21st century living. Explore personal interests while developing skills in the areas of drawing, painting, printmaking, ceramics, sculpture, and digital media. Course content includes art production, art appreciation, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Art 2"
+            "913032"
         ]
     },
     "913032": {
@@ -3496,7 +3504,7 @@
         "description": "Cultivate previously developed artistic knowledge and skills learned in Art 1. Explore new combinations and possibilities in the use of two-dimensional and three-dimensional media including technological applications. Investigate contemporary topics as they relate to artistic expression and design. Ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history and criticism, aesthetics, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Art 3"
+            "914032"
         ]
     },
     "914032": {
@@ -3521,7 +3529,7 @@
         "description": "Expand and improve artistic understandings and skills by using creative processes. Develop an individual style and voice to communicate ideas. Articulate responses to personal and global issues through the integration of traditional and electronic media. Present artworks in diverse formats. Course content includes art production, design application, art history, criticism, aesthetics, and studies in visual culture.",
         "ap": "pre",
         "dependents": [
-            "AP Studio Art"
+            "915004"
         ]
     },
     "915004": {
@@ -3625,7 +3633,7 @@
         "description": "Think creatively and solve visual problems to create personally expressive artworks using technology. Develop expertise in the use of computers, scanners, and digital cameras for artmaking. Use Adobe Photoshop, Adobe Illustrator, Bryce 3-D, and Adobe Flash in the areas of motion graphics/animation, graphic design, and digital imaging. Learn to address ethical issues concerning computer generated imagery. No prior computer experience is required. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Computer Graph 2"
+            "918132"
         ]
     },
     "918132": {
@@ -3670,7 +3678,7 @@
         "description": "Explore and practice standard black and white photographic processes through the use of cameras, films, light effects, and application of basic darkroom techniques. Be introduced to digital photographic processes. Produce meaningful photographs that express ideas about experiences and observations of the world. Study the history of photography and the work of well known photographers to inform artmaking. Develop a beginning portfolio. This course requires a student materials fee as listed in FCPS Notice 5922.",
         "ap": "pre",
         "dependents": [
-            "Photography 2"
+            "919432"
         ]
     },
     "919432": {
@@ -3715,7 +3723,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "French 2"
+            "512000"
         ]
     },
     "512000": {
@@ -3740,7 +3748,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "French 3"
+            "513000"
         ]
     },
     "513000": {
@@ -3765,8 +3773,8 @@
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre",
         "dependents": [
-            "French 4",
-            "AP French Lang"
+            "514000",
+            "517004"
         ]
     },
     "514000": {
@@ -3791,7 +3799,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre",
         "dependents": [
-            "French 5"
+            "515000"
         ]
     },
     "515000": {
@@ -3881,7 +3889,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement French Language exam.",
         "ap": "ap",
         "dependents": [
-            "French 5"
+            "515000"
         ]
     },
     "521000": {
@@ -3904,7 +3912,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "German 2"
+            "522000"
         ]
     },
     "522000": {
@@ -3929,7 +3937,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "German 3"
+            "523000"
         ]
     },
     "523000": {
@@ -3954,7 +3962,7 @@
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre",
         "dependents": [
-            "AP German Lang"
+            "527004"
         ]
     },
     "524000": {
@@ -4061,7 +4069,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement German Language exam.",
         "ap": "ap",
         "dependents": [
-            "German 6"
+            "525000"
         ]
     },
     "531000": {
@@ -4084,7 +4092,7 @@
         "description": "Students learn basic language structures and essential elements of Latin pronunciation in order to be able to read simple passages in Latin. The relationship of English to Latin is emphasized in vocabulary building, word derivation, and meanings of prefixes and suffixes. Language structures and syntax are developed through the study of literary passages. The geography, history, government and the culture of the Roman Empire are studied. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirements of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "Latin 2"
+            "532000"
         ]
     },
     "532000": {
@@ -4109,7 +4117,7 @@
         "description": "Students learn additional vocabulary, more complex language structures and syntax in order to be able to read more challenging passages in Latin. Language structures and syntax are developed through the study of literary passages. Students continue to explore as they study Roman life and Rome's contribution to our civilization.",
         "ap": "pre",
         "dependents": [
-            "Latin 3"
+            "533000"
         ]
     },
     "533000": {
@@ -4134,7 +4142,7 @@
         "description": "Students continue to develop and refine their reading skills through the study of Latin literature. Additional vocabulary, more complex language structures and syntax are emphasized in order to be able to read the writings of prose authors. Through translation and interpretation, students gain a greater understanding of the foundation of Western government and civilization.",
         "ap": "pre",
         "dependents": [
-            "AP Latin-Vergil"
+            "537004"
         ]
     },
     "535000": {
@@ -4221,7 +4229,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement examination, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the literary techniques used by Roman authors by reading Latin poetry and prose with historical and literary sensitivity. Students are encouraged to develop linguistic skills by engaging in multiple activities, including translating poetry and prose from the required-reading list, precisely and literally; reading passages of poetry and prose with comprehension; and analyzing literary texts in clear, coherent written arguments, supported by textual examples. All students are required to take the Advanced Placement Latin exam.",
         "ap": "ap",
         "dependents": [
-            "Latin 5"
+            "535000"
         ]
     },
     "541000": {
@@ -4244,7 +4252,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "Russian 2"
+            "542000"
         ]
     },
     "542000": {
@@ -4269,7 +4277,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "Russian 3"
+            "543000"
         ]
     },
     "543000": {
@@ -4294,8 +4302,8 @@
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre",
         "dependents": [
-            "Russian 4",
-            "AP Russian Lang"
+            "544000",
+            "546004"
         ]
     },
     "544000": {
@@ -4320,7 +4328,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre",
         "dependents": [
-            "Russian 5"
+            "545000"
         ]
     },
     "545000": {
@@ -4410,7 +4418,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "ap",
         "dependents": [
-            "Russian 5"
+            "545000"
         ]
     },
     "551000": {
@@ -4433,7 +4441,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "Spanish 2"
+            "552000"
         ]
     },
     "552000": {
@@ -4458,7 +4466,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "Spanish 3"
+            "553000"
         ]
     },
     "553000": {
@@ -4481,18 +4489,14 @@
         },
         "tj_description": "Modern Language Courses at all levels follow the National Standards for Foreign Language Learning; Communication, Culture, Connections, Comparisons, and Communities. For more information, see www.actfl.org Level 3 is designed to expand students\\' oral proficiency and writing skills beyond practical, day-to-day language functions in an immersion based instruction. Students are expected to use the target language 100% of the time. The aim is to achieve a more elaborate and authentic use of the language. Through thematic units such as teen culture, future plans, social responsibility, environmental issues, students develop higher level of proficiency and mastery. Students actively participate in discussions based on readings of literature, history, culture and current events. Students use the target language in creative activities and research that stimulate critical thinking. Students will be assessed frequently to evaluate their spontaneous oral and written proficiency and cultural literacy. Since research is an integral part of the learning experience at TJHSST, students will utilize a variety of authentic materials such as Internet, films, songs and other audio/visual media to assess, evaluate or analyze cultural and global issues related to the target language countries.",
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
-        "ap": "pre",
-        "dependents": [
-            "Spanish 4",
-            "AP Spanish Lang"
-        ]
+        "ap": "pre"
     },
     "554000": {
         "full_name": "Spanish 4",
         "category": "World Languages",
         "prerequisites": [
             [
-                "553000"
+                "553099"
             ]
         ],
         "id": "554000",
@@ -4509,8 +4513,8 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre",
         "dependents": [
-            "Spanish 5",
-            "AP Spanish Lit"
+            "555000",
+            "558004"
         ]
     },
     "555000": {
@@ -4521,7 +4525,7 @@
                 "554000"
             ],
             [
-                "557004"
+                "557093"
             ]
         ],
         "id": "555000",
@@ -4583,7 +4587,7 @@
         "category": "World Languages",
         "prerequisites": [
             [
-                "553000"
+                "553099"
             ]
         ],
         "id": "557004",
@@ -4598,18 +4602,14 @@
         },
         "tj_description": "Students study the use of language for active communication, specifically: the ability to understand the spoken target language in both formal and conversational situations; the ability to express ideas accurately and resourcefully, both orally and in writing with reasonable fluency; the development of a vocabulary sufficient for reading newspaper and magazine articles, contemporary literature, and other writings; extensive training in the organization and writing of compositions; an in-depth review of grammar; and the study of chosen works by contemporary writers. Materials include recordings, films, newspapers, and magazines. Upon completion, students take the Advanced Placement examination.",
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Spanish Language exam.",
-        "ap": "ap",
-        "dependents": [
-            "Spanish 5",
-            "AP Spanish Lit"
-        ]
+        "ap": "ap"
     },
     "558004": {
         "full_name": "AP Spanish Literature",
         "category": "World Languages",
         "prerequisites": [
             [
-                "557004"
+                "557093"
             ],
             [
                 "554000"
@@ -4649,7 +4649,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "Chinese 2"
+            "582000"
         ]
     },
     "582000": {
@@ -4674,7 +4674,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "Chinese 3"
+            "583000"
         ]
     },
     "583000": {
@@ -4699,7 +4699,7 @@
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre",
         "dependents": [
-            "AP Chinese"
+            "584004"
         ]
     },
     "584004": {
@@ -4801,7 +4801,7 @@
         "description": "Students develop the ability to communicate about themselves and their immediate environment using simple sentences containing basic language structures. This communication is evidenced in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to communicate orally and in writing. Students begin to explore and study the POS themes of Personal and Family Life, School Life, Social Life, and Community Life. For middle school students, this credit becomes a part of the high school transcript, is included in the determination of the high school grade point average (GPA), and counts toward fulfilling the world languages requirement of the high school Advanced Studies diploma. It also counts toward the total number of credits required for graduation.",
         "ap": "pre",
         "dependents": [
-            "Japanese 2"
+            "592000"
         ]
     },
     "592000": {
@@ -4826,7 +4826,7 @@
         "description": "Students continue to develop proficiency in all four language skills - listening, speaking, reading, and writing - with emphasis on the ability to communicate orally and in writing. They learn to function in real-life situations using more complex sentences and language structures. They read material on familiar topics and produce short writing samples. Students continue to explore as they study the POS themes of Home Life, Student Life, Leisure Time, and Vacation and Travel.",
         "ap": "pre",
         "dependents": [
-            "Japanese 3"
+            "593000"
         ]
     },
     "593000": {
@@ -4851,8 +4851,8 @@
         "description": "Students continue to develop and refine their proficiency in all four language skills - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. They communicate using more complex language structures on a variety of topics, moving from concrete to more abstract concepts. At this level, students comprehend the main ideas of the authentic materials that they read and hear and are able to identify significant details when the topics are familiar. Students gain a deeper understanding of the world around them while studying the POS themes of Rights and Responsibilities, Future Plans and Choices, Teen Culture, Environment, and Humanities.",
         "ap": "pre",
         "dependents": [
-            "Japanese 4",
-            "AP Japanese"
+            "594000",
+            "597004"
         ]
     },
     "594000": {
@@ -4877,7 +4877,7 @@
         "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "ap": "pre",
         "dependents": [
-            "Japanese 5"
+            "595000"
         ]
     },
     "595000": {
@@ -4967,7 +4967,7 @@
         "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Japanese Language exam.",
         "ap": "ap",
         "dependents": [
-            "Japanese 5"
+            "595000"
         ]
     }
 }
