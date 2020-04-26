@@ -1,8 +1,8 @@
 import json
 
-SOURCE = "courses.json"
+SOURCE = "courses_raw.json"
 DESTINATION = "courses_cleaned.json"
-LABS_DESTINATION = "labs.json"
+LABS_DESTINATION = "labs_raw.json"
 
 
 def main():

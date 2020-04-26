@@ -126,6 +126,3 @@ dmypy.json
 
 # PyCharm files
 .idea/*
-
-# Parser output
-/course_catalog_html_cleaned.txt
