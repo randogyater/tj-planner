@@ -21,9 +21,9 @@ function validTarget(ev) {
         return true;
     }
     else if (ev.target.childElementCount == 1 && ev.target.firstElementChild.getAttribute("class").includes("course--semester")){
-        var dragged = document.getElementById(ev.dataTransfer.getData("text"));
-        if (dragged != null) {
-            return dragged.getAttribute("class").includes("course--semester");
+        var id = ev.dataTransfer.getData("text")
+        if (id != "") {
+            return $("#"+ev.dataTransfer.getData("text")).attr("class").includes("course--semester");
         }
         return true;
     }
