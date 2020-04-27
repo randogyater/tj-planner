@@ -28,79 +28,21 @@
             <th>Junior</th>
             <th>Senior</th>
         </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="course course--year" draggable="true" ondragstart="drag(event)" id="c1">
-                    Sample course 1
-                </div>
-            </td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="course course--year" draggable="true" ondragstart="drag(event)" id="c2">
-                    Sample course 2
-                </div>
-            </td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="course course--semester" draggable="true" ondragstart="drag(event)" id="c3">
-                    Sample course 3
-                </div>
-                <div class="course course--semester" draggable="true" ondragstart="drag(event)" id="c4">
-                    Sample course 4
-                </div>
-            </td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)">
-                <div class="course course--semester" draggable="true" ondragstart="drag(event)" id="c5">
-                    Sample course 5
-                </div>
-                <div class="course course--semester" draggable="true" ondragstart="drag(event)" id="c6">
-                    Sample course 6
-                </div>
-            </td>
-        </tr>
-
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
-        <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        </tr>
+        {% for row in range(7) %}
+            {% set row_num = loop.index %}
+            <tr class="grid__row">
+                {% for column in range(4) %}
+                    <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)" id="cell-{{row_num}}-{{loop.index}}"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
         <tr>
             <td>Summer:</td>
         </tr>
         <tr class="grid__row">
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-            <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+            {% for column in range(4) %}
+                    <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)" id="cell-s-{{loop.index}}"></td>
+            {% endfor %}
         </tr>
     </table>
 </div>
