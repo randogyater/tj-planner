@@ -3,6 +3,7 @@ function allowDrop(ev) {
         ev.preventDefault();
     }
 }
+
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
@@ -19,6 +20,15 @@ function drop(ev) {
         }
     }
 }
+
+function toss(ev) {
+    var id = ev.dataTransfer.getData("text");
+    if(id.startsWith("c")) {
+        ev.preventDefault();
+        $("#"+id).remove();
+    }
+}
+
 function validTarget(ev) {
     if(!ev.target.getAttribute("class").includes("grid__box")){
         return false;
