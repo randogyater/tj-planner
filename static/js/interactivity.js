@@ -6,6 +6,7 @@ function allowDrop(ev) {
 function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
 }
+
 function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -21,7 +22,7 @@ function validTarget(ev) {
         return true;
     }
     else if (ev.target.childElementCount == 1 && ev.target.firstElementChild.getAttribute("class").includes("course--semester")){
-        var id = ev.dataTransfer.getData("text")
+        var id = ev.dataTransfer.getData("text");
         if (id != "") {
             return $("#"+ev.dataTransfer.getData("text")).attr("class").includes("course--semester");
         }
