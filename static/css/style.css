@@ -1,7 +1,6 @@
-#catalog {
-    overflow: scroll;
-    float: left;
-    width: 15vw;
+.catalog__entry {
+    margin: 5px;
+    border: 1px solid black;
 }
 .course {
     width: calc(100% - 10px);
