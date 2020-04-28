@@ -42,6 +42,12 @@ function createCourseEntry(course_id) {
         "data-course-id":course_id,
     });
     $course.text(course.short_name);
+    if(course.ap === "ap") {
+        $course.addClass("course--ap");
+    }
+    if(course.ap === "post") {
+        $course.addClass("course--post-ap");
+    }
     return $course;
 }
 

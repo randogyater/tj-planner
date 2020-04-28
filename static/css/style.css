@@ -19,6 +19,12 @@
     height: -moz-calc(50% - 7.5px);
     height: -webkit-calc(50% - 7.5px);
 }
+.course--ap {
+    border: 2px solid purple;
+}
+.course--post-ap {
+    border: 2px solid green;
+}
 .grid__box {
     width: 15vw;
     height: 8vh;
