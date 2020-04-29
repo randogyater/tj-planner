@@ -38,7 +38,7 @@ function createCourseEntry(course_id) {
         "ondragstart":"drag(event)",
         "data-course-id":course_id,
     });
-    $course.text(course.full_name);
+    $course.text(course.short_name);
     if(course.ap === "ap") {
         $course.addClass("course--ap");
     }

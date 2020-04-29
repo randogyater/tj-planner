@@ -25,9 +25,11 @@
 .course--post-ap {
     border: 2px solid green;
 }
-.grid__box {
-    width: 15vw;
-    height: 8vh;
+tr.grid__row {
+    height: 12%;
+}
+td.grid__box {
+    width: 25%;
     margin: 5px;
     border: 1px solid black;
  }
