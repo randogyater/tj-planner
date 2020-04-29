@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Four Year Planner</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="/static/js/course_catalog.js"></script>
+    <script src="/static/js/interactivity.js"></script>
+</head>
+<body>
+<nav>
+    Navigation bar goes here.
+</nav>
+<header style="text-align: center;">
+    <h1>TJ Four Year Planner</h1>
+</header>
+<div style="height: 75vh">
+    <div id="catalog_sidebar" style="float: left; width: 15vw; height: 100%; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
+        <p>Courses:</p>
+        <div id="catalog" style="overflow: scroll; flex: auto;"></div>
+    </div>
+    <table id="grid" style="height:100%">
+        <tr id="grid__header">
+            <th>Freshman</th>
+            <th>Sophomore</th>
+            <th>Junior</th>
+            <th>Senior</th>
+        </tr>
+        {% for row in range(7) %}
+            {% set row_num = loop.index %}
+            <tr class="grid__row">
+                {% for column in range(4) %}
+                    <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)" id="cell-{{row_num}}-{{loop.index}}"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>Summer:</td>
+        </tr>
+        <tr class="grid__row">
+            {% for column in range(4) %}
+                    <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)" id="cell-s-{{loop.index}}"></td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+<footer></footer>
+</body>
+</html>

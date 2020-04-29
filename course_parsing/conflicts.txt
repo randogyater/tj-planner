@@ -1,0 +1,5 @@
+CONFLICT: English 11 --> ['1150T1', '1150T2']
+CONFLICT: AP English Lit/Comp --> ['119504', '119561']
+CONFLICT: AP English Lang/Comp --> ['119604', '119662']
+CONFLICT: Computational Phys --> ['4520T1', '4520T2']
+CONFLICT: AP Government --> ['244504', '244506', '244561']
