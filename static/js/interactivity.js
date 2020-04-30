@@ -49,3 +49,26 @@ function validTarget(ev) {
         }
     }
 }
+
+function checkRequirements(course_id, past, other_sem) {
+    course = courses[course_id];
+    if (!('prerequisites' in course)) {
+        // No prerequisites? Let it go.
+        return true;
+    }
+    for(var i = 0; i<course.prerequisites.length; i++) {
+        // Check every set for matching
+        match = true;
+        for(var j = 0; j<course.prerequisites[i].length; j++) {
+            if (!(past.has(course.prerequisites[i][j]) || course.prerequisites[i][j] == other_sem)) {
+                match = false;
+                break;
+            }
+        }
+        if (match) {
+            return true;
+        }
+    }
+    // If no set matched then it doesn't work
+    return false;
+}
