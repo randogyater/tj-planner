@@ -13,7 +13,7 @@ function createCourseDraggable(course_id) {
         id: "c"+counter,
         "class": "course",
         "draggable":"true",
-        "ondragstart":"drag(event)",
+        "ondragstart":"dragStart(event)",
         "data-course-id":course_id,
         "data-course-credit":course.equivalent
     });
@@ -39,7 +39,7 @@ function createCourseEntry(course_id) {
         id: "entry-"+course_id,
         "class": "catalog__entry",
         "draggable":"true",
-        "ondragstart":"drag(event)",
+        "ondragstart":"dragStart(event)",
         "data-course-id":course_id,
     });
     $course.text(course.full_name);
