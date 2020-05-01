@@ -76,6 +76,9 @@ function createCourseEntry(course_id) {
     if(course.online) {
         $properties.append(" <abbr title=\"This course can be taken online.\"><i class=\"fas fa-desktop\"></i></abbr>");
     }
+    if(course.category === "Online") {
+        $properties.append(" <abbr title=\"This is an online-only course.\"><i class=\"fas fa-wifi\"></i></abbr>");
+    }
     if(course.semester) {
         $properties.append(" <span title=\"This is a semester course and will last half a year.\">½</abbr>");
     }

@@ -1753,12 +1753,12 @@
         "skippable": false
     },
     "923315": {
-        "full_name": "Symphonic Band (Intermediate Level)",
+        "full_name": "Band",
         "category": "Performing Arts",
         "id": "923315",
         "semester": false,
         "weight": 0.0,
-        "short_name": "Symphonic Band",
+        "short_name": "Band",
         "availability": {
             "9": true,
             "10": true,
@@ -1770,27 +1770,8 @@
         "equivalent": "923315",
         "unique": false,
         "ap": "pre",
-        "skippable": false
-    },
-    "923415": {
-        "full_name": "Symphonic Wind Ensemble Band (Advanced/Artist Level)",
-        "category": "Performing Arts",
-        "id": "923415",
-        "semester": false,
-        "weight": 0.0,
-        "short_name": "Advanced Band",
-        "availability": {
-            "9": true,
-            "10": true,
-            "11": true,
-            "12": true
-        },
-        "description": "Students in this course form the representative performing band for the school. Emphasis is placed on the sequential development of advanced technical skills and on the study of related literature. Based on successful completion of sequential concepts for each level, students will continue as specified in course level. Marching band techniques, rehearsals, and performances are included in this course. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Symphonic Wind Ensemble (SWE) is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on wind band repertoire and stylistic demands associated with the performance of the repertoire. Class content will include study of appropriate-level repertoire (Grade V-VI-VI+), appropriate rehearsal and practice techniques, and concepts appropriate to the advanced- and artist-level objectives of the FCPS Program of Studies for Concert Band. Rehearsals and Performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
-        "online": false,
-        "equivalent": "923415",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
+        "skippable": false,
+        "note": "You will be placed in Symphonic Band or SWE (925415)"
     },
     "923915": {
         "full_name": "Advanced Orchestra (Concert)",
