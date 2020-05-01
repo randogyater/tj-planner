@@ -42,22 +42,30 @@ function createCourseEntry(course_id) {
         "ondragstart":"dragStart(event)",
         "data-course-id":course_id,
     });
-    $course.text(course.full_name);
     if(course.ap === "ap") {
         $course.addClass("course--ap");
     }
     if(course.ap === "post") {
         $course.addClass("course--post-ap");
     }
+    $properties = $("<span class=\"course__properties\"></span>")
     if(course.category === "Summer School") {
-        $course.append(" <abbr title=\"This is a summer course replacing " + getCourseNameString(course.equivalent) + "\"><i class=\"fas fa-sun\"></i></abbr>");
+        $properties.append(" <abbr title=\"This is a summer course replacing " + getCourseNameString(course.equivalent) + "\"><i class=\"fas fa-sun\"></i></abbr>");
     }
-    if(course.semester) {
-        $course.append(" <abbr title=\"This is a semester course and will last half a year.\"><i class=\"fas fa-hourglass-start\"></i></abbr>");
+    if(course.skippable) {
+        $properties.append(" <abbr title=\"You can take a test to skip this course!\"><i class=\"fas fa-running\"></i></abbr>");
+    }
+    if(course.unique) {
+        $properties.append(" <abbr title=\"This course is unique to TJ and not offered elsewhere in FCPS.\"><i class=\"fas fa-asterisk\"></i></abbr>");
     }
     if(course.online) {
-        $course.append(" <abbr title=\"This course can be taken online.\"><i class=\"fas fa-desktop\"></i></abbr>");
+        $properties.append(" <abbr title=\"This course can be taken online.\"><i class=\"fas fa-desktop\"></i></abbr>");
     }
+    if(course.semester) {
+        $properties.append(" <span title=\"This is a semester course and will last half a year.\">½</abbr>");
+    }
+    $course.append($properties);
+    $course.append(course.full_name);
     return $course;
 }
 
