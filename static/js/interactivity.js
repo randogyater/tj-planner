@@ -54,21 +54,32 @@ function checkRequirements(course_id, past, other_sem) {
     course = courses[course_id];
     if (!('prerequisites' in course)) {
         // No prerequisites? Let it go.
-        return true;
+        return {state: true};
     }
+
+    let result = {state: false, skippable: false, unmet: []};
     for(var i = 0; i<course.prerequisites.length; i++) {
         // Check every set for matching
-        match = true;
+        let unmet = [];
+        let match = true;
+        let skip_match = true;
         for(var j = 0; j<course.prerequisites[i].length; j++) {
             if (!(past.has(course.prerequisites[i][j]) || course.prerequisites[i][j] == other_sem)) {
                 match = false;
-                break;
+                unmet.push(course.prerequisites[i][j]);
+                if(!courses[course.prerequisites[i][j]].skippable) {
+                    skip_match = false;
+                }
             }
         }
+        result.unmet.push(unmet);
         if (match) {
-            return true;
+            result.state = true;
+        }
+        if (skip_match) {
+            result.skippable = true;
         }
     }
-    // If no set matched then it doesn't work
-    return false;
+
+    return result;
 }
