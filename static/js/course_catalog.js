@@ -50,13 +50,13 @@ function createCourseEntry(course_id) {
         $course.addClass("course--post-ap");
     }
     if(course.category === "Summer School") {
-        $course.append(" <i class=\"fas fa-sun\" title=\"This is a summer course replacing " + getCourseNameString(course.equivalent) + "\"></i>");
+        $course.append(" <abbr title=\"This is a summer course replacing " + getCourseNameString(course.equivalent) + "\"><i class=\"fas fa-sun\"></i></abbr>");
     }
     if(course.semester) {
-        $course.append(" <i class=\"fas fa-hourglass-start\" title=\"This is a semester course and will last half a year.\"></i>");
+        $course.append(" <abbr title=\"This is a semester course and will last half a year.\"><i class=\"fas fa-hourglass-start\"></i></abbr>");
     }
     if(course.online) {
-        $course.append(" <i class=\"fas fa-desktop\" title=\"This course can be taken online.\"></i>");
+        $course.append(" <abbr title=\"This course can be taken online.\"><i class=\"fas fa-desktop\"></i></abbr>");
     }
     return $course;
 }
