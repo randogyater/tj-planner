@@ -1,45 +1,54 @@
 [
     {
+        "option": false,
         "course": "1130T1",
         "row": 1,
         "col": 1
     },
     {
+        "option": false,
         "course": "4310T1",
         "row": 2,
         "col": 1
     },
     {
+        "option": false,
         "course": "984060",
         "row": 3,
         "col": 1
     },
     {
+        "option": false,
         "course": "1140T1",
         "row": 1,
         "col": 2
     },
     {
+        "option": false,
         "course": "2221T1",
         "row": 2,
         "col": 2
     },
     {
+        "option": false,
         "course": "4410T1",
         "row": 3,
         "col": 2
     },
     {
+        "option": false,
         "course": "1150T1",
         "row": 1,
         "col": 3
     },
     {
+        "option": false,
         "course": "244504",
         "row": 2,
         "col": 4
     },
     {
+        "option": false,
         "course": "4220T1",
         "row": 3,
         "col": 4
