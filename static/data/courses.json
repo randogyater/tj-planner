@@ -304,26 +304,6 @@
         ],
         "skippable": false
     },
-    "114000": {
-        "full_name": "English 10 (CHUM)",
-        "category": "English",
-        "id": "114000",
-        "semester": false,
-        "weight": 0.5,
-        "short_name": "English 10 (CHUM)",
-        "availability": {
-            "9": false,
-            "10": true,
-            "11": false,
-            "12": false
-        },
-        "description": "None",
-        "online": false,
-        "equivalent": "114000",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
     "1140T1": {
         "full_name": "English 10",
         "category": "English",
@@ -353,7 +333,8 @@
         "dependents": [
             "1150T1"
         ],
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed with CHUM (114000)"
     },
     "1150T1": {
         "full_name": "English 11 (teamed with AP US History)",
@@ -383,27 +364,7 @@
             "119504",
             "119604"
         ],
-        "skippable": false
-    },
-    "1150T2": {
-        "full_name": "English 11 (teamed with Honors US/VA History)",
-        "category": "English",
-        "id": "1150T2",
-        "semester": false,
-        "weight": 0.5,
-        "short_name": "English 11",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": true,
-            "12": false
-        },
-        "description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research.",
-        "online": false,
-        "equivalent": "1150T1",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
+        "note": "May be teamed with APUSH or Honors History (1150T2)"
     },
     "1160T1": {
         "full_name": "English 12",
@@ -2159,26 +2120,6 @@
         ],
         "skippable": false
     },
-    "441000": {
-        "full_name": "Chemistry 1 (CHUM)",
-        "category": "Science",
-        "id": "441000",
-        "semester": false,
-        "weight": 0.5,
-        "short_name": "Chemistry (CHUM)",
-        "availability": {
-            "9": false,
-            "10": true,
-            "11": false,
-            "12": false
-        },
-        "description": "None",
-        "online": false,
-        "equivalent": "441000",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
     "4410T1": {
         "full_name": "Chemistry 1",
         "category": "Science",
@@ -2210,7 +2151,8 @@
             "447004",
             "4610T6"
         ],
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed with CHUM (441000)"
     },
     "4420T4": {
         "full_name": "Introductory Organic Chemistry with Instrumental Analysis",
@@ -2457,26 +2399,6 @@
         "ap": "pre",
         "skippable": false
     },
-    "222100": {
-        "full_name": "World History & Geography 2 (CHUM)",
-        "category": "Social Studies",
-        "id": "222100",
-        "semester": false,
-        "weight": 0.5,
-        "short_name": "World Hist 2 (CHUM)",
-        "availability": {
-            "9": false,
-            "10": true,
-            "11": false,
-            "12": false
-        },
-        "description": "None",
-        "online": false,
-        "equivalent": "222100",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
     "2221T1": {
         "full_name": "World History and Geography 2 Honors",
         "category": "Social Studies",
@@ -2499,7 +2421,8 @@
             "231905",
             "2360T1"
         ],
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed with CHUM (222100)"
     },
     "231905": {
         "full_name": "AP US History",

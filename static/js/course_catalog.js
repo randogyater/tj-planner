@@ -1,5 +1,16 @@
-$.getJSON("static/data/courses.json", function(data) {courses=data; showEntries()});
+$.getJSON("static/data/courses.json", function(data) {
+    courses=data;
+    showEntries(id => true);
+    $.getJSON("static/data/default_schedule.json", function(defaults) {
+        for (let i = 0; i<defaults.length; i++) {
+            let item = defaults[i];
+            $("#cell-"+item.row+"-"+item.col).append(createCourseDraggable(item.course));
+        }
+    });
+});
 $.getJSON("static/data/labs.json", function(data) {labs=data});
+
+
 counter = 0;
 
 function getCourseNameString(id) {
@@ -69,9 +80,11 @@ function createCourseEntry(course_id) {
     return $course;
 }
 
-function showEntries() {
+function showEntries(condition) {
     var catalog = $("#catalog");
     for (course in courses) {
-        catalog.append(createCourseEntry(course));
+        if(condition(course.id)){
+            catalog.append(createCourseEntry(course));
+        }
     }
 };
