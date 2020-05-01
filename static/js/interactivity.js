@@ -50,6 +50,21 @@ function validTarget(event) {
     }
 }
 
+function validateSchedule() {
+    previous = new Set();
+    for(var c = 1; c<=4; c++) {
+        // TODO write code to check summer course prereqs
+        $("#cell-s-"+c).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
+        console.log(previous);
+        for(var r = 1; r<=7; r++){
+            // TODO write code to check each course
+        }
+        for(var r = 1; r<=7; r++){
+            $("#cell-"+r+"-"+c).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
+        }
+    }
+}
+
 function checkRequirements(course_id, past, other_sem) {
     course = courses[course_id];
     if (!('prerequisites' in course)) {
