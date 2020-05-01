@@ -4,19 +4,22 @@ $.getJSON("static/data/courses.json", function(data) {
     $.getJSON("static/data/default_schedule.json", function(defaults) {
         for (let i = 0; i<defaults.length; i++) {
             let item = defaults[i];
-            $("#cell-"+item.row+"-"+item.col).append(createCourseDraggable(item.course));
+            $("#"+getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
         }
+        validateSchedule()
     });
 });
 $.getJSON("static/data/labs.json", function(data) {labs=data});
-
-
-counter = 0;
 
 function getCourseNameString(id) {
     return "("+id+") "+courses[id].full_name;
 }
 
+function getBoxId(r, c) {
+    return "cell-"+r+"-"+c;
+}
+
+counter = 0;
 function createCourseDraggable(course_id) {
     course = courses[course_id];
     counter++;
@@ -28,7 +31,8 @@ function createCourseDraggable(course_id) {
         "data-course-id":course_id,
         "data-course-credit":course.equivalent
     });
-    $course.text(course.short_name);
+    $course.append("<span class=\"course__status\"><abbr title=\"Loading prerequisites\"><i class=\"fas fa-spinner\"></i></abbr></span>");
+    $course.append(course.short_name);
     if(course.semester) {
         $course.addClass("course--semester");
     }

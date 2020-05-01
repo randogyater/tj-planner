@@ -414,27 +414,8 @@
         "equivalent": "119504",
         "unique": false,
         "ap": "ap",
-        "skippable": false
-    },
-    "119561": {
-        "full_name": "AP English Literature / Senior Seminar",
-        "category": "English",
-        "id": "119561",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "AP English Lit/Comp",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "Students study composition and literary analysis at a level equivalent to that of a full-year introductory college course.  Through in-depth studies of literary works, students sharpen their awareness of language and their understanding of the writer's craft.  They establish critical standards for appreciating and evaluating literature.  Students who complete this course are prepared to take the Advanced Placement examination in English Literature and Composition, and may earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.\nTJ: This course examines the connection between literature and politics through the examination of ways writers and politicians use language to tell a story, create an effect, evoke an emotional response, or persuade a nation. The purpose of the course is to promote students' independent ability to read, write, and analyze both literary and nonfiction works and to develop an understanding of themselves as members of a civil society. The study of topics such as the role of the individual in a political system, elections and campaigns, and the proper role of government combine with an analysis of novels such as 1984, One Flew over the Cuckoo's Nest, and All the King's Men as well as essays, poetry, and Shakespeare (Hamlet or Othello) to deepen students understanding of the interplay between language and power. Students write frequently for a variety of audiences and purposes to learn, to explore an idea, to analyze and interpret, and to express themselves imaginatively. Students also engage in individual and group activities including Model Congress, writing and reading groups, and Socratic seminars. Upon completion, students take the Advanced Placement examinations for Literature and Composition and for US Government and Politics.",
-        "online": false,
-        "equivalent": "119504",
-        "unique": false,
-        "ap": "ap",
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed in Senior Seminar (119561)"
     },
     "119604": {
         "full_name": "AP English 12 Language and Composition",
@@ -459,27 +440,8 @@
         "equivalent": "119604",
         "unique": false,
         "ap": "ap",
-        "skippable": false
-    },
-    "119662": {
-        "full_name": "AP English Language / Global Studies",
-        "category": "English",
-        "id": "119662",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "AP English Lang/Comp",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "Students study advanced composition and analysis of language at a level equivalent to that of a full-year introductory college course.  In refining their awareness of language and the writer's craft, students write works of publishable quality.  Students who complete this course are prepared to take the Advanced Placement examination in English Language and Composition, and many earn college credit if a qualifying score is achieved.  Completion of this course fulfills the English 12 course requirement.\nTJ: The world community as we know it is shrinking. Technology and communication are accelerating at an unprecedented rate, integrating the economies and cultures of the world faster than ever before. This course focuses on authentic world problems of interest and significance that derive from and affect the evolving phenomenon of globalization, often using the resources of the Washington, D.C. area. The study of global issues involves problem solving scenarios, presentations of findings, and simulations. Readings include current periodicals, literature with an emphasis on international connections, and texts by noted experts in globalization. Students research and write about these issues in forms such as editorials, columns, position papers, feature stories, and creative writing. In English, students study journalistic models as well as classical rhetorical types of writing and the type of personal writing used in the college application process. In government class, students study AP U.S. Government topics, emphasizing the making of foreign policy and international economic relations. The course is taught both separately as Eng. and Govt. classes and together for quarter projects and special events such as video conferences and field trips. Upon completion, students take the Advanced Placement examination in AP Language and Composition.",
-        "online": false,
-        "equivalent": "119604",
-        "unique": false,
-        "ap": "ap",
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed in Global Studies (119662)"
     },
     "120000": {
         "full_name": "Journalism 1",
@@ -837,6 +799,11 @@
     "313753": {
         "full_name": "TJHSST Math 3",
         "category": "Math",
+        "prerequisites": [
+            [
+                "314352"
+            ]
+        ],
         "id": "313753",
         "semester": true,
         "weight": 0.5,
@@ -860,6 +827,11 @@
     "313754": {
         "full_name": "TJHSST Math 4",
         "category": "Math",
+        "prerequisites": [
+            [
+                "313753"
+            ]
+        ],
         "id": "313754",
         "semester": true,
         "weight": 0.5,
@@ -900,6 +872,11 @@
     "314352": {
         "full_name": "TJHSST Math 2",
         "category": "Math",
+        "prerequisites": [
+            [
+                "314351"
+            ]
+        ],
         "id": "314352",
         "semester": true,
         "weight": 0.5,
@@ -923,6 +900,11 @@
     "316055": {
         "full_name": "TJHSST Math 5",
         "category": "Math",
+        "prerequisites": [
+            [
+                "313754"
+            ]
+        ],
         "id": "316055",
         "semester": true,
         "weight": 0.5,
@@ -2606,47 +2588,8 @@
         "equivalent": "244504",
         "unique": false,
         "ap": "ap",
-        "skippable": false
-    },
-    "244506": {
-        "full_name": "AP US Government / Senior Seminar",
-        "category": "Social Studies",
-        "id": "244506",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "AP Government",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.\nTJ: This course examines the connection between literature and politics through the examination of ways writers and politicians use language to tell a story, create an effect, evoke an emotional response, or persuade a nation. The purpose of the course is to promote students' independent ability to read, write, and analyze both literary and nonfiction works and to develop an understanding of themselves as members of a civil society. The study of topics such as the role of the individual in a political system, elections and campaigns, and the proper role of government combine with an analysis of novels such as 1984, One Flew over the Cuckoo's Nest, and All the King's Men as well as essays, poetry, and Shakespeare (Hamlet or Othello) to deepen students understanding of the interplay between language and power. Students write frequently for a variety of audiences and purposes: to learn, to explore an idea, to analyze and interpret, and to express themselves imaginatively. Students also engage in individual and group activities including Model Congress, writing and reading groups, and Socratic seminars. Upon completion, students take the Advanced Placement examinations for Literature and Composition and for US Government and Politics. Separate grades are awarded for each course.",
-        "online": false,
-        "equivalent": "244504",
-        "unique": false,
-        "ap": "ap",
-        "skippable": false
-    },
-    "244561": {
-        "full_name": "AP US Government / Global Studies",
-        "category": "Social Studies",
-        "id": "244561",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "AP Government",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.\nTJ: The world community as we know it is shrinking. Technology and communication are accelerating at an unprecedented rate, integrating the economies and cultures of the world faster than ever before. This course focuses on authentic world problems of interest and significance that derive from and affect the evolving phenomenon of globalization, often using the resources of the Washington, D.C. area. The study of global issues involves problem solving scenarios, presentations of findings, and simulations. Readings include current periodicals, literature with an emphasis on international connections, and texts by noted experts in globalization. Students research and write about these issues in forms such as editorials, columns, position papers, feature stories, and creative writing. In English, students study journalistic models as well as classical rhetorical types of writing and the type of personal writing used in the college application process. In government class, students study AP U.S. Government topics, emphasizing the making of foreign policy and international economic relations. The course is taught both separately as Eng. and Govt. classes and together for quarter projects and special events such as video conferences and field trips. Upon completion, students take the Advanced Placement examinations in AP Government and AP Language and Composition.",
-        "online": true,
-        "equivalent": "244504",
-        "unique": false,
-        "ap": "ap",
-        "skippable": false
+        "skippable": false,
+        "note": "May be teamed in Senior Seminar (244506) or Global Studies (244561)"
     },
     "280404": {
         "full_name": "AP Macro/Micro Economics",
@@ -2808,46 +2751,6 @@
         "ap": "pre",
         "skippable": false
     },
-    "FCPSSumSch": {
-        "full_name": "FCPS Summer School Course",
-        "category": "Summer School",
-        "id": "FCPSSumSch",
-        "semester": false,
-        "weight": 0.0,
-        "short_name": "FCPS Summer School",
-        "availability": {
-            "9": true,
-            "10": true,
-            "11": true,
-            "12": true
-        },
-        "description": "If you intend on taking a course via FCPS (online campus or alternative site) please indicate so by selecting this course. Please note that this does NOT guarantee approval or registration. Registration for FCPS Summer Programs will begin May 5, 2014.",
-        "online": false,
-        "equivalent": "FCPSSumSch",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
-    "NonFCPSSum": {
-        "full_name": "NonFCPS Summer School",
-        "category": "Summer School",
-        "id": "NonFCPSSum",
-        "semester": false,
-        "weight": 0.0,
-        "short_name": "NonFCPSSum",
-        "availability": {
-            "9": true,
-            "10": true,
-            "11": true,
-            "12": true
-        },
-        "description": "If you intend on taking a course outside FCPS (Loudoun, private, etc.) please indicate so by selecting this course. Please note that this does NOT guarantee approval or registration.\nTJ: Please note that families must submit an FCPS IS-158 (http://www.fcps.edu/it/forms/is158.pdf) to the attention of the Director of Student Services for review.",
-        "online": false,
-        "equivalent": "NonFCPSSum",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
     "TJA2219": {
         "full_name": "Ancient & Classical Civilizations",
         "category": "Summer School",
@@ -2911,6 +2814,11 @@
     "TJA3160": {
         "full_name": "TJHSST Math 5",
         "category": "Summer School",
+        "prerequisites": [
+            [
+                "313754"
+            ]
+        ],
         "id": "TJA3160",
         "semester": true,
         "weight": 0.5,
@@ -2931,6 +2839,11 @@
     "TJA3161": {
         "full_name": "TJHSST Math 6",
         "category": "Summer School",
+        "prerequisites": [
+            [
+                ""
+            ]
+        ],
         "id": "TJA3161",
         "semester": true,
         "weight": 0.5,
@@ -3013,49 +2926,9 @@
         },
         "description": "Chemistry 1 Honors provides students the opportunity to utilize their strong critical thinking skills and apply their mathematical knowledge as they investigate in depth the composition, properties, and reactions of matter.  Laboratory experiments and subsequent classroom analysis are integral components of the course.  Students will participate in an externally-moderated experimental/research project, either independently or in teams.\nTJ: Chemistry 1 focuses on investigating the world of matter and energy through critical inquiry, problem solving, and research. Due to its enabling roles in fields from the life sciences and agriculture to engineering, materials science, and nanotechnology, chemistry is often regarded as the central science. This unique centrality is emphasized through class dialogue, activities, and laboratory experiments in which students observe and analyze chemical systems in order to bolster conceptual understanding. As fundamentals are developed, students continue to deepen their grasp of the molecular basis of macroscopic properties and phenomena and examine principles and questions of increasing complexity. Upon completion of Chemistry 1, students will take the Virginia Chemistry standards of learning end-of-course test.",
         "online": false,
-        "equivalent": "TJA4410",
+        "equivalent": "4410T1",
         "unique": false,
         "ap": "pre",
-        "skippable": false
-    },
-    "GLOBAL": {
-        "full_name": "Global Studies",
-        "category": "Teamed Courses",
-        "id": "GLOBAL",
-        "semester": false,
-        "weight": 0.0,
-        "short_name": "Global Studies",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "The world community as we know it is shrinking. Technology and communication are accelerating at an unprecedented rate, integrating the economies and cultures of the world faster than ever before. This course focuses on authentic world problems of interest and significance that derive from and affect the evolving phenomenon of globalization, often using the resources of the Washington, D.C. area. The study of global issues involves problem solving scenarios, presentations of findings, and simulations. Readings include current periodicals, literature with an emphasis on international connections, and texts by noted experts in globalization. Students research and write about these issues in forms such as editorials, columns, position papers, feature stories, and creative writing. In English, students study journalistic models as well as classical rhetorical types of writing and the type of personal writing used in the college application process. In government class, students study AP U.S. Government topics, emphasizing the making of foreign policy and international economic relations. The course is taught both separately as Eng. and Govt. classes and together for quarter projects and special events such as video conferences and field trips. Upon completion, students take the Advanced Placement examinations in AP Government and AP Language and Composition.",
-        "online": false,
-        "equivalent": "GLOBAL",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
-    "SENIORSEM": {
-        "full_name": "Language, Power, and Politics",
-        "category": "Teamed Courses",
-        "id": "SENIORSEM",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "Senior Seminar",
-        "availability": {
-            "9": false,
-            "10": false,
-            "11": false,
-            "12": true
-        },
-        "description": "This course examines the connection between literature and politics through the examination of ways writers and politicians use language to tell a story, create an effect, evoke an emotional response, or persuade a nation. The purpose of the course is to promote students' independent ability to read, write, and analyze both literary and nonfiction works and to develop an understanding of themselves as members of a civil society. The study of topics such as the role of the individual in a political system, elections and campaigns, and the proper role of government combine with an analysis of novels such as 1984, One Flew over the Cuckoo's Nest, and All the King's Men as well as essays, poetry, and Shakespeare (Hamlet or Othello) to deepen students understanding of the interplay between language and power. Students write frequently for a variety of audiences and purposes: to learn, to explore an idea, to analyze and interpret, and to express themselves imaginatively. Students also engage in individual and group activities including Model Congress, writing and reading groups, and Socratic seminars. Upon completion, students take the Advanced Placement examinations for Literature and Composition and for US Government and Politics. Separate grades are awarded for each course.",
-        "online": false,
-        "equivalent": "SENIORSEM",
-        "unique": false,
-        "ap": "post",
         "skippable": false
     },
     "9826J0": {

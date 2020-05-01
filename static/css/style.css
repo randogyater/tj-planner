@@ -30,6 +30,10 @@
 span.course__properties {
     float: right;
 }
+.course__status {
+    float: left;
+    margin: 5px;
+}
 .grid__box {
     width: 15vw;
     height: 8vh;
