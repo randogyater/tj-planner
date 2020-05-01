@@ -16,7 +16,7 @@ function drop(ev) {
             ev.target.appendChild(document.getElementById(id));
         }
         else {
-            $(ev.target).append(createCourseDraggable($("#"+id).attr("data-course-id")))
+            $(ev.target).append(createCourseDraggable($("#"+id).attr("data-course-id")));
         }
     }
 }
