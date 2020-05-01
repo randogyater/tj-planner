@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/26b88357dc.js" crossorigin="anonymous"></script>
     <script src="/static/js/course_catalog.js"></script>
     <script src="/static/js/interactivity.js"></script>
 </head>
@@ -16,13 +17,13 @@
 <header style="text-align: center;">
     <h1>TJ Four Year Planner</h1>
 </header>
-<div style="height: 75vh">
-    <div id="catalog_sidebar" style="float: left; width: 15vw; height: 100%; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
+<div style="display: flex; flex-direction: row; height: 75vh;">
+    <div id="catalog_sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
         <p>Courses:</p>
         <div id="catalog" style="overflow: scroll; flex: auto;"></div>
     </div>
-    <table id="grid" style="height:100%">
-        <tr id="grid__header">
+    <table id="grid" style="height:100%; flex: 1 0 auto; table-layout:fixed;">
+        <tr id="grid__header" style="height: fit-content">
             <th>Freshman</th>
             <th>Sophomore</th>
             <th>Junior</th>
@@ -36,7 +37,7 @@
                 {% endfor %}
             </tr>
         {% endfor %}
-        <tr>
+        <tr style="height:fit-content">
             <td>Summer:</td>
         </tr>
         <tr class="grid__row">

@@ -1,33 +1,47 @@
 .catalog__entry {
     margin: 5px;
+    padding: 5px;
     border: 1px solid black;
 }
+
 .course {
-    width: calc(100% - 10px);
-    width: -moz-calc(100% - 10px);
-    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 25px);
+    width: -moz-calc(100% - 25px);
+    width: -webkit-calc(100% - 25px);
     margin: 5px;
+    padding: 5px;
     border: 1px solid black;
 }
+
 .course--year {
     height: calc(100% - 10px);
     height: -moz-calc(100% - 10px);
     height: -webkit-calc(100% - 10px);
 }
+
 .course--semester {
     height: calc(50% - 7.5px);
     height: -moz-calc(50% - 7.5px);
     height: -webkit-calc(50% - 7.5px);
 }
+
 .course--ap {
     border: 2px solid purple;
 }
+
 .course--post-ap {
     border: 2px solid green;
 }
-.grid__box {
-    width: 15vw;
-    height: 8vh;
+span.course__properties {
+    float: right;
+}
+.course__status {
+    float: left;
+    margin: 5px;
+}
+td.grid__box {
+    width: 25%;
+    height: 11%;
     margin: 5px;
     border: 1px solid black;
  }
