@@ -37,7 +37,7 @@ span.course__properties {
 }
 .course__status {
     float: left;
-    margin: 5px;
+    margin-right: 5px;
 }
 td.grid__box {
     width: 25%;
