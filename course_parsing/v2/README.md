@@ -1,0 +1,1 @@
+I haven't been able to figure out how to parse the new website yet, so I just copy-and-pasted the course list as `catalog.txt`.
