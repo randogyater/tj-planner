@@ -1,3 +1,5 @@
+# Course Parsing version 1
+
 I've archived the scripts used to get the course data ([courses.json](../static/data/courses.json) and [labs.json](../static/data/labs.json))
 
 The process went something like:

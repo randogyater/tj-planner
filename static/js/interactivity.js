@@ -63,10 +63,10 @@ function validTarget(event) {
 function validateSchedule() {
     previous = new Set();
     for(var c = 1; c<=4; c++) {
-        updateBox($("#"+getBoxId("s", c)), previous, c+8);
+        updateBox($("#"+getBoxId("s", c)), previous, c-1);
         $("#"+getBoxId("s", c)).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
         for(var r = 1; r<=7; r++){
-            updateBox($("#"+getBoxId(r, c)), previous, c+8);
+            updateBox($("#"+getBoxId(r, c)), previous, c-1);
         }
         for(var r = 1; r<=7; r++){
             $("#"+getBoxId(r, c)).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
