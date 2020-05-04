@@ -2,6 +2,14 @@ import json
 
 COURSE_FILE = "static/data/courses.json"
 
+def read():
+    with open(COURSE_FILE, 'r') as file:
+        return(json.load(file))
+
+def write(data):
+    with open(COURSE_FILE, 'w') as file:
+        file.write(json.dumps(data, indent=4))
+
 def back_map():
     """Gets a mapping of names (full and short) to ID
 
