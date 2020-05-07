@@ -1,3 +1,9 @@
+.catalog__category__content {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
 #catalog__controls {
     margin: 5px;
     padding: 5px;
