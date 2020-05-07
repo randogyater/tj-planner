@@ -32,13 +32,16 @@
 .course--post-ap {
     border: 2px solid green;
 }
+
 span.course__properties {
     float: right;
 }
+
 .course__status {
     float: left;
     margin-right: 5px;
 }
+
 td.grid__box {
     width: 25%;
     height: 11%;

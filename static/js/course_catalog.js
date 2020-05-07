@@ -3,7 +3,6 @@ $.getJSON("static/data/courses.json", function(data) {
 
     for (course in courses) {
         cat_id = toID(courses[course]["category"]);
-        console.log(cat_id);
         $("#catalog_"+cat_id).append(createCourseEntry(course));
     }
 

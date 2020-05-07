@@ -178,3 +178,16 @@ function stringRequirements(x) {
 
     return result.join("\n");
 }
+
+function filter(condition) {
+    $(".catalog__entry").each(function(i) {
+        $this = $(this); // Sometimes it just looks surreal
+        let course = courses[$this.attr("data-course-id")]
+        if(condition(course) && $this.is(":hidden")) {
+            $this.show("fast");
+        }
+        if(!condition(course) && !$this.is(":hidden")) {
+            $this.hide("fast");
+        }
+    });
+}

@@ -26,7 +26,7 @@
         <div id="catalog" style="overflow: scroll; flex: auto;">
             {% for category in categories %}
                 {% set cat_id = category.lower().replace(" ", "_") %}
-                <div id="catalog_{{cat_id}}">
+                <div id="catalog_{{cat_id}}" class="catalog__category">
                     <h3>{{category}}</h3>
                 </div>
             {% endfor %}
