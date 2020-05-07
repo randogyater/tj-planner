@@ -18,7 +18,9 @@ function dragStart(event) {
 
 function drop(event) {
     event.preventDefault();
+
     var id = event.dataTransfer.getData("text");
+
     if(validTarget(event)){
         if(id.startsWith("c")){
             event.target.appendChild(document.getElementById(id));
@@ -26,6 +28,7 @@ function drop(event) {
         else {
             $(event.target).append(createCourseDraggable($("#"+id).attr("data-course-id")))
         }
+
         validateSchedule();
     }
 }
@@ -34,7 +37,9 @@ function toss(event) {
     var id = event.dataTransfer.getData("text");
     if(id.startsWith("c")) {
         event.preventDefault();
+
         $("#"+id).remove();
+        
         validateSchedule();
     }
 }
@@ -64,10 +69,13 @@ function validateSchedule() {
     previous = new Set();
     for(var c = 1; c<=4; c++) {
         updateBox($("#"+getBoxId("s", c)), previous, c-1);
+
         $("#"+getBoxId("s", c)).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
+
         for(var r = 1; r<=7; r++){
             updateBox($("#"+getBoxId(r, c)), previous, c-1);
         }
+
         for(var r = 1; r<=7; r++){
             $("#"+getBoxId(r, c)).children().each(function(i){previous.add($(this).attr("data-course-credit"));});
         }
@@ -76,6 +84,7 @@ function validateSchedule() {
 
 function updateBox($box, past, year) {
     $children = $box.children(".course");
+
     if($children.length == 1){
         updateElement($children[0].id, past, null, year);
     }
@@ -88,6 +97,7 @@ function updateBox($box, past, year) {
 function updateElement(id, past, other_sem, year) {
     $course = $("#"+id);
     course = courses[id];
+
     result = checkRequirements($course.attr("data-course-id"), past, other_sem);
     if(result.state) {
         if(!course.availability[year]) {
@@ -118,6 +128,7 @@ function checkRequirements(course_id, past, other_sem) {
         let unmet = [];
         let match = true;
         let skip_match = true;
+
         for(var j = 0; j<course.prerequisites[i].length; j++) {
             let prereq = course.prerequisites[i][j];
             if (!(past.has(prereq) || prereq == other_sem)) {
@@ -131,10 +142,13 @@ function checkRequirements(course_id, past, other_sem) {
                 }
             }
         }
+
         result.unmet.push(unmet);
+
         if (match) {
             result.state = true;
         }
+
         if (skip_match) {
             result.skippable = true;
         }
@@ -151,6 +165,7 @@ function stringRequirements(x) {
     if(x.length==0){
         return " None";
     }
+    
     result = [];
     for(i in x) {
         for(j in x[i]) {
@@ -160,5 +175,6 @@ function stringRequirements(x) {
             result.push("or");
         }
     }
+
     return result.join("\n");
 }

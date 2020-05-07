@@ -22,8 +22,15 @@
 </header>
 <div style="display: flex; flex-direction: row; height: 75vh;">
     <div id="catalog_sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
-        <p>Courses:</p>
-        <div id="catalog" style="overflow: scroll; flex: auto;"></div>
+        <h2>Courses:</h2>
+        <div id="catalog" style="overflow: scroll; flex: auto;">
+            {% for category in categories %}
+                {% set cat_id = category.lower().replace(" ", "_") %}
+                <div id="catalog_{{cat_id}}">
+                    <h3>{{category}}</h3>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <table id="grid" style="height:100%; flex: 1 0 auto; table-layout:fixed;">
         <tr id="grid__header" style="height: fit-content">
