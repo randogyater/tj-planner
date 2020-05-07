@@ -23,11 +23,12 @@
 <div style="display: flex; flex-direction: row; height: 75vh;">
     <div id="catalog_sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
         <h2>Courses:</h2>
-        <div id="catalog" style="overflow: scroll; flex: auto;">
+        <div id="catalog" style="overflow: scroll; flex: auto; padding: 5px;">
             {% for category in categories %}
                 {% set cat_id = category.lower().replace(" ", "_") %}
                 <div id="catalog_{{cat_id}}" class="catalog__category">
                     <h3>{{category}}</h3>
+                    <div class="catalog__category__content"></div>
                 </div>
             {% endfor %}
         </div>

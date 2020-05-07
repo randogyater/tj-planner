@@ -3,7 +3,7 @@ $.getJSON("static/data/courses.json", function(data) {
 
     for (course in courses) {
         cat_id = toID(courses[course]["category"]);
-        $("#catalog_"+cat_id).append(createCourseEntry(course));
+        $("#catalog_"+cat_id+">.catalog__category__content").append(createCourseEntry(course));
     }
 
     $.getJSON("static/data/default_schedule.json", function(defaults) {
