@@ -25,7 +25,7 @@
     <div id="catalog__sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
         <h2>Courses:</h2>
         <div id="catalog__controls">
-            Search: <input type="text" oninput="onSearch()">
+            Search: <input id="search-box" type="text" oninput="onSearch()">
             Jump to: 
             <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
                 {% for category in categories %}

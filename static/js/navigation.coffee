@@ -1,5 +1,8 @@
 onSearch = () ->
-    input = $("#search_box").val().toLowerCase()
+    input = $("#search-box").val()
+    if not input?
+        return
+    input = input.toLowerCase()
     filter((course) ->
         course.full_name.toLowerCase().includes(input) \
         or course.short_name.toLowerCase().includes(input))
