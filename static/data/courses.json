@@ -334,10 +334,10 @@
             "1150T1"
         ],
         "skippable": false,
-        "variants": "May be teamed with CHUM (114000)"
+        "variants": "May be teamed with CHUM"
     },
     "1150T1": {
-        "full_name": "English 11 (teamed with AP US History)",
+        "full_name": "English 11",
         "category": "English",
         "prerequisites": [
             [
@@ -364,7 +364,7 @@
             "119504",
             "119604"
         ],
-        "variants": "May be teamed with APUSH or Honors History (1150T2)"
+        "variants": "May be teamed with APUSH or Honors History"
     },
     "1160T1": {
         "full_name": "English 12",
@@ -415,7 +415,7 @@
         "unique": false,
         "ap": "ap",
         "skippable": false,
-        "variants": "May be teamed in Senior Seminar (119561)"
+        "variants": "May be teamed in Senior Seminar"
     },
     "119604": {
         "full_name": "AP English 12 Language and Composition",
@@ -441,7 +441,7 @@
         "unique": false,
         "ap": "ap",
         "skippable": false,
-        "variants": "May be teamed in Global Studies (119662)"
+        "variants": "May be teamed in Global Studies"
     },
     "120000": {
         "full_name": "Journalism 1",
@@ -1771,7 +1771,7 @@
         "unique": false,
         "ap": "pre",
         "skippable": false,
-        "variants": "You will be placed in Symphonic Band or SWE (925415)"
+        "variants": "You will be placed in Symphonic Band or Symphonic Wind Ensemble"
     },
     "923915": {
         "full_name": "Advanced Orchestra (Concert)",
@@ -2115,7 +2115,7 @@
             "4610T6"
         ],
         "skippable": false,
-        "variants": "May be teamed with CHUM (441000)"
+        "variants": "May be teamed with CHUM"
     },
     "4420T4": {
         "full_name": "Introductory Organic Chemistry with Instrumental Analysis",
@@ -2385,7 +2385,7 @@
             "2360T1"
         ],
         "skippable": false,
-        "variants": "May be teamed with CHUM (222100)"
+        "variants": "May be teamed with CHUM"
     },
     "231905": {
         "full_name": "AP US History",
@@ -2570,7 +2570,7 @@
         "unique": false,
         "ap": "ap",
         "skippable": false,
-        "variants": "May be teamed in Senior Seminar (244506) or Global Studies (244561)"
+        "variants": "May be teamed in Senior Seminar or Global Studies"
     },
     "280404": {
         "full_name": "AP Macro/Micro Economics",

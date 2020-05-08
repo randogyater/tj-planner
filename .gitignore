@@ -127,3 +127,7 @@ dmypy.json
 # Editor files
 .idea/*
 .vscode/*
+node_modules
+
+# Generated files
+static/gen/*
