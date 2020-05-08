@@ -22,7 +22,7 @@
     <h1>TJ Four Year Planner</h1>
 </header>
 <div style="display: flex; flex-direction: row; height: 75vh;">
-    <div id="catalog__sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
+    <div id="catalog__sidebar" style="float: left; height: 100%; flex: 0 1 20vw; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
         <h2>Courses:</h2>
         <div id="catalog__controls">
             Search: <input id="search-box" type="text" oninput="onSearch()">
@@ -34,6 +34,7 @@
                 {% endfor %}
             </select>
             <a id="category-jump-button" href="#catalog__math">Go!</a>
+            <button type="button" onclick="clearFilter()">Clear filters</button>
         </div>
         <div id="catalog" style="overflow: scroll; flex: auto; padding: 5px;">
             {% for category in categories %}

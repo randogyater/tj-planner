@@ -11,3 +11,11 @@ onSearch = () ->
 onCategorySelect = () ->
     dest = toID($("#category-select").val())
     $("#category-jump-button").attr("href", "#catalog__" + dest)
+
+reqFilter = (set) ->
+    return (course) -> set.has(course.equivalent)
+
+clearFilter = () ->
+    $("#search-box").val("")
+    filter((course) -> true)
+    return

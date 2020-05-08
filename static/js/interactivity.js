@@ -108,10 +108,16 @@ function updateElement(id, past, other_sem, year) {
         }
     }
     else if(result.skippable) {
-        updateStatus(id, ICONS.CONDITIONAL, "Skip tests that must be taken:\n"+result.skips.join("\n"));
+        updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - "+result.skips.join("\n - "));
     }
     else{
-        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n"+stringRequirements(result.unmet));
+        let set = new Set();
+        for(i in result.unmet) {
+            for(j in result.unmet[i]) {
+                set.add(result.unmet[i][j]);
+            }
+        }
+        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n"+stringRequirements(result.unmet)+"\nClick to view prerequisites", reqFilter(set));
     }
 }
 
@@ -157,8 +163,13 @@ function checkRequirements(course_id, past, other_sem) {
     return result;
 }
 
-function updateStatus(target, icon, text) {
+function updateStatus(target, icon, text, clickFilter = null) {
     $("#"+target).find("span").html("<abbr title=\""+text+"\"><i class=\""+icon+"\"></i></abbr>");
+    if(clickFilter) {
+        $("#"+target).find("span").click(function(){
+            filter(clickFilter);
+        });
+    }
 }
 
 function stringRequirements(x) {
@@ -187,20 +198,20 @@ function filter(condition) {
         if(condition(course)) {
             keep_category.add("catalog__"+toID(course.category));
             if($this.is(":hidden")){
-                $this.show("fast");
+                $this.show(0);
             }
         }
         if(!condition(course) && !$this.is(":hidden")) {
-            $this.hide("fast");
+            $this.hide(0);
         }
     });
     $(".catalog__category").each(function(i) {
         let $this = $(this);
         if(!keep_category.has($this.attr("id")) && $this.is(":visible")) {
-            $this.hide("fast");
+            $this.hide(0);
         }
         if(keep_category.has($this.attr("id")) && $this.is(":hidden")) {
-            $this.show("fast");
+            $this.show(0);
         }
     });
 }
