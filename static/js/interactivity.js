@@ -191,12 +191,16 @@ function stringRequirements(x) {
 }
 
 function filter(condition) {
-    keep_category = new Set();
-    $(".catalog__entry").each(function(i) {
+    $("#filter-status").text("Filtering...")
+    let keep_category = new Set();
+    let count = 0;
+    let $entries = $(".catalog__entry");
+    $entries.each(function(i) {
         $this = $(this); // Sometimes it just looks surreal
         let course = courses[$this.attr("data-course-id")]
         if(condition(course)) {
             keep_category.add("catalog__"+toID(course.category));
+            count++;
             if($this.is(":hidden")){
                 $this.show(0);
             }
@@ -205,6 +209,7 @@ function filter(condition) {
             $this.hide(0);
         }
     });
+    $("#filter-status").text(`Showing ${count} of ${$entries.length}`);
     $(".catalog__category").each(function(i) {
         let $this = $(this);
         if(!keep_category.has($this.attr("id")) && $this.is(":visible")) {

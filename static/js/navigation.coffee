@@ -6,6 +6,8 @@ onSearch = () ->
     filter((course) ->
         course.full_name.toLowerCase().includes(input) \
         or course.short_name.toLowerCase().includes(input))
+    if input == ""
+        $("#filter-status").text("Not filtering")
     return
 
 onCategorySelect = () ->
@@ -18,4 +20,5 @@ reqFilter = (set) ->
 clearFilter = () ->
     $("#search-box").val("")
     filter((course) -> true)
+    $("#filter-status").text("Not filtering")
     return

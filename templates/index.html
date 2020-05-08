@@ -26,6 +26,7 @@
         <h2>Courses:</h2>
         <div id="catalog__controls">
             Search: <input id="search-box" type="text" oninput="onSearch()">
+            <br>
             Jump to: 
             <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
                 {% for category in categories %}
@@ -34,8 +35,10 @@
                 {% endfor %}
             </select>
             <a id="category-jump-button" href="#catalog__math">Go!</a>
+            <br>
             <button type="button" onclick="clearFilter()">Clear filters</button>
         </div>
+        <span id="filter-status">Not filtering</span>
         <div id="catalog" style="overflow: scroll; flex: auto; padding: 5px;">
             {% for category in categories %}
                 {% set cat_id = category.lower().replace(" ", "_") %}
