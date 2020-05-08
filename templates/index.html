@@ -10,8 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="/static/js/course_catalog.js"></script>
-    <script src="/static/js/interactivity.js"></script>
+    {% assets "js_all" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
 </head>
 <body>
 <nav>
@@ -24,14 +25,15 @@
     <div id="catalog__sidebar" style="float: left; height: 100%; flex: 0 1 content; display: flex; flex-direction: column" ondragover="allowDrop(event)" ondrop="toss(event)">
         <h2>Courses:</h2>
         <div id="catalog__controls">
-            Search: <input type="text" oninput="search()">
+            Search: <input type="text" oninput="onSearch()">
             Jump to: 
-            <select id="category-select" onchange="jumpToCategory()" style="width:fit-content">
+            <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
                 {% for category in categories %}
                     {% set cat_id = category.lower().replace(" ", "_") %}
                     <option value="{{cat_id}}">{{category}}</option>
                 {% endfor %}
             </select>
+            <a id="category-jump-button" href="">Go!</a>
         </div>
         <div id="catalog" style="overflow: scroll; flex: auto; padding: 5px;">
             {% for category in categories %}
