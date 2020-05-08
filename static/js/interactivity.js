@@ -190,4 +190,9 @@ function filter(condition) {
             $this.hide("fast");
         }
     });
+    $(".catalog__category").each(function(i) {
+        $this = $(this);
+         let visible = this.children(".catalog__category__content").children(":hidden").length == 0;
+        console.log(visible);
+    });
 }
