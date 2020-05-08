@@ -180,14 +180,27 @@ function stringRequirements(x) {
 }
 
 function filter(condition) {
+    keep_category = new Set();
     $(".catalog__entry").each(function(i) {
         $this = $(this); // Sometimes it just looks surreal
         let course = courses[$this.attr("data-course-id")]
-        if(condition(course) && $this.is(":hidden")) {
-            $this.show("fast");
+        if(condition(course)) {
+            keep_category.add("catalog__"+toID(course.category));
+            if($this.is(":hidden")){
+                $this.show("fast");
+            }
         }
         if(!condition(course) && !$this.is(":hidden")) {
             $this.hide("fast");
+        }
+    });
+    $(".catalog__category").each(function(i) {
+        let $this = $(this);
+        if(!keep_category.has($this.attr("id")) && $this.is(":visible")) {
+            $this.hide("fast");
+        }
+        if(keep_category.has($this.attr("id")) && $this.is(":hidden")) {
+            $this.show("fast");
         }
     });
 }
