@@ -1,11 +1,14 @@
 {
     "3199R1": {
-        "full_name": "Mobile & Web Application Development Research",
-        "category": "Senior Research",
+        "full_name": "Mobile & Web Application Development",
+        "category": "Computer Science",
         "prerequisites": [
             [
                 "318561"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "3199R1",
         "short_name": "Mob & Web App Res",
@@ -19,6 +22,9 @@
                 "318561"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "3199T3",
         "short_name": "Comp Systems Res",
         "description": "The TJHSST Computer Systems Laboratory supports student research in theoretical and applied computer science and computational science. Projects fall within a broad spectrum of computer science areas spanning artificial intelligence and machine learning, computer vision, computer graphics, high performance computing, grid/distributed computing, computational science applications, agent based modeling of complex systems including social complexity, software design, and development of theoretical algorithms. Our Computer Systems Laboratory emphasizes a multilingual computer language community, featuring C and C++, Java, Python, Ruby, XML, PHP, Perl, MySQL, JavaScript, Tk, OpenGL, Fortran, Lisp, and MASON (Multi-Agent Simulator of Neighborhoods)."
@@ -28,6 +34,9 @@
         "category": "Senior Research",
         "prerequisites": [
             []
+        ],
+        "recommended": [
+
         ],
         "id": "4220T3",
         "short_name": "Mentorship",
@@ -44,6 +53,9 @@
                 "4260T5"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "4260T2",
         "short_name": "Astronomy Res",
         "description": "Students are involved in projects related to planetary geology, deep space image processing, and analyses of astronomical databases, imagery, and telescopic observations. This laboratory participates in several programs which allow students access to research-grade telescopes. Other areas of research include analyzing data provided by astronomers who are doing fundamental research on topics such as: light curves of variable stars, spectroscopic analyses, and exosolar planets. Students are also engaged in research related to supernovae, galaxies, quasars, asteroids, comets, and solar studies."
@@ -55,6 +67,9 @@
             [
                 "4320T6"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "4320T3",
         "short_name": "Biotech Research",
@@ -72,6 +87,9 @@
                 "319967"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "4320T5",
         "short_name": "Neuroscience Res",
         "description": "Students are offered the opportunity to conduct research in a variety of areas relating to the chemistry and function of the nervous system. This field is particularly interdisciplinary, incorporating skills from biology, electronics, robotics, computer science, mathematics, chemistry, and physics. Some of the areas that students in this lab have been pursuing are as follows: 1) brainwave analysis using EEG data from adult humans, 2) conversion of brainwaves into electronic signals that control various physical or computer tasks, 3) nerve activity regeneration, including mechanism and chemical methods of enhancement, 4) neurological basis of behavior, which involves the analysis of nerve activity correlated to specific actions in animals, and 5) biochemical mechanism of neurodegenerative diseases and methods of treatment. Other areas of research that we have not yet begun but that may hold promise for future students include the intracellular recording of action potentials and computational neurobiology."
@@ -83,6 +101,9 @@
             [
                 "447004"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "4420T2",
         "short_name": "Chem Analysis Res",
@@ -96,6 +117,9 @@
                 "457004"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "4520T4",
         "short_name": "Optics Research",
         "description": "The Quantum Physics and Optics Laboratory provide exciting opportunities for students to pursue research in three major fields: Quantum Computational Physics, Nano Physics and Materials, and Quantum Optics. In Quantum Computational Physics, students apply the first-principles electronic structure methods, based on quantum mechanics and density functional theory, to solve the real world problems, such as design new materials for topological insulators, superconductors, spintronics and solar cells. In Nano Physics and materials, students experience hands-on lab work in fabricating and characterizing Graphene and Graphene-like nano-materials for application in topological insulators, superconductors, spintronics and solar cells. In Quantum Optics, students generate the entangled photon source and set up quantum entanglement related applications, especially the quantum key distributions.Primary goals of the lab are to engage students in pursuing state-of-art research methods and problems and collaborating with professionals in the research fields.Starting in 2017-2018 academic year, the computational physics become co-requisite for the lab. The new course has substantial theoretical components and a wide spectrum of technological applications; many aspects of which may be extended to research projects in the lab."
@@ -107,6 +131,9 @@
             [
                 "4320T1"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "4610T1",
         "short_name": "Oceanography Res",
@@ -120,6 +147,9 @@
                 "9826T5",
                 "9826T6"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "9826T2",
         "short_name": "MicroElectronics Res",
@@ -136,6 +166,9 @@
                 "9826J1"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "9826T4",
         "short_name": "Comm Systems Res",
         "description": "Students are required to conduct research and experiments leading to the acquisition and processing of analog and digital signals for successful transfer of information via radio frequency (wireless), fiber, and wire transmission. Storing data to disc, tape, drives, and servers will also be considered. Signal compression can be studied and experimented with in conjunction with the Computer Systems Lab. Circuit design can be experimented with in conjunction with the Electronics Lab. Fiber Optic transmission can be experimented with in conjunction with the Optics and Modern Physics Lab. Graphics design, manipulation and research can be studied in conjunction with the CAD Lab. Students may study the capture of video and aural signals, using a variety of specialized methodology employing various video and audio formats. Students will solve problems of acoustics, and light, employing proper coupling of electrical components, camera sensitivity, and limitations caused by noise and variations between different formats. Video and audio compression leading to podcasting and webstreaming of visual/aural data transfer will be explored. Limitations caused by noise in the transfer of data between formats will be studied. Students will work through group process and collaboration or work in the areas of research described above. All students will respect the works of others when manipulating media data, obtaining permission for use where required."
@@ -148,6 +181,9 @@
                 "9826T7",
                 "9826T8"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "9826T9",
         "short_name": "Aut/Rob Res",
@@ -164,6 +200,9 @@
                 "9828T8"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "9828T1",
         "short_name": "Energy Systems Res",
         "description": "Students solve engineering problems in a wide range of fields through the implementation of the engineering design process and software simulation. Student projects include heat transfer, thermodynamics, direct and indirect energy conversion, power distribution, alternative fuels, electrical and mechanical systems. The laboratory accommodates both individual and team projects requiring specific knowledge in such diversified subjects as design, materials, testing, computer interfacing and planning."
@@ -179,6 +218,9 @@
                 "9828J1"
             ]
         ],
+        "recommended": [
+
+        ],
         "id": "9828T3",
         "short_name": "Engineering Des Res",
         "description": "The Computer Assisted Design Laboratory allows students to interact with the computer to produce various 3-Dimensional designs. Seniors conducting research projects in CAD are free to pursue their interests through independent studies in a variety of technical fields. Students turn their ideas into reality by accessing the various AutoDesk software packages from AutoCAD R to 3-D Studio MAX. 26."
@@ -191,6 +233,9 @@
                 "9828T0",
                 "9828T4"
             ]
+        ],
+        "recommended": [
+
         ],
         "id": "9828T6",
         "short_name": "Prototype Dev Res",

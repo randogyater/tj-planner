@@ -7,7 +7,7 @@ const ICONS = {
 };
 
 function allowDrop(event) {
-    if(event.target.childElementCount<=1) {
+    if(event.target.childElementCount<=1) { // TODO make this a more reasonable check
         event.preventDefault();
     }
 }
@@ -21,7 +21,7 @@ function drop(event) {
 
     var id = event.dataTransfer.getData("text");
 
-    if(validTarget(event)){
+    if(validDrop(event)){
         if(id.startsWith("c")){
             event.target.appendChild(document.getElementById(id));
         }
@@ -29,7 +29,7 @@ function drop(event) {
             $(event.target).append(createCourseDraggable($("#"+id).attr("data-course-id")))
         }
 
-        validateSchedule();
+        updateSchedule();
     }
 }
 
@@ -40,11 +40,11 @@ function toss(event) {
 
         $("#"+id).remove();
         
-        validateSchedule();
+        updateSchedule();
     }
 }
 
-function validTarget(event) {
+function validDrop(event) {
     if(!event.target.getAttribute("class").includes("grid__box")){
         return false;
     }
@@ -65,7 +65,7 @@ function validTarget(event) {
     }
 }
 
-function validateSchedule() {
+function updateSchedule() {
     previous = new Set();
     for(var c = 1; c<=4; c++) {
         updateBox($("#"+getBoxId("s", c)), previous, c-1);
@@ -96,9 +96,9 @@ function updateBox($box, past, year) {
 
 function updateElement(id, past, other_sem, year) {
     $course = $("#"+id);
-    course = courses[id];
+    course = courses[$course.attr("data-course-id")];
 
-    result = checkRequirements($course.attr("data-course-id"), past, other_sem);
+    result = checkTree(course.prerequisites, past, other_sem);
     if(result.state) {
         if(!course.availability[year]) {
             updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year}th grade, but this isn't a hard rule.`);
@@ -117,13 +117,12 @@ function updateElement(id, past, other_sem, year) {
                 set.add(result.unmet[i][j]);
             }
         }
-        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n"+stringRequirements(result.unmet)+"\nClick to view prerequisites", reqFilter(set));
+        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n"+treeToString(result.unmet)+"\nClick to view prerequisites", reqFilter(set));
     }
 }
 
-function checkRequirements(course_id, past, other_sem) {
-    course = courses[course_id];
-    if (!('prerequisites' in course)) {
+function checkTree(tree, past, other_sem) {
+    if(tree === undefined) {
         // No prerequisites? Let it go.
         return {state: true};
     }
@@ -172,7 +171,7 @@ function updateStatus(target, icon, text, clickFilter = null) {
     }
 }
 
-function stringRequirements(x) {
+function treeToString(x) {
     if(x.length==0){
         return " None";
     }
