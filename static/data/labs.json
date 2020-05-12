@@ -1,51 +1,38 @@
 {
     "3199R1": {
-        "full_name": "Mobile & Web Application Development",
-        "category": "Computer Science",
+        "full_name": "Mobile and Web Application Development",
         "prerequisites": [
             [
                 "318561"
             ]
         ],
         "recommended": [
-
+            ["3199J2"],
+            ["3199J1"]
         ],
         "id": "3199R1",
-        "short_name": "Mob & Web App Res",
+        "short_name": "Mob and Web App",
         "description": "Senior research lab in Mobile and Web Application Development. Senior research students build mobile apps for smart phones, tablets, and/or embedded systems, and/or build web apps using a modular development model and considering interface, accessibility (e.g., native language support, assistive technology), human computer interaction, user-centered design, privacy, security, networking connectivity, and their product's target or presumed audience.  Research projects follow all phases of the software development life-cycle: planning, requirements analysis, design, implementation, integration, testing, deployment, and maintenance."
     },
     "3199T3": {
-        "full_name": "Computer Systems Research",
-        "category": "Senior Research",
+        "full_name": "Computer Systems",
         "prerequisites": [
             [
                 "318561"
             ]
         ],
         "recommended": [
-
+            ["319966", "319966"],
+            ["3199T1", "3199T2"],
+            ["319916", "319917"]
         ],
         "id": "3199T3",
-        "short_name": "Comp Systems Res",
+        "short_name": "Comp Systems",
         "description": "The TJHSST Computer Systems Laboratory supports student research in theoretical and applied computer science and computational science. Projects fall within a broad spectrum of computer science areas spanning artificial intelligence and machine learning, computer vision, computer graphics, high performance computing, grid/distributed computing, computational science applications, agent based modeling of complex systems including social complexity, software design, and development of theoretical algorithms. Our Computer Systems Laboratory emphasizes a multilingual computer language community, featuring C and C++, Java, Python, Ruby, XML, PHP, Perl, MySQL, JavaScript, Tk, OpenGL, Fortran, Lisp, and MASON (Multi-Agent Simulator of Neighborhoods)."
     },
-    "4220T3": {
-        "full_name": "Mentorship",
-        "category": "Senior Research",
-        "prerequisites": [
-            []
-        ],
-        "recommended": [
-
-        ],
-        "id": "4220T3",
-        "short_name": "Mentorship",
-        "description": "The mentorship program is one of the options available for students to meet the senior science and technology research graduation requirement. The program provides opportunities for selected seniors to work with accomplished scientists, engineers, and other professionals in firms or laboratories across the greater Washington, D.C. area. The students must plan, implement, document, and present projects chosen in consultation with these mentors and which coincide with the TJHSST technology laboratories. Students who seek this mentorship option must first be selected for one of the research laboratories. They also complete a mentorship application that includes obtaining two teacher recommendations (at least one from a laboratory science or technology teacher; the other from a mathematics or computer science teacher) and write a project brief which outlines the type of research in which they are interested. If selected, a student is assigned a mentor in a specific field that relates to his/her chosen laboratory. Students are released for part of the school day to work 10-15 hours per week at their mentorship locations. Students receive one credit for 180 hours of mentorship in one semester and two credits for 360 hours in two semesters. TJHSST technology laboratory directors and the mentorship coordinator monitor the students in their fields of interest. Course requirements include a project proposal, weekly log, oral presentation, project summary, final paper, and poster display board."
-    },
     "4260T2": {
-        "full_name": "Astronomy Research",
-        "category": "Senior Research",
-        "prerequisites": [
+        "full_name": "Astronomy",
+        "recommended": [
             [
                 "4260T4"
             ],
@@ -53,95 +40,110 @@
                 "4260T5"
             ]
         ],
-        "recommended": [
-
-        ],
         "id": "4260T2",
-        "short_name": "Astronomy Res",
+        "short_name": "Astronomy",
         "description": "Students are involved in projects related to planetary geology, deep space image processing, and analyses of astronomical databases, imagery, and telescopic observations. This laboratory participates in several programs which allow students access to research-grade telescopes. Other areas of research include analyzing data provided by astronomers who are doing fundamental research on topics such as: light curves of variable stars, spectroscopic analyses, and exosolar planets. Students are also engaged in research related to supernovae, galaxies, quasars, asteroids, comets, and solar studies."
     },
     "4320T3": {
-        "full_name": "Life Sciences and Biotechnology Research",
-        "category": "Senior Research",
+        "full_name": "Life Sciences and Biotechnology",
         "prerequisites": [
             [
                 "4320T6"
             ]
         ],
         "recommended": [
-
+            ["4320T7"],
+            ["447004"],
+            ["4310T1"]
         ],
         "id": "4320T3",
-        "short_name": "Biotech Research",
+        "short_name": "Biotech",
         "description": "Students design their own experimental research projects with the guidance of the lab instructors. They work directly on the system of interest or studying a model system, depending on safety considerations and availability of equipment. During this technology-based research experience, students learn to read professional scientific reports and translate this information into methods they will use in the school laboratory. Students using similar materials and methods might form technical teams. Example topics include: animal tissue culture, determining plasmid copy number, gene therapy modeling, molecular biology, recombinant DNA technology, and plant biotechnology."
     },
     "4320T5": {
-        "full_name": "Neuroscience Research",
-        "category": "Senior Research",
+        "full_name": "Neuroscience",
         "prerequisites": [
             [
+                "437004",
                 "4320T8"
             ],
             [
+                "317704",
                 "319966",
                 "319967"
+            ],
+            [
+                "317704",
+                "9826T8",
+                "9826T7"
             ]
         ],
         "recommended": [
-
+            ["9826T6"],
+            ["9826T5"]
         ],
         "id": "4320T5",
-        "short_name": "Neuroscience Res",
+        "short_name": "Neuroscience",
         "description": "Students are offered the opportunity to conduct research in a variety of areas relating to the chemistry and function of the nervous system. This field is particularly interdisciplinary, incorporating skills from biology, electronics, robotics, computer science, mathematics, chemistry, and physics. Some of the areas that students in this lab have been pursuing are as follows: 1) brainwave analysis using EEG data from adult humans, 2) conversion of brainwaves into electronic signals that control various physical or computer tasks, 3) nerve activity regeneration, including mechanism and chemical methods of enhancement, 4) neurological basis of behavior, which involves the analysis of nerve activity correlated to specific actions in animals, and 5) biochemical mechanism of neurodegenerative diseases and methods of treatment. Other areas of research that we have not yet begun but that may hold promise for future students include the intracellular recording of action potentials and computational neurobiology."
     },
     "4420T2": {
-        "full_name": "Chemical Analysis and Nanochemistry Research",
-        "category": "Senior Research",
+        "full_name": "Chemical Analysis and Nanochemistry",
         "prerequisites": [
             [
                 "447004"
             ]
         ],
         "recommended": [
-
+            ["4420T4"],
+            ["437004"],
+            ["457004"],
+            ["317704"]
         ],
         "id": "4420T2",
-        "short_name": "Chem Analysis Res",
+        "short_name": "Chem Analysis",
         "description": "The Chemical Analysis Research Laboratory integrates many aspects of Chemistry, including Inorganic and Organic Synthesis and Characterization, chemical nanotechnology, utilization of instrumentation such as Fluorescence, Fourier Transform-Infrared Spectroscopy (FT-IR), Gas Chromatography, Ultraviolet and Visible Spectroscopy, as well as Instrumentation Development. Such skills and experiences are valuable for those interested in pursuing careers in the natural and physical sciences or areas such as medicine. Students in Chemical Analysis will be expected to complete an independent or group research project."
     },
     "4520T4": {
-        "full_name": "Quantum Physics and Optics Research",
-        "category": "Senior Research",
+        "full_name": "Quantum Physics and Optics",
         "prerequisites": [
             [
                 "457004"
             ]
         ],
         "recommended": [
+            ["4520T9"],
+            ["4520T1"],
+            ["4520T8"],
+            ["319862"],
+            ["9826T5"],
+            ["9826T6"]
 
         ],
         "id": "4520T4",
-        "short_name": "Optics Research",
+        "short_name": "Optics",
         "description": "The Quantum Physics and Optics Laboratory provide exciting opportunities for students to pursue research in three major fields: Quantum Computational Physics, Nano Physics and Materials, and Quantum Optics. In Quantum Computational Physics, students apply the first-principles electronic structure methods, based on quantum mechanics and density functional theory, to solve the real world problems, such as design new materials for topological insulators, superconductors, spintronics and solar cells. In Nano Physics and materials, students experience hands-on lab work in fabricating and characterizing Graphene and Graphene-like nano-materials for application in topological insulators, superconductors, spintronics and solar cells. In Quantum Optics, students generate the entangled photon source and set up quantum entanglement related applications, especially the quantum key distributions.Primary goals of the lab are to engage students in pursuing state-of-art research methods and problems and collaborating with professionals in the research fields.Starting in 2017-2018 academic year, the computational physics become co-requisite for the lab. The new course has substantial theoretical components and a wide spectrum of technological applications; many aspects of which may be extended to research projects in the lab."
     },
     "4610T1": {
-        "full_name": "Oceanography and Geophysical Systems Research",
-        "category": "Senior Research",
+        "full_name": "Oceanography and Geophysical Systems",
         "prerequisites": [
             [
                 "4320T1"
             ]
         ],
         "recommended": [
-
+            ["4320T6"],
+            ["9828T9"],
+            ["9828T8"],
+            ["9828T0"],
+            ["9828T4"],
+            ["447004"]
         ],
         "id": "4610T1",
-        "short_name": "Oceanography Res",
+        "short_name": "Oceanography",
         "description": "Students in this laboratory explore the biology, chemistry, geology, and physics of the ocean. Students use a variety of tools such as biotechnology, remote sensing, robotics, computer modeling, or chemical analysis to pursue exciting new areas of research. Areas of research may include, but are not limited to, bioluminescence, neurobiology, evolution, population studies, genetics, biogeography, meteorology, or physical oceanography. This program advocates collaboration between disciplines and outside institutions such as the Smithsonian Environmental Research Center, University of Maryland, the Center for Marine Biotechnology, the U.S. Geological Survey, Mitretek Systems, and the U.S. Naval Research Lab."
     },
     "9826T2": {
-        "full_name": "MicroElectronics Research",
-        "category": "Senior Research",
+        "full_name": "MicroElectronics",
         "prerequisites": [
             [
                 "9826T5",
@@ -149,50 +151,33 @@
             ]
         ],
         "recommended": [
-
+            ["9826T0"],
+            ["9826T1"]
         ],
         "id": "9826T2",
-        "short_name": "MicroElectronics Res",
+        "short_name": "MicroElectronics",
         "description": "Students pursue research and development projects in a variety of areas involving electronics. Typical areas include real-time Digital Signal Processing (DSP), sensor arrays, mixed-signal systems, electronic instrumentation (including inertial measurement systems), advanced-linear systems (including switching amplifiers and switching regulators), and vacuum-tube amplifiers. The projects often have a circuit design focus; experimental research is conducted to determine crucial circuit design parameters or circuit design is employed to create instrumentation, experimental apparatus, engineering models, or prototypes."
     },
-    "9826T4": {
-        "full_name": "Communication Systems Research",
-        "category": "Senior Research",
-        "prerequisites": [
-            [
-                "9826J0"
-            ],
-            [
-                "9826J1"
-            ]
-        ],
-        "recommended": [
-
-        ],
-        "id": "9826T4",
-        "short_name": "Comm Systems Res",
-        "description": "Students are required to conduct research and experiments leading to the acquisition and processing of analog and digital signals for successful transfer of information via radio frequency (wireless), fiber, and wire transmission. Storing data to disc, tape, drives, and servers will also be considered. Signal compression can be studied and experimented with in conjunction with the Computer Systems Lab. Circuit design can be experimented with in conjunction with the Electronics Lab. Fiber Optic transmission can be experimented with in conjunction with the Optics and Modern Physics Lab. Graphics design, manipulation and research can be studied in conjunction with the CAD Lab. Students may study the capture of video and aural signals, using a variety of specialized methodology employing various video and audio formats. Students will solve problems of acoustics, and light, employing proper coupling of electrical components, camera sensitivity, and limitations caused by noise and variations between different formats. Video and audio compression leading to podcasting and webstreaming of visual/aural data transfer will be explored. Limitations caused by noise in the transfer of data between formats will be studied. Students will work through group process and collaboration or work in the areas of research described above. All students will respect the works of others when manipulating media data, obtaining permission for use where required."
-    },
     "9826T9": {
-        "full_name": "Automation and Robotics Research",
-        "category": "Senior Research",
+        "full_name": "Automation and Robotics",
         "prerequisites": [
             [
-                "9826T7",
-                "9826T8"
+                ["9826T8"],
+                ["9826T7"]
             ]
         ],
         "recommended": [
-
+            ["9826T5"],
+            ["9826T6"],
+            ["318561"]
         ],
         "id": "9826T9",
-        "short_name": "Aut/Rob Res",
+        "short_name": "Aut/Rob",
         "description": "Students apply engineering concepts to the design and production of automated systems. They investigate the building blocks of robotic systems including sensors, analyzers, actuators, and drivers. Students solve problems which are aimed at integrating the concepts of automation and robotic systems, electronics, and computer programming. The laboratory accommodates both individual and group projects."
     },
     "9828T1": {
-        "full_name": "Energy Systems Research",
-        "category": "Senior Research",
-        "prerequisites": [
+        "full_name": "Energy Systems",
+        "recommended": [
             [
                 "9828T9"
             ],
@@ -200,16 +185,12 @@
                 "9828T8"
             ]
         ],
-        "recommended": [
-
-        ],
         "id": "9828T1",
-        "short_name": "Energy Systems Res",
+        "short_name": "Energy Systems",
         "description": "Students solve engineering problems in a wide range of fields through the implementation of the engineering design process and software simulation. Student projects include heat transfer, thermodynamics, direct and indirect energy conversion, power distribution, alternative fuels, electrical and mechanical systems. The laboratory accommodates both individual and team projects requiring specific knowledge in such diversified subjects as design, materials, testing, computer interfacing and planning."
     },
     "9828T3": {
-        "full_name": "Engineering Design Research",
-        "category": "Senior Research",
+        "full_name": "Engineering Design",
         "prerequisites": [
             [
                 "9828T2"
@@ -222,12 +203,11 @@
 
         ],
         "id": "9828T3",
-        "short_name": "Engineering Des Res",
+        "short_name": "Engineering Des",
         "description": "The Computer Assisted Design Laboratory allows students to interact with the computer to produce various 3-Dimensional designs. Seniors conducting research projects in CAD are free to pursue their interests through independent studies in a variety of technical fields. Students turn their ideas into reality by accessing the various AutoDesk software packages from AutoCAD R to 3-D Studio MAX. 26."
     },
     "9828T6": {
-        "full_name": "Prototyping and Engineering Materials Research",
-        "category": "Senior Research",
+        "full_name": "Prototyping and Engineering Materials",
         "prerequisites": [
             [
                 "9828T0",
@@ -235,10 +215,10 @@
             ]
         ],
         "recommended": [
-
+            ["9828T2"]
         ],
         "id": "9828T6",
-        "short_name": "Prototype Dev Res",
+        "short_name": "Prototype Dev",
         "description": "Prototype Development and Processing is helpful if the project requires extensive use of machines and tools. Nature of Materials is helpful if the project involves researching the nature of material and the testing of its physical properties. If no prerequisite has been taken, admission can be obtained from the instructor, based on the research topic; the instructor may elect to assign a topic that can be undertaken, given the student's background.Students are required to conduct research into the nature of a specific material, the processing of a material, or the usage of specific materials in scientific or industrial applications. The student's background and interests play a major role in the topic selection. If a student has a good background in chemistry, topics such as superconductors and semiconductors can be explored. If a student has a sports background and an interest in materials, research could take the form of examining the characteristics of modern composites and their applications to sporting equipment. In this same fashion, materials could be explored in musical, medical, or other applications. Students will always be able to elect to do an individual project, but on occasion, an individual class may undertake a larger group project."
     }
 }
