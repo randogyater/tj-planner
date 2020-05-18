@@ -18,5 +18,5 @@ assets.register('js_all', js)
 @app.route("/")
 def index():
     with open(CONFIG_LOC, 'r') as file:
-        config = yaml.load(file)
+        config = yaml.load(file, Loader=yaml.FullLoader)
     return render_template("index.html", categories=config["categories"])
