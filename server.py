@@ -8,7 +8,7 @@ app = Flask(__name__)
 assets = Environment(app)
 
 js = Bundle(
-    Bundle('js/course_catalog.js','js/interactivity.js'),
+    Bundle('js/course_catalog.js','js/interactivity.js','js/validation.js'),
     Bundle('js/navigation.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
