@@ -7,7 +7,7 @@ const ICONS = {
 };
 
 function allowDrop(event) {
-    if (event.target.childElementCount <= 1) { // TODO make this a more reasonable check
+    if (event.target.has("ondrop")) { // TODO make this a more reasonable check
         event.preventDefault();
     }
 }
