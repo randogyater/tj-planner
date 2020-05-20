@@ -1,8 +1,10 @@
 from flask import Flask, render_template
 from flask_assets import Environment, Bundle
 import yaml
+import json
 
 CONFIG_LOC = "config.yml"
+LABS_LOC = "static/data/labs.json"
 
 app = Flask(__name__)
 assets = Environment(app)
@@ -18,4 +20,6 @@ assets.register('js_all', js)
 def index():
     with open(CONFIG_LOC, 'r') as file:
         config = yaml.load(file)
-    return render_template("index.html", categories=config["categories"])
+    with open(LABS_LOC, 'r') as file:
+        labs = json.load(file)
+    return render_template("index.html", categories=config["categories"], labs = labs)

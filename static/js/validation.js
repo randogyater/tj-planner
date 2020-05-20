@@ -1,4 +1,4 @@
-function updateSchedule() {
+function onUpdate() {
     previous = new Set();
     for (var c = 1; c <= 4; c++) {
         updateBox($("#" + getBoxId("s", c)), previous, c - 1);
@@ -16,6 +16,32 @@ function updateSchedule() {
                 previous.add($(this).attr("data-course-credit"));
             });
         }
+    }
+    console.log("---"); // TODO remove debug
+    console.log(previous);
+    for (lab_id in labs) {
+        let requirements = labs[lab_id].prerequisites;
+        let recommendations = labs[lab_id].recommended;
+        let reqMet = checkTree(requirements, previous, null);
+        let recMet = checkTree(recommendations, previous, null);
+        // var entry = $("#labs__"+lab_id);
+        // var reqBox = entry.find(".labs__req");
+        // var recBox = entry.find(".labs__rec");
+        console.log(labs[lab_id].full_name+": "+reqMet.state+", "+recMet.state); // TODO remove debug
+        // }
+        // if (reqMet.state) {
+            // reqBox.removeClass("table-danger");
+            // reqBox.addClass("table-success");
+            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are met.");
+        // }
+        // else {
+            // reqBox.removeClass("table-success");
+            // reqBox.addClass("table-danger");
+            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are met.");
+            // recBox.removeClass("table-success");
+            // recBox.addClass("table-danger");
+            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are not met.");
+        // }
     }
 }
 
@@ -68,14 +94,15 @@ function checkTree(tree, past, other_sem) {
         unmet: [],
         skips: []
     };
-    for (var i = 0; i < course.prerequisites.length; i++) {
+
+    for (var i = 0; i < tree.length; i++) {
         // Check every set for matching
         let unmet = [];
         let match = true;
         let skip_match = true;
 
-        for (var j = 0; j < course.prerequisites[i].length; j++) {
-            let prereq = course.prerequisites[i][j];
+        for (var j = 0; j < tree[i].length; j++) {
+            let prereq = tree[i][j];
             if (!(past.has(prereq) || prereq == other_sem)) {
                 match = false;
                 unmet.push(prereq);
@@ -101,10 +128,10 @@ function checkTree(tree, past, other_sem) {
     return result;
 }
 
-function updateStatus(target, icon, text, clickFilter = null) {
-    $("#" + target).find("span").html("<abbr title=\"" + text + "\"><i class=\"" + icon + "\"></i></abbr>");
+function updateStatus(target_id, icon, text, clickFilter = null) {
+    $("#" + target_id).find("span").html("<abbr title=\"" + text + "\"><i class=\"" + icon + "\"></i></abbr>");
     if (clickFilter) {
-        $("#" + target).find("span").click(function () {
+        $("#" + target_id).find("span").click(function () {
             filter(clickFilter);
         });
     }

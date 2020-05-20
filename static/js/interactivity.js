@@ -28,7 +28,7 @@ function drop(event) {
             $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")))
         }
 
-        updateSchedule();
+        onUpdate();
     }
 }
 
@@ -39,7 +39,7 @@ function toss(event) {
 
         $("#" + id).remove();
 
-        updateSchedule();
+        onUpdate();
     }
 }
 

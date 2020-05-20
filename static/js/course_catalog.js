@@ -12,7 +12,7 @@ $.getJSON("static/data/courses.json", function (data) {
                 $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
             }
     
-            updateSchedule()
+            onUpdate()
         });
     });
 });

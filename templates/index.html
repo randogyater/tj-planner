@@ -31,7 +31,7 @@
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
         <div class="row h-75">
-            <div id="catalog__sidebar" class="col-3 h-100 d-flex flex-column" ondragover="allowDrop(event)"
+            <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2>Courses:</h2>
                 <div id="catalog__controls" class="m-2">
@@ -87,8 +87,22 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-3 h-100">
-                Senior labs go here
+            <div class="col-4 h-100 d-flex flex-column">
+                <h2>Senior labs:</h2>
+                <div style="overflow: scroll;">
+                    <table class="table">
+                        <tr>
+                            <th>Name</th>
+                            <th>Status</th>
+                        </tr>
+                        {% for lab in labs %}
+                            <tr id="labs__{{lab}}" class="labs__row">
+                                <td>{{ labs[lab].full_name }}</td>
+                                <td class="labs__req">Loading...</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
             </div>
         </div>
         <div class="row" style="height:12.5%">
