@@ -17,6 +17,10 @@ js = Bundle(
 assets.register('js_all', js)
 
 
+def kebab(string):
+    return string.lower().replace(" ", "-")
+
+
 @app.route("/")
 def index():
     with open(CONFIG_LOC, 'r') as file:
@@ -29,7 +33,16 @@ def index():
     categorized = dict()
     for course in courses:
         course = courses[course]
+
+        if course["ap"] == "ap":
+            course["ap_class"] = "course--ap"
+        elif course["ap"] =="post":
+            course["ap_class"] = "course--post-ap"
+        else:
+            course["ap_class"] = "pre-ap"
+        course["category_class"] = "course--"+kebab(course["category"])
+
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs)
+    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab)

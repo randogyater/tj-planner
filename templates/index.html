@@ -40,7 +40,7 @@
                     Jump to:
                     <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
                         {% for category in categories %}
-                        {% set cat_id = category.lower().replace(" ", "_") %}
+                        {% set cat_id = kebab(category) %}
                         <option value="{{cat_id}}">{{category}}</option>
                         {% endfor %}
                     </select>
@@ -53,7 +53,9 @@
                     {% for category, courses in categorized.items() %}
                     <h3>{{category}}</h3>
                         {% for course in courses %}
-                            <div>{{course.full_name}}</div>
+                            <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
+                                {{course.full_name}}
+                            </div>
                         {% endfor %}
                     {% endfor %}
                 </div>
