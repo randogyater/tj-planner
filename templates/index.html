@@ -55,6 +55,9 @@
                         {% for course in courses %}
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
                                 {{course.full_name}}
+                                <span class="course__properties">
+                                    
+                                </span>
                             </div>
                         {% endfor %}
                     {% endfor %}

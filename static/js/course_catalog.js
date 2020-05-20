@@ -17,7 +17,7 @@ $.getJSON("static/data/courses.json", function (data) {
     });
 });
 
-function toID(string) {
+function kebab(string) {
     return string.toLowerCase().replace(/ /g, "_");
 }
 
@@ -56,10 +56,14 @@ function createCourseDraggable(course_id) {
     if (course.ap === "ap") {
         $course.addClass("course--ap");
     }
-
-    if (course.ap === "post") {
+    else if (course.ap === "post") {
         $course.addClass("course--post-ap");
     }
+    else {
+        $course.addClass("course--pre-ap");
+    }
+
+    $course.addClass("course--"+kebab(course.category))
 
     return $course;
 }
