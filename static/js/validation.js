@@ -17,31 +17,30 @@ function onUpdate() {
             });
         }
     }
-    console.log("---"); // TODO remove debug
-    console.log(previous);
     for (lab_id in labs) {
         let requirements = labs[lab_id].prerequisites;
         let recommendations = labs[lab_id].recommended;
         let reqMet = checkTree(requirements, previous, null);
         let recMet = checkTree(recommendations, previous, null);
-        // var entry = $("#labs__"+lab_id);
-        // var reqBox = entry.find(".labs__req");
-        // var recBox = entry.find(".labs__rec");
-        console.log(labs[lab_id].full_name+": "+reqMet.state+", "+recMet.state); // TODO remove debug
-        // }
-        // if (reqMet.state) {
-            // reqBox.removeClass("table-danger");
-            // reqBox.addClass("table-success");
-            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are met.");
-        // }
-        // else {
-            // reqBox.removeClass("table-success");
-            // reqBox.addClass("table-danger");
-            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are met.");
-            // recBox.removeClass("table-success");
-            // recBox.addClass("table-danger");
-            // updateStatus(reqBox.attr("id"),ICONS.SUCCESS, "Prerequisites for this lab are not met.");
-        // }
+        var entry = $("#labs__"+lab_id);
+        var status = entry.find(".labs__status");
+        if (reqMet.state) {
+            if(recMet.state) {
+                entry.removeClass("table-success table-default");
+                entry.addClass("table-primary");
+                status.text("Recommended");
+            }
+            else{
+                entry.removeClass("table-primary table-default");
+                entry.addClass("table-success");
+                status.text("Qualified");
+            }
+        }
+        else {
+            entry.removeClass("table-primary table-success");
+            entry.addClass("table-default");
+            status.text("Unqualified");
+        }
     }
 }
 
