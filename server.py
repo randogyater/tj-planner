@@ -4,6 +4,7 @@ import yaml
 import json
 
 CONFIG_LOC = "config.yml"
+COURSES_LOC = "static/data/courses.json"
 LABS_LOC = "static/data/labs.json"
 
 app = Flask(__name__)
@@ -20,6 +21,15 @@ assets.register('js_all', js)
 def index():
     with open(CONFIG_LOC, 'r') as file:
         config = yaml.load(file)
+    with open(COURSES_LOC, 'r') as file:
+        courses = json.load(file)
     with open(LABS_LOC, 'r') as file:
         labs = json.load(file)
-    return render_template("index.html", categories=config["categories"], labs = labs)
+    
+    categorized = dict()
+    for course in courses:
+        course = courses[course]
+        if course["category"] not in categorized:
+            categorized[course["category"]] = list()
+        categorized[course["category"]].append(course)
+    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs)

@@ -50,12 +50,11 @@
                 </div>
                 <span id="filter-status">Not filtering</span>
                 <div id="catalog" class="p-2" style="overflow: scroll;">
-                    {% for category in categories %}
-                    {% set cat_id = category.lower().replace(" ", "_") %}
-                    <div id="catalog__{{cat_id}}" class="catalog__category">
-                        <h3>{{category}}</h3>
-                        <div class="catalog__category__content"></div>
-                    </div>
+                    {% for category, courses in categorized.items() %}
+                    <h3>{{category}}</h3>
+                        {% for course in courses %}
+                            <div>{{course.full_name}}</div>
+                        {% endfor %}
                     {% endfor %}
                 </div>
             </div>
