@@ -7,7 +7,7 @@ const ICONS = {
 };
 
 function allowDrop(event) {
-    if (event.target.hasAttribute("ondrop")) {
+    if (event.target.hasAttribute("ondrop") || $(event.target).parents("#catalog__sidebar")) {
         event.preventDefault();
     }
 }
