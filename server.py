@@ -13,13 +13,14 @@ js = Bundle(
     Bundle('js/course_catalog.js','js/interactivity.js','js/validation.js'),
     Bundle('js/navigation.coffee',filters='coffeescript'),
     output='gen/packed.js')
+assets.config["coffee_bin"] = "./node_modules/coffeescript/bin/coffee"
 assets.register('js_all', js)
 
 
 @app.route("/")
 def index():
     with open(CONFIG_LOC, 'r') as file:
-        config = yaml.load(file)
+        config = yaml.load(file, Loader=yaml.FullLoader)
     with open(LABS_LOC, 'r') as file:
         labs = json.load(file)
     return render_template("index.html", categories=config["categories"], labs = labs)
