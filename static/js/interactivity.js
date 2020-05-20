@@ -7,7 +7,7 @@ const ICONS = {
 };
 
 function allowDrop(event) {
-    if (event.target.has("ondrop")) { // TODO make this a more reasonable check
+    if (event.target.hasAttribute("ondrop")) {
         event.preventDefault();
     }
 }
