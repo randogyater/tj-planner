@@ -16,9 +16,6 @@
 }
 
 .course {
-    width: calc(100% - 25px);
-    width: -moz-calc(100% - 25px);
-    width: -webkit-calc(100% - 25px);
     margin: 5px;
     padding: 5px;
     border: 1px solid black;
