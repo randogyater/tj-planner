@@ -2,7 +2,7 @@ $.getJSON("static/data/courses.json", function (data) {
     courses = data;
     for (course in courses) {
         cat_id = toID(courses[course]["category"]);
-        $("#catalog__" + cat_id + ">.catalog__category__content").append(createCourseEntry(course));
+        $("#" + cat_id + ">.catalog__category__content").append(createCourseEntry(course));
     }
     $.getJSON("static/data/labs.json", function (data) {
         labs = data
