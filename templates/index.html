@@ -37,14 +37,17 @@
                 <div id="catalog__controls" class="m-2">
                     Search: <input id="search-box" type="text" oninput="onSearch()">
                     <br>
-                    Jump to:
-                    <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Jump to
+                    </button>
+                    <div class="dropdown-menu">
                         {% for category in categories %}
                         {% set cat_id = category.lower().replace(" ", "_") %}
-                        <option value="{{cat_id}}">{{category}}</option>
+                        <a class="dropdown-item" href="#catalog__{{cat_id}}">{{category}}</a>
                         {% endfor %}
-                    </select>
-                    <a id="category-jump-button" href="#catalog__math">Go!</a>
+                    </div>
+                    </div>
                     <br>
                     <button type="button" onclick="clearFilter()">Clear filters</button>
                 </div>
