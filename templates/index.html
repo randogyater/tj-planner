@@ -34,28 +34,27 @@
             <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2>Courses:</h2>
-                <div id="catalog__controls" class="m-2">
-                    Search: <input id="search-box" type="text" oninput="onSearch()">
-                    <br>
-                    <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Jump to
-                    </button>
-                    <div class="dropdown-menu">
-                        {% for category in categories %}
-                        {% set cat_id = category.lower().replace(" ", "_") %}
-                        <a class="dropdown-item" href="#catalog__{{cat_id}}">{{category}}</a>
-                        {% endfor %}
+                <div id="catalog__controls" class="m-1">
+                    <div class="m-1">Search: <input id="search-box" type="text" oninput="onSearch()"></div>
+                    <div class="btn-group m-1">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Jump to
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for category in categories %}
+                            {% set cat_id = category.lower().replace(" ", "_") %}
+                            <a class="dropdown-item" href="#{{cat_id}}">{{category}}</a>
+                            {% endfor %}
+                        </div>
                     </div>
-                    </div>
                     <br>
-                    <button type="button" onclick="clearFilter()">Clear filters</button>
+                    <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
                 </div>
-                <span id="filter-status">Not filtering</span>
-                <div id="catalog" class="p-2" style="overflow: scroll;">
+                <span class="m2" id="filter-status">Not filtering</span>
+                <div id="catalog" class="m-2" style="overflow: scroll;">
                     {% for category in categories %}
                     {% set cat_id = category.lower().replace(" ", "_") %}
-                    <div id="catalog__{{cat_id}}" class="catalog__category">
+                    <div id="{{cat_id}}" class="catalog__category">
                         <h3>{{category}}</h3>
                         <div class="catalog__category__content"></div>
                     </div>
