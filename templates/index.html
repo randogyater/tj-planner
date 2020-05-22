@@ -54,10 +54,28 @@
                     <h3>{{category}}</h3>
                         {% for course in courses %}
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
-                                {{course.full_name}}
-                                <span class="course__properties">
-                                    
-                                </span>
+                                <div class="course__name">{{course.full_name}}</div>
+                                <div class="course__properties">
+                                    {% if course.category == "Summer School" %}
+                                        <!--TODO add the course equivalent!-->
+                                        <abbr title="This is a summer school course."><i class="fas fa-sun"></i></abbr>
+                                    {% endif %}
+                                    {% if course.skippable %}
+                                        <abbr title="You can take a test to skip this course!"><i class="fas fa-running"></i></abbr>
+                                    {% endif %}
+                                    {% if course.unique %}
+                                        <abbr title="This course is unique to TJ and not offered elsewhere in FCPS."><i class="fas fa-asterisk"></i></abbr>
+                                    {% endif %}
+                                    {% if course.online %}
+                                        <abbr title="This course can be taken online."><i class="fas fa-desktop"></i></abbr>
+                                    {% endif %}
+                                    {% if course.category == "Online" %}
+                                        <abbr title="This is an online-only course."><i class="fas fa-wifi"></i></abbr>
+                                    {% endif %}
+                                    {% if course.semester %}
+                                        <abbr title="This is a semester course and will last half a year."><i class="fas fa-adjust"></i></abbr>
+                                    {% endif %}
+                                </div>
                             </div>
                         {% endfor %}
                     {% endfor %}
