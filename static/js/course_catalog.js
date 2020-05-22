@@ -7,7 +7,7 @@ $.getJSON("static/data/courses.json", function (data) {
                 let item = defaults[i];
                 $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
             }
-    
+
             onUpdate()
         });
     });

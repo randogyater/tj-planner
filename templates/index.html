@@ -34,19 +34,21 @@
             <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2>Courses:</h2>
-                <div id="catalog__controls" class="m-2">
-                    Search: <input id="search-box" type="text" oninput="onSearch()">
+                <div id="catalog__controls" class="m-1">
+                    <div class="m-1">Search: <input id="search-box" type="text" oninput="onSearch()"></div>
+                    <div class="btn-group m-1">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Jump to
+                        </button>
+                        <div class="dropdown-menu">
+                            {% for category in categories %}
+                            {% set cat_id = kebab(category) %}
+                            <a class="dropdown-item" href="#{{cat_id}}">{{category}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
                     <br>
-                    Jump to:
-                    <select id="category-select" onchange="onCategorySelect()" style="width:fit-content">
-                        {% for category in categories %}
-                        {% set cat_id = kebab(category) %}
-                        <option value="{{cat_id}}">{{category}}</option>
-                        {% endfor %}
-                    </select>
-                    <a id="category-jump-button" href="#catalog__math">Go!</a>
-                    <br>
-                    <button type="button" onclick="clearFilter()">Clear filters</button>
+                    <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
                 </div>
                 <span id="filter-status">Not filtering</span>
                 <div id="catalog" class="p-2" style="overflow: scroll;">
