@@ -13,6 +13,17 @@
     margin: 5px;
     padding: 5px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.catalog__entry__name {
+    flex: 0 1 auto;
+}
+
+.catalog__entry__properties {
+    flex: 0 0 auto;
+    margin-left: auto;
 }
 
 .course {
@@ -42,10 +53,6 @@
 
 .course--post-ap {
     border: 2px solid green;
-}
-
-span.course__properties {
-    float: right;
 }
 
 .course__status {
