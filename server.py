@@ -14,7 +14,7 @@ js = Bundle(
     Bundle('js/course_catalog.js','js/interactivity.js','js/validation.js'),
     Bundle('js/navigation.coffee',filters='coffeescript'),
     output='gen/packed.js')
-assets.config["coffee_bin"] = "./node_modules/coffeescript/bin/coffee"
+assets.config["coffee_bin"] = ".\\node_modules\\coffeescript\\bin\\coffee"
 assets.register('js_all', js)
 
 
