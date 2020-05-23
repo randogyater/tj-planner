@@ -54,9 +54,9 @@
                     <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
                 </div>
                 <span id="filter-status">Not filtering</span>
-                <div id="catalog" class="p-2" style="overflow: scroll;">
+                <div id="catalog" class="p-2" style="overflow-y: scroll;">
                     {% for category, courses in categorized.items() %}
-                    <h3>{{category}}</h3>
+                    <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in courses %}
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
                                 <div class="catalog__entry__name">{{course.full_name}}</div>
