@@ -45,4 +45,6 @@ def index():
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab)
+    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
+        ("test"+str(i), "Test"+str(i), i*3%4+1) for i in range(1, 10)
+    ])
