@@ -107,7 +107,7 @@ function updateElement(id, other_sem, state) {
     if (course.id === "3190T1" && state.rs_time === 0) {
         state.rs_time = state.year*2 + ((state.index === 0)?1:2);
     }
-    else if (course.category === "Math" && state.rs_time >= state.year*2 - ((state.index === 0)?1:0) && other_sem !== "3190T1") {
+    else if (course.category === "Math" && state.rs_time >= state.year*2 + ((state.index === 0)?1:2) && other_sem !== "3190T1") {
         state.grad["rs1"] = 0;
     }
 
