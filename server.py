@@ -46,5 +46,11 @@ def index():
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
     return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
-        ("test"+str(i), "Test"+str(i), i*3%4+1) for i in range(1, 10)
+        ("math", "4 Math credits", 4),
+        ("history", "Fourth history credit", 4),
+        ("language", "3 Language credits", 3),
+        ("pe", "2 PE credits", 2),
+        ("econ", "Economics", 1),
+        ("rs1", "RS1 must be first Math class", 1),
+        ("cs", "CS must be taken before 11th grade", 1),
     ])

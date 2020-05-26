@@ -62,7 +62,7 @@ function updateElement(id, past, other_sem, year) {
     result = checkTree(course.prerequisites, past, other_sem);
     if (result.state) {
         if (!course.availability[year]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year}th grade, but this isn't a hard rule.`);
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }

@@ -29,11 +29,11 @@
 
 <body>
     <div class="container-fluid d-flex flex-column" style="height:100vh;">
-        <div class="row" style="height:12.5%">
+        <div class="row" style="height:10%">
             Navigation bar goes here.
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
-        <div class="row h-75">
+        <div class="row" style="height:70%">
             <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2>Courses:</h2>
@@ -136,14 +136,16 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="height:12.5%">
+        <div class="row" style="height:20%">
             <div class="col-12 h-100 p-2 d-flex flex-column flex-wrap">
+                <h4 class="m-1 flex-fill">Graduation requirements:</h4>
+                <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                 {% for name, text, num in requirements %}
                 <div id="grad-{{name}}" class="grad-requirement m-1 flex-fill border d-flex align-items-center">
                     <span class="m-1">
                         {{text}}:
                         {% for _ in range(num) %}
-                            <i class="far fa-square"></i>
+                            <i class="far fa-square fa-lg"></i>
                         {% endfor %}
                     </span>
                 </div>
