@@ -53,8 +53,8 @@
                     <br>
                     <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
                 </div>
-                <span id="filter-status">Not filtering</span>
-                <div id="catalog" class="p-2" style="overflow-y: scroll;">
+                <span id="filter-status" class="m-1">Not filtering</span>
+                <div id="catalog" class="m-1 p-2 border overflow-auto">
                     {% for category, courses in categorized.items() %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in courses %}
