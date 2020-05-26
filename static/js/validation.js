@@ -11,19 +11,26 @@ function onUpdate() {
         "cs": 0
     }
 
-    for (var c = 1; c <= 4; c++) {
-        updateBox($("#" + getBoxId("s", c)), previous, c - 1, grad, true);
+    state = {
+        past: previous,
+        year: 0,
+        grad: grad,
+        index: 0
+    };
+    for (state.year = 0; state.year < 4; state.year++) {
+        state.index = 0;
+        updateBox($("#" + getBoxId("s", state.year+1)), state);
 
-        $("#" + getBoxId("s", c)).children().each(function (i) {
+        $("#" + getBoxId("s", state.year+1)).children().each(function (i) {
             previous.add($(this).attr("data-course-credit"));
         });
 
-        for (var r = 1; r <= 7; r++) {
-            updateBox($("#" + getBoxId(r, c)), previous, c - 1, grad, false);
+        for (state.index = 1; state.index <= 7; state.index++) {
+            updateBox($("#" + getBoxId(state.index, state.year+1)), state);
         }
 
-        for (var r = 1; r <= 7; r++) {
-            $("#" + getBoxId(r, c)).children().each(function (i) {
+        for (state.index = 1; state.index <= 7; state.index++) {
+            $("#" + getBoxId(state.index, state.year+1)).children().each(function (i) {
                 previous.add($(this).attr("data-course-credit"));
             });
         }
@@ -63,27 +70,27 @@ function onUpdate() {
     showGradState(grad);
 }
 
-function updateBox($box, past, year_index, grad, isSummer) {
+function updateBox($box, state) {
     $children = $box.children(".course");
 
     if ($children.length == 1) {
-        updateElement($children[0].id, past, null, year_index, grad, isSummer);
+        updateElement($children[0].id, null, state);
     } else if ($children.length == 2) {
-        updateElement($children[0].id, past, $children[1].getAttribute("data-course-id"), year_index, grad, isSummer);
-        updateElement($children[1].id, past, $children[0].getAttribute("data-course-id"), year_index, grad, isSummer);
+        updateElement($children[0].id, $children[1].getAttribute("data-course-id"), state);
+        updateElement($children[1].id, $children[0].getAttribute("data-course-id"), state);
     }
 }
 
-function updateElement(id, past, other_sem, year_index, grad, isSummer) {
+function updateElement(id, other_sem, state) {
     $course = $("#" + id);
     course = courses[$course.attr("data-course-id")];
-    if ((year_index < 2 || (year_index === 2 && isSummer)) && course.category === "Computer Science") {
-        grad["cs"] += 1;
+    if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
+        state.grad["cs"] += 1;
     }
-    result = checkTree(course.prerequisites, past, other_sem);
+    result = checkTree(course.prerequisites, state.past, other_sem);
     if (result.state) {
-        if (!course.availability[year_index]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year_index+9}th grade, but this isn't a hard rule.`);
+        if (!course.availability[state.year]) {
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
