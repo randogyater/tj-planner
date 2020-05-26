@@ -4,6 +4,7 @@ import yaml
 import json
 
 CONFIG_LOC = "config.yml"
+INFO_LOC = "info.yml"
 COURSES_LOC = "static/data/courses.json"
 LABS_LOC = "static/data/labs.json"
 
@@ -15,6 +16,9 @@ js = Bundle(
     Bundle('js/navigation.coffee','js/grad_requirements.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
+with open(CONFIG_LOC, 'r') as file:
+    config = yaml.load(file, Loader=yaml.FullLoader)
+assets.config["coffee_bin"] = config["coffee_path"]
 
 
 def kebab(string):
@@ -23,8 +27,8 @@ def kebab(string):
 
 @app.route("/")
 def index():
-    with open(CONFIG_LOC, 'r') as file:
-        config = yaml.load(file, Loader=yaml.FullLoader)
+    with open(INFO_LOC, 'r') as file:
+        info = yaml.load(file, Loader=yaml.FullLoader)
     with open(COURSES_LOC, 'r') as file:
         courses = json.load(file)
     with open(LABS_LOC, 'r') as file:
@@ -45,7 +49,7 @@ def index():
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
+    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
         ("math", "4 Math credits", 4),
         ("history", "Fourth history credit", 1),
         ("lang", "3 years of a language", 3),
