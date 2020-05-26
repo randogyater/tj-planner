@@ -1,22 +1,44 @@
 function onUpdate() {
     previous = new Set();
-    for (var c = 1; c <= 4; c++) {
-        updateBox($("#" + getBoxId("s", c)), previous, c - 1);
+    grad = {
+        "math": 0,
+        "history": 0,
+        "lang": 0,
+        "lang2": 0,
+        "pe": 0,
+        "econ": 0,
+        "rs1": 1, // RS1 starts out "yes", and gets set to "no" later
+        "cs": 0
+    }
 
-        $("#" + getBoxId("s", c)).children().each(function (i) {
+    state = {
+        past: previous,
+        year: 0,
+        grad: grad,
+        index: 0,
+        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
+        languages: {}
+    };
+    for (state.year = 0; state.year < 4; state.year++) {
+        state.index = 0;
+        updateBox($("#" + getBoxId("s", state.year+1)), state);
+
+        $("#" + getBoxId("s", state.year+1)).children().each(function (i) {
             previous.add($(this).attr("data-course-credit"));
         });
 
-        for (var r = 1; r <= 7; r++) {
-            updateBox($("#" + getBoxId(r, c)), previous, c - 1);
+        for (state.index = 1; state.index <= 7; state.index++) {
+            updateBox($("#" + getBoxId(state.index, state.year+1)), state);
         }
 
-        for (var r = 1; r <= 7; r++) {
-            $("#" + getBoxId(r, c)).children().each(function (i) {
+        for (state.index = 1; state.index <= 7; state.index++) {
+            $("#" + getBoxId(state.index, state.year+1)).children().each(function (i) {
                 previous.add($(this).attr("data-course-credit"));
             });
         }
     }
+
+    // Check labs using the final list of courses
     for (lab_id in labs) {
         let requirements = labs[lab_id].prerequisites;
         let recommendations = labs[lab_id].recommended;
@@ -42,27 +64,68 @@ function onUpdate() {
             status.text("Unqualified");
         }
     }
+
+    // Was RS taken at all?
+    if(state.rs_time === 0) {
+        grad["rs1"] = 0;
+    }
+
+    // Check conditions depending only on the final courses
+    grad = checkSimpleConditions(previous, grad);
+
+    // Check language condition
+    let max = 0;
+    for (language in state.languages) {
+        max = Math.max(max, state.languages[language]);
+    }
+    grad["lang"] = max;
+
+    // Now display it
+    showGradState(grad);
 }
 
-function updateBox($box, past, year) {
+function updateBox($box, state) {
     $children = $box.children(".course");
 
     if ($children.length == 1) {
-        updateElement($children[0].id, past, null, year);
+        updateElement($children[0].id, null, state);
     } else if ($children.length == 2) {
-        updateElement($children[0].id, past, $children[1].getAttribute("data-course-id"), year);
-        updateElement($children[1].id, past, $children[0].getAttribute("data-course-id"), year);
+        updateElement($children[0].id, $children[1].getAttribute("data-course-id"), state);
+        updateElement($children[1].id, $children[0].getAttribute("data-course-id"), state);
     }
 }
 
-function updateElement(id, past, other_sem, year) {
+function updateElement(id, other_sem, state) {
+    // Find the course
     $course = $("#" + id);
     course = courses[$course.attr("data-course-id")];
 
-    result = checkTree(course.prerequisites, past, other_sem);
+    // Update requirements stuff
+    if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
+        state.grad["cs"] += 1;
+    }
+    if (course.id === "3190T1" && state.rs_time === 0) {
+        state.rs_time = state.year*2 + ((state.index === 0)?1:2);
+    }
+    else if (course.category === "Math" && state.rs_time >= state.year*2 + ((state.index === 0)?1:2) && other_sem !== "3190T1") {
+        state.grad["rs1"] = 0;
+    }
+
+    if (course.category==="World Languages") {
+        let language = languageFromName(course.short_name);
+        if (language in state.languages) {
+            state.languages[language] += 1;
+        }
+        else{
+            state.languages[language] = 1;
+        }
+    }
+
+    // Update the status
+    result = checkTree(course.prerequisites, state.past, other_sem);
     if (result.state) {
-        if (!course.availability[year]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year}th grade, but this isn't a hard rule.`);
+        if (!course.availability[state.year]) {
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }

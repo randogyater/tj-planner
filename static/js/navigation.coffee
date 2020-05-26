@@ -7,9 +7,9 @@ filter = (condition) ->
         if condition(course)
             count += 1
             if ($this.is(":hidden"))
-                $this.show(0)
+                $this.show("fast")
         else if not $this.is(":hidden")
-            $this.hide(0)
+            $this.hide("fast")
     )
     $("#filter-status").text("Showing #{count} of #{$entries.length} courses")
 

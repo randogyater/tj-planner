@@ -12,7 +12,7 @@ assets = Environment(app)
 
 js = Bundle(
     Bundle('js/course_catalog.js','js/interactivity.js','js/validation.js'),
-    Bundle('js/navigation.coffee',filters='coffeescript'),
+    Bundle('js/navigation.coffee','js/grad_requirements.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
 
@@ -45,4 +45,12 @@ def index():
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab)
+    return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
+        ("math", "4 Math credits", 4),
+        ("history", "Fourth history credit", 1),
+        ("lang", "3 years of a language", 3),
+        ("pe", "2 PE credits", 2),
+        ("econ", "Economics", 1),
+        ("rs1", "RS1 must be first Math class", 1),
+        ("cs", "CS must be taken before 11th grade", 1),
+    ])

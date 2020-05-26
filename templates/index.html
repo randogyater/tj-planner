@@ -29,11 +29,11 @@
 
 <body>
     <div class="container-fluid d-flex flex-column" style="height:100vh;">
-        <div class="row" style="height:12.5%">
+        <div class="row" style="height:10%">
             Navigation bar goes here.
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
-        <div class="row h-75">
+        <div class="row" style="height:70%">
             <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2>Courses:</h2>
@@ -53,8 +53,8 @@
                     <br>
                     <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
                 </div>
-                <span id="filter-status">Not filtering</span>
-                <div id="catalog" class="p-2" style="overflow-y: scroll;">
+                <span id="filter-status" class="m-1">Not filtering</span>
+                <div id="catalog" class="m-1 p-2 border overflow-auto">
                     {% for category, courses in categorized.items() %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in courses %}
@@ -86,7 +86,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-6 h-100">
+            <div class="col-6 h-100 p-2">
                 <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
                     <tr id="grid__header" style="height: fit-content">
                         <th>Freshman</th>
@@ -136,8 +136,27 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="height:12.5%">
-            Graduation requirements go here
+        <div class="row" style="height:20%">
+            <div class="col-6 h-100 p-2 d-flex flex-row flex-wrap overflow-auto">
+                <h4 class="m-auto flex-grow-0">Graduation requirements:</h4>
+                <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
+                {% for name, text, num in requirements %}
+                <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
+                    <span class="m-1">
+                        {{text}}:
+                        {% for _ in range(num) %}
+                            <i class="far fa-square fa-lg"></i>
+                        {% endfor %}
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="col-3">
+                Schedule stats go here
+            </div>
+            <div class="col-3">
+                Import/Export goes here
+            </div>
         </div>
     </div>
 </body>
