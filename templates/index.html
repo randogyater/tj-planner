@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-6 h-100 p-2">
-                <table id="grid" class="h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
+                <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
                     <tr id="grid__header" style="height: fit-content">
                         <th>Freshman</th>
                         <th>Sophomore</th>
@@ -137,11 +137,11 @@
             </div>
         </div>
         <div class="row" style="height:20%">
-            <div class="col-6 h-100 p-2 d-flex flex-column flex-wrap">
-                <h4 class="m-1 flex-fill">Graduation requirements:</h4>
+            <div class="col-6 h-100 p-2 d-flex flex-row flex-wrap overflow-auto">
+                <h4 class="m-auto flex-grow-0">Graduation requirements:</h4>
                 <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                 {% for name, text, num in requirements %}
-                <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center bg-danger text-white">
+                <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
                     <span class="m-1">
                         {{text}}:
                         {% for _ in range(num) %}
