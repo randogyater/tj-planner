@@ -7,7 +7,7 @@ function onUpdate() {
         "lang2": 0,
         "pe": 0,
         "econ": 0,
-        "rs1": 1,
+        "rs1": 1, // RS1 starts out "yes", and gets set to "no" later
         "cs": 0
     }
 
@@ -16,7 +16,8 @@ function onUpdate() {
         year: 0,
         grad: grad,
         index: 0,
-        rs_time: 0 // This is actually 2 + the current year * 2, minus 1 if it was in summer
+        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
+        languages: {}
     };
     for (state.year = 0; state.year < 4; state.year++) {
         state.index = 0;
@@ -72,6 +73,13 @@ function onUpdate() {
     // Check conditions depending only on the final courses
     grad = checkSimpleConditions(previous, grad);
 
+    // Check language condition
+    let max = 0;
+    for (language in state.languages) {
+        max = Math.max(max, state.languages[language]);
+    }
+    grad["lang"] = max;
+
     // Now display it
     showGradState(grad);
 }
@@ -88,17 +96,32 @@ function updateBox($box, state) {
 }
 
 function updateElement(id, other_sem, state) {
+    // Find the course
     $course = $("#" + id);
     course = courses[$course.attr("data-course-id")];
+
+    // Update requirements stuff
     if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
         state.grad["cs"] += 1;
     }
     if (course.id === "3190T1" && state.rs_time === 0) {
-        state.rs_time = state.year*2 + ((state.index === 0)?0:1);
+        state.rs_time = state.year*2 + ((state.index === 0)?1:2);
     }
     else if (course.category === "Math" && state.rs_time >= state.year*2 - ((state.index === 0)?1:0) && other_sem !== "3190T1") {
         state.grad["rs1"] = 0;
     }
+
+    if (course.category==="World Languages") {
+        let language = languageFromName(course.short_name);
+        if (language in state.languages) {
+            state.languages[language] += 1;
+        }
+        else{
+            state.languages[language] = 1;
+        }
+    }
+
+    // Update the status
     result = checkTree(course.prerequisites, state.past, other_sem);
     if (result.state) {
         if (!course.availability[state.year]) {

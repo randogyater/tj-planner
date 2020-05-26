@@ -6,7 +6,6 @@ SIMPLE_CONDITIONS = [
 ]
 
 showGradState = (state) ->
-    console.log(state)
     showGradReq(name, num) for name, num of state
 
 showGradReq = (name, num) ->
@@ -25,7 +24,7 @@ showGradReq = (name, num) ->
             $this.removeClass("fa-square")
             $this.removeClass("fa-minus-square"))
         unchecked.each(() ->
-            $this = $(this) # once again
+            $this = $(this)
             $this.addClass("fa-square")
             $this.removeClass("fa-check-square")
             $this.removeClass("fa-minus-square"))
@@ -33,7 +32,7 @@ showGradReq = (name, num) ->
         entry.addClass("table-success")
         entry.removeClass("table-danger")
         boxes.each(() ->
-            $this = $(this) # once again
+            $this = $(this)
             $this.addClass("fa-check-square")
             $this.removeClass("fa-square")
             $this.removeClass("fa-minus-square"))
@@ -53,3 +52,11 @@ checkSimpleConditions = (past, grad) ->
         name = entry[0]
         grad[name] /= 2
     return grad
+
+languageFromName = (name) ->
+    # I apologize in advance for this function.
+    split = name.split(/[ -]/)
+    if split[0] == "AP"
+        return split[1]
+    else
+        return split[0]
