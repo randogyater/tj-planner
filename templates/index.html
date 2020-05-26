@@ -139,11 +139,13 @@
         <div class="row" style="height:12.5%">
             <div class="col-12 h-100 p-2 d-flex flex-column flex-wrap">
                 {% for name, text, num in requirements %}
-                <div id="grad-{{name}}" class="grad-requirement m-1 flex-fill border">
-                    {{text}}:
-                    {% for _ in range(num) %}
-                        <i class="far fa-square"></i>
-                    {% endfor %}
+                <div id="grad-{{name}}" class="grad-requirement m-1 flex-fill border d-flex align-items-center">
+                    <span class="m-1">
+                        {{text}}:
+                        {% for _ in range(num) %}
+                            <i class="far fa-square"></i>
+                        {% endfor %}
+                    </span>
                 </div>
                 {% endfor %}
             </div>
