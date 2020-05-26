@@ -8,21 +8,6 @@ SIMPLE_CONDITIONS = [
 showGradState = (state) ->
     console.log(state)
     showGradReq(name, num) for name, num of state
-    lang = $("#grad-lang")
-    lang2 = $("#grad-lang2")
-    if lang.hasClass("table-success") and !lang2.hasClass("table-success")
-        lang2.addClass("table-success")
-        lang2.removeClass("table-danger")
-        boxes = lang2.find("i")
-    if !lang.hasClass("table-success") and lang2.hasClass("table-success")
-        lang.addClass("table-success")
-        lang.removeClass("table-danger")
-        boxes = lang1.find("i")
-    if boxes?
-        boxes.removeClass("fa-check-square")
-        boxes.removeClass("fa-square")
-        boxes.addClass("fa-minus-square")
-    return
 
 showGradReq = (name, num) ->
     entry = $("#grad-#{name}")
