@@ -1,5 +1,16 @@
 function onUpdate() {
     previous = new Set();
+    grad = {
+        "math": 0,
+        "history": 0,
+        "lang": 0,
+        "lang2": 0,
+        "pe": 0,
+        "econ": 0,
+        "rs1": 0,
+        "cs": 0
+    }
+
     for (var c = 1; c <= 4; c++) {
         updateBox($("#" + getBoxId("s", c)), previous, c - 1);
 
@@ -17,6 +28,8 @@ function onUpdate() {
             });
         }
     }
+
+    // Check labs using the final list of courses
     for (lab_id in labs) {
         let requirements = labs[lab_id].prerequisites;
         let recommendations = labs[lab_id].recommended;
@@ -42,27 +55,33 @@ function onUpdate() {
             status.text("Unqualified");
         }
     }
+
+    // Check conditions depending only on the final courses
+    grad = checkSimpleConditions(previous, grad);
+
+    // Now display it
+    showGradState(grad);
 }
 
-function updateBox($box, past, year) {
+function updateBox($box, past, year_index) {
     $children = $box.children(".course");
 
     if ($children.length == 1) {
-        updateElement($children[0].id, past, null, year);
+        updateElement($children[0].id, past, null, year_index);
     } else if ($children.length == 2) {
-        updateElement($children[0].id, past, $children[1].getAttribute("data-course-id"), year);
-        updateElement($children[1].id, past, $children[0].getAttribute("data-course-id"), year);
+        updateElement($children[0].id, past, $children[1].getAttribute("data-course-id"), year_index);
+        updateElement($children[1].id, past, $children[0].getAttribute("data-course-id"), year_index);
     }
 }
 
-function updateElement(id, past, other_sem, year) {
+function updateElement(id, past, other_sem, year_index) {
     $course = $("#" + id);
     course = courses[$course.attr("data-course-id")];
 
     result = checkTree(course.prerequisites, past, other_sem);
     if (result.state) {
-        if (!course.availability[year]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year+9}th grade, but this isn't a hard rule.`);
+        if (!course.availability[year_index]) {
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${year_index+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }

@@ -47,8 +47,9 @@ def index():
         categorized[course["category"]].append(course)
     return render_template("index.html", categories=config["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
         ("math", "4 Math credits", 4),
-        ("history", "Fourth history credit", 4),
-        ("language", "3 Language credits", 3),
+        ("history", "Fourth history credit", 1),
+        ("lang", "3 years in one language", 3),
+        ("lang2", "or 2 years in two languages", 4),
         ("pe", "2 PE credits", 2),
         ("econ", "Economics", 1),
         ("rs1", "RS1 must be first Math class", 1),
