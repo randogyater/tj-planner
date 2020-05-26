@@ -38,11 +38,12 @@
     height: -webkit-calc(100% - 10px);
 }
 
-.course--semester {
+/* TODO: Replace this with something that doesn't make the boxes squeeze */
+/* .course--semester {
     height: calc(50% - 7.5px);
     height: -moz-calc(50% - 7.5px);
     height: -webkit-calc(50% - 7.5px);
-}
+} */
 
 .course--ap {
     border: 2px solid purple;
