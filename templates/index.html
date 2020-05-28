@@ -28,15 +28,15 @@
 </head>
 
 <body>
-    <div class="container-fluid d-flex flex-column" style="height:100vh;">
-        <div class="row" style="height:10%">
+    <div class="container-fluid d-flex flex-column" style="height:98vh;">
+        <div class="row" style="height:10%"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
             Navigation bar goes here.
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
-        <div class="row" style="height:70%">
+        <div class="row" style="height:90%">
             <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
-                <h2>Courses:</h2>
+                <h2 class="m-auto">Courses:</h2>
                 <div id="catalog__controls" class="m-1">
                     <div class="m-1">Search: <input id="search-box" type="text" oninput="onSearch()"></div>
                     <div class="btn-group m-1">
@@ -115,7 +115,7 @@
                 </table>
             </div>
             <div class="col-4 h-100 d-flex flex-column">
-                <h2>Senior labs:</h2>
+                <h2 class="m-auto">Senior labs:</h2>
                 <div class="overflow-auto">
                     <table class="table table-hover">
                         <thead>
@@ -134,28 +134,20 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        <div class="row" style="height:20%">
-            <div class="col-6 h-100 p-2 d-flex flex-row flex-wrap overflow-auto">
-                <h4 class="m-auto flex-grow-0">Graduation requirements:</h4>
-                <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
-                {% for name, text, num in requirements %}
-                <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
-                    <span class="m-1">
-                        {{text}}:
-                        {% for _ in range(num) %}
-                            <i class="far fa-square fa-lg"></i>
-                        {% endfor %}
-                    </span>
+                <h2 class="m-auto">Graduation requirements:</h2>
+                <div class="p-2 flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
+                    <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
+                    {% for name, text, num in requirements %}
+                    <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
+                        <span class="m-1">
+                            {{text}}:
+                            {% for _ in range(num) %}
+                                <i class="far fa-square fa-lg"></i>
+                            {% endfor %}
+                        </span>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            <div class="col-3">
-                Schedule stats go here
-            </div>
-            <div class="col-3">
-                Import/Export goes here
             </div>
         </div>
     </div>
