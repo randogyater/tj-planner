@@ -28,6 +28,7 @@
 
 .course {
     border: 1px solid black;
+    font-size: smaller; /* TODO It should grow back to normal size if there's enough space */
 }
 
 .course--year {
