@@ -27,23 +27,34 @@
 }
 
 .course {
-    margin: 5px;
-    padding: 5px;
     border: 1px solid black;
 }
 
 .course--year {
-    height: calc(100% - 10px);
-    height: -moz-calc(100% - 10px);
-    height: -webkit-calc(100% - 10px);
+    height: 100%;
 }
 
-/* TODO: Replace this with something that doesn't make the boxes squeeze */
-/* .course--semester {
-    height: calc(50% - 7.5px);
-    height: -moz-calc(50% - 7.5px);
-    height: -webkit-calc(50% - 7.5px);
-} */
+.course--semester:not(:only-of-type) {
+    height: 50%
+}
+
+td.grid__box > .course--semester:nth-last-of-type(2) {
+    margin-bottom: -1px;
+}
+
+td.grid__box > .course--semester:nth-of-type(2) {
+    margin-top: -1px;
+}
+
+/* TODO: These really shouldn't have to be marked as important, and as soon as I figure out why precedence isn't working I'll fix it. */
+
+td.grid__box > .course--semester.course--ap:nth-last-of-type(2), .course--semester.course--post-ap:nth-last-of-type(2) {
+    margin-bottom: -2px !important;
+}
+
+td.grid__box > .course--semester.course--ap:nth-of-type(2), .course--semester.course--post-ap:nth-of-type(2) {
+    margin-top: -2px !important;
+}
 
 .course--ap {
     border: 2px solid purple;
@@ -61,6 +72,5 @@
 td.grid__box {
     width: 25%;
     height: 11%;
-    margin: 5px;
     border: 1px solid black;
  }

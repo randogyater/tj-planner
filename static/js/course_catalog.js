@@ -33,7 +33,7 @@ function createCourseDraggable(course_id) {
 
     var $course = $("<div>", {
         id: "c" + counter,
-        "class": "course",
+        "class": "course p-1",
         "draggable": "true",
         "ondragstart": "dragStart(event)",
         "data-course-id": course_id,
