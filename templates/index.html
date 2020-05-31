@@ -89,6 +89,14 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
+                <div class="w-100 d-flex flex-row">
+                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
+                        Toggle summer
+                    </button>
+                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--online" aria-expanded="false" aria-controls="row--online">
+                        Toggle online
+                    </button>
+                </div>
             </div>
             <div class="col-5 h-100 p-2">
                 <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
@@ -98,7 +106,7 @@
                         <th>Junior</th>
                         <th>Senior</th>
                     </tr>
-                    <tr id="row--summer" class="grid__row">
+                    <tr id="row--summer" class="grid__row collapse">
                         {% for column in range(4) %}
                         <td class="grid__box p-1 grid__box--summer" ondrop="drop(event)" ondragover="allowDrop(event)"
                             id="cell-s-{{loop.index}}">
@@ -116,7 +124,7 @@
                     </tr>
                     {% endfor %}
                     
-                    <tr id="row--online" class="grid__row">
+                    <tr id="row--online" class="grid__row collapse">
                         {% for column in range(4) %}
                         <td class="grid__box p-1 grid__box--online" ondrop="drop(event)" ondragover="allowDrop(event)"
                             id="cell-o-{{loop.index}}">
