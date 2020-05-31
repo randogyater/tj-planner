@@ -98,6 +98,14 @@
                         <th>Junior</th>
                         <th>Senior</th>
                     </tr>
+                    <tr id="row--summer" class="grid__row">
+                        {% for column in range(4) %}
+                        <td class="grid__box p-1 grid__box--summer" ondrop="drop(event)" ondragover="allowDrop(event)"
+                            id="cell-s-{{loop.index}}">
+                            <div class="m-auto grid__hint text-secondary">Summer</div>
+                        </td>
+                        {% endfor %}
+                    </tr>
                     {% for row in range(7) %}
                     {% set row_num = loop.index %}
                     <tr class="grid__row">
@@ -107,13 +115,13 @@
                         {% endfor %}
                     </tr>
                     {% endfor %}
-                    <tr style="height:fit-content">
-                        <td>Summer:</td>
-                    </tr>
-                    <tr class="grid__row">
+                    
+                    <tr id="row--online" class="grid__row">
                         {% for column in range(4) %}
-                        <td class="grid__box p-1" ondrop="drop(event)" ondragover="allowDrop(event)"
-                            id="cell-s-{{loop.index}}"></td>
+                        <td class="grid__box p-1 grid__box--online" ondrop="drop(event)" ondragover="allowDrop(event)"
+                            id="cell-o-{{loop.index}}">
+                            <div class="m-auto grid__hint text-secondary">Online</div>
+                        </td>
                         {% endfor %}
                     </tr>
                 </table>
