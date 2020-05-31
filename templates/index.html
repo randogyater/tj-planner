@@ -34,26 +34,30 @@
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
         <div class="row" style="height:90%">
-            <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
+            <div id="catalog__sidebar" class="col-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2 class="m-auto">Courses:</h2>
                 <div id="catalog__controls" class="m-1">
-                    <div class="m-1">Search: <input id="search-box" type="text" oninput="onSearch()"></div>
-                    <div class="btn-group m-1">
+                    <div class="input-group m-1">
+                        <input id="search-box" type="text" class="form-control" placeholder="Enter name of course..." aria-label="Search terms">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-primary" type="button" onclick="onSearch()">Search</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary m-1 btn-block" onclick="clearFilter()">Clear filters</button>
+                    <div class="btn-group m-1 btn-block">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Jump to
                         </button>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu btn-block">
                             {% for category in categories %}
                             {% set cat_id = kebab(category) %}
                             <a class="dropdown-item" href="#{{cat_id}}">{{category}}</a>
                             {% endfor %}
                         </div>
                     </div>
-                    <br>
-                    <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
+                    <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
-                <span id="filter-status" class="m-1">Not filtering</span>
                 <div id="catalog" class="m-1 p-2 border overflow-auto">
                     {% for category, courses in categorized.items() %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
@@ -86,7 +90,7 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="col-6 h-100 p-2">
+            <div class="col-5 h-100 p-2">
                 <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
                     <tr id="grid__header" style="height: fit-content">
                         <th>Freshman</th>
