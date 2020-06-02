@@ -130,6 +130,7 @@ function updateElement(id, other_sem, state) {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
     } else if (result.skippable) {
+        // TODO make this show the course names too
         updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - " + result.skips.join("\n - "));
     } else {
         let set = new Set();

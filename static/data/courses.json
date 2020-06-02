@@ -847,7 +847,7 @@
         "equivalent": "313754",
         "unique": false,
         "ap": "pre",
-        "skippable": false
+        "skippable": true
     },
     "314351": {
         "full_name": "TJHSST Math 1",
@@ -2860,7 +2860,7 @@
         "equivalent": "3184T1",
         "unique": false,
         "ap": "pre",
-        "skippable": false
+        "skippable": true
     },
     "TJA3190": {
         "full_name": "TJHSST Research & Statistics 1",
