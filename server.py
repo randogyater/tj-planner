@@ -12,7 +12,7 @@ app = Flask(__name__)
 assets = Environment(app)
 
 js = Bundle(
-    Bundle('js/course_catalog.js','js/interactivity.js','js/validation.js'),
+    Bundle('js/constants.js','js/course_catalog.js','js/interactivity.js','js/validation.js'),
     Bundle('js/navigation.coffee','js/grad_requirements.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
@@ -49,7 +49,7 @@ def index():
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab, requirements=[
+    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab, info = info, requirements=[
         ("math", "4 Math credits", 4),
         ("history", "Fourth history credit", 1),
         ("lang", "3 years of a language", 3),
