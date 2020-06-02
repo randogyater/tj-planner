@@ -21,21 +21,32 @@ function onUpdate() {
     };
     for (state.year = 0; state.year < 4; state.year++) {
         state.index = 0;
+
+        // Update the summer box
         updateBox($("#" + getBoxId("s", state.year+1)), state);
 
-        $("#" + getBoxId("s", state.year+1)).children().each(function (i) {
+        // Add summer box to set
+        $("#" + getBoxId("s", state.year+1)).children(".course").each(function (i) {
             previous.add($(this).attr("data-course-credit"));
         });
 
+        // Update the ordinary boxes
         for (state.index = 1; state.index <= 7; state.index++) {
             updateBox($("#" + getBoxId(state.index, state.year+1)), state);
         }
 
+        // Update the online box
+        updateBox($("#" + getBoxId("o", state.year+1)), state);
+
+        // Add normal and online courses to set
         for (state.index = 1; state.index <= 7; state.index++) {
-            $("#" + getBoxId(state.index, state.year+1)).children().each(function (i) {
+            $("#" + getBoxId(state.index, state.year+1)).children(".course").each(function (i) {
                 previous.add($(this).attr("data-course-credit"));
             });
         }
+        $("#" + getBoxId("o", state.year+1)).children(".course").each(function (i) {
+            previous.add($(this).attr("data-course-credit"));
+        });
     }
 
     // Check labs using the final list of courses

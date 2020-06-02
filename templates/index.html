@@ -28,32 +28,36 @@
 </head>
 
 <body>
-    <div class="container-fluid d-flex flex-column" style="height:100vh;">
-        <div class="row" style="height:10%">
+    <div class="container-fluid d-flex flex-column" style="height:98vh;">
+        <div class="row" style="height:10%"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
             Navigation bar goes here.
             <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
         </div>
-        <div class="row" style="height:70%">
-            <div id="catalog__sidebar" class="col-2 h-100 d-flex flex-column" ondragover="allowDrop(event)"
+        <div class="row" style="height:90%">
+            <div id="catalog__sidebar" class="col-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
-                <h2>Courses:</h2>
+                <h2 class="m-auto">Courses:</h2>
                 <div id="catalog__controls" class="m-1">
-                    <div class="m-1">Search: <input id="search-box" type="text" oninput="onSearch()"></div>
-                    <div class="btn-group m-1">
+                    <div class="input-group m-1">
+                        <input id="search-box" type="text" class="form-control" placeholder="Enter name of course..." aria-label="Search terms">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-primary" type="button" onclick="onSearch()">Search</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-outline-primary m-1 btn-block" onclick="clearFilter()">Clear filters</button>
+                    <div class="btn-group m-1 btn-block">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Jump to
                         </button>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu btn-block">
                             {% for category in categories %}
                             {% set cat_id = kebab(category) %}
                             <a class="dropdown-item" href="#{{cat_id}}">{{category}}</a>
                             {% endfor %}
                         </div>
                     </div>
-                    <br>
-                    <button type="button" class="btn btn-primary m-1" onclick="clearFilter()">Clear filters</button>
+                    <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
-                <span id="filter-status" class="m-1">Not filtering</span>
                 <div id="catalog" class="m-1 p-2 border overflow-auto">
                     {% for category, courses in categorized.items() %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
@@ -85,8 +89,16 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
+                <div class="w-100 d-flex flex-row">
+                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
+                        Toggle summer
+                    </button>
+                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--online" aria-expanded="false" aria-controls="row--online">
+                        Toggle online
+                    </button>
+                </div>
             </div>
-            <div class="col-6 h-100 p-2">
+            <div class="col-5 h-100 p-2">
                 <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
                     <tr id="grid__header" style="height: fit-content">
                         <th>Freshman</th>
@@ -94,28 +106,36 @@
                         <th>Junior</th>
                         <th>Senior</th>
                     </tr>
+                    <tr id="row--summer" class="grid__row collapse">
+                        {% for column in range(4) %}
+                        <td class="grid__box p-1 grid__box--summer" ondrop="drop(event)" ondragover="allowDrop(event)"
+                            id="cell-s-{{loop.index}}">
+                            <div class="m-auto grid__hint text-secondary">Summer</div>
+                        </td>
+                        {% endfor %}
+                    </tr>
                     {% for row in range(7) %}
                     {% set row_num = loop.index %}
                     <tr class="grid__row">
                         {% for column in range(4) %}
-                        <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"
+                        <td class="grid__box p-1" ondrop="drop(event)" ondragover="allowDrop(event)"
                             id="cell-{{row_num}}-{{loop.index}}"></td>
                         {% endfor %}
                     </tr>
                     {% endfor %}
-                    <tr style="height:fit-content">
-                        <td>Summer:</td>
-                    </tr>
-                    <tr class="grid__row">
+                    
+                    <tr id="row--online" class="grid__row collapse">
                         {% for column in range(4) %}
-                        <td class="grid__box" ondrop="drop(event)" ondragover="allowDrop(event)"
-                            id="cell-s-{{loop.index}}"></td>
+                        <td class="grid__box p-1 grid__box--online" ondrop="drop(event)" ondragover="allowDrop(event)"
+                            id="cell-o-{{loop.index}}">
+                            <div class="m-auto grid__hint text-secondary">Online</div>
+                        </td>
                         {% endfor %}
                     </tr>
                 </table>
             </div>
             <div class="col-4 h-100 d-flex flex-column">
-                <h2>Senior labs:</h2>
+                <h2 class="m-auto">Senior labs:</h2>
                 <div class="overflow-auto">
                     <table class="table table-hover">
                         <thead>
@@ -134,28 +154,20 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        <div class="row" style="height:20%">
-            <div class="col-6 h-100 p-2 d-flex flex-row flex-wrap overflow-auto">
-                <h4 class="m-auto flex-grow-0">Graduation requirements:</h4>
-                <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
-                {% for name, text, num in requirements %}
-                <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
-                    <span class="m-1">
-                        {{text}}:
-                        {% for _ in range(num) %}
-                            <i class="far fa-square fa-lg"></i>
-                        {% endfor %}
-                    </span>
+                <h2 class="m-auto">Graduation requirements:</h2>
+                <div class="p-2 flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
+                    <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
+                    {% for name, text, num in requirements %}
+                    <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
+                        <span class="m-1">
+                            {{text}}:
+                            {% for _ in range(num) %}
+                                <i class="far fa-square fa-lg"></i>
+                            {% endfor %}
+                        </span>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            <div class="col-3">
-                Schedule stats go here
-            </div>
-            <div class="col-3">
-                Import/Export goes here
             </div>
         </div>
     </div>
