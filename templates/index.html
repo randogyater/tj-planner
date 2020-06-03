@@ -169,24 +169,24 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="math-ms">Highest math taken:</label>
-                    <select class="form-control" id="math-ms">
-                        <option value="none">Algebra 1</option>
-                        <option value="geo">Geometry (TJ Math 1/2 equivalent)</option>
-                        <option value="a2">Algebra 2 (TJ Math 3 equivalent)</option>
-                        <option value="trig">Trigonometry (TJ Math 4 equivalent)</option>
+                    <label for="ms-math">Highest math taken:</label>
+                    <select class="form-control" id="ms-math">
+                        <option value="0">Algebra 1</option>
+                        <option value="2">Geometry (TJ Math 1/2 equivalent)</option>
+                        <option value="3">Algebra 2 (TJ Math 3 equivalent)</option>
+                        <option value="4">Trigonometry (TJ Math 4 equivalent)</option>
                     </select>
-                    <label for="lang-ms">Language taken in middle school:</label>
-                    <select class="form-control" id="math-ms">
+                    <label for="ms-lang">Language taken in middle school:</label>
+                    <select class="form-control" id="ms-lang">
                         <option value="none">None</option>
                         {% for language in info["languages"] %}
-                        <option value="{{ language }}">{{ language.capitalize() }}</option>
+                        <option value="{{ language.lower() }}">{{ language }}</option>
                         {% endfor %}
                     </select>
                 </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onUpdate()">Save changes</button>
             </div>
           </div>
         </div>
