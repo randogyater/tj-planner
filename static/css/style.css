@@ -69,4 +69,28 @@ td.grid__box {
     width: 25%;
     height: 11%;
     border: 1px solid black;
- }
+}
+
+td.grid__box--summer {
+    background-color: cornsilk;
+}
+
+td.grid__box--online {
+    background: rgb(215,235,255);
+    background: -moz-linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
+    background: linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7ebff",endColorstr="#d7ebff",GradientType=1);
+}
+
+.grid__hint {
+    text-align: center;
+    font-style: italic;
+    font-size: larger;
+    pointer-events: none;
+}
+
+.grid__hint:not(:only-child) {
+    visibility: hidden;
+    display: none;
+}
