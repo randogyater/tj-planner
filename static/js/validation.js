@@ -19,6 +19,18 @@ function onUpdate() {
         rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
         languages: {}
     };
+
+    // Add things from previous years
+    let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
+    for (var i = 0; i<math_courses; i++) {
+        previous.add(MATHS[i]);
+    }
+    let language = $("#ms-lang").val();
+    if (language !== "none") {
+        previous.add(LANGUAGE_1[language]);
+    }
+
+    // Check all the boxes
     for (state.year = 0; state.year < 4; state.year++) {
         state.index = 0;
 
@@ -85,6 +97,18 @@ function onUpdate() {
     grad = checkSimpleConditions(previous, grad);
 
     // Check language condition
+    previous.forEach(function(id) {
+        let course = courses[id];
+        if (course.category==="World Languages") {
+            let language = languageFromName(course.short_name);
+            if (language in state.languages) {
+                state.languages[language] += 1;
+            }
+            else{
+                state.languages[language] = 1;
+            }
+        }
+    });
     let max = 0;
     for (language in state.languages) {
         max = Math.max(max, state.languages[language]);
@@ -122,16 +146,6 @@ function updateElement(id, other_sem, state) {
         state.grad["rs1"] = 0;
     }
 
-    if (course.category==="World Languages") {
-        let language = languageFromName(course.short_name);
-        if (language in state.languages) {
-            state.languages[language] += 1;
-        }
-        else{
-            state.languages[language] = 1;
-        }
-    }
-
     // Update the status
     result = checkTree(course.prerequisites, state.past, other_sem);
     if (result.state) {
@@ -141,6 +155,7 @@ function updateElement(id, other_sem, state) {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
     } else if (result.skippable) {
+        // TODO make this show the course names too
         updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - " + result.skips.join("\n - "));
     } else {
         let set = new Set();

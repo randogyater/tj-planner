@@ -89,6 +89,9 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
+                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+                    Enter middle school courses...
+                </button>
                 <div class="w-100 d-flex flex-row">
                     <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
                         Toggle summer
@@ -169,6 +172,39 @@
                     {% endfor %}
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Enter courses from middle school:</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="ms-math">Highest math taken:</label>
+                    <select class="form-control" id="ms-math">
+                        <option value="0">Algebra 1</option>
+                        <option value="2">Geometry (TJ Math 1/2 equivalent)</option>
+                        <option value="3">Algebra 2 (TJ Math 3 equivalent)</option>
+                        <option value="4">Trigonometry (TJ Math 4 equivalent)</option>
+                    </select>
+                    <label for="ms-lang">Language taken in middle school:</label>
+                    <select class="form-control" id="ms-lang">
+                        <option value="none">None</option>
+                        {% for language in info["languages"] %}
+                        <option value="{{ language.lower() }}">{{ language }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onUpdate()">Save changes</button>
+            </div>
+          </div>
         </div>
     </div>
 </body>

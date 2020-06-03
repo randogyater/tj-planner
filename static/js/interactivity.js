@@ -1,11 +1,3 @@
-const ICONS = {
-    SUCCESS: "fas fa-check-circle",
-    FAILURE: "fas fa-times-circle",
-    CONDITIONAL: "fas fa-exclamation-circle",
-    ADDITIONAL: "fas fa-plus-circle",
-    LOADING: "fas fa-spinner"
-};
-
 function allowDrop(event) {
     if (event.target.hasAttribute("ondrop") || $(event.target).parents("#catalog__sidebar")) {
         event.preventDefault();

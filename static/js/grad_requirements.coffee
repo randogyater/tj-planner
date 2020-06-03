@@ -1,7 +1,7 @@
 SIMPLE_CONDITIONS = [
     ["math", (course) -> course.category=="Math"], # TODO RS1 and Algebra don't count here
-    ["history", (course) -> course.category=="Social Studies" && course.ap=="pre" && course.id!="2221T1" && course.id!="244000" && course.id!="2360T1" && course.id!="2900T1"], 
-    ["pe", (course) -> course.equivalent=="730000" || course.equivalent=="740500"],
+    ["history", (course) -> course.category=="Social Studies" && course.ap=="pre" && course.id!=WORLD_HISTORY_2 && course.id!=VA_US_GOV && course.id!=US_VA_HISTORY && course.id!=PSYCHOLOGY], 
+    ["pe", (course) -> course.equivalent==PE_9 || course.equivalent==PE_10],
     ["econ", (course) -> course.full_name.includes("Economics")] # Sometimes the obvious solution works
 ]
 
