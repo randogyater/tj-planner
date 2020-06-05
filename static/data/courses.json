@@ -479,7 +479,7 @@
         "weight": 0.0,
         "short_name": "Journalism 2",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -507,8 +507,8 @@
         "weight": 0.0,
         "short_name": "Journalism 3",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -535,9 +535,9 @@
         "weight": 0.0,
         "short_name": "Journalism 4",
         "availability": [
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
             true
         ],
         "description": "In Journalism 4 students learn marketable publications skills; develop individual writing, layout, and design styles; and may assume editorial leadership and responsibility for producing a high school newspaper and/or student produced website.  Students also take responsibility for business and circulation management.\nTJ: Students at the highest level of publications expertise assume top positions on staff ranging from editor in chief to managing editor to senior news and features editors. Each of these positions has many managerial responsibilities. Emphasis is on teaching these leaders to manage their sections, mentor younger students and provide their staff with role models. In a student run paper, these students run the show. Students attend local, regional and national workshops and conventions as part of the overall learning experience. Journalism 4 students work is targeted for senior-only contests such as the NSPA Wikoff Scholarship Award and the NSPA Best of Story and Art. Students will be encouraged to attend special internships before and during their J-4 year. They will be guided to produce a professional-level portfolio of their work for college admission and/or post-graduation internships. Students will assist the adviser in co-leading workshops at various conventions and will be encouraged to represent TJHSST and tjTODAY in forums of other high school students. Students will meet regularly with administrators and other student leaders on campus and around the county.",
@@ -651,7 +651,7 @@
         "weight": 0.0,
         "short_name": "Broadcast Journ 1",
         "availability": [
-            false,
+            true,
             true,
             true,
             true
@@ -832,7 +832,7 @@
                 "313753"
             ]
         ],
-        "id": "313754",
+        "id": "316154",
         "semester": true,
         "weight": 0.5,
         "short_name": "TJ Math 4",
@@ -844,7 +844,7 @@
         ],
         "description": "Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.\nTJ: Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.",
         "online": false,
-        "equivalent": "313754",
+        "equivalent": "316154",
         "unique": false,
         "ap": "pre",
         "skippable": true
@@ -902,7 +902,7 @@
         "category": "Math",
         "prerequisites": [
             [
-                "313754"
+                "316154"
             ]
         ],
         "id": "316055",
@@ -912,7 +912,7 @@
         "availability": [
             true,
             true,
-            false,
+            true,
             false
         ],
         "description": "The study of Advanced Functions includes an extension of topics first introduced in algebra. All parent function graphs and their transformations are a focus as well as the important features of graphs such as symmetry, concavity, extrema and end behavior. Operations on functions are studied, especially composition, and finding appropriate domains is stressed. Specific functions such as exponential and logarithmic are explored and used for graphing, solving equations, and applications. Other topics of study include sequences and series, proof by math induction, and the exploration of conic sections and their applications and an introduction to the fundamentals of calculus, including limits, continuity, and the concept of the derivative. The process standard focus will be Communication. Upon conclusion of TJ Math 5, students will be advised as to which level of AP Calculus they should take the following school year.",
@@ -944,7 +944,7 @@
         "availability": [
             true,
             true,
-            false,
+            true,
             false
         ],
         "description": "Insert FCPS approved course description here.\nTJ: Semester introduction to calculus providing an overview of limits, derivatives, and applications related to those topics.",
@@ -967,8 +967,8 @@
         "weight": 1.0,
         "short_name": "AP Calculus AB",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -992,7 +992,7 @@
         "weight": 1.0,
         "short_name": "AP Calculus BC",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -1150,8 +1150,8 @@
         "weight": 1.0,
         "short_name": "Matrix Algebra",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -1740,7 +1740,7 @@
         "weight": 1.0,
         "short_name": "AP Music Theory",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -1796,7 +1796,7 @@
     "924016": {
         "full_name": "Jazz Band",
         "category": "Performing Arts",
-        "id": "924016",
+        "id": "924015",
         "semester": false,
         "weight": 0.0,
         "short_name": "Jazz Ensemble",
@@ -1808,7 +1808,7 @@
         ],
         "description": "The instrumental jazz ensemble curriculum emphasizes improvisation and styles of the jazz idiom. Content includes the study of blues scale patterns and harmonic progressions innate in jazz music. Content also includes the study of the appropriate jazz literature and rehearsal and performance techniques from the jazz idiom. Instrumentation of the jazz ensemble is at the discretion of the instructor. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Jazz Band is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on Jazz repertoire and stylistic demands associated with the performance of the repertoire. Standard instrumentation will include: Alto, Tenor and Baritone Saxophones, Tenor and Bass Trombones, Trumpets, Trap Set, Electric/Upright Bass, Keyboard, and Rhythm Guitar. Class content will include study of jazz repertoire, rehearsal techniques, and individual improvisation. Rehearsals and performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
         "online": false,
-        "equivalent": "924016",
+        "equivalent": "924015",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -1894,7 +1894,7 @@
         "short_name": "Adv Astr Solar Sys",
         "availability": [
             false,
-            false,
+            true,
             true,
             true
         ],
@@ -1919,7 +1919,7 @@
         "short_name": "Adv Astr Universe",
         "availability": [
             false,
-            false,
+            true,
             true,
             true
         ],
@@ -2069,7 +2069,7 @@
         "short_name": "AP Biology",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -2157,7 +2157,7 @@
         "short_name": "AP Chemistry",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -2284,7 +2284,7 @@
         "availability": [
             false,
             false,
-            false,
+            true,
             true
         ],
         "description": "Electromagnetic interactions dominate the structure and behavior of systems on earth; from atomic to chemical to nano to biological to geological scales and beyond. 100% of the information humans receive about the world around them is encoded in and transmitted through the electromagnetic field. Building on the foundation of the strong AP Physics-C course, students extend their understanding of Space-Time, Electromagnetic fields and interactions during the first semester,; with an emphasis on dynamic electromagnetic fields and waves starting from Maxwell's Equations in differential and integral form. Einstein's conception of space-time, embodied in Special Relativity, is developed to produce a consistent description of electromagnetic fields, forces, and interactions. Classical electrodynamics, and classical wave optics are developed in a rigorous mathematical treatment.Quantum Mechanics is introduced after winter break in the physical context of Quantum Optics and finite-state systems which brings together fundamental quantum mechanics, electromagnetic fields, and the interaction of photons with matter,. The development includes contemporary research areas and modern applications of quantum mechanics including quantum entanglement, the quantum description of photo production and detection, select topics in solid state physics and nano technology. The last quarter of the course introduces basic concepts in Quantum Computing and Quantum Cryptography, with an attendant examination of fundamental quantum mechanics of entangled states and Bell's theorem. The course ends with a brief description of the structure and physical concepts of the fully relativistic quantum theory: Quantum Electrodynamics.This course is intended for students who enjoyed AP Physics-C and wish to understand the fundamental physics of space-time, electromagnetic fields, and quantum mechanics. Strong quantitative problem solving skills as demonstrated in AP Physics-C and advanced mathematics courses at TJ as well as an eagerness to learn through problem solving are requirements for success in this post-AP course.Students should plan on spending a minimum of 6 hours per week on homework for the class.",
@@ -2331,7 +2331,7 @@
         "short_name": "Bionanotechnology",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -2797,7 +2797,7 @@
         "category": "Summer School",
         "prerequisites": [
             [
-                "313754"
+                "316154"
             ]
         ],
         "id": "TJA3160",
@@ -3531,7 +3531,7 @@
         "short_name": "Photography 2",
         "availability": [
             true,
-            true,
+            false,
             true,
             true
         ],
@@ -3635,7 +3635,7 @@
         "weight": 0.0,
         "short_name": "French 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -3666,8 +3666,8 @@
         "weight": 0.5,
         "short_name": "French 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -3833,7 +3833,7 @@
         "weight": 0.0,
         "short_name": "German 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -4030,8 +4030,8 @@
         "weight": 0.5,
         "short_name": "Latin 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -4203,7 +4203,7 @@
         "weight": 0.0,
         "short_name": "Russian 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -4234,8 +4234,8 @@
         "weight": 0.5,
         "short_name": "Russian 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -4440,7 +4440,7 @@
         "short_name": "Spanish 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -4661,7 +4661,7 @@
         "short_name": "Chinese 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -4805,7 +4805,7 @@
         "weight": 0.0,
         "short_name": "Japanese 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -4837,7 +4837,7 @@
         "short_name": "Japanese 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -4915,5 +4915,50 @@
             "595000"
         ],
         "skippable": false
+    },
+    "924015": {
+        "full_name": "Jazz Band",
+        "category": "Performing Arts",
+        "id": "924015",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Jazz Ensemble",
+        "availability": [
+            false,
+            true,
+            true,
+            true
+        ],
+        "description": "The instrumental jazz ensemble curriculum emphasizes improvisation and styles of the jazz idiom. Content includes the study of blues scale patterns and harmonic progressions innate in jazz music. Content also includes the study of the appropriate jazz literature and rehearsal and performance techniques from the jazz idiom. Instrumentation of the jazz ensemble is at the discretion of the instructor. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Jazz Band is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on Jazz repertoire and stylistic demands associated with the performance of the repertoire. Standard instrumentation will include: Alto, Tenor and Baritone Saxophones, Tenor and Bass Trombones, Trumpets, Trap Set, Electric/Upright Bass, Keyboard, and Rhythm Guitar. Class content will include study of jazz repertoire, rehearsal techniques, and individual improvisation. Rehearsals and performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
+        "online": false,
+        "equivalent": "924015",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "316154": {
+        "full_name": "TJHSST Math 4",
+        "category": "Math",
+        "prerequisites": [
+            [
+                "313753"
+            ]
+        ],
+        "id": "316154",
+        "semester": true,
+        "weight": 0.5,
+        "short_name": "TJ Math 4",
+        "availability": [
+            true,
+            true,
+            false,
+            false
+        ],
+        "description": "Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.\nTJ: Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.",
+        "online": false,
+        "equivalent": "316154",
+        "unique": false,
+        "ap": "pre",
+        "skippable": true
     }
 }
