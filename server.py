@@ -2,11 +2,13 @@ from flask import Flask, render_template
 from flask_assets import Environment, Bundle
 import yaml
 import json
+import subprocess
 
 CONFIG_LOC = "config.yml"
 INFO_LOC = "info.yml"
 COURSES_LOC = "static/data/courses.json"
 LABS_LOC = "static/data/labs.json"
+GITHUB_URL = "https://github.com/greenturtle1134/tj-planner/commit/"
 
 app = Flask(__name__)
 assets = Environment(app)
@@ -25,6 +27,14 @@ def kebab(string):
     return string.lower().replace(" ", "-")
 
 
+def get_version():
+    name = subprocess.run(["git", "describe", "--always"], capture_output = True)
+    commit = subprocess.run(["git", "rev-parse", "head"], capture_output = True)
+    name = name.stdout.decode().strip()
+    commit = commit.stdout.decode().strip()
+    return name, (GITHUB_URL + commit)
+
+
 @app.route("/")
 def index():
     with open(INFO_LOC, 'r') as file:
@@ -37,7 +47,6 @@ def index():
     categorized = dict()
     for course in courses:
         course = courses[course]
-
         if course["ap"] == "ap":
             course["ap_class"] = "course--ap"
         elif course["ap"] =="post":
@@ -49,7 +58,10 @@ def index():
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
-    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab, info = info, requirements=[
+    
+    version, version_url = get_version()
+    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab,
+    info = info, version = version, version_url = version_url, requirements=[
         ("math", "4 Math credits", 4),
         ("history", "Fourth history credit", 1),
         ("lang", "3 years of a language", 3),
