@@ -1,14 +1,14 @@
 $.getJSON("static/data/courses.json", function (data) {
     courses = data;
     $.getJSON("static/data/labs.json", function (data) {
-        labs = data
+        labs = data;
         $.getJSON("static/data/default_schedule.json", function (defaults) {
             for (let i = 0; i < defaults.length; i++) {
                 let item = defaults[i];
                 $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
             }
 
-            onUpdate()
+            onUpdate();
         });
     });
 });
@@ -59,7 +59,7 @@ function createCourseDraggable(course_id) {
         $course.addClass("course--pre-ap");
     }
 
-    $course.addClass("course--"+kebab(course.category))
+    $course.addClass("course--"+kebab(course.category));
 
     return $course;
 }

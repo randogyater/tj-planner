@@ -17,7 +17,7 @@ function drop(event) {
         if (id.startsWith("c")) {
             event.target.appendChild(document.getElementById(id));
         } else {
-            $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")))
+            $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")));
         }
 
         onUpdate();
@@ -41,11 +41,11 @@ function validDrop(event) {
         return false;
     } else {
         contents = target.children(".course");
-        if (contents.length == 0) {
+        if (contents.length === 0) {
             return true;
         } else if (contents.length == 1 && contents[0].getAttribute("class").includes("course--semester")) {
             var id = event.dataTransfer.getData("text");
-            if (id == "") {
+            if (id === "") {
                 return true;
             } else if (id.startsWith("c")) {
                 return $("#" + event.dataTransfer.getData("text")).attr("class").includes("course--semester");
