@@ -402,7 +402,7 @@
         "id": "119504",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP English Lit/Comp",
+        "short_name": "AP English Lit",
         "availability": [
             false,
             false,
@@ -428,7 +428,7 @@
         "id": "119604",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP English Lang/Comp",
+        "short_name": "AP English Lang",
         "availability": [
             false,
             false,
@@ -656,9 +656,84 @@
             true,
             true
         ],
-        "description": "In this course, students will learn and practice the language and processes of broadcast journalism and reporting.  They will develop an understanding of the role and responsibilities of broadcast journalists.",
+        "description": "In this course, students continue to learn and practice the language and processes of broadcast journalism and reporting. They develop an understanding of the role and responsibilities of broadcast journalists.",
         "online": false,
         "equivalent": "122000",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122012": {
+        "full_name": "Broadcast Journalism 2",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122000"
+            ]
+        ],
+        "id": "122012",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 2",
+        "availability": [
+            false,
+            true,
+            true,
+            true
+        ],
+        "description": "In this course, students will learn and practice the language and processes of broadcast journalism and reporting.  They will develop an understanding of the role and responsibilities of broadcast journalists.",
+        "online": false,
+        "equivalent": "122012",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122013": {
+        "full_name": "Broadcast Journalism 3",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122012"
+            ]
+        ],
+        "id": "122013",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 3",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "In this course, students expand their learning and practice the language and processes of broadcast journalism and reporting. They become proficient at producing the news while understanding of the role and responsibilities of broadcast journalists.",
+        "online": false,
+        "equivalent": "122013",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122014": {
+        "full_name": "Broadcast Journalism 4",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122013"
+            ]
+        ],
+        "id": "122014",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 4",
+        "availability": [
+            false,
+            false,
+            false,
+            true
+        ],
+        "description": "In this course, students advance their broadcast journalism skills by practicing communication skills in the community and in the media workplace. They become proficient at producing in-depth news packages and quality field reports. They master the rights and responsibilities of broadcast journalism.",
+        "online": false,
+        "equivalent": "122014",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -3109,7 +3184,7 @@
         "id": "9828J1",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Eng Design",
+        "short_name": "Engineering Des",
         "availability": [
             false,
             true,
@@ -3129,7 +3204,7 @@
         "id": "9828T0",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Prototyping 1",
+        "short_name": "Prototype Dev 1",
         "availability": [
             false,
             true,
@@ -3177,7 +3252,7 @@
         "id": "9828T4",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Prototyping 2",
+        "short_name": "Prototype Dev 2",
         "availability": [
             false,
             true,
@@ -3212,7 +3287,7 @@
         "skippable": false
     },
     "9828T8": {
-        "full_name": "Alternate Energy Systems",
+        "full_name": "Energy Systems 2",
         "category": "Technology",
         "prerequisites": [
             [
@@ -3222,7 +3297,7 @@
         "id": "9828T8",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Energy Sys 2",
+        "short_name": "Energy Systems 2",
         "availability": [
             false,
             true,
@@ -3237,12 +3312,12 @@
         "skippable": false
     },
     "9828T9": {
-        "full_name": "Conventional Energy Systems",
+        "full_name": "Energy Systems 1",
         "category": "Technology",
         "id": "9828T9",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Energy Sys 1",
+        "short_name": "Energy Systems 1",
         "availability": [
             false,
             true,
