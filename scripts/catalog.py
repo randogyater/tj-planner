@@ -86,7 +86,7 @@ def title_case(string):
     return " ".join(word.capitalize() for word in string.split(" "))
 
 
-def main():
+def from_catalog():
     data = read()
     name_to_id = back_map()
     replacements = dict()
@@ -122,6 +122,22 @@ def main():
     
     apply_replacements(replacements, data)
     write(data)
+
+
+def main():
+    print("Input replacements, old followed by new:")
+    string = input()
+    map = dict()
+    while len(string) > 0:
+        strung = string.split(" ")
+        map[strung[0]] = strung[1]
+        string = input()
+    displaced, conflicts = validate_replacements(map)
+    if len(displaced) == 0 and len(conflicts) == 0:
+        apply_replacements(map)
+        print("Done.")
+    else:
+        print("Displacements/conflicts detected:", displaced, conflicts)
 
 
 if __name__ == "__main__":

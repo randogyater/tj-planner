@@ -2442,6 +2442,34 @@
         "ap": "pre",
         "skippable": false
     },
+    "4621T1": {
+        "full_name": "Microbial Genomics and Bioinformatics",
+        "category": "Science",
+        "prerequisites": [
+            [
+                "4320T6"
+            ],
+            [
+                "437004"
+            ]
+        ],
+        "id": "4621T1",
+        "semester": false,
+        "weight": 0.5,
+        "short_name": "Microbial Genomics",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Microbial Genomics & Bioinformatics will provide a practical introduction to microbial genomics and bioinformatics. Topics include next-generation sequencing, biological databases, sequence alignment, similarity searches, genome browsers, molecular evolution, disease genetics and proteomics. No previous computing experience is required, but would be helpful. Students will utilize computer-based practical modules and tutorials throughout the course that provide hands-on experience with established bioinformatics tools and approaches. Students will come away with the key concepts that underpin microbial bioinformatics and genomics approaches.",
+        "online": false,
+        "equivalent": "4621T1",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
     "2219T1": {
         "full_name": "Ancient and Classical Civilizations",
         "category": "Social Studies",
@@ -2458,6 +2486,26 @@
         "description": "Ancient Civilizations will be an inquiry-based, in-depth course that will offer students an opportunity to investigate the history of the ancient world's major cultures from their beginning to their decline in the post-classical era from an interdisciplinary perspective. Offered as an elective option aimed at 9th and 10th graders to complete their 4th social studies credit, the course will serve as a foundational course that purports to introduce students to research and analytical skills needed in the upper level courses.In terms of content, the course will explore the increasingly interconnected history of major civilizations and other forms of complex societies that arose in pre-classical through post-classical era Afro-Eurasia, focusing on comparative analysis of the sociopolitical, economic, religious, and cultural traditions and innovations that developed in these ancient societies as well as the webs of communication and exchange that connected these societies spatially and temporally. Investigations of cultural traditions will emphasize the development of scientific and technological breakthroughs and innovations, trace the means and routes by which they spread beyond the society in which they emerged, and the regional and cross-regional impact they wielded on the increasingly interconnected pre-modern world. In specific terms, the civilizations studied in the course will range from Mesopotamia and Egypt in the ancient world, to Greece, Rome, Persia, China, and India in the classical world, to the fall of Rome and the rise of the Islamic world in the early-post-classical world.As a foundational course focusing on inquiry learning and the development of higher order thinking, reading, and writing skills, a heavy emphasis will be based on analyzing and evaluating various types of primary and secondary sources. The course will culminate with a final research project that will integrate these skills and focus on the larger themes of the course.",
         "online": false,
         "equivalent": "2219T1",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "2219T2": {
+        "full_name": "World History and Geography 1",
+        "category": "Social Studies",
+        "id": "2219T2",
+        "semester": false,
+        "weight": 0.5,
+        "short_name": "World Hist/Geog 1",
+        "availability": [
+            true,
+            true,
+            true,
+            false
+        ],
+        "description": "This is the first of a two-year, chronologically and thematically organized study of world history and geography. In this first year, students study the world from ancient times to 1500 CE. The course highlights the relationship between the geography and history of Europe, Africa, Asia, and Latin America. Students examine the relationship among social, economic and geopolitical developments across time and place. They use the processes of conceptual and critical thinking to analyze historical and contemporary issues. Students are encouraged to think independently while developing group process skills. Additionally, students will apply social science skills -historical thinking, geographic analysis, economic decision making, and responsible citizenship - to course content. World History and Geography 1 at TJHSST satisfies the World History and Geography 1 graduation requirement.",
+        "online": false,
+        "equivalent": "2219T2",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -2546,14 +2594,14 @@
         "id": "2360T1",
         "semester": false,
         "weight": 0.5,
-        "short_name": "US/VA History",
+        "short_name": "US VA History",
         "availability": [
             false,
             false,
             true,
             false
         ],
-        "description": "Virginia and United States History Honors deepens and advances the curriculum of Virginia and United States History.  Students examine the political, economic, social, and cultural growth of the United States, including the role of Virginia in this growth.  Students study major historical developments and their impact on contemporary society and on the individual.  Map and globe reading, critical thinking, writing, research, and group-process skills are refined.  Virginia and United States History is required for graduation.  Students are required to take the Standards of Learning End of Course Test.\nTJ: This is a team-taught, interdisciplinary survey course in American history and literature from the 16 century to the present. Students examine the interrelationships among art, literature, music, and architecture along with specific historic trends and events. The course focuses on the major themes and philosophies of our nation's history as well as on the men and women who created it. Although the reading load is lighter than an AP US History course, VA/US History provides a thorough survey of America's story with an emphasis on overall trends and events. Upon completion, students will take the SOL U.S./VA History end-of-course test.",
+        "description": "This is a team-taught, interdisciplinary survey course in American history and literature from the 16 century to the present. Students examine the interrelationships among art, literature, music, and architecture along with specific historic trends and events. The course focuses on the major themes and philosophies of our nation's history as well as on the men and women who created it. Although the reading load is lighter than an AP US History course, VA/US History provides a thorough survey of America's story with an emphasis on overall trends and events. Upon completion, students will take the SOL U.S./VA History end-of-course test. Students learn to assess historical materials, their relevance to a given interpretive problem, their reliability and their importance, and to weigh evidence and interpretations presented in historical scholarship while refining their language, learning, and communication skills.",
         "online": false,
         "equivalent": "2360T1",
         "unique": false,
@@ -2564,19 +2612,19 @@
         "skippable": false
     },
     "2374T1": {
-        "full_name": "Physical / Cultural Anthropology",
+        "full_name": "Anthro Studies",
         "category": "Social Studies",
         "id": "2374T1",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Cultural Studies",
+        "short_name": "Anthro Studies",
         "availability": [
             false,
             true,
             true,
             true
         ],
-        "description": "Students examine the cultural and physical developments and changes in human societies. This course provides students an opportunity to increase their understanding of themselves and their own culture through a variety of activities.\nTJ: Divided into two halves, this course is an introduction to the broad field of anthropology. In the physical/biological half, the focus is human evolution and non-human primates such as monkeys and great apes. A visit to the primate collection of the National Zoo is standard. The second half is organized around the study of human society and culture. Through readings, class discussions, presentations, and videos, the class explores what it means to be human. Topics include: similarities and differences among cultures; social and economic characteristics; customs, traditions, taboos, and beliefs; and how anthropology, through its distinctive methods, can clarify our understanding of each other and ourselves. A variety of guest speakers working in the subfields of anthropology enrich the course, and depending on availability may include primatologists, forensic anthropologists, archaeologists, and ethnographers. Emphasis is placed on responsible participation in group and class activities such as team projects, class discussions, reading, writing, and research.",
+        "description": "Divided into two halves, this course is an introduction to the broad field of anthropology. In the physical/biological half, the focus is human evolution and non-human primates such as monkeys and great apes. A visit to the primate collection of the National Zoo is standard. The second half is organized around the study of human society and culture. Through readings, class discussions, presentations, and videos, the class explores what it means to be human. Topics include: similarities and differences among cultures; social and economic characteristics; customs, traditions, taboos, and beliefs; and how anthropology, through its distinctive methods, can clarify our understanding of each other and ourselves. A variety of guest speakers working in the subfields of anthropology enrich the course, and depending on availability may include primatologists, forensic anthropologists, archaeologists, and ethnographers. Emphasis is placed on responsible participation in group and class activities such as team projects, class discussions, reading, writing, and research.",
         "online": false,
         "equivalent": "2374T1",
         "unique": false,
@@ -2657,14 +2705,14 @@
         "id": "244504",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Government",
+        "short_name": "AP US Government",
         "availability": [
             false,
             false,
             false,
             true
         ],
-        "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.\nTJ: This course is a detailed examination of the U.S. political system with a special focus on the key players in this system and the roles they play in shaping public policy. These players include not just politicians and political leaders but also the media, interest groups, bureaucrats, and, of course, the people themselves. Emphasis is placed on student knowledge of current issues, events, and personalities as these provide a basis for the study of the US Constitution, the three branches of government, civil liberties and civil rights, and campaigns, elections, and voting behavior. This course prepares students for the AP US Government and Politics exam and fulfills the graduation requirement for one credit in Virginia and United States Government.",
+        "description": "This study of American government is an introduction to the discipline of political science. Students study required US foundational documents and Supreme Court decisions to gain an understanding of the relationships and interactions among political institutions, processes and behaviors. Students learn and apply the skills of data interpretation, comparison, application and development of an argument. In addition, students will complete a political science research or applied civics project. This course prepares students to take the Advanced Placement examination. Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "244504",
         "unique": false,
@@ -2678,14 +2726,14 @@
         "id": "280404",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Mac/Mic Econ",
+        "short_name": "AP Macro/Micro Econ",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
-        "description": "This course is designed to provide students with an understanding of the economic principles which apply to an economic system as a whole. This course is designed to provide students with an understanding of the principles of economics which apply to the functions of decision-makers, both consumers and producers, within economic systems. Topics include, national economics, international economics, the nature and functions of product markets, the study of factor markets, and the role of government in promoting greater efficiency and equity in the economy. This course prepares students to take the Advanced Placement examinations in Macro and Micro Economics, for which college credit and/or placement may be given if a qualifying score is achieved. This course fulfills the Economic and Personal Finance and virtual graduation requirements. All students are required to take both the AP Micro Economics and the AP Macro Economics exams.",
+        "description": "This course is designed to provide students with an understanding of the economic principles which apply to an economic system as a whole. This course is designed to provide students with an understanding of the principles of economics which apply to the functions of decision-makers, both consumers and producers, within economic systems. Topics include, national economics, international economics, the nature and functions of product markets, the study of factor markets, and the role of government in promoting greater efficiency and equity in the economy.. This course fulfills the Economic and Personal Finance and virtual graduation requirements. Students who complete this course are encouraged to take the associated Advanced Placement examinations and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "280404",
         "unique": false,
@@ -2838,7 +2886,7 @@
         "id": "TJA2219",
         "semester": false,
         "weight": 0.5,
-        "short_name": "Ancient Civ",
+        "short_name": "Ancient & Clas Civ",
         "availability": [
             true,
             true,
