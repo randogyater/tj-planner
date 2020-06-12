@@ -4847,25 +4847,53 @@
         ],
         "skippable": false
     },
-    "584004": {
-        "full_name": "AP Chinese",
+    "584000": {
+        "full_name": "Chinese 4",
         "category": "World Languages",
         "prerequisites": [
             [
                 "583000"
             ]
         ],
+        "id": "584000",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Chinese 4",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Students develop more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
+        "online": false,
+        "equivalent": "584000",
+        "unique": false,
+        "ap": "pre",
+        "dependents": [
+            "584004"
+        ],
+        "skippable": false
+    },
+    "584004": {
+        "full_name": "AP Chinese Language and Culture",
+        "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ]
+        ],
         "id": "584004",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Chinese",
+        "short_name": "AP Chinese Language",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Chinese Language exam at their base school.\nTJ: Students study the use of language for active communication, specifically: the ability to understand the spoken target language in both formal and conversational situations; the ability to express ideas accurately and resourcefully, both orally and in writing with reasonable fluency; the development of a vocabulary sufficient for reading newspaper and magazine articles, contemporary literature, and other writings; extensive training in the organization and writing of compositions; an in-depth review of grammar; and the study of chosen works by contemporary writers. Materials include recordings, films, newspapers, and magazines. Upon completion, students take the Advanced Placement examination.",
+        "description": "In this course, students study the use of language for active communication. Emphasis is placed on the development of the three modes of communication (interpersonal, interpretive and presentational). The course is structured around six overarching themes: Beauty, and Aesthetics, Contemporary Life, Families and Communities, Global Challenges, Personal and Public Identities, and Science and Technology. Students use language structures in context and use them to convey meaning. The course promotes fluency and accuracy to facilitate the study of language and culture. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "584004",
         "unique": false,
@@ -4875,6 +4903,14 @@
     "585000": {
         "full_name": "Chinese 5",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "585000",
         "semester": false,
         "weight": 0.5,
@@ -4885,7 +4921,7 @@
             true,
             true
         ],
-        "description": "None",
+        "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "online": false,
         "equivalent": "585000",
         "unique": false,
@@ -4895,6 +4931,14 @@
     "5850T1": {
         "full_name": "Chinese 5 Sem1",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "5850T1",
         "semester": true,
         "weight": 0.5,
@@ -4915,6 +4959,14 @@
     "5850T2": {
         "full_name": "Chinese 5 Sem2",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "5850T2",
         "semester": true,
         "weight": 0.5,
