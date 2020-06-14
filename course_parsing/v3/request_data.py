@@ -1,4 +1,28 @@
 import requests
+import json
+
+
+OUTPUT = "courses.json"
+
+
+def get_course_list():
+    r = requests.post("https://insys.fcps.edu/CourseCatOnline/server/services/CourseCatOnlineData.cfc"
+                      "?method=getPanelMenuData",
+                      json={"LocationID": "503",
+                            "GradeA": "0",
+                            "GradeB": "0",
+                            "GradeC": "0",
+                            "CourseMenuMainID": "reportPanelSideNav"})
+    groups = r.json()["TDATA"]["stCourseList"]["CourseGroups"]
+    courses = list()
+    categories = list()
+    for group in groups:
+        for category in group["CourseGroup"]:
+            category_name = category["CourseGroupNavShort"]
+            for course in category["Courses"]:
+                courses.append((course["Course_ID"], category_name))
+            categories.append(category_name)
+    return courses, categories
 
 
 def get_course(course_id, category):
@@ -11,7 +35,6 @@ def get_course(course_id, category):
                           "showbus": 0
                       })
     course_data = r.json()["TDATA"][0]
-    # print(course_data)
     course = dict()
     course["full_name"] = course_data["CourseName"]
     if course_data["Flag_OnlineCourse"] == 0:
@@ -38,4 +61,14 @@ def get_course(course_id, category):
 
 
 if __name__ == "__main__":
-    print(get_course(11248, "N/A"))
+    courses = dict()
+    course_list, categories = get_course_list()
+    print("Got %s ids" % (len(course_list)))
+    for i, entry in enumerate(course_list):
+        print("Requesting {} ({:.2%})".format(entry[0], i/len(course_list)))
+        course = get_course(*entry)
+        courses[course["id"]] = course
+    with open(OUTPUT, 'w') as file:
+        file.write(json.dumps(courses, indent=4))
+    print("Done!")
+    print("Categories found:", "\n".join(categories), sep="\n")

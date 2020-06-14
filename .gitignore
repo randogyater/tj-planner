@@ -134,3 +134,4 @@ static/gen/*
 
 # Config file
 config.yml
+course_parsing/v3/courses.json
