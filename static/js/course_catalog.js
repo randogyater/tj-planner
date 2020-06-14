@@ -2,10 +2,18 @@ $.getJSON("static/data/courses.json", function (data) {
     courses = data;
     $.getJSON("static/data/labs.json", function (data) {
         labs = data;
-        $.getJSON("static/data/default_schedule.json", function (defaults) {
-            for (let i = 0; i < defaults.length; i++) {
-                let item = defaults[i];
+        $.getJSON("static/data/defaults.json", function (defaults) {
+
+            let default_courses = defaults.courses;
+            for (let i = 0; i < default_courses.length; i++) {
+                let item = default_courses[i];
                 $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
+            }
+
+            let hints = defaults.hints;
+            for (let i = 0; i < hints.length; i++) {
+                let item = hints[i];
+                $("#" + getBoxId(item.row, item.col)).append("<div class=\"m-auto grid__hint text-secondary\">" + item.text + "</div>");
             }
 
             onUpdate();
