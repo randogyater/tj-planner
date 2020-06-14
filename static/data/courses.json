@@ -5,7 +5,7 @@
         "id": "3184T1",
         "semester": false,
         "weight": 0.5,
-        "short_name": "Foundations CompSci",
+        "short_name": "Found Comp Sci",
         "availability": [
             true,
             true,
@@ -30,7 +30,7 @@
         "id": "3184T2",
         "semester": false,
         "weight": 0.5,
-        "short_name": "Foundations CompSci Acc",
+        "short_name": "Accel Found Comp Sci",
         "availability": [
             true,
             true,
@@ -58,7 +58,7 @@
         "id": "318561",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Computer Sci A+",
+        "short_name": "AP Comp Sci A+",
         "availability": [
             true,
             true,
@@ -135,7 +135,7 @@
         "id": "319966",
         "semester": true,
         "weight": 1.0,
-        "short_name": "Artificial Intel 1",
+        "short_name": "Art Intel 1",
         "availability": [
             false,
             true,
@@ -163,7 +163,7 @@
         "id": "319967",
         "semester": true,
         "weight": 1.0,
-        "short_name": "Artificial Intel 2",
+        "short_name": "Art Intel 2",
         "availability": [
             false,
             true,
@@ -188,7 +188,7 @@
         "id": "3199J1",
         "semester": true,
         "weight": 1.0,
-        "short_name": "Web App Dev",
+        "short_name": "Web App Develop",
         "availability": [
             false,
             true,
@@ -213,7 +213,7 @@
         "id": "3199J2",
         "semester": true,
         "weight": 1.0,
-        "short_name": "Mobile App Dev",
+        "short_name": "Mobile App Develop",
         "availability": [
             false,
             true,
@@ -402,7 +402,7 @@
         "id": "119504",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP English Lit/Comp",
+        "short_name": "AP English Lit",
         "availability": [
             false,
             false,
@@ -428,7 +428,7 @@
         "id": "119604",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP English Lang/Comp",
+        "short_name": "AP English Lang",
         "availability": [
             false,
             false,
@@ -479,7 +479,7 @@
         "weight": 0.0,
         "short_name": "Journalism 2",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -507,8 +507,8 @@
         "weight": 0.0,
         "short_name": "Journalism 3",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -535,9 +535,9 @@
         "weight": 0.0,
         "short_name": "Journalism 4",
         "availability": [
-            true,
-            true,
-            true,
+            false,
+            false,
+            false,
             true
         ],
         "description": "In Journalism 4 students learn marketable publications skills; develop individual writing, layout, and design styles; and may assume editorial leadership and responsibility for producing a high school newspaper and/or student produced website.  Students also take responsibility for business and circulation management.\nTJ: Students at the highest level of publications expertise assume top positions on staff ranging from editor in chief to managing editor to senior news and features editors. Each of these positions has many managerial responsibilities. Emphasis is on teaching these leaders to manage their sections, mentor younger students and provide their staff with role models. In a student run paper, these students run the show. Students attend local, regional and national workshops and conventions as part of the overall learning experience. Journalism 4 students work is targeted for senior-only contests such as the NSPA Wikoff Scholarship Award and the NSPA Best of Story and Art. Students will be encouraged to attend special internships before and during their J-4 year. They will be guided to produce a professional-level portfolio of their work for college admission and/or post-graduation internships. Students will assist the adviser in co-leading workshops at various conventions and will be encouraged to represent TJHSST and tjTODAY in forums of other high school students. Students will meet regularly with administrators and other student leaders on campus and around the county.",
@@ -651,6 +651,31 @@
         "weight": 0.0,
         "short_name": "Broadcast Journ 1",
         "availability": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "description": "In this course, students continue to learn and practice the language and processes of broadcast journalism and reporting. They develop an understanding of the role and responsibilities of broadcast journalists.",
+        "online": false,
+        "equivalent": "122000",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122012": {
+        "full_name": "Broadcast Journalism 2",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122000"
+            ]
+        ],
+        "id": "122012",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 2",
+        "availability": [
             false,
             true,
             true,
@@ -658,7 +683,57 @@
         ],
         "description": "In this course, students will learn and practice the language and processes of broadcast journalism and reporting.  They will develop an understanding of the role and responsibilities of broadcast journalists.",
         "online": false,
-        "equivalent": "122000",
+        "equivalent": "122012",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122013": {
+        "full_name": "Broadcast Journalism 3",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122012"
+            ]
+        ],
+        "id": "122013",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 3",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "In this course, students expand their learning and practice the language and processes of broadcast journalism and reporting. They become proficient at producing the news while understanding of the role and responsibilities of broadcast journalists.",
+        "online": false,
+        "equivalent": "122013",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "122014": {
+        "full_name": "Broadcast Journalism 4",
+        "category": "English",
+        "prerequisites": [
+            [
+                "122013"
+            ]
+        ],
+        "id": "122014",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Broadcast Journ 4",
+        "availability": [
+            false,
+            false,
+            false,
+            true
+        ],
+        "description": "In this course, students advance their broadcast journalism skills by practicing communication skills in the community and in the media workplace. They become proficient at producing in-depth news packages and quality field reports. They master the rights and responsibilities of broadcast journalism.",
+        "online": false,
+        "equivalent": "122014",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -727,6 +802,31 @@
         "description": "Students demonstrate competency in a lifetime sport or activity and demonstrate personal fitness planning.  One quarter of the course includes instruction in the health education topics of personal and community health, nutrition, human growth and development, and injury and violence prevention.  One quarter of the course includes the classroom component of driver education.  The 90-minute Parent/Teen Traffic Safety Presentation (Partners for Safe Teen Driving) is offered to fulfill the requirements of juvenile licensing.  Grades from all quarters are averaged to determine the final course grade.\nTJ: For two quarters students will continue to build on their knowledge and skills of individual, dual, and team sports. They will demonstrate competency in a lifetime sport or activity. They will set and achieve personal fitness goals. One quarter is Driver Education. The classroom program provides appropriate learning activities that will assist students in becoming competent and responsible drivers. One quarter includes instruction in Health. Topics include Personal and Community Health, Nutrition, and Family Life Education. Parents may opt their child out of any or all parts of Family Life Education.",
         "online": false,
         "equivalent": "740500",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "751050": {
+        "full_name": "Yoga for Wellness",
+        "category": "Health and PE",
+        "prerequisites": [
+            [
+                "740500"
+            ]
+        ],
+        "id": "751050",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Yoga",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Yoga is an elective physical education course. Students will learn the physical postures and exercises of yoga that develop strength, flexibility, coordination, and balance. Relaxation techniques, breathing practices, and mindfulness practices that support fitness and well-being will be incorporated. Students will apply concepts of basic anatomy and physiology to understand alignment, benefits, and contraindications of yoga poses and exercises. Students will develop independent, personal yoga practices that can be adapted and modified to their individual needs. Students will explore nutritional requirements needed for lifelong health and well-being. Students may not take this course in lieu of the grade 9 or grade 10 health and physical education requirements.",
+        "online": false,
+        "equivalent": "751050",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -832,7 +932,7 @@
                 "313753"
             ]
         ],
-        "id": "313754",
+        "id": "316154",
         "semester": true,
         "weight": 0.5,
         "short_name": "TJ Math 4",
@@ -844,7 +944,7 @@
         ],
         "description": "Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.\nTJ: Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.",
         "online": false,
-        "equivalent": "313754",
+        "equivalent": "316154",
         "unique": false,
         "ap": "pre",
         "skippable": true
@@ -902,7 +1002,7 @@
         "category": "Math",
         "prerequisites": [
             [
-                "313754"
+                "316154"
             ]
         ],
         "id": "316055",
@@ -912,7 +1012,7 @@
         "availability": [
             true,
             true,
-            false,
+            true,
             false
         ],
         "description": "The study of Advanced Functions includes an extension of topics first introduced in algebra. All parent function graphs and their transformations are a focus as well as the important features of graphs such as symmetry, concavity, extrema and end behavior. Operations on functions are studied, especially composition, and finding appropriate domains is stressed. Specific functions such as exponential and logarithmic are explored and used for graphing, solving equations, and applications. Other topics of study include sequences and series, proof by math induction, and the exploration of conic sections and their applications and an introduction to the fundamentals of calculus, including limits, continuity, and the concept of the derivative. The process standard focus will be Communication. Upon conclusion of TJ Math 5, students will be advised as to which level of AP Calculus they should take the following school year.",
@@ -944,7 +1044,7 @@
         "availability": [
             true,
             true,
-            false,
+            true,
             false
         ],
         "description": "Insert FCPS approved course description here.\nTJ: Semester introduction to calculus providing an overview of limits, derivatives, and applications related to those topics.",
@@ -967,8 +1067,8 @@
         "weight": 1.0,
         "short_name": "AP Calculus AB",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -992,7 +1092,7 @@
         "weight": 1.0,
         "short_name": "AP Calculus BC",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -1020,7 +1120,7 @@
         "id": "317860",
         "semester": true,
         "weight": 1.0,
-        "short_name": "Multivar Calc",
+        "short_name": "Multivar Calculus",
         "availability": [
             true,
             true,
@@ -1103,7 +1203,7 @@
         "id": "3190T1",
         "semester": true,
         "weight": 0.5,
-        "short_name": "TJ Res Stat 1",
+        "short_name": "TJ Research Stat 1",
         "availability": [
             true,
             true,
@@ -1123,7 +1223,7 @@
         "id": "3190T2",
         "semester": true,
         "weight": 1.0,
-        "short_name": "TJ Res Stat 2",
+        "short_name": "TJ Research Stat 2",
         "availability": [
             true,
             true,
@@ -1150,8 +1250,8 @@
         "weight": 1.0,
         "short_name": "Matrix Algebra",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -1545,22 +1645,22 @@
         "ap": "pre",
         "skippable": false
     },
-    "612099": {
-        "full_name": "Economics and Personal Finance",
+    "6120SD": {
+        "full_name": "Self-directed Online Economics and Personal Finance",
         "category": "Online",
-        "id": "612099",
+        "id": "6120SD",
         "semester": false,
         "weight": 0.0,
-        "short_name": "Econ & Pers Fin",
+        "short_name": "Self EPF Online",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "Students learn how to navigate the financial decisions they must face and to make informed decisions related to career exploration, budgeting, banking, credit, insurance, spending, taxes, saving, investing, buying/leasing a vehicle, living independently, and inheritance.  Development of financial literacy skills and an understanding of economic principles will provide the basis for responsible citizenship and career success.  In addition to developing personal finance skills, students in the 36-week course will also study basic occupational skills and concepts in preparation for entry-level employment in the field of finance.",
+        "description": "Instruction in economics and personal finance prepares students to function effectively as consumers, savers, investors, entrepreneurs, and active citizens. Students learn how economies and markets operate and how the United States' economy is interconnected with the global economy. On a personal level, students learn that their own human capital (knowledge and skills) is their most valuable resource. Beginning with students entering ninth grade in fall 2011, one standard unit of credit in Economics and Personal Finance is required for graduation. Students who choose an EPF option that requires payment, will not be reimbursed should additional options become available. Industry certification may be available as part of this course.",
         "online": false,
-        "equivalent": "612099",
+        "equivalent": "6120SD",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -1740,7 +1840,7 @@
         "weight": 1.0,
         "short_name": "AP Music Theory",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -1765,7 +1865,7 @@
             true,
             true
         ],
-        "description": "Students in this course form the representative performing band for the school. Emphasis is placed on the sequential development of advanced technical skills and on the study of related literature. Based on successful completion of sequential concepts for each level, students will continue as specified in course level. Marching band techniques, rehearsals, and performances are included in this course. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Symphonic Band is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on wind band repertoire and stylistic demands associated with the performance of the repertoire. Class content will include study of appropriate-level repertoire (Grade III-IV-V), appropriate rehearsal and practice techniques, and concepts appropriate to the intermediate and advanced level objectives of the FCPS Program of Studies for Concert Band. Rehearsals and Performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
+        "description": "Students continue developing as individual musicians and as members of a musical group. Emphasis is placed on the development of intermediate level technical and ensemble skills necessary for performance. Marching band techniques and performances may be included. Students must meet both the school day and outside of the school day participation requirements to receive credit for the course.",
         "online": false,
         "equivalent": "923315",
         "unique": false,
@@ -1773,82 +1873,82 @@
         "skippable": false,
         "variants": "You will be placed in Symphonic Band or Symphonic Wind Ensemble"
     },
-    "923915": {
-        "full_name": "Advanced Orchestra (Concert)",
+    "923815": {
+        "full_name": "Orchestra",
         "category": "Performing Arts",
-        "id": "923915",
+        "id": "923815",
         "semester": false,
         "weight": 0.0,
-        "short_name": "Advanced Orchestra",
+        "short_name": "Orchestra",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "The course offers instruction in the development of intermediate and advanced performing skills, including individual playing and ensemble techniques, and disciplinary skills needed for performance. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: This course is intended for students who have some experience playing in the upper positions but need additional experience in ensemble playing. Intonation, rhythmic accuracy, and tone production are emphasized. Most freshmen enroll in this course which is designed to bring the playing skills of the participants up to a level needed to perform the standard string literature. Students are required to participate in a minimum of four school concerts and District XI Orchestra Assessment. This course is available as full year only. A placement audition is required.",
+        "description": "Students continue developing as individual musicians and as members of a musical group. Emphasis is placed on the development of intermediate level technical and ensemble skills necessary for performance. Students must meet both the school day and outside of the school day participation requirements to receive credit for the course.",
         "online": false,
-        "equivalent": "923915",
+        "equivalent": "923815",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "925015": {
+        "full_name": "Percussion Ensemble",
+        "category": "Performing Arts",
+        "id": "925015",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Percussion Ensemb",
+        "availability": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "description": "The percussion ensemble class is designed to meet specific needs of percussionists. Content includes study of the appropriate ensemble literature, and rehearsal and performance techniques from the various areas of musical composition. Instrumentation of the group is at the discretion of the instructor. Marching band techniques and performances may be included. Students must meet both the school day and outside of the school day participation requirements to receive credit for the course.",
+        "online": false,
+        "equivalent": "925015",
         "unique": false,
         "ap": "pre",
         "skippable": false
     },
     "924016": {
-        "full_name": "Jazz Band",
+        "full_name": "Jazz Ensemble",
         "category": "Performing Arts",
-        "id": "924016",
+        "id": "924015",
         "semester": false,
         "weight": 0.0,
         "short_name": "Jazz Ensemble",
         "availability": [
-            false,
+            true,
             true,
             true,
             true
         ],
         "description": "The instrumental jazz ensemble curriculum emphasizes improvisation and styles of the jazz idiom. Content includes the study of blues scale patterns and harmonic progressions innate in jazz music. Content also includes the study of the appropriate jazz literature and rehearsal and performance techniques from the jazz idiom. Instrumentation of the jazz ensemble is at the discretion of the instructor. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Jazz Band is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on Jazz repertoire and stylistic demands associated with the performance of the repertoire. Standard instrumentation will include: Alto, Tenor and Baritone Saxophones, Tenor and Bass Trombones, Trumpets, Trap Set, Electric/Upright Bass, Keyboard, and Rhythm Guitar. Class content will include study of jazz repertoire, rehearsal techniques, and individual improvisation. Rehearsals and performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
         "online": false,
-        "equivalent": "924016",
+        "equivalent": "924015",
         "unique": false,
         "ap": "pre",
         "skippable": false
     },
-    "928032": {
-        "full_name": "Vocal Ensemble",
+    "926015": {
+        "full_name": "Mixed Chorus",
         "category": "Performing Arts",
-        "id": "928032",
-        "semester": true,
-        "weight": 0.0,
-        "short_name": "Vocal Ensemble",
-        "availability": [
-            true,
-            true,
-            true,
-            true
-        ],
-        "description": "None",
-        "online": false,
-        "equivalent": "928032",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
-    "928915": {
-        "full_name": "Advanced Mixed Chorus",
-        "category": "Performing Arts",
-        "id": "928915",
+        "id": "926015",
         "semester": false,
         "weight": 0.0,
-        "short_name": "Adv Mixed Chorus",
+        "short_name": "Mixed Chorus",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "None",
+        "description": "Students will participate in a chorus of mixed voices. Emphasis is placed upon correct vocal performance techniques and sight-singing through the study of appropriate choral literature. Based on successful completion of sequential concepts for each level, students will continue to learn progressive musical concepts.. Students must meet both the school day and outside of the school day participation requirements to receive credit for the course.",
         "online": false,
-        "equivalent": "928915",
+        "equivalent": "926015",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -1894,7 +1994,7 @@
         "short_name": "Adv Astr Solar Sys",
         "availability": [
             false,
-            false,
+            true,
             true,
             true
         ],
@@ -1919,7 +2019,7 @@
         "short_name": "Adv Astr Universe",
         "availability": [
             false,
-            false,
+            true,
             true,
             true
         ],
@@ -2069,7 +2169,7 @@
         "short_name": "AP Biology",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -2157,7 +2257,7 @@
         "short_name": "AP Chemistry",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -2284,7 +2384,7 @@
         "availability": [
             false,
             false,
-            false,
+            true,
             true
         ],
         "description": "Electromagnetic interactions dominate the structure and behavior of systems on earth; from atomic to chemical to nano to biological to geological scales and beyond. 100% of the information humans receive about the world around them is encoded in and transmitted through the electromagnetic field. Building on the foundation of the strong AP Physics-C course, students extend their understanding of Space-Time, Electromagnetic fields and interactions during the first semester,; with an emphasis on dynamic electromagnetic fields and waves starting from Maxwell's Equations in differential and integral form. Einstein's conception of space-time, embodied in Special Relativity, is developed to produce a consistent description of electromagnetic fields, forces, and interactions. Classical electrodynamics, and classical wave optics are developed in a rigorous mathematical treatment.Quantum Mechanics is introduced after winter break in the physical context of Quantum Optics and finite-state systems which brings together fundamental quantum mechanics, electromagnetic fields, and the interaction of photons with matter,. The development includes contemporary research areas and modern applications of quantum mechanics including quantum entanglement, the quantum description of photo production and detection, select topics in solid state physics and nano technology. The last quarter of the course introduces basic concepts in Quantum Computing and Quantum Cryptography, with an attendant examination of fundamental quantum mechanics of entangled states and Bell's theorem. The course ends with a brief description of the structure and physical concepts of the fully relativistic quantum theory: Quantum Electrodynamics.This course is intended for students who enjoyed AP Physics-C and wish to understand the fundamental physics of space-time, electromagnetic fields, and quantum mechanics. Strong quantitative problem solving skills as demonstrated in AP Physics-C and advanced mathematics courses at TJ as well as an eagerness to learn through problem solving are requirements for success in this post-AP course.Students should plan on spending a minimum of 6 hours per week on homework for the class.",
@@ -2300,7 +2400,7 @@
         "id": "457004",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Physics C",
+        "short_name": "AP Physics C-MEM",
         "availability": [
             false,
             false,
@@ -2331,13 +2431,41 @@
         "short_name": "Bionanotechnology",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
         "description": "A few years ago, scientists discovered that geckoes can cling to smooth surfaces through the use of Van der Waals interactions between fine hairs on the geckos feet and the surface in question. In 2004 a small company began advertising a new adhesive that relies on the principles learned from studying geckos feet. Bionanotechnology is the relatively new field that focuses on the interface between technology and very small biological systems. The course will be conducted primarily as a seminar, and students will read papers on how biological systems and processes could be adapted for use in todays society. They will be called upon to imagine unique but beneficial uses of adaptations of known biological processes. A good imagination will clearly be an advantage to students taking this course.",
         "online": false,
         "equivalent": "4610T6",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "4621T1": {
+        "full_name": "Microbial Genomics and Bioinformatics",
+        "category": "Science",
+        "prerequisites": [
+            [
+                "4320T6"
+            ],
+            [
+                "437004"
+            ]
+        ],
+        "id": "4621T1",
+        "semester": false,
+        "weight": 0.5,
+        "short_name": "Microbial Genomics",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Microbial Genomics & Bioinformatics will provide a practical introduction to microbial genomics and bioinformatics. Topics include next-generation sequencing, biological databases, sequence alignment, similarity searches, genome browsers, molecular evolution, disease genetics and proteomics. No previous computing experience is required, but would be helpful. Students will utilize computer-based practical modules and tutorials throughout the course that provide hands-on experience with established bioinformatics tools and approaches. Students will come away with the key concepts that underpin microbial bioinformatics and genomics approaches.",
+        "online": false,
+        "equivalent": "4621T1",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -2358,6 +2486,26 @@
         "description": "Ancient Civilizations will be an inquiry-based, in-depth course that will offer students an opportunity to investigate the history of the ancient world's major cultures from their beginning to their decline in the post-classical era from an interdisciplinary perspective. Offered as an elective option aimed at 9th and 10th graders to complete their 4th social studies credit, the course will serve as a foundational course that purports to introduce students to research and analytical skills needed in the upper level courses.In terms of content, the course will explore the increasingly interconnected history of major civilizations and other forms of complex societies that arose in pre-classical through post-classical era Afro-Eurasia, focusing on comparative analysis of the sociopolitical, economic, religious, and cultural traditions and innovations that developed in these ancient societies as well as the webs of communication and exchange that connected these societies spatially and temporally. Investigations of cultural traditions will emphasize the development of scientific and technological breakthroughs and innovations, trace the means and routes by which they spread beyond the society in which they emerged, and the regional and cross-regional impact they wielded on the increasingly interconnected pre-modern world. In specific terms, the civilizations studied in the course will range from Mesopotamia and Egypt in the ancient world, to Greece, Rome, Persia, China, and India in the classical world, to the fall of Rome and the rise of the Islamic world in the early-post-classical world.As a foundational course focusing on inquiry learning and the development of higher order thinking, reading, and writing skills, a heavy emphasis will be based on analyzing and evaluating various types of primary and secondary sources. The course will culminate with a final research project that will integrate these skills and focus on the larger themes of the course.",
         "online": false,
         "equivalent": "2219T1",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "2219T2": {
+        "full_name": "World History and Geography 1",
+        "category": "Social Studies",
+        "id": "2219T2",
+        "semester": false,
+        "weight": 0.5,
+        "short_name": "World Hist/Geog 1",
+        "availability": [
+            true,
+            true,
+            true,
+            false
+        ],
+        "description": "This is the first of a two-year, chronologically and thematically organized study of world history and geography. In this first year, students study the world from ancient times to 1500 CE. The course highlights the relationship between the geography and history of Europe, Africa, Asia, and Latin America. Students examine the relationship among social, economic and geopolitical developments across time and place. They use the processes of conceptual and critical thinking to analyze historical and contemporary issues. Students are encouraged to think independently while developing group process skills. Additionally, students will apply social science skills -historical thinking, geographic analysis, economic decision making, and responsible citizenship - to course content. World History and Geography 1 at TJHSST satisfies the World History and Geography 1 graduation requirement.",
+        "online": false,
+        "equivalent": "2219T2",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -2446,14 +2594,14 @@
         "id": "2360T1",
         "semester": false,
         "weight": 0.5,
-        "short_name": "US/VA History",
+        "short_name": "US VA History",
         "availability": [
             false,
             false,
             true,
             false
         ],
-        "description": "Virginia and United States History Honors deepens and advances the curriculum of Virginia and United States History.  Students examine the political, economic, social, and cultural growth of the United States, including the role of Virginia in this growth.  Students study major historical developments and their impact on contemporary society and on the individual.  Map and globe reading, critical thinking, writing, research, and group-process skills are refined.  Virginia and United States History is required for graduation.  Students are required to take the Standards of Learning End of Course Test.\nTJ: This is a team-taught, interdisciplinary survey course in American history and literature from the 16 century to the present. Students examine the interrelationships among art, literature, music, and architecture along with specific historic trends and events. The course focuses on the major themes and philosophies of our nation's history as well as on the men and women who created it. Although the reading load is lighter than an AP US History course, VA/US History provides a thorough survey of America's story with an emphasis on overall trends and events. Upon completion, students will take the SOL U.S./VA History end-of-course test.",
+        "description": "This is a team-taught, interdisciplinary survey course in American history and literature from the 16 century to the present. Students examine the interrelationships among art, literature, music, and architecture along with specific historic trends and events. The course focuses on the major themes and philosophies of our nation's history as well as on the men and women who created it. Although the reading load is lighter than an AP US History course, VA/US History provides a thorough survey of America's story with an emphasis on overall trends and events. Upon completion, students will take the SOL U.S./VA History end-of-course test. Students learn to assess historical materials, their relevance to a given interpretive problem, their reliability and their importance, and to weigh evidence and interpretations presented in historical scholarship while refining their language, learning, and communication skills.",
         "online": false,
         "equivalent": "2360T1",
         "unique": false,
@@ -2464,19 +2612,19 @@
         "skippable": false
     },
     "2374T1": {
-        "full_name": "Physical / Cultural Anthropology",
+        "full_name": "Anthro Studies",
         "category": "Social Studies",
         "id": "2374T1",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Cultural Studies",
+        "short_name": "Anthro Studies",
         "availability": [
             false,
             true,
             true,
             true
         ],
-        "description": "Students examine the cultural and physical developments and changes in human societies. This course provides students an opportunity to increase their understanding of themselves and their own culture through a variety of activities.\nTJ: Divided into two halves, this course is an introduction to the broad field of anthropology. In the physical/biological half, the focus is human evolution and non-human primates such as monkeys and great apes. A visit to the primate collection of the National Zoo is standard. The second half is organized around the study of human society and culture. Through readings, class discussions, presentations, and videos, the class explores what it means to be human. Topics include: similarities and differences among cultures; social and economic characteristics; customs, traditions, taboos, and beliefs; and how anthropology, through its distinctive methods, can clarify our understanding of each other and ourselves. A variety of guest speakers working in the subfields of anthropology enrich the course, and depending on availability may include primatologists, forensic anthropologists, archaeologists, and ethnographers. Emphasis is placed on responsible participation in group and class activities such as team projects, class discussions, reading, writing, and research.",
+        "description": "Divided into two halves, this course is an introduction to the broad field of anthropology. In the physical/biological half, the focus is human evolution and non-human primates such as monkeys and great apes. A visit to the primate collection of the National Zoo is standard. The second half is organized around the study of human society and culture. Through readings, class discussions, presentations, and videos, the class explores what it means to be human. Topics include: similarities and differences among cultures; social and economic characteristics; customs, traditions, taboos, and beliefs; and how anthropology, through its distinctive methods, can clarify our understanding of each other and ourselves. A variety of guest speakers working in the subfields of anthropology enrich the course, and depending on availability may include primatologists, forensic anthropologists, archaeologists, and ethnographers. Emphasis is placed on responsible participation in group and class activities such as team projects, class discussions, reading, writing, and research.",
         "online": false,
         "equivalent": "2374T1",
         "unique": false,
@@ -2557,14 +2705,14 @@
         "id": "244504",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Government",
+        "short_name": "AP US Government",
         "availability": [
             false,
             false,
             false,
             true
         ],
-        "description": "In this study of American government, students interpret national, state, and local government and politics through an examination of both general concepts used to interpret U.S. politics and the analysis of specific examples.  This course prepares students to take the Advanced Placement examination for which college credit and/or placement may be given if a qualifying score is made.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.\nTJ: This course is a detailed examination of the U.S. political system with a special focus on the key players in this system and the roles they play in shaping public policy. These players include not just politicians and political leaders but also the media, interest groups, bureaucrats, and, of course, the people themselves. Emphasis is placed on student knowledge of current issues, events, and personalities as these provide a basis for the study of the US Constitution, the three branches of government, civil liberties and civil rights, and campaigns, elections, and voting behavior. This course prepares students for the AP US Government and Politics exam and fulfills the graduation requirement for one credit in Virginia and United States Government.",
+        "description": "This study of American government is an introduction to the discipline of political science. Students study required US foundational documents and Supreme Court decisions to gain an understanding of the relationships and interactions among political institutions, processes and behaviors. Students learn and apply the skills of data interpretation, comparison, application and development of an argument. In addition, students will complete a political science research or applied civics project. This course prepares students to take the Advanced Placement examination. Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "244504",
         "unique": false,
@@ -2578,14 +2726,14 @@
         "id": "280404",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Mac/Mic Econ",
+        "short_name": "AP Macro/Micro Econ",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
-        "description": "This course is designed to provide students with an understanding of the economic principles which apply to an economic system as a whole. This course is designed to provide students with an understanding of the principles of economics which apply to the functions of decision-makers, both consumers and producers, within economic systems. Topics include, national economics, international economics, the nature and functions of product markets, the study of factor markets, and the role of government in promoting greater efficiency and equity in the economy. This course prepares students to take the Advanced Placement examinations in Macro and Micro Economics, for which college credit and/or placement may be given if a qualifying score is achieved. This course fulfills the Economic and Personal Finance and virtual graduation requirements. All students are required to take both the AP Micro Economics and the AP Macro Economics exams.",
+        "description": "This course is designed to provide students with an understanding of the economic principles which apply to an economic system as a whole. This course is designed to provide students with an understanding of the principles of economics which apply to the functions of decision-makers, both consumers and producers, within economic systems. Topics include, national economics, international economics, the nature and functions of product markets, the study of factor markets, and the role of government in promoting greater efficiency and equity in the economy.. This course fulfills the Economic and Personal Finance and virtual graduation requirements. Students who complete this course are encouraged to take the associated Advanced Placement examinations and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "280404",
         "unique": false,
@@ -2738,7 +2886,7 @@
         "id": "TJA2219",
         "semester": false,
         "weight": 0.5,
-        "short_name": "Ancient Civ",
+        "short_name": "Ancient & Clas Civ",
         "availability": [
             true,
             true,
@@ -2797,7 +2945,7 @@
         "category": "Summer School",
         "prerequisites": [
             [
-                "313754"
+                "316154"
             ]
         ],
         "id": "TJA3160",
@@ -3109,7 +3257,7 @@
         "id": "9828J1",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Eng Design",
+        "short_name": "Engineering Des",
         "availability": [
             false,
             true,
@@ -3129,7 +3277,7 @@
         "id": "9828T0",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Prototyping 1",
+        "short_name": "Prototype Dev 1",
         "availability": [
             false,
             true,
@@ -3177,7 +3325,7 @@
         "id": "9828T4",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Prototyping 2",
+        "short_name": "Prototype Dev 2",
         "availability": [
             false,
             true,
@@ -3212,7 +3360,7 @@
         "skippable": false
     },
     "9828T8": {
-        "full_name": "Alternate Energy Systems",
+        "full_name": "Energy Systems 2",
         "category": "Technology",
         "prerequisites": [
             [
@@ -3222,7 +3370,7 @@
         "id": "9828T8",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Energy Sys 2",
+        "short_name": "Energy Systems 2",
         "availability": [
             false,
             true,
@@ -3237,12 +3385,12 @@
         "skippable": false
     },
     "9828T9": {
-        "full_name": "Conventional Energy Systems",
+        "full_name": "Energy Systems 1",
         "category": "Technology",
         "id": "9828T9",
         "semester": true,
         "weight": 0.5,
-        "short_name": "Energy Sys 1",
+        "short_name": "Energy Systems 1",
         "availability": [
             false,
             true,
@@ -3295,7 +3443,7 @@
             true,
             true
         ],
-        "description": "Be introduced to a variety of exciting opportunities in using artistic processes, learn to think conceptually and realize potential as a creative and critical thinker in order to meet the challenges of 21st century living. Explore personal interests while developing skills in the areas of drawing, painting, printmaking, ceramics, sculpture, and digital media. Course content includes art production, art appreciation, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.\nTJ: Art 1 offers a wide range of exciting opportunities to explore, learn and practice a variety of artistic processes. Focus is placed on investigating individual interests while developing skills in the areas of drawing, painting, printmaking, ceramics, sculpture, and digital media. To solve artistic challenges, students learn to use both creative and critical thinking skills. Course content includes art production, as well as art history, aesthetics, criticism and studies in visual culture.",
+        "description": "Students will be introduced to a variety of exciting opportunities to use artistic processes, learn to think conceptually and realize your potential as a creative and critical thinker in order to meet the challenges of modern living. Explore personal interests while developing skills in the areas of drawing, painting, printmaking, ceramics sculpture, and digital media. Course content includes art production, art appreciation, and studies in visual culture. Course content includes art production, art appreciation, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.\nTJ: Art 1 offers a wide range of exciting opportunities to explore, learn and practice a variety of artistic processes. Focus is placed on investigating individual interests while developing skills in the areas of drawing, painting, printmaking, ceramics, sculpture, and digital media. To solve artistic challenges, students learn to use both creative and critical thinking skills. Course content includes art production, as well as art history, aesthetics, criticism and studies in visual culture.",
         "online": false,
         "equivalent": "912032",
         "unique": false,
@@ -3323,7 +3471,7 @@
             true,
             true
         ],
-        "description": "Cultivate previously developed artistic knowledge and skills learned in Art 1. Explore new combinations and possibilities in the use of two-dimensional and three-dimensional media including technological applications. Investigate contemporary topics as they relate to artistic expression and design. Ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history and criticism, aesthetics, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.\nTJ: Art 2 cultivates previously developed artistic knowledge and skills learned in Art 1. New combinations and possibilities in the use of two-dimensional and three-dimensional media are introduced. Focus is placed on the investigation of contemporary topics as they relate to artistic expression and design. Students are challenged to ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history and criticism, aesthetics, and studies in visual culture.",
+        "description": "Students cultivate previously developed artistic knowledge and skills learned in Art 1. Explore new combinations and possibilities in the use of two-dimensional and three-dimensional media including technological applications. Investigate contemporary topics as they relate to artistic expression and design. Ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history and criticism, aesthetics, and studies in visual culture. This course requires a student materials fee as listed in FCPS Notice 5922.\nTJ: Art 2 cultivates previously developed artistic knowledge and skills learned in Art 1. New combinations and possibilities in the use of two-dimensional and three-dimensional media are introduced. Focus is placed on the investigation of contemporary topics as they relate to artistic expression and design. Students are challenged to ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history and criticism, aesthetics, and studies in visual culture.",
         "online": false,
         "equivalent": "913032",
         "unique": false,
@@ -3333,53 +3481,145 @@
         ],
         "skippable": false
     },
-    "914032": {
-        "full_name": "Art 3",
+    "912000": {
+        "full_name": "Studio Art and Design 1",
         "category": "Visual Arts",
-        "prerequisites": [
-            [
-                "913032"
-            ]
-        ],
-        "id": "914032",
+        "id": "912000",
         "semester": true,
         "weight": 0.0,
-        "short_name": "Art 3",
+        "short_name": "Stud Art & Des 1",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "Expand and improve artistic understandings and skills by using creative processes. Develop an individual style and voice to communicate ideas. Articulate responses to personal and global issues through the integration of traditional and electronic media. Present artworks in diverse formats. Course content includes art production, design application, art history, criticism, aesthetics, and studies in visual culture.\nTJ: Art 3 provides unique opportunities to expand and improve artistic understandings and skills through the creative process. Focus is placed on the development of an individual style and voice in the communication of ideas. Students will articulate responses to personal and global issues through the use of traditional and electronic media. Presentation of works in diverse formats is emphasized. Course content includes art production, design application, art history, criticism, aesthetics, and studies in visual culture.",
+        "description": "xplore a variety of exciting opportunities and materials to inform the artmaking process. Learn to think conceptually and realize potential as a creative and critical thinker in order to meet the challenges of 21st century living. Explore personal interests related to the theme of a sense of place while developing skills in the areas of drawing, painting, printmaking, ceramics, sculpture, and digital media. Course content includes art production, art appreciation, and studies in visual culture.",
         "online": false,
-        "equivalent": "914032",
+        "equivalent": "912000",
         "unique": false,
         "ap": "pre",
-        "dependents": [
-            "915004"
-        ],
         "skippable": false
     },
-    "915004": {
-        "full_name": "AP Studio Art",
+    "913000": {
+        "full_name": "Studio Art and Design 2",
         "category": "Visual Arts",
         "prerequisites": [
             [
-                "914032"
+                "912000"
             ]
         ],
-        "id": "915004",
-        "semester": false,
-        "weight": 1.0,
-        "short_name": "AP Studio Art",
+        "id": "913000",
+        "semester": true,
+        "weight": 0.0,
+        "short_name": "Stud Art & Des 2",
         "availability": [
             false,
             true,
             true,
             true
         ],
-        "description": "This course is designed for highly motivated, advanced art students who have demonstrated a serious interest in the study of art.  Ideally suited for students who work well independently, the course will focus on the preparation of a drawing portfolio of artworks that exhibit quality, concentration in an area of visual interest or problem solving, and breadth of experience in the formal, technical, and expressive means of an artist.  The drawing portfolio addresses a broad interpretation of drawing issues including painting, printmaking, studies for sculpture, some forms of design, and abstract and observational works.  Students will prepare and submit drawing portfolios based on objectives that reflect the format and requirements established by the College Board for Advanced Placement Studio Art.  Advanced Placement college credit and/or placement may be awarded if a qualifying exam score is achieved.  All students are required to take Advanced Placement Art: Studio Art Drawing exam.\nTJ: Advanced Placement Studio Art allows students to work in one particular area of art or design of their choosing. A student may select a focus from: Painting and Drawing, Computer Graphics, Photography, or 3-D Design. Students are encouraged to work more independently and to respond to personal and global issues through their preferred medium while establishing an individual voice and style of communication. Ultimately, students will create a portfolio of their work for advanced placement review. This course requires a student materials fee as listed in FCPS Notice 5922.",
+        "description": "Cultivate previously developed artistic knowledge and skills learned in Studio Art and Design 1. Explore new combinations and possibilities in the use of two-dimensional and three-dimensional media including technological applications. Investigate contemporary topics, artistic expression, and design related to the theme perceptions of self. Ask questions, solve problems, create products, and communicate ideas in innovative ways. Course content includes art production, design thinking, art history, criticism, aesthetics, and studies in visual culture.",
+        "online": false,
+        "equivalent": "913000",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "914000": {
+        "full_name": "Studio Art and Design 3",
+        "category": "Visual Arts",
+        "prerequisites": [
+            [
+                "913000"
+            ]
+        ],
+        "id": "914000",
+        "semester": true,
+        "weight": 0.0,
+        "short_name": "Stud Art & Des 3",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Expand and improve artistic understandings and skills by using creative processes. Develop an individual style and voice to communicate ideas. Articulate responses to social and contemporary issues through the integration of traditional and electronic media. Present artworks in diverse formats. Course content includes art production, design application, art history, criticism, aesthetics, and studies in visual culture.",
+        "online": false,
+        "equivalent": "914000",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "914700": {
+        "full_name": "Studio Art and Design 4: Portfoli Preparation General",
+        "category": "Visual Arts",
+        "prerequisites": [
+            [
+                "914000"
+            ]
+        ],
+        "id": "914700",
+        "semester": true,
+        "weight": 0.0,
+        "short_name": "Stud Art & Des 4",
+        "availability": [
+            false,
+            false,
+            false,
+            true
+        ],
+        "description": "Engage in advanced study of art production, art history, aesthetics, and art criticism while maintaining the attitude and self-discipline of a working artist. Practice and exhibit technical proficiency and personal style, work in advanced media, and apply professional presentation techniques to develop and prepare artwork for exhibitions and portfolios. Demonstrate quality, concentration, and breadth of experience in a body of work and select work for personal exhibitions, exit portfolios, and presentation portfolios.",
+        "online": false,
+        "equivalent": "914700",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "914804": {
+        "full_name": "AP Studio Art: 2-D Design Portfolio",
+        "category": "Visual Arts",
+        "prerequisites": [
+            [
+                "913000"
+            ]
+        ],
+        "id": "914804",
+        "semester": false,
+        "weight": 1.0,
+        "short_name": "AP Art: Studio Art 2-D",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "This course is designed for highly motivated, advanced art students who have demonstrated a serious interest in the study of art. Ideally suited for students who work well independently, the course will focus on the preparation of a two-dimensional design portfolio of artworks that exhibit quality, concentration in an area of visual interest or problem solving, and breadth of experience in the formal, technical, and expressive means of an artist. The two-dimensional portfolio may include, but is not limited to, forms of artwork in graphic design, typography, digital imaging, photography, collage, fabric design, weaving, illustration, painting, and printmaking. Students will submit two-dimensional portfolios based on objectives that reflect the format and requirements established by the College Board for Advanced Placement Studio Art. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
+        "online": false,
+        "equivalent": "914804",
+        "unique": false,
+        "ap": "ap",
+        "skippable": false
+    },
+    "915004": {
+        "full_name": "AP Studio Art: Drawing Portfolio",
+        "category": "Visual Arts",
+        "prerequisites": [
+            [
+                "913000"
+            ]
+        ],
+        "id": "915004",
+        "semester": false,
+        "weight": 1.0,
+        "short_name": "AP Art: Drawing Portfolio",
+        "availability": [
+            false,
+            true,
+            true,
+            true
+        ],
+        "description": "This course is designed for highly motivated, advanced art students who have demonstrated a serious interest in the study of art. Ideally suited for students who work well independently, the course will focus on the preparation of a drawing portfolio of artworks that exhibit quality, concentration in an area of visual interest or problem solving, and breadth of experience in the formal, technical, and expressive means of an artist. The drawing portfolio addresses a broad interpretation of drawing issues including painting, printmaking, studies for sculpture, some forms of design, and abstract and observational works. Students will prepare and submit drawing portfolios based on objectives that reflect the format and requirements established by the College Board for Advanced Placement Studio Art. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "915004",
         "unique": false,
@@ -3387,19 +3627,19 @@
         "skippable": false
     },
     "915104": {
-        "full_name": "AP Art History",
+        "full_name": "AP Art: Art History",
         "category": "Visual Arts",
         "id": "915104",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Art History",
+        "short_name": "AP Art: Art History",
         "availability": [
             false,
             true,
             true,
             true
         ],
-        "description": "Students develop an understanding of works of art within their historical context by examining issues such as politics, religion, patronage, gender, function, and ethnicity. The course also addresses visual analysis, aesthetics, and criticism. Students should demonstrate a high degree of commitment to academic work and possess academic skills needed to pursue a program designed to meet college standards. The course is designed to prepare students for the Advanced Placement Art History examination, for which college credit and/or placement may be awarded if a qualifying score is achieved. Objectives for Advanced Placement courses reflect the format and requirements in the Advanced Placement Course Description for Artpublished by the College Board. No prior experience in art studio or art history is assumed. All students are required to take the Advanced Placement Art History exam.\nTJ: AP Art History provides the same exciting course of study as a college art history course: an understanding and knowledge of architecture, sculpture, painting and other forms of art, within their social/historical contexts. Students will examine and critically analyze major artworks from the past and present, within a variety of cultures. These include a chronology from Paleolithic art through the present. While the emphasis will be on Western Art traditions, a minimum of 20% of the course comes from beyond the European tradition. As the name implies, art history is the study of art and the study of history. While a visual analysis (formal critique) is emphasized, the cultural context, history, politics, religion, patronage, gender issues, function, effect and audience of each work are crucial to the study of art history. Art history is based not primarily on memorization of facts, but rather on specific historical contexts shaped by the forces of time, place, events, culture, social change, and the activities of individual artists and patrons. In this course works of art are viewed as products of specific times and places.",
+        "description": "Students develop the ability to critically analyze major forms of artistic expression including architecture, sculpture and other media t within their historical context by examining issues such as politics, religion, patronage, gender, function, and ethnicity. The course also specifies course content and identifies works of art students are required to understand to support their in-depth learning. . Students should demonstrate a high degree of commitment to academic work and possess academic skills needed to pursue a program designed to meet college standards. The course prepares students for the Advanced Placement Art History examination, for which two semesters of college credit and/or placement may be awarded if a qualifying score is achieved. Objectives for Advanced Placement courses reflect the format and requirements in the Advanced Placement Course Description for Art published by the College Board. No prior experience in art studio or art history is assumed. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "915104",
         "unique": false,
@@ -3422,26 +3662,6 @@
         "description": "This course is unique to TJHSST and is not available elsewhere in FCPS.\nTJ: This course is designed for students who want to learn new skills in design and drawing and understand the use of spatial concepts including overlapping, foreground, middle ground and background, linear perspective, scale, atmospheric perspective, aerial perspective, that will assist with engineering projects. Also the use of vector-based software such as Adobe illustrator and photo shop to create digital illustrative designs, graphic designs, and typography can assist with building overall design skills.",
         "online": false,
         "equivalent": "9153T0",
-        "unique": false,
-        "ap": "pre",
-        "skippable": false
-    },
-    "917560": {
-        "full_name": "Ceramics 1 3-D Art",
-        "category": "Visual Arts",
-        "id": "917560",
-        "semester": false,
-        "weight": 0.0,
-        "short_name": "Ceramics 1 3-D Art",
-        "availability": [
-            true,
-            true,
-            true,
-            true
-        ],
-        "description": "Practice and apply three-dimensional design and ceramic techniques.  Explore a variety of materials and approaches to create functional and decorative ceramic objects.  Think creatively and critically to meet challenges and solve problems in innovate ways.  Study the history of ceramics and leading contemporary ceramic artists to inform art making.  Compile and maintain a required ceramic art portfolio.",
-        "online": false,
-        "equivalent": "917560",
         "unique": false,
         "ap": "pre",
         "skippable": false
@@ -3531,7 +3751,7 @@
         "short_name": "Photography 2",
         "availability": [
             true,
-            true,
+            false,
             true,
             true
         ],
@@ -3635,7 +3855,7 @@
         "weight": 0.0,
         "short_name": "French 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -3666,8 +3886,8 @@
         "weight": 0.5,
         "short_name": "French 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -3833,7 +4053,7 @@
         "weight": 0.0,
         "short_name": "German 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -3856,7 +4076,7 @@
         "id": "525000",
         "semester": false,
         "weight": 0.5,
-        "short_name": "German 6",
+        "short_name": "German 5",
         "availability": [
             false,
             true,
@@ -4030,8 +4250,8 @@
         "weight": 0.5,
         "short_name": "Latin 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -4203,7 +4423,7 @@
         "weight": 0.0,
         "short_name": "Russian 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -4234,8 +4454,8 @@
         "weight": 0.5,
         "short_name": "Russian 5",
         "availability": [
-            true,
-            true,
+            false,
+            false,
             true,
             true
         ],
@@ -4440,7 +4660,7 @@
         "short_name": "Spanish 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -4627,25 +4847,53 @@
         ],
         "skippable": false
     },
-    "584004": {
-        "full_name": "AP Chinese",
+    "584000": {
+        "full_name": "Chinese 4",
         "category": "World Languages",
         "prerequisites": [
             [
                 "583000"
             ]
         ],
+        "id": "584000",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Chinese 4",
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "description": "Students develop more sophisticated communication skills in all four areas - listening, speaking, reading and writing - with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
+        "online": false,
+        "equivalent": "584000",
+        "unique": false,
+        "ap": "pre",
+        "dependents": [
+            "584004"
+        ],
+        "skippable": false
+    },
+    "584004": {
+        "full_name": "AP Chinese Language and Culture",
+        "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ]
+        ],
         "id": "584004",
         "semester": false,
         "weight": 1.0,
-        "short_name": "AP Chinese",
+        "short_name": "AP Chinese Language",
         "availability": [
             true,
             true,
             true,
             true
         ],
-        "description": "The purpose of this course is to prepare students to take the Advanced Placement Language examination given each spring, for which placement and/or credit may be awarded at the college level if a qualifying score is obtained.  Students study the use of language for active communication.  Specifically, they understand the spoken target language in both formal and conversational situations.  They express ideas accurately and resourcefully, both orally and in writing, with reasonable fluency, and they develop a vocabulary sufficiently ample for reading newspaper and magazine articles, contemporary literature, and other nontechnical writings.  They receive extensive training in the organization and writing of compositions, review syntax, and study selected works by contemporary authors.  Materials will include recordings, films, newspapers, and magazines.  All students are required to take the Advanced Placement Chinese Language exam at their base school.\nTJ: Students study the use of language for active communication, specifically: the ability to understand the spoken target language in both formal and conversational situations; the ability to express ideas accurately and resourcefully, both orally and in writing with reasonable fluency; the development of a vocabulary sufficient for reading newspaper and magazine articles, contemporary literature, and other writings; extensive training in the organization and writing of compositions; an in-depth review of grammar; and the study of chosen works by contemporary writers. Materials include recordings, films, newspapers, and magazines. Upon completion, students take the Advanced Placement examination.",
+        "description": "In this course, students study the use of language for active communication. Emphasis is placed on the development of the three modes of communication (interpersonal, interpretive and presentational). The course is structured around six overarching themes: Beauty, and Aesthetics, Contemporary Life, Families and Communities, Global Challenges, Personal and Public Identities, and Science and Technology. Students use language structures in context and use them to convey meaning. The course promotes fluency and accuracy to facilitate the study of language and culture. Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "online": false,
         "equivalent": "584004",
         "unique": false,
@@ -4655,17 +4903,25 @@
     "585000": {
         "full_name": "Chinese 5",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "585000",
         "semester": false,
         "weight": 0.5,
         "short_name": "Chinese 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
-        "description": "None",
+        "description": "Students develop more sophisticated communication skills in all four areas listening, speaking, reading and writing with emphasis on the ability to interact orally and in writing. The authentic reading selections are emphasized at this level. Students communicate using more complex language structures and express abstract ideas with reasonable fluency. Students are able to create and listen with understanding to reports and presentations. They are also able to describe, summarize and discuss selected upper level POS themes and topics.",
         "online": false,
         "equivalent": "585000",
         "unique": false,
@@ -4675,6 +4931,14 @@
     "5850T1": {
         "full_name": "Chinese 5 Sem1",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "5850T1",
         "semester": true,
         "weight": 0.5,
@@ -4695,6 +4959,14 @@
     "5850T2": {
         "full_name": "Chinese 5 Sem2",
         "category": "World Languages",
+        "prerequisites": [
+            [
+                "584000"
+            ],
+            [
+                "584004"
+            ]
+        ],
         "id": "5850T2",
         "semester": true,
         "weight": 0.5,
@@ -4805,7 +5077,7 @@
         "weight": 0.0,
         "short_name": "Japanese 4",
         "availability": [
-            true,
+            false,
             true,
             true,
             true
@@ -4837,7 +5109,7 @@
         "short_name": "Japanese 5",
         "availability": [
             false,
-            true,
+            false,
             true,
             true
         ],
@@ -4914,6 +5186,91 @@
         "dependents": [
             "595000"
         ],
+        "skippable": false
+    },
+    "924015": {
+        "full_name": "Jazz Band",
+        "category": "Performing Arts",
+        "id": "924015",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Jazz Ensemble",
+        "availability": [
+            false,
+            true,
+            true,
+            true
+        ],
+        "description": "The instrumental jazz ensemble curriculum emphasizes improvisation and styles of the jazz idiom. Content includes the study of blues scale patterns and harmonic progressions innate in jazz music. Content also includes the study of the appropriate jazz literature and rehearsal and performance techniques from the jazz idiom. Instrumentation of the jazz ensemble is at the discretion of the instructor. Students must meet both the school day and after-school participation requirements to receive credit for the course.\nTJ: Jazz Band is an auditioned ensemble (auditions take place in the spring for the following school year) which will concentrate on Jazz repertoire and stylistic demands associated with the performance of the repertoire. Standard instrumentation will include: Alto, Tenor and Baritone Saxophones, Tenor and Bass Trombones, Trumpets, Trap Set, Electric/Upright Bass, Keyboard, and Rhythm Guitar. Class content will include study of jazz repertoire, rehearsal techniques, and individual improvisation. Rehearsals and performances, both inside and outside the academic day, are required. There is a nominal uniform/participation fee for this class.",
+        "online": false,
+        "equivalent": "924015",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "316154": {
+        "full_name": "TJHSST Math 4",
+        "category": "Math",
+        "prerequisites": [
+            [
+                "313753"
+            ]
+        ],
+        "id": "316154",
+        "semester": true,
+        "weight": 0.5,
+        "short_name": "TJ Math 4",
+        "availability": [
+            true,
+            true,
+            false,
+            false
+        ],
+        "description": "Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.\nTJ: Students study right triangle relationships, identities and equations, the unit circle and graphing. Class includes modeling and application problems. Topics include finding values of trigonometric functions, finding exact trigonometric values of special angles in degrees and radians, finding exact angles of inverse trigonometric functions, trigonometric identities, transformations and finding domain, range, amplitude, period, and shifts, graphing inverse trigonometric functions, solving trigonometric equations and inequalities, solving practical problems using the law of sines and cosines, vectors applications, polar coordinate system, using De Moivre's theorem with complex numbers, and three-dimensional modeling and applications. The process standard focus will be Connections.",
+        "online": false,
+        "equivalent": "316154",
+        "unique": false,
+        "ap": "pre",
+        "skippable": true
+    },
+    "612000": {
+        "full_name": "Economics and Personal Finance",
+        "category": "General",
+        "id": "612000",
+        "semester": false,
+        "weight": 0.0,
+        "short_name": "Econ Pers Finance",
+        "availability": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "description": "Instruction in economics and personal finance prepares students to function effectively as consumers, savers, investors, entrepreneurs, and active citizens. Students learn how economies and markets operate and how the United States' economy is interconnected with the global economy. On a personal level, students learn that their own human capital (knowledge and skills) is their most valuable resource. Beginning with students entering ninth grade in fall 2011, one standard unit of credit in Economics and Personal Finance is required for graduation. Students who choose an EPF option that requires payment, will not be reimbursed should additional options become available.",
+        "online": false,
+        "equivalent": "612000",
+        "unique": false,
+        "ap": "pre",
+        "skippable": false
+    },
+    "612036": {
+        "full_name": "Economics and Personal Finance Honors",
+        "category": "General",
+        "id": "612036",
+        "semester": false,
+        "weight": 0.5,
+        "short_name": "Econ Pers Finance HN",
+        "availability": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "description": "The Honors EPF course expands and enriches the standard Economics and Personal Finance curriculum by incorporating project based learning and curriculum extensions that will require students to analyze the costs and benefits of economic policies to society and to themselves. In addition to being able to define, identify, and understand financial and economic systems, students in the honors course will analyze the differences between domestic and global policies and the evolution, and oftentimes unintended consequences, of those policies. Students will be able to explain the operation of current financial and economic systems, anticipate advantages and disadvantages of evolving systems, and consider how they can best take advantage of these changes to ensure economic security for our nation and for themselves.",
+        "online": false,
+        "equivalent": "612036",
+        "unique": false,
+        "ap": "pre",
         "skippable": false
     }
 }
