@@ -13,7 +13,6 @@ $.getJSON("static/data/courses.json", function (data) {
             let hints = defaults.hints;
             for (let i = 0; i < hints.length; i++) {
                 let item = hints[i];
-                console.log(item.text);
                 $("#" + getBoxId(item.row, item.col)).append("<div class=\"m-auto grid__hint text-secondary\">" + item.text + "</div>");
             }
 
