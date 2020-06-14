@@ -233,7 +233,7 @@ function treeToString(x) {
     result = [];
     for (i in x) {
         for (j in x[i]) {
-            result.push(" - " + getCourseNameString(x[i][j]));
+            result.push(" - " + getCourseNameString(courses[x[i][j]]));
         }
         if (i < x.length - 1) {
             result.push("or");

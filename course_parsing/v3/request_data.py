@@ -2,7 +2,7 @@ import requests
 import json
 
 
-OUTPUT = "courses.json"
+OUTPUT = "/course_parsing/v3/courses.json"
 
 
 def get_course_list():
@@ -43,7 +43,8 @@ def get_course(course_id, category):
         course["category"] = "Online"
     course["prereq_string"] = course_data["Prerequisite"]
     course["coreq_string"] = course_data["Corequisite"]
-    course["id"] = course_data["CourseNum"]
+    course["id"] = course_id
+    course["num"] = course_data["CourseNum"]
     course["semester"] = not course_data["CourseDurationShort"] == "Year"
     if "weighted" not in course_data["CourseCredit"]:
         course["weight"] = 0

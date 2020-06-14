@@ -17,7 +17,7 @@ function drop(event) {
         if (id.startsWith("c")) {
             event.target.appendChild(document.getElementById(id));
         } else {
-            $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")))
+            $(event.target).append(createCourseDraggable(courses[$("#" + id).attr("data-course-id")]))
         }
 
         onUpdate();

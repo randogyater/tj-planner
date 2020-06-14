@@ -5,7 +5,7 @@ $.getJSON("static/data/courses.json", function (data) {
         $.getJSON("static/data/default_schedule.json", function (defaults) {
             for (let i = 0; i < defaults.length; i++) {
                 let item = defaults[i];
-                $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
+                $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(courses[item.course]));
             }
 
             onUpdate()
@@ -17,8 +17,8 @@ function kebab(string) {
     return string.toLowerCase().replace(/ /g, "_");
 }
 
-function getCourseNameString(id) {
-    return "(" + id + ") " + courses[id].full_name;
+function getCourseNameString(course) {
+    return "(" + course.num + ") " + course.full_name;
 }
 
 function getBoxId(r, c) {
@@ -27,8 +27,7 @@ function getBoxId(r, c) {
 
 counter = 0;
 
-function createCourseDraggable(course_id) {
-    course = courses[course_id];
+function createCourseDraggable(course) {
     counter++;
 
     var $course = $("<div>", {
@@ -36,7 +35,7 @@ function createCourseDraggable(course_id) {
         "class": "course p-1",
         "draggable": "true",
         "ondragstart": "dragStart(event)",
-        "data-course-id": course_id,
+        "data-course-id": course.id,
         "data-course-credit": course.equivalent
     });
 
