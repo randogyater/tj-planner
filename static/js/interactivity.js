@@ -38,10 +38,11 @@ function toss(event) {
 function validDrop(event) {
     var target = $(event.target);
     var id = event.dataTransfer.getData("text");
+    var course_dragged = courses[$("#" + id).attr("data-course-id")];
     if (!target.hasClass("grid__box")) {
         return false;
     } else {
-        if(!boxTypeAllowed(id.split("-", 2)[1], boxType(target))) {
+        if(!boxTypeAllowed(course_dragged, boxType(target))) {
             return false;
         }
         contents = target.children(".course");
@@ -53,7 +54,7 @@ function validDrop(event) {
             } else if (id.startsWith("c")) {
                 return $("#" + event.dataTransfer.getData("text")).attr("class").includes("course--semester");
             } else {
-                return courses[$("#" + id).attr("data-course-id")].semester;
+                return course_dragged.semester;
             }
         }
     }
@@ -69,8 +70,7 @@ function boxType(box) {
     return 0;
 }
 
-function boxTypeAllowed(course_id, type) {
-    var course = courses[course_id];
+function boxTypeAllowed(course, type) {
     switch(type) {
         case 0:
             return course["category"] !== "Online" && course["category"] !== "Summer School"
