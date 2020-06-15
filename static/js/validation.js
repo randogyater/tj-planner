@@ -62,7 +62,7 @@ function onUpdate() {
     }
 
     // Check labs using the final list of courses
-    for (lab_id in labs) {
+    for (var lab_id in labs) {
         let requirements = labs[lab_id].prerequisites;
         let recommendations = labs[lab_id].recommended;
         let reqMet = checkTree(requirements, previous, null);
@@ -90,7 +90,7 @@ function onUpdate() {
 
     // Was RS taken at all?
     if(state.rs_time === 0) {
-        grad["rs1"] = 0;
+        grad.rs1 = 0;
     }
 
     // Check conditions depending only on the final courses
@@ -113,7 +113,7 @@ function onUpdate() {
     for (language in state.languages) {
         max = Math.max(max, state.languages[language]);
     }
-    grad["lang"] = max;
+    grad.lang = max;
 
     // Now display it
     showGradState(grad);
@@ -137,13 +137,13 @@ function updateElement(id, other_sem, state) {
 
     // Update requirements stuff
     if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
-        state.grad["cs"] += 1;
+        state.grad.cs += 1;
     }
     if (course.id === "3190T1" && state.rs_time === 0) {
         state.rs_time = state.year*2 + ((state.index === 0)?1:2);
     }
-    else if (course.category === "Math" && state.rs_time >= state.year*2 + ((state.index === 0)?1:2) && other_sem !== "3190T1") {
-        state.grad["rs1"] = 0;
+    else if (course.category === "Math" && (state.rs_time === 0 || state.rs_time >= state.year*2 + ((state.index === 0)?1:2)) && other_sem !== "3190T1") {
+        state.grad.rs1 = 0;
     }
 
     // Update the status
@@ -159,8 +159,8 @@ function updateElement(id, other_sem, state) {
         updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - " + result.skips.join("\n - "));
     } else {
         let set = new Set();
-        for (i in result.unmet) {
-            for (j in result.unmet[i]) {
+        for (var i in result.unmet) {
+            for (var j in result.unmet[i]) {
                 set.add(result.unmet[i][j]);
             }
         }

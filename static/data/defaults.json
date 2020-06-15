@@ -1,0 +1,68 @@
+{
+    "courses":
+    [
+        {
+            "course": "1130T1",
+            "row": 1,
+            "col": 1
+        },
+        {
+            "course": "4310T1",
+            "row": 2,
+            "col": 1
+        },
+        {
+            "course": "984060",
+            "row": 3,
+            "col": 1
+        },
+        {
+            "course": "1140T1",
+            "row": 1,
+            "col": 2
+        },
+        {
+            "course": "2221T1",
+            "row": 2,
+            "col": 2
+        },
+        {
+            "course": "4410T1",
+            "row": 3,
+            "col": 2
+        },
+        {
+            "course": "1150T1",
+            "row": 1,
+            "col": 3
+        },
+        {
+            "course": "244504",
+            "row": 2,
+            "col": 4
+        },
+        {
+            "course": "4220T1",
+            "row": 3,
+            "col": 4
+        }
+    ],
+    "hints":
+    [
+        {
+            "text": "US History",
+            "row": 2,
+            "col": 3
+        },
+        {
+            "text": "Physics",
+            "row": 3,
+            "col": 3
+        },
+        {
+            "text": "AP English",
+            "row": 1,
+            "col": 4
+        }
+    ]
+}
