@@ -141,6 +141,14 @@ def set_ap(courses):
             course["ap"] = "pre"
 
 
+def add_summer_and_online(courses):
+    for course_id in courses:
+        course = courses[course_id]
+        course["summer"] = False
+        course["online"] = False
+        course["online_only"] = False
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r') as file:
         courses = json.load(file)
@@ -150,6 +158,7 @@ if __name__ == "__main__":
     # resolve_prereqs(courses)
     # correct_prereqs(courses)
     # print(*list_categories(courses), sep="\n")
-    set_ap(courses)
+    # set_ap(courses)
+    # add_summer_and_online(courses)
     with open(SOURCE, 'w') as file:
-        file.write(json.dumps(courses, indent=4))
+        file.write(json.dumps(courses, indent=4, sort_keys=True))
