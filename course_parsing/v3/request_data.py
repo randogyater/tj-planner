@@ -2,7 +2,7 @@ import requests
 import json
 
 
-OUTPUT = "/course_parsing/v3/courses.json"
+OUTPUT = "course_parsing/v3/courses.json"
 
 
 def get_course_list():
