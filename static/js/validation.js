@@ -23,11 +23,11 @@ function onUpdate() {
     // Add things from previous years
     let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
     for (var i = 0; i<math_courses; i++) {
-        previous.add(MATHS[i]);
+        previous.add(MATHS[i]+"");
     }
     let language = $("#ms-lang").val();
     if (language !== "none") {
-        previous.add(LANGUAGE_1[language]);
+        previous.add(LANGUAGE_1[language]+"");
     }
 
     // Check all the boxes
@@ -139,15 +139,15 @@ function updateElement(id, other_sem, state) {
     if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
         state.grad.cs += 1;
     }
-    if (course.id === "3190T1" && state.rs_time === 0) {
+    if (course.id == RS1 && state.rs_time === 0) {
         state.rs_time = state.year*2 + ((state.index === 0)?1:2);
     }
-    else if (course.category === "Math" && (state.rs_time === 0 || state.rs_time >= state.year*2 + ((state.index === 0)?1:2)) && other_sem !== "3190T1") {
+    else if (course.category === "Mathematics" && (state.rs_time === 0 || state.rs_time >= state.year*2 + ((state.index === 0)?1:2)) && other_sem != RS1) {
         state.grad.rs1 = 0;
     }
 
     // Update the status
-    result = checkTree(course.prerequisites, state.past, other_sem);
+    result = checkTree(course.prereqs, state.past, other_sem);
     if (result.state) {
         if (!course.availability[state.year]) {
             updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
@@ -155,7 +155,7 @@ function updateElement(id, other_sem, state) {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
     } else if (result.skippable) {
-        // TODO make this show the course names too
+        // TODO make this show the course nums too
         updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - " + result.skips.join("\n - "));
     } else {
         let set = new Set();
@@ -169,7 +169,7 @@ function updateElement(id, other_sem, state) {
 }
 
 function checkTree(tree, past, other_sem) {
-    if (tree === undefined) {
+    if (tree === undefined || tree.length === 0) {
         // No prerequisites? Let it go.
         return {
             state: true
@@ -179,26 +179,20 @@ function checkTree(tree, past, other_sem) {
     let result = {
         state: false,
         skippable: false,
-        unmet: [],
-        skips: []
+        unmet: []
     };
 
     for (var i = 0; i < tree.length; i++) {
         // Check every set for matching
+        // TODO: Check for skippability!
         let unmet = [];
         let match = true;
-        let skip_match = true;
 
         for (var j = 0; j < tree[i].length; j++) {
             let prereq = tree[i][j];
             if (!(past.has(prereq) || prereq == other_sem)) {
                 match = false;
                 unmet.push(prereq);
-                if (courses[prereq].skippable) {
-                    result.skips.push(prereq);
-                } else {
-                    skip_match = false;
-                }
             }
         }
 
@@ -206,10 +200,6 @@ function checkTree(tree, past, other_sem) {
 
         if (match) {
             result.state = true;
-        }
-
-        if (skip_match) {
-            result.skippable = true;
         }
     }
 
@@ -227,7 +217,7 @@ function updateStatus(target_id, icon, text, clickFilter = null) {
 
 function treeToString(x) {
     if (x.length == 0) {
-        return " None";
+        return "None";
     }
 
     result = [];

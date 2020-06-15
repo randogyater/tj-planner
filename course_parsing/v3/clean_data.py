@@ -129,14 +129,27 @@ def list_categories(courses):
     return categories
 
 
+def set_ap(courses):
+    for course_id in courses:
+        course = courses[course_id]
+        if course["weight"] > 0.9:
+            if "AP" in course["short_name"]:
+                course["ap"] = "ap"
+            else:
+                course["ap"] = "post"
+        else:
+            course["ap"] = "pre"
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r') as file:
         courses = json.load(file)
     fix_names(courses)
     # remove_labs(courses)
-    # remove_coreqs(courses))
+    # remove_coreqs(courses)
     # resolve_prereqs(courses)
     # correct_prereqs(courses)
     # print(*list_categories(courses), sep="\n")
+    set_ap(courses)
     with open(SOURCE, 'w') as file:
         file.write(json.dumps(courses, indent=4))
