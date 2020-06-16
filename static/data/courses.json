@@ -526,8 +526,8 @@
         ],
         "semester": true,
         "short_name": "TJ Math 5",
-        "skiptest": false,
-        "summer": false,
+        "skiptest": true,
+        "summer": true,
         "weight": 0.5
     },
     "10602": {
@@ -553,7 +553,7 @@
         "semester": true,
         "short_name": "TJ Research Stat 1",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "10603": {
@@ -4637,7 +4637,7 @@
         ],
         "semester": false,
         "short_name": "AP Computer Sci A+",
-        "skiptest": false,
+        "skiptest": true,
         "summer": false,
         "weight": 1.0
     },
@@ -5475,7 +5475,7 @@
         "semester": false,
         "short_name": "Foundations Comsci",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6993": {

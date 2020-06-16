@@ -69,8 +69,8 @@ function onUpdate() {
         let recMet = checkTree(recommendations, previous, null);
         var entry = $("#labs__"+lab_id);
         var status = entry.find(".labs__status");
-        if (reqMet.state) {
-            if(recMet.state) {
+        if (reqMet.length === 0) {
+            if(recMet.length === 0) {
                 entry.removeClass("table-success table-default");
                 entry.addClass("table-primary");
                 status.text("Recommended");
@@ -148,15 +148,16 @@ function updateElement(id, other_sem, state) {
 
     // Update the status
     result = checkTree(course.prereqs, state.past, other_sem);
-    if (result.state) {
+    if (result.length === 0) {
         if (!course.availability[state.year]) {
             updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
-    } else if (result.skippable) {
-        // TODO make this show the course nums too
-        updateStatus(id, ICONS.CONDITIONAL, "This course can be taken if you test out of the following classes:\n - " + result.skips.join("\n - "));
+    } else if (course.skiptest) {
+        updateStatus(id, ICONS.TEST, "This course can be taken if you pass the skip test.");
+    } else if (course.approval) {
+        updateStatus(id, ICONS.APPROVE, "This course can be taken with teacher approval.");
     } else {
         let set = new Set();
         for (var i in result.unmet) {
@@ -171,39 +172,30 @@ function updateElement(id, other_sem, state) {
 function checkTree(tree, past, other_sem) {
     if (tree === undefined || tree.length === 0) {
         // No prerequisites? Let it go.
-        return {
-            state: true
-        };
+        return [];
     }
-
-    let result = {
-        state: false,
-        skippable: false,
-        unmet: []
-    };
-
+    var total_unmet = [];
     for (var i = 0; i < tree.length; i++) {
         // Check every set for matching
         // TODO: Check for skippability!
         let unmet = [];
-        let match = true;
 
         for (var j = 0; j < tree[i].length; j++) {
             let prereq = tree[i][j];
             if (!(past.has(prereq) || prereq == other_sem)) {
-                match = false;
                 unmet.push(prereq);
             }
         }
 
-        result.unmet.push(unmet);
-
-        if (match) {
-            result.state = true;
+        if (unmet.length > 0) {
+            total_unmet.push(unmet);
+        }
+        else {
+            return [];
         }
     }
 
-    return result;
+    return total_unmet;
 }
 
 function updateStatus(target_id, icon, text, clickFilter = null) {

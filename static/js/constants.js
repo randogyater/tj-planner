@@ -22,6 +22,8 @@ const ICONS = {
     SUCCESS: "fas fa-check-circle",
     FAILURE: "fas fa-times-circle",
     CONDITIONAL: "fas fa-exclamation-circle",
+    TEST: "fas fa-file-alt",
+    APPROVE: "fas fa-eye",
     ADDITIONAL: "fas fa-plus-circle",
     LOADING: "fas fa-spinner"
 };

@@ -65,21 +65,20 @@
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
                                 <div class="catalog__entry__name">{{course.full_name}}</div>
                                 <div class="catalog__entry__properties">
-                                    {% if course.category == "Summer School" %}
-                                        <!--TODO add the course equivalent!-->
-                                        <abbr title="This is a summer school course."><i class="fas fa-sun"></i></abbr>
+                                    {% if course.summer %}
+                                        <abbr title="This course can be taken in summer school."><i class="fas fa-sun"></i></abbr>
                                     {% endif %}
-                                    {% if course.skippable %}
-                                        <abbr title="You can take a test to skip this course!"><i class="fas fa-running"></i></abbr>
+                                    {% if course.skiptest %}
+                                        <abbr title="You can take a test to skip the prerequisites of this course."><i class="fas fa-file-alt"></i></abbr>
                                     {% endif %}
-                                    {% if course.unique %}
-                                        <abbr title="This course is unique to TJ and not offered elsewhere in FCPS."><i class="fas fa-asterisk"></i></abbr>
+                                    {% if course.approval %}
+                                        <abbr title="You can skip to this course with teacher approval."><i class="fas fa-eye"></i></abbr>
                                     {% endif %}
-                                    {% if course.online %}
+                                    {% if course.online and not course.online_only %}
                                         <abbr title="This course can be taken online."><i class="fas fa-desktop"></i></abbr>
                                     {% endif %}
-                                    {% if course.category == "Online" %}
-                                        <abbr title="This is an online-only course."><i class="fas fa-wifi"></i></abbr>
+                                    {% if course.online_only %}
+                                        <abbr title="This course is only offered online."><i class="fas fa-wifi"></i></abbr>
                                     {% endif %}
                                     {% if course.semester %}
                                         <abbr title="This is a semester course and will last half a year."><i class="fas fa-adjust"></i></abbr>
@@ -94,10 +93,10 @@
                 </button>
                 <div class="w-100 d-flex flex-row">
                     <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
-                        Toggle summer
+                        Show/hide summer
                     </button>
                     <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--online" aria-expanded="false" aria-controls="row--online">
-                        Toggle online
+                        Show/hide online
                     </button>
                 </div>
             </div>
