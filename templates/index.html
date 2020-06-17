@@ -94,6 +94,7 @@
                                     </div>
                                 </div>
                                 <div id="desc-{{course.id}}" class="catalog__entry__description collapse" data-parent="#catalog">
+                                    <p><em>{{ course.num }}</em></p>
                                     <p><strong>Prerequisites: {% if course.prereq_string|length > 0 %} {{ course.prereq_string }} {% else %} None {% endif %}</strong></p>
                                     <p><strong>Offered: </strong>{{ course.grades|join(', ') }}</p>
                                     <p><strong>Description: </strong>{{ course.description }}</p>
