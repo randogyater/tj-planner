@@ -30,13 +30,14 @@
 <body>
     <div class="container-fluid d-flex flex-column" style="height:98vh;">
         <div class="row" style="height:10%"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
-            <h1 class="w-100" style="text-align: center">TJ Four Year Planner</h1>
+            <h1 class="m-auto p-2" style="text-align: center">TJ Four Year Planner</h1>
             <div class="m-auto">By Daniel Fu | <a href="{{ version_url }}">{{ version }}</a></div>
         </div>
+        <div class="row"><p class="m-auto">By Daniel Fu | <a href="{{ version_url }}">{{ version }}</a></p></div>
         <div class="row" style="height:90%">
-            <div id="catalog__sidebar" class="col-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
+            <div id="catalog__sidebar" class="col-md-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
-                <h2 class="m-auto">Courses:</h2>
+                <h2 class="m-auto p-2">Courses:</h2>
                 <div id="catalog__controls" class="m-1">
                     <div class="input-group m-1">
                         <input id="search-box" type="text" class="form-control" placeholder="Enter name of course..." aria-label="Search terms">
@@ -58,7 +59,7 @@
                     </div>
                     <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
-                <div id="catalog" class="m-1 p-2 border overflow-auto">
+                <div id="catalog" class="m-2 p-1 border overflow-auto">
                     {% for category, course_list in categorized %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in course_list %}
@@ -104,7 +105,7 @@
                     </button>
                 </div>
             </div>
-            <div class="col-5 h-100 p-2">
+            <div class="col-lg-5 col-md-9 col-12 h-100 p-2">
                 <table id="grid" class="m-2 h-100 w-100" style="flex: 1 0 auto; table-layout:fixed;">
                     <tr id="grid__header" style="height: fit-content">
                         <th>Freshman</th>
@@ -140,8 +141,8 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-4 h-100 d-flex flex-column">
-                <h2 class="m-auto">Senior labs:</h2>
+            <div class="col-lg-4 h-100 d-flex flex-column">
+                <h2 class="m-auto p-2">Senior labs:</h2>
                 <div class="overflow-auto">
                     <table class="table table-hover">
                         <thead>
@@ -160,7 +161,7 @@
                         </tbody>
                     </table>
                 </div>
-                <h2 class="m-auto">Graduation requirements:</h2>
+                <h2 class="m-auto p-2">Graduation requirements:</h2>
                 <div class="p-2 flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
                     <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                     {% for name, text, num in requirements %}
