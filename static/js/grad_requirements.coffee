@@ -1,5 +1,5 @@
 SIMPLE_CONDITIONS = [
-    ["math", (course) -> course.category == "Math"], # TODO RS1 and Algebra don't count here
+    ["math", (course) -> course.category == "Mathematics"], # TODO RS1 and Algebra don't count here
     ["history", (course) -> course.category == "Social Studies" and
      course.ap == "pre" and course.id != WORLD_HISTORY_2 and
       course.id != VA_US_GOV and

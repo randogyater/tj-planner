@@ -1,14 +1,22 @@
 $.getJSON("static/data/courses.json", function (data) {
     courses = data;
     $.getJSON("static/data/labs.json", function (data) {
-        labs = data
-        $.getJSON("static/data/default_schedule.json", function (defaults) {
-            for (let i = 0; i < defaults.length; i++) {
-                let item = defaults[i];
-                $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(item.course));
+        labs = data;
+        $.getJSON("static/data/defaults.json", function (defaults) {
+
+            let default_courses = defaults.courses;
+            for (let i = 0; i < default_courses.length; i++) {
+                let item = default_courses[i];
+                $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(courses[item.course]));
             }
 
-            onUpdate()
+            let hints = defaults.hints;
+            for (let i = 0; i < hints.length; i++) {
+                let item = hints[i];
+                $("#" + getBoxId(item.row, item.col)).append("<div class=\"m-auto grid__hint text-secondary\">" + item.text + "</div>");
+            }
+
+            onUpdate();
         });
     });
 });
@@ -17,8 +25,8 @@ function kebab(string) {
     return string.toLowerCase().replace(/ /g, "_");
 }
 
-function getCourseNameString(id) {
-    return "(" + id + ") " + courses[id].full_name;
+function getCourseNameString(course) {
+    return "(" + course.num + ") " + course.full_name;
 }
 
 function getBoxId(r, c) {
@@ -27,8 +35,7 @@ function getBoxId(r, c) {
 
 counter = 0;
 
-function createCourseDraggable(course_id) {
-    course = courses[course_id];
+function createCourseDraggable(course) {
     counter++;
 
     var $course = $("<div>", {
@@ -36,7 +43,7 @@ function createCourseDraggable(course_id) {
         "class": "course p-1",
         "draggable": "true",
         "ondragstart": "dragStart(event)",
-        "data-course-id": course_id,
+        "data-course-id": course.id,
         "data-course-credit": course.equivalent
     });
 
@@ -59,7 +66,7 @@ function createCourseDraggable(course_id) {
         $course.addClass("course--pre-ap");
     }
 
-    $course.addClass("course--"+kebab(course.category))
+    $course.addClass("course--"+kebab(course.category));
 
     return $course;
 }

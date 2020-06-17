@@ -17,7 +17,7 @@ function drop(event) {
         if (id.startsWith("c")) {
             event.target.appendChild(document.getElementById(id));
         } else {
-            $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")))
+            $(event.target).append(createCourseDraggable(courses[$("#" + id).attr("data-course-id")]))
         }
 
         onUpdate();
@@ -36,22 +36,47 @@ function toss(event) {
 }
 
 function validDrop(event) {
-    target = $(event.target);
+    var target = $(event.target);
+    var id = event.dataTransfer.getData("text");
+    var course_dragged = courses[$("#" + id).attr("data-course-id")];
     if (!target.hasClass("grid__box")) {
         return false;
     } else {
+        if(!boxTypeAllowed(course_dragged, boxType(target))) {
+            return false;
+        }
         contents = target.children(".course");
-        if (contents.length == 0) {
+        if (contents.length === 0) {
             return true;
         } else if (contents.length == 1 && contents[0].getAttribute("class").includes("course--semester")) {
-            var id = event.dataTransfer.getData("text");
-            if (id == "") {
+            if (id === "") {
                 return true;
             } else if (id.startsWith("c")) {
                 return $("#" + event.dataTransfer.getData("text")).attr("class").includes("course--semester");
             } else {
-                return courses[$("#" + id).attr("data-course-id")].semester;
+                return course_dragged.semester;
             }
         }
+    }
+}
+
+function boxType(box) {
+    if(box.hasClass("grid__box--summer")) {
+        return 1;
+    }
+    if(box.hasClass("grid__box--online")) {
+        return 2;
+    }
+    return 0;
+}
+
+function boxTypeAllowed(course, type) {
+    switch(type) {
+        case 0:
+            return !course["online-only"];
+        case 1:
+            return course["online"] || course["online-only"];
+        case 2:
+            return course["summer"];
     }
 }

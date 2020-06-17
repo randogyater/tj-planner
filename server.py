@@ -29,10 +29,24 @@ def kebab(string):
 
 def get_version():
     name = subprocess.run(["git", "describe", "--always"], stdout=subprocess.PIPE)
-    commit = subprocess.run(["git", "rev-parse", "head"], stdout=subprocess.PIPE)
+    commit = subprocess.run(["git", "rev-parse", "HEAD"], stdout=subprocess.PIPE)
     name = name.stdout.decode().strip()
     commit = commit.stdout.decode().strip()
     return name, (GITHUB_URL + commit)
+
+
+def ordering_key(course):
+    if course["category"] == "World Language":
+        # Languages are sorted by language then level
+        if course["short_name"].beginswith("AP"):
+            # AP is to be equal to language 4, but higher
+            return course["short_name"][3:]+"4", 1
+        else:
+            return course["short_name"], 0
+    if course["category"] == "English":
+        # English gets a bit wacky if you sort it the usual way, let's put all core classes at the top
+        return "English" not in course["full_name"], [not(x) for x in course["availability"]], course["full_name"]
+    return course["lexographic"], 0 if course["ap"] == "pre" else (1 if course["ap"] == "ap" else 2), [not(x) for x in course["availability"]], course["full_name"]
 
 
 @app.route("/")
@@ -60,13 +74,16 @@ def index():
         categorized[course["category"]].append(course)
     
     version, version_url = get_version()
-    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab,
-    info = info, version = version, version_url = version_url, requirements=[
-        ("math", "4 Math credits", 4),
-        ("history", "Fourth history credit", 1),
-        ("lang", "3 years of a language", 3),
-        ("pe", "2 PE credits", 2),
-        ("econ", "Economics", 1),
-        ("rs1", "RS1 must be first Math class", 1),
-        ("cs", "CS must be taken before 11th grade", 1),
-    ])
+    return render_template("index.html",
+                            categories=info["categories"],
+                            categorized = [(category, sorted(categorized[category], key = ordering_key)) for category in info["categories"]],
+                            courses = courses,
+                            labs = labs, kebab = kebab, info = info, version = version, version_url = version_url,
+                            requirements=[
+                                ("math", "4 Math credits", 4),
+                                ("history", "Fourth history credit", 1),
+                                ("lang", "3 years of a language", 3),
+                                ("pe", "2 PE credits", 2),
+                                ("econ", "Economics", 1),
+                                ("rs1", "RS1 must be first Math class", 1),
+                                ("cs", "CS must be taken before 11th grade", 1),])
