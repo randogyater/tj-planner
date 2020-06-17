@@ -8,8 +8,6 @@
     margin: 5px;
     padding: 5px;
     border: 1px solid black;
-    display: flex;
-    flex-direction: row;
 }
 
 .catalog__entry__name {
