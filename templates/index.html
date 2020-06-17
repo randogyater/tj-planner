@@ -28,12 +28,12 @@
 </head>
 
 <body>
-    <div class="container-fluid d-flex flex-column" style="height:98vh;">
+    <div class="container-fluid d-flex flex-column" style="height:calc(100vh - 9px);">
         <div class="row">
             <h1 class="m-auto p-2" style="text-align: center">TJ Four Year Planner</h1>
         </div>
         <div class="row"><p class="m-auto">By Daniel Fu | <a href="{{ version_url }}">{{ version }}</a></p></div>
-        <div class="row" style="height:88%"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
+        <div class="row" style="height:calc(100% - 88px)"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
             <div id="catalog__sidebar" class="col-md-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
                 <h2 class="m-auto p-2">Courses:</h2>
@@ -101,14 +101,14 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
-                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
                     Enter middle school courses...
                 </button>
-                <div class="w-100 d-flex flex-row">
-                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
+                <div class="w-100 d-flex flex-row py-2">
+                    <button class="btn btn-primary flex-fill mr-1" type="button" data-toggle="collapse" data-target="#row--summer" aria-expanded="false" aria-controls="row--summer">
                         Show/hide summer
                     </button>
-                    <button class="btn btn-primary flex-fill m-1" type="button" data-toggle="collapse" data-target="#row--online" aria-expanded="false" aria-controls="row--online">
+                    <button class="btn btn-primary flex-fill ml-1" type="button" data-toggle="collapse" data-target="#row--online" aria-expanded="false" aria-controls="row--online">
                         Show/hide online
                     </button>
                 </div>
@@ -170,7 +170,7 @@
                     </table>
                 </div>
                 <h2 class="m-auto p-2">Graduation requirements:</h2>
-                <div class="p-2 flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
+                <div class="flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
                     <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                     {% for name, text, num in requirements %}
                     <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
