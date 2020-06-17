@@ -1898,7 +1898,7 @@
         "prereq_string": "English 11",
         "prereqs": [
             [
-                "6904"
+                "6903"
             ]
         ],
         "semester": false,
@@ -1929,7 +1929,7 @@
         "prereq_string": "English 11",
         "prereqs": [
             [
-                "6904"
+                "6903"
             ]
         ],
         "semester": false,
@@ -1960,7 +1960,7 @@
         "prereq_string": "English 11",
         "prereqs": [
             [
-                "6904"
+                "6903"
             ]
         ],
         "semester": false,
@@ -4729,7 +4729,7 @@
         "prereq_string": "English 11",
         "prereqs": [
             [
-                "6904"
+                "6903"
             ]
         ],
         "semester": false,
@@ -5126,7 +5126,7 @@
         ],
         "category": "English",
         "coreq_string": "",
-        "description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research. In the English portion of this course, students study a variety of literary texts, including poetry, fiction, exposition, and drama. They discover and compare themes in these texts and use them as the basis for written analysis and discussion. Through varied and frequent writing assignments, students reinforce their understanding of purpose and audience, and develop their ability to control voice and tone. In addition, students study vocabulary, usage, dialect differences, language development and rhetorical principles.  Upon completion, students take the Reading and Writing SOL tests.",
+        "description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research. In the English portion of this course, students study a variety of literary texts, including poetry, fiction, exposition, and drama. They discover and compare themes in these texts and use them as the basis for written analysis and discussion. Through varied and frequent writing assignments, students reinforce their understanding of purpose and audience, and develop their ability to control voice and tone. In addition, students study vocabulary, usage, dialect differences, language development and rhetorical principles.  Upon completion, students take the Reading and Writing SOL tests.\nNote: When paired with US History (not APUSH) this is (1150T2)",
         "equivalent": 6903,
         "full_name": "English 11",
         "id": 6903,
@@ -5140,33 +5140,6 @@
                 "6902"
             ]
         ],
-        "semester": false,
-        "short_name": "English 11",
-        "skiptest": false,
-        "summer": false,
-        "weight": 0.5
-    },
-    "6904": {
-        "ap": "pre",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            true,
-            false
-        ],
-        "category": "English",
-        "coreq_string": "",
-        "description": "This course is a team-taught, interdisciplinary study of American history, literature and culture from pre-Columbian times to the present. Many of the assignments and activities in Humanities 2 are designed to provide teachers and students opportunities to explore relationships between the two subjects. The class focuses on specific historical and literary themes and events in American history emphasizing critical reading and writing, group work, and individual and group projects. Students not only learn about the American experience at a survey level, but also investigate primary source documents that give voice to the major ideas of each time period. These texts serve as a springboard for independent, ongoing research. In the English portion of this course, students study a variety of literary texts, including poetry, fiction, exposition, and drama. They discover and compare themes in these texts and use them as the basis for written analysis and discussion. Through varied and frequent writing assignments, students reinforce their understanding of purpose and audience, and develop their ability to control voice and tone. In addition, students study vocabulary, usage, dialect differences, language development and rhetorical principles. Upon completion, students take the Reading and Writing SOL tests.",
-        "equivalent": 6904,
-        "full_name": "English 11",
-        "id": 6904,
-        "lexographic": 0,
-        "num": "1150T2",
-        "online": false,
-        "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
         "semester": false,
         "short_name": "English 11",
         "skiptest": false,
@@ -5195,7 +5168,7 @@
         "prereq_string": "English 11",
         "prereqs": [
             [
-                "6904"
+                "6903"
             ]
         ],
         "semester": false,

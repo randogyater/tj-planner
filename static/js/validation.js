@@ -160,12 +160,12 @@ function updateElement(id, other_sem, state) {
         updateStatus(id, ICONS.APPROVE, "This course can be taken with teacher approval.");
     } else {
         let set = new Set();
-        for (var i in result.unmet) {
-            for (var j in result.unmet[i]) {
-                set.add(result.unmet[i][j]);
+        for (var i in result) {
+            for (var j in result[i]) {
+                set.add(result[i][j]);
             }
         }
-        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n" + treeToString(result.unmet) + "\nClick to view prerequisites", reqFilter(set));
+        updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n" + treeToString(result) + "\nClick to view prerequisites", reqFilter(set));
     }
 }
 
@@ -177,7 +177,6 @@ function checkTree(tree, past, other_sem) {
     var total_unmet = [];
     for (var i = 0; i < tree.length; i++) {
         // Check every set for matching
-        // TODO: Check for skippability!
         let unmet = [];
 
         for (var j = 0; j < tree[i].length; j++) {
