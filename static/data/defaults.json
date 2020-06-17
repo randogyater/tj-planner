@@ -2,47 +2,47 @@
     "courses":
     [
         {
-            "course": "1130T1",
+            "course": "6900",
             "row": 1,
             "col": 1
         },
         {
-            "course": "4310T1",
+            "course": "6895",
             "row": 2,
             "col": 1
         },
         {
-            "course": "984060",
+            "course": "10441",
             "row": 3,
             "col": 1
         },
         {
-            "course": "1140T1",
+            "course": "6902",
             "row": 1,
             "col": 2
         },
         {
-            "course": "2221T1",
+            "course": "6911",
             "row": 2,
             "col": 2
         },
         {
-            "course": "4410T1",
+            "course": "6897",
             "row": 3,
             "col": 2
         },
         {
-            "course": "1150T1",
+            "course": "6903",
             "row": 1,
             "col": 3
         },
         {
-            "course": "244504",
+            "course": "1313",
             "row": 2,
             "col": 4
         },
         {
-            "course": "4220T1",
+            "course": "6893",
             "row": 3,
             "col": 4
         }

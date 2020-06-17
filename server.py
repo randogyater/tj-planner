@@ -35,6 +35,10 @@ def get_version():
     return name, (GITHUB_URL + commit)
 
 
+def ordering_key(course):
+    return course["lexographic"], 0 if course["ap"] == "pre" else (1 if course["ap"] == "ap" else 2), [not(x) for x in course["availability"]], course["full_name"]
+
+
 @app.route("/")
 def index():
     with open(INFO_LOC, 'r') as file:
@@ -60,13 +64,16 @@ def index():
         categorized[course["category"]].append(course)
     
     version, version_url = get_version()
-    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab,
-    info = info, version = version, version_url = version_url, requirements=[
-        ("math", "4 Math credits", 4),
-        ("history", "Fourth history credit", 1),
-        ("lang", "3 years of a language", 3),
-        ("pe", "2 PE credits", 2),
-        ("econ", "Economics", 1),
-        ("rs1", "RS1 must be first Math class", 1),
-        ("cs", "CS must be taken before 11th grade", 1),
-    ])
+    return render_template("index.html",
+                            categories=info["categories"],
+                            categorized = [(category, sorted(categorized[category], key = ordering_key)) for category in info["categories"]],
+                            courses = courses,
+                            labs = labs, kebab = kebab, info = info, version = version, version_url = version_url,
+                            requirements=[
+                                ("math", "4 Math credits", 4),
+                                ("history", "Fourth history credit", 1),
+                                ("lang", "3 years of a language", 3),
+                                ("pe", "2 PE credits", 2),
+                                ("econ", "Economics", 1),
+                                ("rs1", "RS1 must be first Math class", 1),
+                                ("cs", "CS must be taken before 11th grade", 1),])

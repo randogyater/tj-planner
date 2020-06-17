@@ -17,7 +17,7 @@ function drop(event) {
         if (id.startsWith("c")) {
             event.target.appendChild(document.getElementById(id));
         } else {
-            $(event.target).append(createCourseDraggable($("#" + id).attr("data-course-id")));
+            $(event.target).append(createCourseDraggable(courses[$("#" + id).attr("data-course-id")]))
         }
 
         onUpdate();
@@ -73,10 +73,10 @@ function boxType(box) {
 function boxTypeAllowed(course, type) {
     switch(type) {
         case 0:
-            return course["category"] !== "Online" && course["category"] !== "Summer School"
+            return !course["online-only"];
         case 1:
-            return course["category"] === "Summer School"
+            return course["online"] || course["online-only"];
         case 2:
-            return course["category"] === "Online" || course["online"]
+            return course["summer"];
     }
 }
