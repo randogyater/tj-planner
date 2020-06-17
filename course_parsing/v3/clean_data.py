@@ -173,6 +173,15 @@ def lexographic(courses):
                 batch.append(course_id)
 
 
+def validate_prereqs(courses):
+    for course_id in courses:
+        for prereq in courses[course_id]["prereqs"]:
+            for pre_id in prereq:
+                if pre_id not in courses:
+                    print("Unknown prereq %s in %s" % (pre_id, course_id))
+    print("Checked all prereqs.")
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r') as file:
         courses = json.load(file)
@@ -184,7 +193,8 @@ if __name__ == "__main__":
     # print(*list_categories(courses), sep="\n")
     # set_ap(courses)
     # add_summer_and_online(courses)
-    set_empty_prereqs(courses)
-    lexographic(courses)
+    # set_empty_prereqs(courses)
+    # lexographic(courses)
+    validate_prereqs(courses)
     with open(SOURCE, 'w') as file:
         file.write(json.dumps(courses, indent=4, sort_keys=True))
