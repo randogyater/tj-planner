@@ -60,7 +60,6 @@
                     <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
                 <div id="catalog" class="m-2 p-1 border overflow-auto">
-                    {% for category, courses in categorized.items() %}
                     {% for category, course_list in categorized %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in course_list %}
