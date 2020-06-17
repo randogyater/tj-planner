@@ -60,7 +60,7 @@ def index():
         categorized[course["category"]].append(course)
     
     version, version_url = get_version()
-    return render_template("index.html", categories=info["categories"], categorized = categorized, labs = labs, kebab = kebab,
+    return render_template("index.html", categories=info["categories"], categorized = [(category, categorized[category]) for category in info["categories"]], labs = labs, kebab = kebab,
     info = info, version = version, version_url = version_url, requirements=[
         ("math", "4 Math credits", 4),
         ("history", "Fourth history credit", 1),

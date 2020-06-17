@@ -59,7 +59,7 @@
                     <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
                 <div id="catalog" class="m-1 p-2 border overflow-auto">
-                    {% for category, courses in categorized.items() %}
+                    {% for category, courses in categorized %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in courses %}
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
