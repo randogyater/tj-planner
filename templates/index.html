@@ -59,9 +59,9 @@
                     <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
                 <div id="catalog" class="m-1 p-2 border overflow-auto">
-                    {% for category, courses in categorized %}
+                    {% for category, course_list in categorized %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
-                        {% for course in courses %}
+                        {% for course in course_list %}
                             <div id="entry-{{course.id}}" class="catalog__entry {{course.ap_class}} {{course.category_class}}" draggable="true" ondragstart="dragStart(event)" data-course-id="{{course.id}}">
                                 <div class="catalog__entry__name">{{course.full_name}}</div>
                                 <div class="catalog__entry__properties">
@@ -69,7 +69,7 @@
                                         <abbr title="This course can be taken in summer school."><i class="fas fa-sun"></i></abbr>
                                     {% endif %}
                                     {% if course.skiptest %}
-                                        <abbr title="You can take a test to skip the prerequisites of this course."><i class="fas fa-file-alt"></i></abbr>
+                                        <abbr title="You can take a test to skip the prerequisites of this course."><i class="fas fa-clipboard-list-alt"></i></abbr>
                                     {% endif %}
                                     {% if course.approval %}
                                         <abbr title="You can skip to this course with teacher approval."><i class="fas fa-eye"></i></abbr>
@@ -79,6 +79,10 @@
                                     {% endif %}
                                     {% if course.online_only %}
                                         <abbr title="This course is only offered online."><i class="fas fa-wifi"></i></abbr>
+                                    {% endif %}
+                                    {% if course.equivalent != course.id %}
+                                        {% set other_course = courses.get(course.equivalent|string) %}
+                                        <abbr title="This course counts as ({{ other_course.num }}) {{ other_course.full_name }} "><i class="fas fa-exchange-alt"></i></abbr>
                                     {% endif %}
                                     {% if course.semester %}
                                         <abbr title="This is a semester course and will last half a year."><i class="fas fa-adjust"></i></abbr>

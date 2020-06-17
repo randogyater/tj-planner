@@ -149,6 +149,30 @@ def add_summer_and_online(courses):
         course["online_only"] = False
 
 
+def set_empty_prereqs(courses):
+    for course_id in courses:
+        if "prereqs" not in courses[course_id] or all(len(x) == 0 for x in courses[course_id]["prereqs"]):
+            courses[course_id]["prereqs"] = []
+
+
+def lexographic(courses):
+    seen = set()
+    batch = list()
+    for course_id in courses:
+        if len(courses[course_id]["prereqs"]) == 0:
+            batch.append(course_id)
+            courses[course_id]["lexographic"] = 0
+    i = 0
+    while len(batch) > 0:
+        i += 1
+        seen.update(batch)
+        batch = list()
+        for course_id in courses:
+            if course_id not in seen and all(all(x in seen for x in subreq) for subreq in courses[course_id]["prereqs"]):
+                courses[course_id]["lexographic"] = i
+                batch.append(course_id)
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r') as file:
         courses = json.load(file)
@@ -160,5 +184,7 @@ if __name__ == "__main__":
     # print(*list_categories(courses), sep="\n")
     # set_ap(courses)
     # add_summer_and_online(courses)
+    set_empty_prereqs(courses)
+    lexographic(courses)
     with open(SOURCE, 'w') as file:
         file.write(json.dumps(courses, indent=4, sort_keys=True))
