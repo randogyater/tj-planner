@@ -58,7 +58,7 @@
                     </div>
                     <span id="filter-status" class="m-1">Not filtering</span>
                 </div>
-                <div id="catalog" class="m-1 p-2 border overflow-auto">
+                <div id="catalog" class="m-2 p-1 border overflow-auto">
                     {% for category, courses in categorized.items() %}
                     <h3 id="{{kebab(category)}}">{{category}}</h3>
                         {% for course in courses %}
@@ -157,7 +157,7 @@
                         </tbody>
                     </table>
                 </div>
-                <h2 class="m-auto">Graduation requirements:</h2>
+                <h2 class="m-auto p-2">Graduation requirements:</h2>
                 <div class="p-2 flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
                     <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                     {% for name, text, num in requirements %}
