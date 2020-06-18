@@ -73,10 +73,10 @@ function boxType(box) {
 function boxTypeAllowed(course, type) {
     switch(type) {
         case 0:
-            return !course["online-only"];
+            return !course.online_only
         case 1:
-            return course["online"] || course["online-only"];
+            return course.summer;
         case 2:
-            return course["summer"];
+            return course.online || course.online_only;
     }
 }
