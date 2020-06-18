@@ -27,7 +27,14 @@ function onUpdate() {
     }
     let language = $("#ms-lang").val();
     if (language !== "none") {
-        previous.add(LANGUAGE_1[language]+"");
+        var level = parseInt($("#ms-lang-level").val());
+        for(var i = 0; i<level; i++){
+            previous.add(LANGUAGE[language][i]+"");
+        }
+        $("#ms-lang-level").prop("disabled", false);
+    }
+    else{
+        $("#ms-lang-level").prop("disabled", true);
     }
 
     // Check all the boxes
