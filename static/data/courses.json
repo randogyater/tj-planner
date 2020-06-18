@@ -2437,7 +2437,7 @@
         "category": "Science",
         "coreq_string": "AP Calculus AB or BC",
         "description": "Advanced Placement Physics is a second-level course which surveys a broad selection of physics topics at a level above Physics 1. It is designed for students who have completed a core science curriculum and are now ready to pursue more advanced and specialized studies in mechanics, electricity, and magnetism. AP Physics C serves as the foundation in physics for students who wish to pursue physical science or engineering degrees. Students are encouraged to take both the Mechanics Advanced Placement exam and the Electricity and Magnetism Advanced Placement exam and may earn college credit if a qualifying score is achieved.",
-        "equivalent": 1408,
+        "equivalent": 6898,
         "full_name": "AP Physics C - Mechanics and Electricity and Magnetism",
         "id": 1408,
         "lexographic": 3,
@@ -2448,8 +2448,7 @@
         "prereqs": [
             [
                 "6898"
-            ],
-            []
+            ]
         ],
         "semester": false,
         "short_name": "AP Physics C M&em",
@@ -4846,7 +4845,9 @@
         "online": false,
         "online_only": false,
         "prereq_string": "Biology 1, Chemistry 1, and Physics 1",
-        "prereqs": [],
+        "prereqs": [
+            ["6895", "6897", "6898"]
+        ],
         "semester": false,
         "short_name": "Geosystems",
         "summer": false,
