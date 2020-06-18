@@ -7,15 +7,14 @@ const PSYCHOLOGY = 6915;
 const RS1 = 10602;
 const MATHS = [10597, 10598, 10595, 11344];
 
-// ? Maybe we should allow for people that took a higher level than 1 in middle school...
-const LANGUAGE_1 = {
-    "chinese": 5145,
-    "french": 1419,
-    "german": 1435,
-    "japanese": 1522,
-    "latin": 1448,
-    "russian": 1461,
-    "spanish": 1465
+const LANGUAGE = {
+    "chinese": [5145, 5146, 5147],
+    "french": [1419, 1424, 1426],
+    "german": [1435, 1440, 1442],
+    "japanese": [1522, 1524, 1526],
+    "latin": [1448, 1452, 1453],
+    "russian": [1461, 1462, 1463],
+    "spanish": [1465, 1472, 1475],
 };
 
 const ICONS = {

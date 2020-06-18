@@ -109,7 +109,7 @@
                         {% endfor %}
                     {% endfor %}
                 </div>
-                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#msModal">
                     Enter middle school courses...
                 </button>
                 <div class="w-100 d-flex flex-row py-2">
@@ -194,29 +194,37 @@
             </div>
         </div>
     </div>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="msModal" tabindex="-1" role="dialog" aria-labelledby="msModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Enter courses from middle school:</h5>
+              <h5 class="modal-title" id="msModalLabel">Enter courses from middle school:</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-                <div class="form-group">
-                    <label for="ms-math">Highest math taken:</label>
-                    <select class="form-control" id="ms-math">
+                <div class="form-group row">
+                    <label class="col-sm-4" for="ms-math">Highest math:</label>
+                    <select class="form-control col-sm-8" id="ms-math" onchange="onUpdate()">
                         <option value="0">Algebra 1</option>
                         <option value="2">Geometry (TJ Math 1/2 equivalent)</option>
                         <option value="3">Algebra 2 (TJ Math 3 equivalent)</option>
                         <option value="4">Trigonometry (TJ Math 4 equivalent)</option>
                     </select>
-                    <label for="ms-lang">Language taken in middle school:</label>
-                    <select class="form-control" id="ms-lang">
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4" for="ms-lang">Language:</label>
+                    <select class="form-control col-sm-6" id="ms-lang" onchange="onUpdate()">
                         <option value="none">None</option>
                         {% for language in info["languages"] %}
                         <option value="{{ language.lower() }}">{{ language }}</option>
+                        {% endfor %}
+                    </select>
+                    <select class="form-control col-sm-2" id="ms-lang-level" onchange="onUpdate()">
+                        <option hidden disabled selected value="0">-</option>
+                        {% for x in range(1,4) %}
+                        <option value="{{x}}">{{x}}</option>
                         {% endfor %}
                     </select>
                 </div>
