@@ -2444,14 +2444,10 @@
         "num": 457004,
         "online": false,
         "online_only": false,
-        "prereq_string": "Physics 1 or a comparable physics introductory course",
-        "prereqs": [
-            [
-                "6898"
-            ]
-        ],
+        "prereq_string": "",
+        "prereqs": [],
         "semester": false,
-        "short_name": "AP Physics C M&em",
+        "short_name": "AP Physics C M&EM",
         "skiptest": false,
         "summer": false,
         "weight": 1.0
