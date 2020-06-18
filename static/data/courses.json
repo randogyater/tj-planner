@@ -1938,37 +1938,6 @@
         "summer": false,
         "weight": 1.0
     },
-    "1244": {
-        "ap": "ap",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            false,
-            true
-        ],
-        "category": "English",
-        "coreq_string": "",
-        "description": "The world community as we know it is shrinking. Technology and communication are accelerating at an unprecedented rate, integrating the economies and cultures of the world faster than ever before. This course focuses on authentic world problems of interest and significance that derive from and affect the evolving phenomenon of globalization, often using the resources of the Washington, D.C. area. The study of global issues involves problem solving scenarios, presentations of findings, and simulations. Readings include current periodicals, literature with an emphasis on international connections, and texts by noted experts in globalization. Students research and write about these issues in forms such as editorials, columns, position papers, feature stories, and creative writing. In English, students study journalistic models as well as classical rhetorical types of writing and the type of personal writing used in the college application process. In government class, students study AP U.S. Government topics, emphasizing the making of foreign policy and international economic relations. The course is taught both separately as Eng. and Govt. classes and together for quarter projects and special events such as video conferences and field trips. Upon completion, students take the Advanced Placement examination in AP Language and Composition.",
-        "equivalent": 1244,
-        "full_name": "AP English: Language and Composition (government)",
-        "id": 1244,
-        "lexographic": 1,
-        "num": 119662,
-        "online": false,
-        "online_only": false,
-        "prereq_string": "English 11",
-        "prereqs": [
-            [
-                "6903"
-            ]
-        ],
-        "semester": false,
-        "short_name": "AP English Lan/com",
-        "skiptest": false,
-        "summer": false,
-        "weight": 1.0
-    },
     "1246": {
         "ap": "pre",
         "approval": false,
@@ -2249,7 +2218,7 @@
         "coreq_string": "",
         "description": "This study of American government is an introduction to the discipline of political science. Students study required US foundational documents and Supreme Court decisions to gain an understanding of the relationships and interactions among political institutions, processes and behaviors. Students learn and apply  the skills of data interpretation, comparison, application and development of an argument. In addition, students will complete a political science research or applied civics project. This course prepares students to take the Advanced Placement examination.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government.  Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "equivalent": 1313,
-        "full_name": "AP Us Government and Politics",
+        "full_name": "AP US Government and Politics",
         "id": 1313,
         "lexographic": 0,
         "num": 244504,
@@ -3966,7 +3935,7 @@
         "coreq_string": "",
         "description": "In this class blocked with AP English Language and Composition, students consider the ways literature reflects history and the human experience as they refine their awareness of language and the writer's craft.  They make connections between history and literature while examining the American experience.  Students acquire conceptual knowledge and strengthen critical thinking skills by studying the political, economic, social, and cultural growth of the United States.  Students study primary documents and engage in research and writing.  They study traditional and contemporary American beliefs, values and characteristics.  In this course, students receive one credit in Advanced Placement United States History and one credit in AP Language and Composition (119667). Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "equivalent": 2283,
-        "full_name": "AP Us History (american Civilization)",
+        "full_name": "AP US History (American Civilization)",
         "id": 2283,
         "lexographic": 0,
         "num": 231905,
@@ -3975,7 +3944,7 @@
         "prereq_string": "",
         "prereqs": [],
         "semester": false,
-        "short_name": "AP Us History",
+        "short_name": "AP US History",
         "skiptest": false,
         "summer": false,
         "weight": 1.0
@@ -4211,60 +4180,6 @@
         "skiptest": false,
         "summer": false,
         "weight": 0.5
-    },
-    "4624": {
-        "ap": "ap",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            false,
-            true
-        ],
-        "category": "Social Studies",
-        "coreq_string": "",
-        "description": "In this blocked class with Advanced Placement English Literature and Composition, students consider the ways literature reflects American politics and the human experience as they refine their awareness of language and the writer's craft.  Completion of this course fulfills the graduation requirement for one credit in Virginia and United States Government  They make connections between government and literature while examining the American political experience.  Students who complete this course are encouraged to take the associated Advanced Placement examinations and may earn college credit if a qualifying score is achieved.",
-        "equivalent": 4624,
-        "full_name": "AP Us Government and Politics (blocked with AP English Literature and Composition)",
-        "id": 4624,
-        "lexographic": 0,
-        "num": 244506,
-        "online": false,
-        "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
-        "semester": false,
-        "short_name": "AP Government",
-        "skiptest": false,
-        "summer": false,
-        "weight": 1.0
-    },
-    "4626": {
-        "ap": "ap",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            false,
-            true
-        ],
-        "category": "Social Studies",
-        "coreq_string": "",
-        "description": "The world community as we know it is shrinking. Technology and communication are accelerating at an unprecedented rate, integrating the economies and cultures of the world faster than ever before. This course focuses on authentic world problems of interest and significance that derive from and affect the evolving phenomenon of globalization, often using the resources of the Washington, D.C. area. The study of global issues involves problem solving scenarios, presentations of findings, and simulations. Readings include current periodicals, literature with an emphasis on international connections, and texts by noted experts in globalization. Students research and write about these issues in forms such as editorials, columns, position papers, feature stories, and creative writing. In English, students study journalistic models as well as classical rhetorical types of writing and the type of personal writing used in the college application process. In government class, students study AP U.S. Government topics, emphasizing the making of foreign policy and international economic relations. The course is taught both separately as Eng. and Govt. classes and together for quarter projects and special events such as video conferences and field trips. Upon completion, students take the Advanced Placement examinations in AP Government and AP Language and Composition.",
-        "equivalent": 4626,
-        "full_name": "AP Government",
-        "id": 4626,
-        "lexographic": 0,
-        "num": 244561,
-        "online": false,
-        "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
-        "semester": false,
-        "short_name": "AP Government",
-        "skiptest": false,
-        "summer": false,
-        "weight": 1.0
     },
     "4670": {
         "ap": "pre",
@@ -4707,37 +4622,6 @@
         "summer": false,
         "weight": 0
     },
-    "6073": {
-        "ap": "ap",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            false,
-            true
-        ],
-        "category": "English",
-        "coreq_string": "",
-        "description": "In this blocked class with Advanced Placement US Government (244506), students consider the ways literature reflects politics and the human experience as they refine their awareness of language and the writer's craft.  They make connections between government and literature while examining the American political experience.  Students who complete this course are encouraged to take the associated Advanced Placement examinations and may earn college credit if qualifying scores are achieved. Completion of this course fulfills the English 12 course requirement.",
-        "equivalent": 6073,
-        "full_name": "AP English Literature and Composition (blocked with AP Us Government)",
-        "id": 6073,
-        "lexographic": 1,
-        "num": 119505,
-        "online": false,
-        "online_only": false,
-        "prereq_string": "English 11",
-        "prereqs": [
-            [
-                "6903"
-            ]
-        ],
-        "semester": false,
-        "short_name": "AP English Lit/com",
-        "skiptest": false,
-        "summer": false,
-        "weight": 1.0
-    },
     "6184": {
         "ap": "pre",
         "approval": false,
@@ -4925,7 +4809,7 @@
         "coreq_string": "",
         "description": "This is a team-taught, interdisciplinary survey course in American history and literature from the 16 century to the present. Students examine the interrelationships among art, literature, music, and architecture along with specific historic trends and events. The course focuses on the major themes and philosophies of our nation's history as well as on the men and women who created it. Although the reading load is lighter than an AP US History course, VA/US History provides a thorough survey of America's story with an emphasis on overall trends and events. Upon completion, students will take the SOL U.S./VA History end-of-course test. Students learn to assess historical materials, their relevance to a given interpretive problem, their reliability and their importance, and to weigh evidence and interpretations presented in historical scholarship while refining their language, learning, and communication skills.",
         "equivalent": 6863,
-        "full_name": "Us VA History",
+        "full_name": "US VA History",
         "id": 6863,
         "lexographic": 1,
         "num": "2360T1",
@@ -4938,7 +4822,7 @@
             ]
         ],
         "semester": false,
-        "short_name": "Us VA History",
+        "short_name": "US VA History",
         "skiptest": false,
         "summer": false,
         "weight": 0.5

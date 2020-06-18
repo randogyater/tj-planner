@@ -68,7 +68,7 @@ def index():
         else:
             course["ap_class"] = "pre-ap"
         course["category_class"] = "course--"+kebab(course["category"])
-
+        course["grades"] = [str(x+9) for x in range(4) if course["availability"][x]]
         if course["category"] not in categorized:
             categorized[course["category"]] = list()
         categorized[course["category"]].append(course)
