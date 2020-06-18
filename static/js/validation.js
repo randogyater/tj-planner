@@ -206,7 +206,7 @@ function checkTree(tree, past, other_sem) {
 }
 
 function updateStatus(target_id, icon, text, clickFilter = null) {
-    $("#" + target_id).find("span").html("<abbr title=\"" + text + "\"><i class=\"" + icon + "\"></i></abbr>");
+    $("#" + target_id).find("span").html("<abbr title=\"" + text + "\" style=\"color:" + icon[1] + ";\"><i class=\"" + icon[0] + "\"></i></abbr>");
     if (clickFilter) {
         $("#" + target_id).find("span").click(function () {
             filter(clickFilter);

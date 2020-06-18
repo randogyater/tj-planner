@@ -18,11 +18,11 @@ const LANGUAGE = {
 };
 
 const ICONS = {
-    SUCCESS: "fas fa-check-circle",
-    FAILURE: "fas fa-times-circle",
-    CONDITIONAL: "fas fa-exclamation-circle",
-    TEST: "fas fa-file-alt",
-    APPROVE: "fas fa-eye",
-    ADDITIONAL: "fas fa-plus-circle",
-    LOADING: "fas fa-spinner"
+    SUCCESS: ["fas fa-check-circle", "green"],
+    FAILURE: ["fas fa-times-circle", "red"],
+    CONDITIONAL: ["fas fa-check-circle", "orange"],
+    TEST: ["fas fa-file-alt", "blue"],
+    APPROVE: ["fas fa-eye", "blue"],
+    ADDITIONAL: ["fas fa-plus-circle", "blue"],
+    LOADING: ["fas fa-spinner", "black"]
 };
