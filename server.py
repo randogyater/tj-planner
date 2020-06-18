@@ -36,13 +36,12 @@ def get_version():
 
 
 def ordering_key(course):
-    if course["category"] == "World Language":
+    if course["category"] == "World Languages":
         # Languages are sorted by language then level
-        if course["short_name"].beginswith("AP"):
-            # AP is to be equal to language 4, but higher
-            return course["short_name"][3:]+"4", 1
+        if course["short_name"].startswith("AP"):
+            return course["short_name"][3:]
         else:
-            return course["short_name"], 0
+            return course["short_name"]
     if course["category"] == "English":
         # English gets a bit wacky if you sort it the usual way, let's put all core classes at the top
         return "English" not in course["full_name"], [not(x) for x in course["availability"]], course["full_name"]
