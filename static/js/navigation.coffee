@@ -26,7 +26,7 @@ onSearch = () ->
     return
 
 reqFilter = (set) ->
-    return (course) -> set.has(course.equivalent)
+    return (course) -> set.has(course.equivalent + "")
 
 clearFilter = () ->
     $("#search-box").val("")
