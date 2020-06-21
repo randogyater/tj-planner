@@ -71,7 +71,7 @@ function onUpdate() {
 
     // Check labs using the final list of courses
     for (var lab_id in labs) {
-        let requirements = labs[lab_id].prerequisites;
+        let requirements = labs[lab_id].prereqs;
         let recommendations = labs[lab_id].recommended;
         let reqMet = checkTree(requirements, previous, null);
         let recMet = checkTree(recommendations, previous, null);
