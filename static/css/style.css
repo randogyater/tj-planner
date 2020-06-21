@@ -52,6 +52,14 @@ td.grid__box > .course--semester:nth-of-type(2) {
     border: 2px solid green;
 }
 
+#lab_placeholder {
+
+}
+
+#lab_placeholder.mentorship {
+    height: calc(300% + 1rem - 2px);
+}
+
 .course__status {
     float: left;
     margin-right: 5px;
@@ -63,16 +71,21 @@ td.grid__box {
     border: 1px solid black;
 }
 
-td.grid__box--summer {
+td.grid__box.grid__box--summer {
     background-color: cornsilk;
 }
 
-td.grid__box--online {
+td.grid__box.grid__box--online {
     background: rgb(215,235,255);
     background: -moz-linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
     background: linear-gradient(0deg, rgba(215,235,255,1) 0%, rgba(200,241,255,1) 50%, rgba(215,235,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d7ebff",endColorstr="#d7ebff",GradientType=1);
+}
+
+td.grid__box.grid__box--joined {
+    border-top: none;
+    border-bottom: none;
 }
 
 .grid__hint {
