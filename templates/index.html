@@ -180,9 +180,29 @@
                                                 {% for prereq in labs[lab].prereqs %}
                                                     {% for i in prereq %}
                                                         {% set course = courses[i] %}
-                                                        {{ course.short_name }}
                                                         {% if not loop.last %}
-                                                            , 
+                                                            {{ course.short_name }}, 
+                                                        {% else %}
+                                                            {{ course.short_name }}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    {% if not loop.last %}
+                                                        or
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% else %}
+                                                None
+                                            {% endif %}
+                                        </p>
+                                        <p><strong>Recommended:</strong> 
+                                            {% if labs[lab].recommended %}
+                                                {% for rec in labs[lab].recommended %}
+                                                    {% for i in rec %}
+                                                        {% set course = courses[i] %}
+                                                        {% if not loop.last %}
+                                                            {{ course.short_name }}, 
+                                                        {% else %}
+                                                            {{ course.short_name }}
                                                         {% endif %}
                                                     {% endfor %}
                                                     {% if not loop.last %}
