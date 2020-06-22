@@ -53,11 +53,13 @@ td.grid__box > .course--semester:nth-of-type(2) {
 }
 
 #lab_placeholder {
-
+    border: thick outset cyan;
+    background: whitesmoke;
 }
 
 #lab_placeholder.mentorship {
     height: calc(300% + 1rem - 2px);
+    border-color: magenta;
 }
 
 .course__status {
