@@ -15,7 +15,7 @@ assets = Environment(app)
 
 js = Bundle(
     Bundle('js/constants.js','js/course_catalog.js','js/interactivity.js','js/validation.js'),
-    Bundle('js/navigation.coffee','js/grad_requirements.coffee','js/placeholder.coffee',filters='coffeescript'),
+    Bundle('js/navigation.coffee','js/grad_requirements.coffee','js/placeholder.coffee','js/sort_labs.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
 with open(CONFIG_LOC, 'r') as file:
