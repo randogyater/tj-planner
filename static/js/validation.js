@@ -125,6 +125,9 @@ function onUpdate() {
 
     // Now display it
     showGradState(grad);
+
+    // Sort the labs
+    sortLabs()
 }
 
 function updateBox($box, state) {
