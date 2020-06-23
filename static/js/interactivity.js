@@ -45,7 +45,13 @@ function validDrop(event) {
         if(!boxTypeAllowed(course_dragged, boxType(target))) {
             return false;
         }
-        contents = target.children(".course");
+        if(target.hasClass("filled")) {
+            return false;
+        }
+        if(target.children("#lab_placeholder").length) {
+            return false;
+        }
+        contents = target.children(".course:not(#lab_placeholder)");
         if (contents.length === 0) {
             return true;
         } else if (contents.length == 1 && contents[0].getAttribute("class").includes("course--semester")) {
