@@ -27,11 +27,6 @@
             "col": 2
         },
         {
-            "course": "6897",
-            "row": 3,
-            "col": 2
-        },
-        {
             "course": "6903",
             "row": 1,
             "col": 3
@@ -49,6 +44,11 @@
     ],
     "hints":
     [
+        {
+            "text": "Chemistry",
+            "row": 3,
+            "col": 2
+        },
         {
             "text": "US History",
             "row": 2,

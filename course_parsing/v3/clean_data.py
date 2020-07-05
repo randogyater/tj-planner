@@ -39,20 +39,27 @@ def remove_labs(courses):
         del courses[course]
 
 
-def resolve_prereqs(courses, replace=False):
+def reverse_courses(courses):
     course_to_id = dict()
     for course_id in courses:
         course = courses[course_id]
         course_to_id[course["full_name"].lower()] = course_id
         course_to_id[course["short_name"].lower()] = course_id
+    return course_to_id
+
+
+def resolve_prereqs(courses, replace=False):
+    course_to_id = reverse_courses(courses)
     for course_id in courses:
         course = courses[course_id]
         if "prereqs" not in course or replace:
-            parsed = parse_prereq(course["prereq_string"], course_to_id, course["short_name"])
+            parsed = parse_prereq(
+                course["prereq_string"], course_to_id, course["short_name"])
             if parsed:
                 course["prereqs"] = parsed
             else:
-                print("Could not parse: %s (%s)" % (course["full_name"], course["prereq_string"]))
+                print("Could not parse: %s (%s)" %
+                      (course["full_name"], course["prereq_string"]))
 
 
 def parse_prereq(prereq, name_to_id, course_name):
@@ -80,10 +87,12 @@ def parse_prereq(prereq, name_to_id, course_name):
                         section = [name_to_id[subsection]]
                         break
                     else:
-                        replacement = input("Substitute for \"%s\" in %s: " % (requirement, course_name)).lower()
+                        replacement = input("Substitute for \"%s\" in %s: " % (
+                            requirement, course_name)).lower()
                         if replacement in name_to_id:
                             section.append(name_to_id[replacement])
-                            print("Replacement found:", name_to_id[replacement])
+                            print("Replacement found:",
+                                  name_to_id[replacement])
                         elif replacement == "ignore":
                             continue
                         else:
@@ -92,14 +101,12 @@ def parse_prereq(prereq, name_to_id, course_name):
     return result, test, approval
 
 
-
 def remove_coreqs(courses):
     # Okay, TECHNICALLY we could do the same thing as for prereqs
     # But nothing has coreqs except for AP Physics
     # So let's just get rid of them
     for course_id in courses:
         del courses[course_id]["coreq_string"]
-
 
 
 def correct_prereqs(courses):
@@ -182,10 +189,20 @@ def validate_prereqs(courses):
     print("Checked all prereqs.")
 
 
+def mark_online(courses, source):
+    name_to_id = reverse_courses(courses)
+    with open(source, 'r') as file:
+        for line in file.readlines():
+            if line.strip().lower() in name_to_id:
+                courses[name_to_id[line.strip().lower()]]['online'] = True
+            else:
+                print(line.strip())
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r') as file:
         courses = json.load(file)
-    fix_names(courses)
+    # fix_names(courses)
     # remove_labs(courses)
     # remove_coreqs(courses)
     # resolve_prereqs(courses)
@@ -195,6 +212,7 @@ if __name__ == "__main__":
     # add_summer_and_online(courses)
     # set_empty_prereqs(courses)
     # lexographic(courses)
-    validate_prereqs(courses)
+    # validate_prereqs(courses)
+    # mark_online(courses, "course_parsing/v3/online_courses.txt")
     with open(SOURCE, 'w') as file:
         file.write(json.dumps(courses, indent=4, sort_keys=True))
