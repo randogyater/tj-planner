@@ -504,7 +504,7 @@
         "id": 10598,
         "lexographic": 1,
         "num": 314352,
-        "online": false,
+        "online": true,
         "online_only": false,
         "prereq_string": "",
         "prereqs": [
@@ -1751,7 +1751,7 @@
         "semester": false,
         "short_name": "World Hist/geog 1",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "11344": {
@@ -1782,7 +1782,7 @@
         "semester": true,
         "short_name": "TJ Math 4",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "11431": {
@@ -3083,7 +3083,7 @@
         "semester": false,
         "short_name": "Spanish 2",
         "skiptest": true,
-        "summer": false,
+        "summer": true,
         "weight": 0
     },
     "1475": {
@@ -3114,7 +3114,7 @@
         "semester": false,
         "short_name": "Spanish 3",
         "skiptest": true,
-        "summer": false,
+        "summer": true,
         "weight": 0
     },
     "1477": {
@@ -3350,7 +3350,7 @@
         "id": 1533,
         "lexographic": 0,
         "num": 612000,
-        "online": false,
+        "online": true,
         "online_only": false,
         "prereq_string": "",
         "prereqs": [],
@@ -3384,7 +3384,7 @@
         "semester": false,
         "short_name": "Health & Pe 9",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0
     },
     "1570": {
@@ -3416,7 +3416,7 @@
         "semester": false,
         "short_name": "Health & Pe 10",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0
     },
     "1891": {
@@ -4819,7 +4819,7 @@
         "semester": false,
         "short_name": "US VA History",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6893": {
@@ -4846,7 +4846,7 @@
         ],
         "semester": false,
         "short_name": "Geosystems",
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6895": {
@@ -4904,7 +4904,7 @@
         "semester": false,
         "short_name": "Chemistry 1",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6898": {
@@ -4935,7 +4935,7 @@
         "semester": false,
         "short_name": "Physics 1",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6900": {
@@ -5082,7 +5082,7 @@
         "semester": false,
         "short_name": "World Hist/geog 2",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "6912": {
@@ -5541,33 +5541,6 @@
         "prereqs": [],
         "semester": false,
         "short_name": "Fnds Comp Sci Acc",
-        "skiptest": false,
-        "summer": false,
-        "weight": 0.5
-    },
-    "6997": {
-        "ap": "pre",
-        "approval": false,
-        "availability": [
-            false,
-            false,
-            false,
-            true
-        ],
-        "category": "Science",
-        "coreq_string": "",
-        "description": "The mentorship program is one of the options available for students to meet the senior science and technology research graduation requirement. The program provides opportunities for selected seniors to work with accomplished scientists, engineers, and other professionals in firms or laboratories across the greater Washington, D.C. area. The students must plan, implement, document, and present projects chosen in consultation with these mentors and which coincide with the TJHSST technology laboratories. Students who seek this mentorship option must first be selected for one of the research laboratories. They also complete a mentorship application that includes obtaining two teacher recommendations (at least one from a laboratory science or technology teacher; the other from a mathematics or computer science teacher) and write a project brief which outlines the type of research in which they are interested. If selected, a student is assigned a mentor in a specific field that relates to his/her chosen laboratory. Students are released for part of the school day to work 10-15 hours per week at their mentorship locations. Students receive one credit for 180 hours of mentorship in one semester and two credits for 360 hours in two semesters. TJHSST technology laboratory directors and the mentorship coordinator monitor the students in their fields of interest. Course requirements include a project proposal, weekly log, oral presentation, project summary, final paper, and poster display board.",
-        "equivalent": 6997,
-        "full_name": "Mentorship",
-        "id": 6997,
-        "lexographic": 0,
-        "num": "4220T3",
-        "online": false,
-        "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
-        "semester": false,
-        "short_name": "Geosystems Ment",
         "skiptest": false,
         "summer": false,
         "weight": 0.5
