@@ -28,7 +28,7 @@ def kebab(string):
 
 
 def get_version():
-    name = subprocess.run(["git", "describe", "--always"], stdout=subprocess.PIPE)
+    name = subprocess.run(["git", "describe", "--tags"], stdout=subprocess.PIPE)
     commit = subprocess.run(["git", "rev-parse", "HEAD"], stdout=subprocess.PIPE)
     name = name.stdout.decode().strip()
     commit = commit.stdout.decode().strip()
