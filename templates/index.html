@@ -10,7 +10,7 @@
     <meta property="og:title" content="TJ Four Year Planner"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://4yearplan.sites.tjhsst.edu/"/>
-    <meta property="og:image" content="https://4yearplan.sites.tjhsst.edu/static/img/dome_square.jpg"/>
+    <meta property="og:image" content="https://4yearplan.sites.tjhsst.edu/static/img/preview.jpg"/>
     <meta property="og:description" content="A tool for planning and validating course schedules at TJHSST"/>
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icon/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='icon/favicon-32x32.png') }}">
@@ -38,7 +38,7 @@
         <div class="row">
             <h1 class="m-auto p-2" style="text-align: center">TJ Four Year Planner</h1>
         </div>
-        <div class="row"><p class="m-auto">By Daniel Fu | <a href="{{ version_url }}">{{ version }}</a> | <a href="#helpModal" data-toggle="modal" data-target="#helpModal">Help</a></p></div>
+        <div class="row"><p class="m-auto">By Daniel Fu | version <a href="{{ version_url }}">{{ version }}</a> | <a href="#helpModal" data-toggle="modal" data-target="#helpModal">How to use</a></p></div>
         <div class="row" style="height:calc(100% - 88px)"> <!--Irritatingly, flex seems to refuse to work on these, so I'll just have to force their heights.-->
             <div id="catalog__sidebar" class="col-md-3 h-100 d-flex flex-column align-items-stretch" ondragover="allowDrop(event)"
                 ondrop="toss(event)">
@@ -232,7 +232,6 @@
                 </div>
                 <h2 class="m-auto p-2">Graduation requirements:</h2>
                 <div class="flex-shrink-0 d-flex flex-row flex-wrap overflow-auto">
-                    <!--TODO add note of which requirements have been excluded: English, three of the Histories, Science, Electives-->
                     {% for name, text, num in requirements %}
                     <div id="grad-{{name}}" class="grad-requirement m-1 border rounded flex-fill d-flex align-items-center">
                         <span class="m-1">
@@ -251,7 +250,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="msModalLabel">Enter courses from middle school:</h5>
+              <h4 class="modal-title" id="msModalLabel">Enter courses from middle school:</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -292,13 +291,57 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="msModalLabel">How to use:</h5>
+              <h4 class="modal-title" id="msModalLabel">How to use:</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-                <p>Placeholder</p>
+                <h5>Courses</h5>
+                <p>Drag courses from the list on the right into the grid. To delete a course, drag it from the grid back to the list. Hover over any symbol for details.</p>
+                <p>Semester (half-year) courses are marked by being half as tall as a normal one. You can fit two semester courses in one box.</p>
+                <p>Click the "Enter middle school courses..." button to record middle school courses you have taken that are eligable for credit in high school. (That means math and world languages.)</p>
+                <p>Click the "Show/hide summer" and "Show/hide online" buttons to display rows corresponding to the one period of summer classes and one online class you are allowed to take each year. Note that, for example, "Freshman Summer" refers to the summer before freshman year</p>
+                <h5>Required Courses</h5>
+                <p>The courses already in the grid (English 9/10/11, Biology 1, World History 2, Design and Tech, AP Gov, and Geosystems) are required and need to be where they are. In addition, there's four places where you have a choice of which course to take:</p>
+                <ul>
+                    <li><b>Chemistry</b> - Either take Chemistry 1 in 10th grade or take Chemistry 1 in summer before sophomore year and take AP Chemistry in 10th</li>
+                    <li><b>US History</b> - Either take VA/US History or AP US History</li>
+                    <li><b>Physics</b> - Either take Physics 1 or AP Physics. If you take Physics 1, you're allowed to take AP Physics in senior year. AP Physics has BC Calculus as a corequisite (it's recorded as a prerequisite in this app because I haven't implemented corequisites yet)</li>
+                    <li><b>AP English</b> - Choose from AP English Literature or AP English Language.</li>
+                </ul>
+                <p>Note that there's teaming options for all of these (IBET in 9th grade, CHUM and GHUM in 10th, HUM in 11th, Senior Seminar and Global Studies in 12th) but I have not included these because they have no effect on prerequisites.</p>
+                <p>(The search feature is a bit laggy, I'm working on this.)</p>
+                <h5>Research Labs</h5>
+                <p>Every TJ student is required to take one research lab in 12th grade, this period has already been marked</p>
+                <p>Research lab availability is displayed as "Qualified" if you have met the requirements, and "Recommended" if you have taken the recommended courses for that lab, as listed <a href="https://tjhsst.fcps.edu/node/2761">here</a>. Make sure you qualify for the lab you want!</p>
+                <p>(Energy Systems and Astronomy have no prerequisites, so are always available.)</p>
+                <h5>Graduation Requirements</h5>
+                <p>This isn't a list of all the graduation requirements, I'm not listing the ones covered by the required courses (such as 4 years of English or 4 years of science).</p>
+                <p><b>4 Math credits</b> - Not including Algebra 1, so this basically means you take Calculus, either AB or B.C</p>
+                <p><b>Fourth history credit</b> - FCPS requires four history courses through four years of high school; Design and Tech replaces the history course in freshman year, so a fourth history course has to be taken in one of your elective slots. This <strong>cannot be an AP course</strong>. Ancient Civilizations (possibly over the summer) is a popular choice.</p>
+                <p><b>3 years of a language</b> - FCPS allows for 2 years of 2 languages but <strong>TJ does not</strong>. Middle school years count!</p>
+                <p><b>2 PE credits</b> - This means Health and PE 9 and 10, usually taken in (duh) 9th and 10th grade, but both are available over the summer.</p>
+                <p><b>Economics</b> - Usually fulfilled with the Economics and Personal Finance course (available online, over the summer, and self-directed). The self-directed course is a popular choice (it's literally just a couple of slideshows with an easy quiz at the end) and AP Macro/Micro also fills this requirement.</p>
+                <p><b>RS1 must be first Math class</b> - You can take it summer before 9th to get it out of the way.</p>
+                <p><b>CS must be taken before 11th grade</b> - Most people will take Foundations or Accelerated Foundations (possibly over the summer) but if you test out of Foundations, you still need to do APCS before 11th grade. (That means summer before 11th is the last time you can do it.)</p>
+                <h5>I found a bug/have a feature request!</h5>
+                <p><a href="https://github.com/greenturtle1134/tj-planner/issues/new">Submit an issue on Github</a>, email me at <a href="mailto:daniel.y.fu@gmail.com">daniel.y.fu@gmail.com</a>, or <a href="https://www.facebook.com/daniel.fu.395669">bother me on Facebook</a> (or comment on the post). Or, if you feel enterprising, fork <a href="https://github.com/greenturtle1134/tj-planner">the repo</a> and fix it yourself.</p>
+                <h5>Your data is wrong!</h5>
+                <p>To report course data being wrong, use the <a href="https://github.com/greenturtle1134/tj-planner/issues/new?assignees=&labels=data&template=data-inaccuracy.md&title=%5BDATA%5D">Issue Template for Data Inaccuracies</a>. (Or any of the other channels listed above)</p>
+                <h5>The boxes stretch weirdly when I drag a semester course in.</h5>
+                <p>CSS woes, I'm working on it.</p>
+                <h5>Does it work on mobile?</h5>
+                <p>It's designed as a desktop app, but I've done a bit to make it look reasonable on mobile. There may be weird visual stuff.</p>
+                <h5>Does it work on IE?</h5>
+                <p>I have no idea.</p>
+                <h5>What's it running on?</h5>
+                <p>Python, Flask, Javascript, Coffeescript, jQuery, and Bootstrap</p>
+                <h5>Credits</h5>
+                <p>I would like to thank:</p>
+                <ul>
+                    <li>my little sister, for having a four year plan convoluted enough to make me write this</li>
+                </ul>
             </div>
           </div>
         </div>
