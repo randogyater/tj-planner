@@ -3,7 +3,7 @@ SIMPLE_CONDITIONS = [
     ["history", (course) -> course.category == "Social Studies" and
      course.ap == "pre" and course.id != WORLD_HISTORY_2 and
       course.id != VA_US_GOV and
-       course.id != US_VA_HISTORY and course.id != PSYCHOLOGY],
+       course.id != US_VA_HISTORY],
     ["pe", (course) -> course.equivalent == PE_9 || course.equivalent == PE_10],
     ["econ", (course) -> course.full_name.includes("Economics")]
     # Sometimes the obvious solution works
