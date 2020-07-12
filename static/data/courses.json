@@ -1285,7 +1285,7 @@
         "semester": false,
         "short_name": "Ancient & Clas Civ",
         "skiptest": false,
-        "summer": false,
+        "summer": true,
         "weight": 0.5
     },
     "10678": {
@@ -2380,11 +2380,10 @@
         "num": 437004,
         "online": false,
         "online_only": false,
-        "prereq_string": "Biology 1 and Chemistry 1",
+        "prereq_string": "Biology 1",
         "prereqs": [
             [
-                "6895",
-                "6897"
+                "6895"
             ]
         ],
         "semester": false,
@@ -3552,7 +3551,7 @@
         "coreq_string": "",
         "description": "This course is designed for highly motivated, advanced art students who have demonstrated a serious interest in the study of art.  Ideally suited for students who work well independently, the course will focus on the preparation of a two-dimensional design portfolio of artworks that exhibit quality, concentration in an area of visual interest or problem solving, and breadth of experience in the formal, technical, and expressive means of an artist.  The two-dimensional portfolio may include, but is not limited to, forms of artwork in graphic design, typography, digital imaging, photography, collage, fabric design, weaving, illustration, painting, and printmaking.  Students will submit two-dimensional portfolios based on objectives that reflect the format and requirements established by the College Board for Advanced Placement Studio Art.  Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "equivalent": 1900,
-        "full_name": "AP Studio Art: 2-d Design Portfolio",
+        "full_name": "AP Studio Art: 2-D Design Portfolio",
         "id": 1900,
         "lexographic": 2,
         "num": 914804,
@@ -3616,7 +3615,7 @@
         "coreq_string": "",
         "description": "Students develop the ability to critically analyze major forms of artistic expression including architecture, sculpture and other media t within their historical context by examining issues such as politics, religion, patronage, gender, function, and ethnicity. The course also specifies course content and identifies works of art students are required to understand to support their in-depth learning.  . Students should demonstrate a high degree of commitment to academic work and possess academic skills needed to pursue a program designed to meet college standards. The course prepares students for the Advanced Placement Art History examination, for which two semesters of college credit and/or placement may be awarded if a qualifying score is achieved.  Objectives for Advanced Placement courses reflect the format and requirements in the Advanced Placement Course Description for Art published by the College Board. No prior experience in art studio or art history is assumed.  Students who complete this course are encouraged to take the associated Advanced Placement examination and may earn college credit if a qualifying score is achieved.",
         "equivalent": 1905,
-        "full_name": "Ap: Art History",
+        "full_name": "AP: Art History",
         "id": 1905,
         "lexographic": 0,
         "num": 915104,

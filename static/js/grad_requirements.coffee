@@ -4,8 +4,9 @@ SIMPLE_CONDITIONS = [
      course.ap == "pre" and course.id != WORLD_HISTORY_2 and
       course.id != VA_US_GOV and
        course.id != US_VA_HISTORY],
-    ["pe", (course) -> course.equivalent == PE_9 || course.equivalent == PE_10],
-    ["econ", (course) -> course.full_name.includes("Economics")]
+    ["pe", (course) -> course.equivalent == PE_9 or course.equivalent == PE_10],
+    ["econ", (course) -> course.equivalent == AP_MACRO_MICRO or
+     course.equivalent == SELF_EPF or course.equivalent == EPF or course.equivalent == EPF_HONORS];
     # Sometimes the obvious solution works
 ]
 

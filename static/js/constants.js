@@ -6,6 +6,10 @@ const US_VA_HISTORY = 6863;
 const PSYCHOLOGY = 6915;
 const RS1 = 10602;
 const MATHS = [10597, 10598, 10595, 11344, 10600, 1352];
+const AP_MACRO_MICRO = 10678;
+const SELF_EPF = 11248;
+const EPF = 1533;
+const EPF_HONORS = 11431;
 
 const LANGUAGE = {
     "chinese": [5145, 5146, 5147],
