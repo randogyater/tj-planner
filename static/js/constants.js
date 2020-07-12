@@ -5,7 +5,7 @@ const VA_US_GOV = 6863;
 const US_VA_HISTORY = 6863;
 const PSYCHOLOGY = 6915;
 const RS1 = 10602;
-const MATHS = [10597, 10598, 10595, 11344];
+const MATHS = [10597, 10598, 10595, 11344, 10600, 1352];
 
 const LANGUAGE = {
     "chinese": [5145, 5146, 5147],
