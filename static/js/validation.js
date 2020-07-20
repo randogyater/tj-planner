@@ -1,5 +1,4 @@
 function onUpdate() {
-    previous = new Set();
     grad = {
         "math": 0,
         "history": 0,
@@ -12,7 +11,8 @@ function onUpdate() {
     }
 
     state = {
-        past: previous,
+        past: new Set(),
+        present: new Set(),
         year: 0,
         grad: grad,
         index: 0,
@@ -23,14 +23,14 @@ function onUpdate() {
     // Add things from previous years
     let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
     for (var i = 0; i<math_courses; i++) {
-        previous.add(MATHS[i]+"");
+        state.past.add(MATHS[i]+"");
     }
     let language = $("#ms-lang").val();
     if (language !== "none") {
         $("#ms-lang-level").prop("disabled", false);
         var level = parseInt($("#ms-lang-level").val());
         for(var i = 0; i<level; i++){
-            previous.add(LANGUAGE[language][i]+"");
+            state.past.add(LANGUAGE[language][i]+"");
         }
     }
     else{
@@ -43,10 +43,15 @@ function onUpdate() {
         state.index = 0;
 
         // Update the summer box
+        preUpdate($("#" + getBoxId("s", state.year+1)), state);
         updateBox($("#" + getBoxId("s", state.year+1)), state);
+        postUpdate($("#" + getBoxId("s", state.year+1)), state);
 
-        // Add summer box to set
-        postUpdate($("#" + getBoxId("s", state.year+1)), state)
+        // Add normal and online courses to present set
+        for (state.index = 1; state.index <= 7; state.index++) {
+            preUpdate($("#" + getBoxId(state.index, state.year+1)), state);
+        }
+        preUpdate($("#" + getBoxId("o", state.year+1)), state);
 
         // Update the ordinary boxes
         for (state.index = 1; state.index <= 7; state.index++) {
@@ -122,6 +127,13 @@ function onUpdate() {
 
     // Sort the labs
     sortLabs()
+}
+
+function preUpdate($box, state) {
+    $box.children(".course:not(#lab_placeholder)").each(function (i) {
+        state.present.add($(this).attr("data-course-credit"));
+        state.present.add($(this).attr("data-course-id"));
+    });
 }
 
 function postUpdate($box, state) {
