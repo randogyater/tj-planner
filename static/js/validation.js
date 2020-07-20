@@ -46,9 +46,7 @@ function onUpdate() {
         updateBox($("#" + getBoxId("s", state.year+1)), state);
 
         // Add summer box to set
-        $("#" + getBoxId("s", state.year+1)).children(".course:not(#lab_placeholder)").each(function (i) {
-            previous.add($(this).attr("data-course-credit"));
-        });
+        postUpdate($("#" + getBoxId("s", state.year+1)), state)
 
         // Update the ordinary boxes
         for (state.index = 1; state.index <= 7; state.index++) {
@@ -60,13 +58,9 @@ function onUpdate() {
 
         // Add normal and online courses to set
         for (state.index = 1; state.index <= 7; state.index++) {
-            $("#" + getBoxId(state.index, state.year+1)).children(".course:not(#lab_placeholder)").each(function (i) {
-                previous.add($(this).attr("data-course-credit"));
-            });
+            postUpdate($("#" + getBoxId(state.index, state.year+1)), state);
         }
-        $("#" + getBoxId("o", state.year+1)).children(".course:not(#lab_placeholder)").each(function (i) {
-            previous.add($(this).attr("data-course-credit"));
-        });
+        postUpdate($("#" + getBoxId("o", state.year+1)), state);
     }
 
     // Check labs using the final list of courses
@@ -128,6 +122,13 @@ function onUpdate() {
 
     // Sort the labs
     sortLabs()
+}
+
+function postUpdate($box, state) {
+    $box.children(".course:not(#lab_placeholder)").each(function (i) {
+        state.past.add($(this).attr("data-course-credit"));
+        state.past.add($(this).attr("data-course-id"));
+    });
 }
 
 function updateBox($box, state) {
