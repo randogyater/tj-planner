@@ -2282,8 +2282,7 @@
         "prereqs": [
             [
                 "10600"
-            ],
-            []
+            ]
         ],
         "semester": false,
         "short_name": "AP Calculus AB",
@@ -2443,8 +2442,15 @@
         "num": 457004,
         "online": false,
         "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
+        "prereq_string": "AP Calculus AB or BC as coreq",
+        "prereqs": [
+            [
+                "1350C"
+            ],
+            [
+                "1352C"
+            ]
+        ],
         "semester": false,
         "short_name": "AP Physics C M&em",
         "skiptest": false,

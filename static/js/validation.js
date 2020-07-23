@@ -10,27 +10,19 @@ function onUpdate() {
         "cs": 0
     }
 
-    state = {
-        past: new Set(),
-        present: new Set(),
-        year: 0,
-        grad: grad,
-        index: 0,
-        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
-        languages: {}
-    };
+    var previous = new Set();
 
     // Add things from previous years
     let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
     for (var i = 0; i<math_courses; i++) {
-        state.past.add(MATHS[i]+"");
+        previous.add(MATHS[i]+"");
     }
     let language = $("#ms-lang").val();
     if (language !== "none") {
         $("#ms-lang-level").prop("disabled", false);
         var level = parseInt($("#ms-lang-level").val());
         for(var i = 0; i<level; i++){
-            state.past.add(LANGUAGE[language][i]+"");
+            previous.add(LANGUAGE[language][i]+"");
         }
     }
     else{
@@ -40,6 +32,16 @@ function onUpdate() {
     if ($("#ms-epf-yes").is(":checked")) {
         previous.add(SELF_EPF);
     }
+
+    state = {
+        past: new Set(previous),
+        present: new Set(previous),
+        year: 0,
+        grad: grad,
+        index: 0,
+        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
+        languages: {}
+    };
 
     // Check all the boxes
     for (state.year = 0; state.year < 4; state.year++) {
@@ -75,8 +77,8 @@ function onUpdate() {
     for (var lab_id in labs) {
         let requirements = labs[lab_id].prereqs;
         let recommendations = labs[lab_id].recommended;
-        let reqMet = checkTree(requirements, previous, null);
-        let recMet = checkTree(recommendations, previous, null);
+        let reqMet = checkTree(requirements, state.past, state.present, null);
+        let recMet = checkTree(recommendations, state.past, state.present, null);
         var entry = $("#labs__"+lab_id);
         var status = entry.find(".labs__status");
         if (reqMet.length === 0) {
@@ -174,7 +176,7 @@ function updateElement(id, other_sem, state) {
     }
 
     // Update the status
-    result = checkTree(course.prereqs, state.past, other_sem);
+    result = checkTree(course.prereqs, state.past, state.present, other_sem);
     if (result.length === 0) {
         if (!course.availability[state.year]) {
             updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
@@ -196,7 +198,7 @@ function updateElement(id, other_sem, state) {
     }
 }
 
-function checkTree(tree, past, other_sem) {
+function checkTree(tree, past, present, other_sem) {
     if (tree === undefined || tree.length === 0) {
         // No prerequisites? Let it go.
         return [];
@@ -208,7 +210,12 @@ function checkTree(tree, past, other_sem) {
 
         for (var j = 0; j < tree[i].length; j++) {
             let prereq = tree[i][j];
-            if (!(past.has(prereq) || prereq == other_sem)) {
+            let isCoreq = false;
+            if (prereq.charAt(prereq.length-1) == 'C'){
+                prereq = prereq.substring(0, prereq.length-1);
+                isCoreq = true;
+            }
+            if (!(past.has(prereq) || prereq == other_sem || (present.has(prereq) && isCoreq))) {
                 unmet.push(prereq);
             }
         }
