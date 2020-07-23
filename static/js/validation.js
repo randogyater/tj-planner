@@ -37,6 +37,9 @@ function onUpdate() {
         $("#ms-lang-level").prop("disabled", true);
         $("#ms-lang-level").val("0");
     }
+    if ($("#ms-epf-yes").is(":checked")) {
+        previous.add(SELF_EPF);
+    }
 
     // Check all the boxes
     for (state.year = 0; state.year < 4; state.year++) {

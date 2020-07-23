@@ -286,10 +286,10 @@
                     <label class="col-sm-6" for="ms-epf">Did you take EPF?</label>
                     <div class="btn-group btn-group-toggle col-sm-6" data-toggle="buttons">
                         <label class="btn btn-outline-secondary">
-                          <input type="radio" name="options" id="ms-epf-yes" autocomplete="off"> Yes
+                          <input type="radio" name="options" id="ms-epf-yes" autocomplete="off" onchange="onUpdate()"> Yes
                         </label>
                         <label class="btn btn-outline-secondary active">
-                          <input type="radio" name="options" id="ms-epf-no" autocomplete="off" checked> No
+                          <input type="radio" name="options" id="ms-epf-no" autocomplete="off" checked onchange="onUpdate()"> No
                         </label>
                       </div>
                 </div>
