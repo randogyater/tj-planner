@@ -66,38 +66,40 @@ function onUpdate() {
         // Update the online box
         updateBox($("#" + getBoxId("o", state.year+1)), state);
 
+        // In senior year, check labs
+        if (state.year == 3) {
+            for (var lab_id in labs) {
+                let requirements = labs[lab_id].prereqs;
+                let recommendations = labs[lab_id].recommended;
+                let reqMet = checkTree(requirements, state.past, state.present, null);
+                let recMet = checkTree(recommendations, state.past, state.present, null);
+                var entry = $("#labs__"+lab_id);
+                var status = entry.find(".labs__status");
+                if (reqMet.length === 0) {
+                    if(recMet.length === 0) {
+                        entry.removeClass("table-success table-default");
+                        entry.addClass("table-primary");
+                        status.text("Recommended");
+                    }
+                    else{
+                        entry.removeClass("table-primary table-default");
+                        entry.addClass("table-success");
+                        status.text("Qualified");
+                    }
+                }
+                else {
+                    entry.removeClass("table-primary table-success");
+                    entry.addClass("table-default");
+                    status.text("Unqualified");
+                }
+            }
+        }
+
         // Add normal and online courses to set
         for (state.index = 1; state.index <= 7; state.index++) {
             postUpdate($("#" + getBoxId(state.index, state.year+1)), state);
         }
         postUpdate($("#" + getBoxId("o", state.year+1)), state);
-    }
-
-    // Check labs using the final list of courses
-    for (var lab_id in labs) {
-        let requirements = labs[lab_id].prereqs;
-        let recommendations = labs[lab_id].recommended;
-        let reqMet = checkTree(requirements, state.past, state.present, null);
-        let recMet = checkTree(recommendations, state.past, state.present, null);
-        var entry = $("#labs__"+lab_id);
-        var status = entry.find(".labs__status");
-        if (reqMet.length === 0) {
-            if(recMet.length === 0) {
-                entry.removeClass("table-success table-default");
-                entry.addClass("table-primary");
-                status.text("Recommended");
-            }
-            else{
-                entry.removeClass("table-primary table-default");
-                entry.addClass("table-success");
-                status.text("Qualified");
-            }
-        }
-        else {
-            entry.removeClass("table-primary table-success");
-            entry.addClass("table-default");
-            status.text("Unqualified");
-        }
     }
 
     // Was RS taken at all?

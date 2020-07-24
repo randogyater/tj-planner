@@ -183,11 +183,11 @@
                                     <a data-toggle="collapse" href="#desc-{{lab}}" role="button" aria-expanded="false" aria-controls="desc-{{lab}}"><i class="fas fa-caret-down fa-lg"></i></a>
                                     <div id="desc-{{lab}}" class="catalog__entry__description collapse" data-parent="#lab-list">
                                         <p><em>{{ labs[lab].num }}</em></p>
-                                        <p><strong>Prerequisites:</strong> 
+                                        <p><strong>Prerequisites:</strong> <!--TODO: Make prerequisites string include indication of coreq status-->
                                             {% if labs[lab].prereqs %}
                                                 {% for prereq in labs[lab].prereqs %}
-                                                    {% for i in prereq %}
-                                                        {% set course = courses[i] %}
+                                                    {% for course_id in prereq %}
+                                                        {% set course = courses[course_id.replace("C", "")] %}
                                                         {% if not loop.last %}
                                                             {{ course.short_name }}, 
                                                         {% else %}
