@@ -1891,7 +1891,7 @@
         "equivalent": 1238,
         "full_name": "AP English Literature and Composition",
         "id": 1238,
-        "lexographic": 1,
+        "lexographic": 3,
         "num": 119504,
         "online": false,
         "online_only": false,
@@ -1922,7 +1922,7 @@
         "equivalent": 1241,
         "full_name": "AP English Language and Composition",
         "id": 1241,
-        "lexographic": 1,
+        "lexographic": 3,
         "num": 119604,
         "online": false,
         "online_only": false,
@@ -2282,8 +2282,7 @@
         "prereqs": [
             [
                 "10600"
-            ],
-            []
+            ]
         ],
         "semester": false,
         "short_name": "AP Calculus AB",
@@ -2376,7 +2375,7 @@
         "equivalent": 1382,
         "full_name": "AP Biology",
         "id": 1382,
-        "lexographic": 2,
+        "lexographic": 1,
         "num": 437004,
         "online": false,
         "online_only": false,
@@ -2443,8 +2442,15 @@
         "num": 457004,
         "online": false,
         "online_only": false,
-        "prereq_string": "",
-        "prereqs": [],
+        "prereq_string": "AP Calculus AB or BC as coreq",
+        "prereqs": [
+            [
+                "1350C"
+            ],
+            [
+                "1352C"
+            ]
+        ],
         "semester": false,
         "short_name": "AP Physics C M&em",
         "skiptest": false,
@@ -4835,7 +4841,7 @@
         "equivalent": 6893,
         "full_name": "Geosystems",
         "id": 6893,
-        "lexographic": 0,
+        "lexographic": 3,
         "num": "4220T1",
         "online": false,
         "online_only": false,
@@ -5045,7 +5051,7 @@
         "equivalent": 6905,
         "full_name": "English 12 Hn",
         "id": 6905,
-        "lexographic": 1,
+        "lexographic": 3,
         "num": "1160T1",
         "online": false,
         "online_only": false,
@@ -5385,7 +5391,7 @@
         "equivalent": 6954,
         "full_name": "Neurobiology",
         "id": 6954,
-        "lexographic": 3,
+        "lexographic": 2,
         "num": "4320T8",
         "online": false,
         "online_only": false,
@@ -5637,5 +5643,124 @@
         "skiptest": false,
         "summer": false,
         "weight": 0
+    },
+    "A001": {
+        "ap": "post",
+        "approval": false,
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "category": "Computer Science",
+        "description": "Machine Learning 1 at TJHSST is a 1\u2010semester course covering modern machine learning algorithms for classification, regression, analysis, evaluation and generation. The course covers classical techniques such as logistic and linear regression, support vector machines, decision trees, random forest, boosting, gradient descent and principal component analysis. Along the way best practice techniques for data processing, validation, model selection and accuracy evaluation are stressed.",
+        "equivalent": "A001",
+        "full_name": "Machine Learning 1",
+        "id": "A001",
+        "lexographic": 4,
+        "num": "3199T1",
+        "online": false,
+        "online_only": false,
+        "prereq_string": "Artificial Intelligence 1 & 2",
+        "prereqs": [
+            [
+                "4919",
+                "4920",
+                "2204C"
+            ]
+        ],
+        "semester": true,
+        "short_name": "Machine Learning 1",
+        "skiptest": false,
+        "summer": false,
+        "weight": 1.0
+    },
+    "A002": {
+        "ap": "post",
+        "approval": false,
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "category": "Computer Science",
+        "description": "Machine Learning 2 at TJHSST is a 1\u2010semester course covering modern neural network architectures and applications. This course topics include neural networks including dense neural networks, recurrent neural networks, convolutional networks, long\u2010short\u2010term\u2010memory, auto encoders and reinforcement learning. Along the way practice techniques for data processing, validation, model selection and accuracy evaluation are stressed.",
+        "equivalent": "A002",
+        "full_name": "Machine Learning 2",
+        "id": "A002",
+        "lexographic": 5,
+        "num": "3199T2",
+        "online": false,
+        "online_only": false,
+        "prereq_string": "Machine Learning 1",
+        "prereqs": [
+            [
+                "A001"
+            ]
+        ],
+        "semester": true,
+        "short_name": "Machine Learning 2",
+        "skiptest": false,
+        "summer": false,
+        "weight": 1.0
+    },
+    "A003": {
+        "ap": "post",
+        "approval": false,
+        "availability": [
+            false,
+            false,
+            true,
+            true
+        ],
+        "category": "Mathematics",
+        "description": "Research Statistics 3 (RS3) at TJHSST is a 1\u2010semester course that is a thorough examination of Statistics from a non\u2010calculus\u2010based perspective. It will include a review of topics found in the AP Statistics curriculum, and optional topics such as Bayes\u2019 Theorem, Simpson\u2019s Paradox, and calculating the power of a test. The course will go beyond the AP curriculum to include ANOVA, multiple regression, logistic regression, and non\u2010parametric tests. The practice of statistics today requires computer software, students will create graphical displays, analyze data, and run tests using appropriate software.",
+        "equivalent": "A003",
+        "full_name": "Research Statistics 3",
+        "id": "A003",
+        "lexographic": 1,
+        "num": "3199T0",
+        "online": false,
+        "online_only": false,
+        "prereq_string": "Research Statistics 1 & 2",
+        "prereqs": [
+            [
+                "10602",
+                "10603"
+            ]
+        ],
+        "semester": true,
+        "short_name": "Research Stat 3",
+        "skiptest": false,
+        "summer": false,
+        "weight": 0.5
+    },
+    "A004": {
+        "ap": "pre",
+        "approval": false,
+        "availability": [
+            true,
+            true,
+            true,
+            true
+        ],
+        "category": "Science",
+        "description": "Geospatial technologies are playing an ever-more central role in decision-making regarding a variety of issues across several fields, including environmental science, city planning, agriculture, emergency response, and many others. This course provides students with the skills and knowledge to make use of geospatial technologies such as geographic information systems (GIS), global positioning systems (GPS), and remote sensing. In this class, students will become acquainted with the tools, techniques and theory of GIS. They will also develop a solid understanding of the different kinds of data that can be used with GIS. Students will then use these skills and knowledge to complete a community-based research project involving spatial reasoning and decision-making. In the process, students develop critical thinking, spatial reasoning, communication, and collaboration skills, while addressing a problem that is important to their community.",
+        "equivalent": "A004",
+        "full_name": "Geospatial Analysis",
+        "id": "A004",
+        "lexographic": 0,
+        "num": "422067",
+        "online": false,
+        "online_only": false,
+        "prereq_string": "",
+        "prereqs": [],
+        "semester": false,
+        "short_name": "Geospatial Analysis",
+        "skiptest": false,
+        "summer": false,
+        "weight": 0.5
     }
 }

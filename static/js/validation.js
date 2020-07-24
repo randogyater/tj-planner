@@ -1,5 +1,4 @@
 function onUpdate() {
-    previous = new Set();
     grad = {
         "math": 0,
         "history": 0,
@@ -11,14 +10,7 @@ function onUpdate() {
         "cs": 0
     }
 
-    state = {
-        past: previous,
-        year: 0,
-        grad: grad,
-        index: 0,
-        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
-        languages: {}
-    };
+    var previous = new Set();
 
     // Add things from previous years
     let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
@@ -37,16 +29,34 @@ function onUpdate() {
         $("#ms-lang-level").prop("disabled", true);
         $("#ms-lang-level").val("0");
     }
+    if ($("#ms-epf-yes").is(":checked")) {
+        previous.add(SELF_EPF);
+    }
+
+    state = {
+        past: new Set(previous),
+        present: new Set(previous),
+        year: 0,
+        grad: grad,
+        index: 0,
+        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
+        languages: {}
+    };
 
     // Check all the boxes
     for (state.year = 0; state.year < 4; state.year++) {
         state.index = 0;
 
         // Update the summer box
+        preUpdate($("#" + getBoxId("s", state.year+1)), state);
         updateBox($("#" + getBoxId("s", state.year+1)), state);
+        postUpdate($("#" + getBoxId("s", state.year+1)), state);
 
-        // Add summer box to set
-        postUpdate($("#" + getBoxId("s", state.year+1)), state)
+        // Add normal and online courses to present set
+        for (state.index = 1; state.index <= 7; state.index++) {
+            preUpdate($("#" + getBoxId(state.index, state.year+1)), state);
+        }
+        preUpdate($("#" + getBoxId("o", state.year+1)), state);
 
         // Update the ordinary boxes
         for (state.index = 1; state.index <= 7; state.index++) {
@@ -56,38 +66,40 @@ function onUpdate() {
         // Update the online box
         updateBox($("#" + getBoxId("o", state.year+1)), state);
 
+        // In senior year, check labs
+        if (state.year == 3) {
+            for (var lab_id in labs) {
+                let requirements = labs[lab_id].prereqs;
+                let recommendations = labs[lab_id].recommended;
+                let reqMet = checkTree(requirements, state.past, state.present, null);
+                let recMet = checkTree(recommendations, state.past, state.present, null);
+                var entry = $("#labs__"+lab_id);
+                var status = entry.find(".labs__status");
+                if (reqMet.length === 0) {
+                    if(recMet.length === 0) {
+                        entry.removeClass("table-success table-default");
+                        entry.addClass("table-primary");
+                        status.text("Recommended");
+                    }
+                    else{
+                        entry.removeClass("table-primary table-default");
+                        entry.addClass("table-success");
+                        status.text("Qualified");
+                    }
+                }
+                else {
+                    entry.removeClass("table-primary table-success");
+                    entry.addClass("table-default");
+                    status.text("Unqualified");
+                }
+            }
+        }
+
         // Add normal and online courses to set
         for (state.index = 1; state.index <= 7; state.index++) {
             postUpdate($("#" + getBoxId(state.index, state.year+1)), state);
         }
         postUpdate($("#" + getBoxId("o", state.year+1)), state);
-    }
-
-    // Check labs using the final list of courses
-    for (var lab_id in labs) {
-        let requirements = labs[lab_id].prereqs;
-        let recommendations = labs[lab_id].recommended;
-        let reqMet = checkTree(requirements, previous, null);
-        let recMet = checkTree(recommendations, previous, null);
-        var entry = $("#labs__"+lab_id);
-        var status = entry.find(".labs__status");
-        if (reqMet.length === 0) {
-            if(recMet.length === 0) {
-                entry.removeClass("table-success table-default");
-                entry.addClass("table-primary");
-                status.text("Recommended");
-            }
-            else{
-                entry.removeClass("table-primary table-default");
-                entry.addClass("table-success");
-                status.text("Qualified");
-            }
-        }
-        else {
-            entry.removeClass("table-primary table-success");
-            entry.addClass("table-default");
-            status.text("Unqualified");
-        }
     }
 
     // Was RS taken at all?
@@ -122,6 +134,13 @@ function onUpdate() {
 
     // Sort the labs
     sortLabs()
+}
+
+function preUpdate($box, state) {
+    $box.children(".course:not(#lab_placeholder)").each(function (i) {
+        state.present.add($(this).attr("data-course-credit"));
+        state.present.add($(this).attr("data-course-id"));
+    });
 }
 
 function postUpdate($box, state) {
@@ -159,7 +178,7 @@ function updateElement(id, other_sem, state) {
     }
 
     // Update the status
-    result = checkTree(course.prereqs, state.past, other_sem);
+    result = checkTree(course.prereqs, state.past, state.present, other_sem);
     if (result.length === 0) {
         if (!course.availability[state.year]) {
             updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
@@ -181,7 +200,7 @@ function updateElement(id, other_sem, state) {
     }
 }
 
-function checkTree(tree, past, other_sem) {
+function checkTree(tree, past, present, other_sem) {
     if (tree === undefined || tree.length === 0) {
         // No prerequisites? Let it go.
         return [];
@@ -193,7 +212,12 @@ function checkTree(tree, past, other_sem) {
 
         for (var j = 0; j < tree[i].length; j++) {
             let prereq = tree[i][j];
-            if (!(past.has(prereq) || prereq == other_sem)) {
+            let isCoreq = false;
+            if (prereq.charAt(prereq.length-1) == 'C'){
+                prereq = prereq.substring(0, prereq.length-1);
+                isCoreq = true;
+            }
+            if (!(past.has(prereq) || prereq == other_sem || (present.has(prereq) && isCoreq))) {
                 unmet.push(prereq);
             }
         }
