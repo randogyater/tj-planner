@@ -200,7 +200,7 @@ def mark_online(courses, source):
 
 
 if __name__ == "__main__":
-    with open(SOURCE, 'r') as file:
+    with open(SOURCE, 'r', encoding='utf-8') as file:
         courses = json.load(file)
     # fix_names(courses)
     # remove_labs(courses)
@@ -214,5 +214,5 @@ if __name__ == "__main__":
     # lexographic(courses)
     # validate_prereqs(courses)
     # mark_online(courses, "course_parsing/v3/online_courses.txt")
-    with open(SOURCE, 'w') as file:
+    with open(SOURCE, 'w', encoding='utf-8') as file:
         file.write(json.dumps(courses, indent=4, sort_keys=True))
