@@ -10,19 +10,19 @@ function onUpdate() {
         "cs": 0
     }
 
-    var previous = new Set();
+    var ms_courses = new Set();
 
     // Add things from previous years
     let math_courses = parseInt($("#ms-math").val()); // ? Does Algebra 1 correspond to TJ Math 1? If it does, we'd have to change the value in the HTML
     for (var i = 0; i<math_courses; i++) {
-        previous.add(MATHS[i]+"");
+        ms_courses.add(MATHS[i]+"");
     }
     let language = $("#ms-lang").val();
     if (language !== "none") {
         $("#ms-lang-level").prop("disabled", false);
         var level = parseInt($("#ms-lang-level").val());
         for(var i = 0; i<level; i++){
-            previous.add(LANGUAGE[language][i]+"");
+            ms_courses.add(LANGUAGE[language][i]+"");
         }
     }
     else{
@@ -30,12 +30,12 @@ function onUpdate() {
         $("#ms-lang-level").val("0");
     }
     if ($("#ms-epf-yes").is(":checked")) {
-        previous.add(SELF_EPF);
+        ms_courses.add(SELF_EPF);
     }
 
     state = {
-        past: new Set(previous),
-        present: new Set(previous),
+        past: new Set(ms_courses),
+        present: new Set(ms_courses),
         year: 0,
         grad: grad,
         index: 0,
@@ -108,10 +108,10 @@ function onUpdate() {
     }
 
     // Check conditions depending only on the final courses
-    grad = checkSimpleConditions(previous, grad);
+    grad = checkSimpleConditions(state.past, grad);
 
     // Check language condition
-    previous.forEach(function(id) {
+    state.past.forEach(function(id) {
         let course = courses[id];
         if (course.category==="World Languages") {
             let language = languageFromName(course.short_name);
