@@ -136,6 +136,27 @@ function onUpdate() {
     sortLabs()
 }
 
+function readCourses() {
+    var result = [];
+    for(var i = 0; i<4; i++){
+        var column = [];
+        column.push(readBox($("#" + getBoxId("s", i+1))));
+        for(var j = 0; j<7; j++){
+            column.push(readBox($("#" + getBoxId(j+1, i+1))));
+        }
+        result.push(column);
+    }
+    return result;
+}
+
+function readBox($box) {
+    var result = [];
+    $box.find(".course").each(function(){
+        result.push($(this).attr("data-course-id"));
+    });
+    return result;
+}
+
 function preUpdate($box, state) {
     $box.children(".course:not(#lab_placeholder)").each(function (i) {
         state.present.add($(this).attr("data-course-credit"));
