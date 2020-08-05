@@ -1,8 +1,9 @@
 filter = (condition) ->
+    $("#filter-status").text("Filtering...")
     count = 0
     $entries = $(".catalog__entry")
-    $entries.each(() ->
-        $this = $(this) # Sometimes it just looks surreal
+    for i in [0 ... $entries.length]
+        $this = $($entries[i])
         course = courses[$this.attr("data-course-id")]
         if condition(course)
             count += 1
@@ -10,7 +11,6 @@ filter = (condition) ->
                 $this.show("fast")
         else if not $this.is(":hidden")
             $this.hide("fast")
-    )
     $("#filter-status").text("Showing #{count} of #{$entries.length} courses")
 
 onSearch = () ->
