@@ -33,11 +33,15 @@ function onUpdate() {
         ms_courses.add(SELF_EPF);
     }
 
+    var current_courses = readCourses();
+
     // Check all the boxes
-    console.log(validate(readCourses(), ms_courses));
+    var status = validate(current_courses, ms_courses);
+
+    showState(status, current_courses);
 
     // TODO move lab check to new place!
-    // if (state.year == 3) {
+    // if (location.year == 3) {
     //     for (var lab_id in labs) {
     //         let requirements = labs[lab_id].prereqs;
     //         let recommendations = labs[lab_id].recommended;
@@ -123,10 +127,35 @@ function readBox($box) {
     return result;
 }
 
-function updateCourse(id, course, result) {
+function showState(state, current_courses) {
+    let validity = state.validity;
+    console.log(validity);
+    var location = {
+        year: 0,
+        index: 0
+    };
+    for(location.year = 0; location.year<4; location.year++){
+        updateBox($("#" + getBoxId("s", location.year+1)), current_courses[location.year][0], validity[location.year][0], location);
+        for(location.index = 1; location.index<8; location.index++){
+            updateBox($("#" + getBoxId(location.index, location.year+1)), current_courses[location.year][location.index], validity[location.year][location.index], location);
+        }
+    }
+}
+
+function updateBox($box, box_courses, results, location) {
+    var to_update = $box.find(".course").not("#lab_placeholder");
+    console.log(to_update);
+    console.log(results);
+    for(var i = 0; i<to_update.length; i++){
+        updateCourse(to_update[i].id, box_courses[i], results[i], location);
+    }
+}
+
+function updateCourse(id, course_id, result, location) {
+    course = courses[course_id];
     if (result.length === 0) {
-        if (!course.availability[state.year]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
+        if (!course.availability[location.year]) {
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not typically taken in ${location.year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }

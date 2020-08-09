@@ -1,6 +1,6 @@
 function validate(grid, ms_courses) {
 
-    state = {
+    var state = {
         past: new Set(ms_courses),
         present: new Set(ms_courses),
         year: 0,
@@ -8,12 +8,19 @@ function validate(grid, ms_courses) {
         index: 0,
         rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
         languages: {},
-        validity: []
+        validity: [],
+        lab_past: null,
+        lab_present: null
     };
 
-    for(state.year = 0; state.year<4; state.year++) {
+    var location = {
+        year: 0,
+        index: 0
+    };
+
+    for(location.year = 0; location.year<4; location.year++) {
         let year_results = [];
-        let year = grid[state.year];
+        let year = grid[location.year];
 
         // The summer stuff
         for(course of year[0]){
@@ -24,14 +31,20 @@ function validate(grid, ms_courses) {
             state.present.add(course);
         }
 
+        
+
         // The main courses + online
         for(let i = 1; i<8; i++){
             for(course of year[i]){
                 state.past.add(course);
             }
         }
-        for(state.index = 1; state.index < 8; state.index++){
-            year_results.push(checkBox(year[state.index], state));
+        if (location.year === 3) {
+            state.lab_past = new Set(state.past);
+            state.lab_present = new Set(state.present);
+        }
+        for(location.index = 1; location.index < 8; location.index++){
+            year_results.push(checkBox(year[location.index], state, location));
         }
         for(let i = 1; i<8; i++){
             for(course of year[i]){
@@ -44,29 +57,29 @@ function validate(grid, ms_courses) {
     return state;
 }
 
-function checkBox(box, state) {
+function checkBox(box, state, location) {
     switch(box.length) {
         case 1:
-            return [checkCourse(box[0], null, state)];
+            return [checkCourse(box[0], null, state, location)];
         case 2:
-            return [checkCourse(box[0], box[1], state), checkCourse(box[1], box[2], state)];
+            return [checkCourse(box[0], box[1], state, location), checkCourse(box[1], box[2], state, location)];
         default:
             return [];
     }
 }
 
-function checkCourse(course_id, other, state) {
+function checkCourse(course_id, other, state, location) {
 
     course = courses[course_id];
 
     // Update requirements stuff
-    if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
+    if ((location.year < 2 || (location.year === 2 && location.index === 0)) && course.category === "Computer Science") {
         state.grad.cs += 1;
     }
     if (course.id == RS1 && state.rs_time === 0) {
-        state.rs_time = state.year*2 + ((state.index === 0)?1:2);
+        state.rs_time = location.year*2 + ((location.index === 0)?1:2);
     }
-    else if (course.category === "Mathematics" && (state.rs_time === 0 || state.rs_time >= state.year*2 + ((state.index === 0)?1:2)) && other != RS1) {
+    else if (course.category === "Mathematics" && (state.rs_time === 0 || state.rs_time >= location.year*2 + ((location.index === 0)?1:2)) && other != RS1) {
         state.grad.rs1 = 0;
     }
 
