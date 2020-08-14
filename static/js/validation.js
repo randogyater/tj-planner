@@ -38,7 +38,7 @@ function onUpdate() {
     // Check all the boxes
     var status = validate(current_courses, ms_courses);
 
-    showState(status, current_courses);
+    showStatus(status, current_courses);
 
     // TODO move lab check to new place!
     // if (location.year == 3) {
@@ -70,29 +70,29 @@ function onUpdate() {
     // }
 
     // Was RS taken at all?
-    if(state.rs_time === 0) {
+    if(status.rs_time === 0) {
         grad.rs1 = 0;
     }
 
     // Check conditions depending only on the final courses
-    grad = checkSimpleConditions(state.past, grad);
+    grad = checkSimpleConditions(status.past, grad);
 
     // Check language condition
-    state.past.forEach(function(id) {
+    status.past.forEach(function(id) {
         let course = courses[id];
         if (course.category==="World Languages") {
             let language = languageFromName(course.short_name);
-            if (language in state.languages) {
-                state.languages[language] += 1;
+            if (language in status.languages) {
+                status.languages[language] += 1;
             }
             else{
-                state.languages[language] = 1;
+                status.languages[language] = 1;
             }
         }
     });
     let max = 0;
-    for (language in state.languages) {
-        max = Math.max(max, state.languages[language]);
+    for (language in status.languages) {
+        max = Math.max(max, status.languages[language]);
     }
     grad.lang = max;
 
@@ -127,9 +127,8 @@ function readBox($box) {
     return result;
 }
 
-function showState(state, current_courses) {
-    let validity = state.validity;
-    console.log(validity);
+function showStatus(status, current_courses) {
+    let validity = status.validity;
     var location = {
         year: 0,
         index: 0
@@ -144,8 +143,6 @@ function showState(state, current_courses) {
 
 function updateBox($box, box_courses, results, location) {
     var to_update = $box.find(".course").not("#lab_placeholder");
-    console.log(to_update);
-    console.log(results);
     for(var i = 0; i<to_update.length; i++){
         updateCourse(to_update[i].id, box_courses[i], results[i], location);
     }
