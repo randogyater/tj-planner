@@ -51,13 +51,25 @@ function readCourses() {
     var result = [];
     for(var i = 0; i<4; i++){
         var column = [];
-        column.push(readBox($("#" + getBoxId("s", i+1))));
-        for(var j = 0; j<7; j++){
-            column.push(readBox($("#" + getBoxId(j+1, i+1))));
+        for(var j = 0; j<8; j++){
+            column.push(readBox($("#" + getBoxId(j, i+1))));
         }
         result.push(column);
     }
     return result;
+}
+
+function setCourses(course_list) {
+    for(var i = 0; i<4; i++){
+        for(var j = 0; j<8; j++){
+            let contents = course_list[i][j];
+            let $box = $("#" + getBoxId(j, i+1));
+            $box.find(".course").not("#lab_placeholder").remove();
+            for(var k = 0; k<contents.length; k++) {
+                $box.append(createCourseDraggable(courses[contents[k]]));
+            }
+        }
+    }
 }
 
 function readBox($box) {

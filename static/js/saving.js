@@ -19,13 +19,15 @@ function setSettings(settings) {
     }
 }
 
-function save() {
+function getJSON() {
     return {
         settings: getSettings(),
         courses: readCourses()
     };
 }
 
-function load(saved) {
+function loadJSON(saved) {
     setSettings(saved.settings);
+    setCourses(saved.courses);
+    onUpdate();
 }
