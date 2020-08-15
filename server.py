@@ -14,7 +14,7 @@ app = Flask(__name__)
 assets = Environment(app)
 
 js = Bundle(
-    Bundle('js/constants.js','js/course_catalog.js','js/interactivity.js','js/validation.js','js/prerequisites.js'),
+    Bundle('js/constants.js','js/course_catalog.js','js/interactivity.js','js/validation.js','js/prerequisites.js','js/saving.js'),
     Bundle('js/navigation.coffee','js/grad_requirements.coffee','js/placeholder.coffee','js/sort_labs.coffee','js/postload.coffee',filters='coffeescript'),
     output='gen/packed.js')
 assets.register('js_all', js)
