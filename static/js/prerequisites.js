@@ -3,14 +3,11 @@ function validate(grid, ms_courses) {
     var state = {
         past: new Set(ms_courses),
         present: new Set(ms_courses),
-        year: 0,
         grad: grad,
-        index: 0,
         rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
         languages: {},
         validity: [],
-        lab_past: null,
-        lab_present: null
+        labs: null
     };
 
     var location = {
@@ -31,8 +28,6 @@ function validate(grid, ms_courses) {
             state.present.add(course);
         }
 
-        
-
         // The main courses + online
         for(let i = 1; i<8; i++){
             for(course of year[i]){
@@ -40,8 +35,7 @@ function validate(grid, ms_courses) {
             }
         }
         if (location.year === 3) {
-            state.lab_past = new Set(state.past);
-            state.lab_present = new Set(state.present);
+            state.labs = checkLabs(state);
         }
         for(location.index = 1; location.index < 8; location.index++){
             year_results.push(checkBox(year[location.index], state, location));
@@ -54,7 +48,38 @@ function validate(grid, ms_courses) {
         state.validity.push(year_results);
     }
 
-    return state;
+    // Was RS taken at all?
+    if(state.rs_time === 0) {
+        grad.rs1 = 0;
+    }
+
+    // Check conditions depending only on the final courses
+    grad = checkSimpleConditions(state.past, grad);
+
+    // Check language condition
+    state.past.forEach(function(id) {
+        let course = courses[id];
+        if (course.category==="World Languages") {
+            let language = languageFromName(course.short_name);
+            if (language in state.languages) {
+                state.languages[language] += 1;
+            }
+            else{
+                state.languages[language] = 1;
+            }
+        }
+    });
+    let max = 0;
+    for (language in state.languages) {
+        max = Math.max(max, state.languages[language]);
+    }
+    grad.lang = max;
+
+    return {
+        validity: state.validity,
+        grad: state.grad,
+        labs: state.labs
+    };
 }
 
 function checkBox(box, state, location) {
@@ -85,6 +110,28 @@ function checkCourse(course_id, other, state, location) {
 
     // Update the status
     return checkTree(course.prereqs, state.past, state.present, other);
+}
+
+function checkLabs(status) {
+    result = {};
+    for (var lab_id in labs) {
+        let requirements = labs[lab_id].prereqs;
+        let recommendations = labs[lab_id].recommended;
+        let reqMet = checkTree(requirements, status.past, status.present, null);
+        let recMet = checkTree(recommendations, status.past, status.present, null);
+        if (reqMet.length === 0) {
+            if(recMet.length === 0) {
+                result[lab_id] = 2;
+            }
+            else{
+                result[lab_id] = 1;
+            }
+        }
+        else {
+            result[lab_id] = 0;
+        }
+    }
+    return result;
 }
 
 function checkTree(tree, past, present, other_sem) {

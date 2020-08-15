@@ -38,66 +38,10 @@ function onUpdate() {
     // Check all the boxes
     var status = validate(current_courses, ms_courses);
 
-    showStatus(status, current_courses);
-
-    // TODO move lab check to new place!
-    // if (location.year == 3) {
-    //     for (var lab_id in labs) {
-    //         let requirements = labs[lab_id].prereqs;
-    //         let recommendations = labs[lab_id].recommended;
-    //         let reqMet = checkTree(requirements, state.past, state.present, null);
-    //         let recMet = checkTree(recommendations, state.past, state.present, null);
-    //         var entry = $("#labs__"+lab_id);
-    //         var status = entry.find(".labs__status");
-    //         if (reqMet.length === 0) {
-    //             if(recMet.length === 0) {
-    //                 entry.removeClass("table-success table-default");
-    //                 entry.addClass("table-primary");
-    //                 status.text("Recommended");
-    //             }
-    //             else{
-    //                 entry.removeClass("table-primary table-default");
-    //                 entry.addClass("table-success");
-    //                 status.text("Qualified");
-    //             }
-    //         }
-    //         else {
-    //             entry.removeClass("table-primary table-success");
-    //             entry.addClass("table-default");
-    //             status.text("Unqualified");
-    //         }
-    //     }
-    // }
-
-    // Was RS taken at all?
-    if(status.rs_time === 0) {
-        grad.rs1 = 0;
-    }
-
-    // Check conditions depending only on the final courses
-    grad = checkSimpleConditions(status.past, grad);
-
-    // Check language condition
-    status.past.forEach(function(id) {
-        let course = courses[id];
-        if (course.category==="World Languages") {
-            let language = languageFromName(course.short_name);
-            if (language in status.languages) {
-                status.languages[language] += 1;
-            }
-            else{
-                status.languages[language] = 1;
-            }
-        }
-    });
-    let max = 0;
-    for (language in status.languages) {
-        max = Math.max(max, status.languages[language]);
-    }
-    grad.lang = max;
-
     // Now display it
-    showGradState(grad);
+    showStatus(status.validity, current_courses);
+    showGradState(status.grad);
+    showLabStats(status.labs);
 
     // Sort the labs
     sortLabs()
@@ -127,8 +71,7 @@ function readBox($box) {
     return result;
 }
 
-function showStatus(status, current_courses) {
-    let validity = status.validity;
+function showStatus(validity, current_courses) {
     var location = {
         year: 0,
         index: 0
@@ -196,4 +139,28 @@ function treeToString(x) {
     }
 
     return result.join("\n");
+}
+
+function showLabStats(labs) {
+    for (var lab_id in labs) {
+        var entry = $("#labs__"+lab_id);
+        var status = entry.find(".labs__status");
+        switch(labs[lab_id]) {
+            case 2:
+                entry.removeClass("table-success table-default");
+                entry.addClass("table-primary");
+                status.text("Recommended");
+                break;
+            case 1:
+                entry.removeClass("table-primary table-default");
+                entry.addClass("table-success");
+                status.text("Qualified");
+                break;
+            case 0:
+                entry.removeClass("table-primary table-success");
+                entry.addClass("table-default");
+                status.text("Unqualified");
+                break;
+        }
+    }
 }
