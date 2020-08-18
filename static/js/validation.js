@@ -45,6 +45,9 @@ function onUpdate() {
 
     // Sort the labs
     sortLabs()
+
+    // Update the save thing
+    saveToBox();
 }
 
 function readCourses() {

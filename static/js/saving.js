@@ -31,3 +31,27 @@ function loadJSON(saved) {
     setCourses(saved.courses);
     onUpdate();
 }
+
+function getString() {
+    return JSON.stringify(getJSON());
+}
+
+function loadString(string) {
+    loadJSON(JSON.parse(string));
+}
+
+function saveToBox() {
+    $("#save-area").val(getString());
+}
+
+function loadFromBox() {
+    loadString($("#save-area").val());
+}
+
+function saveToClip() {
+    navigator.clipboard.writeText(getString());
+}
+
+function loadFromClip() {
+    navigator.clipboard.readText().then(clipText => loadString(clipText));
+}
