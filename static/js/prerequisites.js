@@ -23,7 +23,7 @@ function validate(grid, ms_courses) {
         for(course of year[0]){
             state.past.add(course);
         }
-        year_results.push(checkBox(year[0], state));
+        year_results.push(checkBox(year[0], state, location));
         for(course of year[0]){
             state.present.add(course);
         }

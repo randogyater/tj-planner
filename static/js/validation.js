@@ -48,13 +48,14 @@ function onUpdate() {
 
     // Update the save thing
     saveToBox();
+    exportSummary();
 }
 
 function readCourses() {
     var result = [];
     for(var i = 0; i<4; i++){
         var column = [];
-        for(var j = 0; j<8; j++){
+        for(var j = 0; j<9; j++){
             column.push(readBox($("#" + getBoxId(j, i+1))));
         }
         result.push(column);
