@@ -199,6 +199,13 @@ def mark_online(courses, source):
                 print(line.strip())
 
 
+def int_to_string(courses):
+    for x in courses:
+        course = courses[x]
+        course['equivalent'] = str(course['equivalent'])
+        course['id'] = str(course['id'])
+
+
 if __name__ == "__main__":
     with open(SOURCE, 'r', encoding='utf-8') as file:
         courses = json.load(file)
@@ -214,5 +221,6 @@ if __name__ == "__main__":
     # lexographic(courses)
     # validate_prereqs(courses)
     # mark_online(courses, "course_parsing/v3/online_courses.txt")
+    # int_to_string(courses)
     with open(SOURCE, 'w', encoding='utf-8') as file:
         file.write(json.dumps(courses, indent=4, sort_keys=True))

@@ -33,155 +33,85 @@ function onUpdate() {
         ms_courses.add(SELF_EPF);
     }
 
-    state = {
-        past: new Set(ms_courses),
-        present: new Set(ms_courses),
-        year: 0,
-        grad: grad,
-        index: 0,
-        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
-        languages: {}
-    };
+    var current_courses = readCourses();
 
     // Check all the boxes
-    for (state.year = 0; state.year < 4; state.year++) {
-        state.index = 0;
-
-        // Update the summer box
-        preUpdate($("#" + getBoxId("s", state.year+1)), state);
-        updateBox($("#" + getBoxId("s", state.year+1)), state);
-        postUpdate($("#" + getBoxId("s", state.year+1)), state);
-
-        // Add normal and online courses to present set
-        for (state.index = 1; state.index <= 7; state.index++) {
-            preUpdate($("#" + getBoxId(state.index, state.year+1)), state);
-        }
-        preUpdate($("#" + getBoxId("o", state.year+1)), state);
-
-        // Update the ordinary boxes
-        for (state.index = 1; state.index <= 7; state.index++) {
-            updateBox($("#" + getBoxId(state.index, state.year+1)), state);
-        }
-
-        // Update the online box
-        updateBox($("#" + getBoxId("o", state.year+1)), state);
-
-        // In senior year, check labs
-        if (state.year == 3) {
-            for (var lab_id in labs) {
-                let requirements = labs[lab_id].prereqs;
-                let recommendations = labs[lab_id].recommended;
-                let reqMet = checkTree(requirements, state.past, state.present, null);
-                let recMet = checkTree(recommendations, state.past, state.present, null);
-                var entry = $("#labs__"+lab_id);
-                var status = entry.find(".labs__status");
-                if (reqMet.length === 0) {
-                    if(recMet.length === 0) {
-                        entry.removeClass("table-success table-default");
-                        entry.addClass("table-primary");
-                        status.text("Recommended");
-                    }
-                    else{
-                        entry.removeClass("table-primary table-default");
-                        entry.addClass("table-success");
-                        status.text("Qualified");
-                    }
-                }
-                else {
-                    entry.removeClass("table-primary table-success");
-                    entry.addClass("table-default");
-                    status.text("Unqualified");
-                }
-            }
-        }
-
-        // Add normal and online courses to set
-        for (state.index = 1; state.index <= 7; state.index++) {
-            postUpdate($("#" + getBoxId(state.index, state.year+1)), state);
-        }
-        postUpdate($("#" + getBoxId("o", state.year+1)), state);
-    }
-
-    // Was RS taken at all?
-    if(state.rs_time === 0) {
-        grad.rs1 = 0;
-    }
-
-    // Check conditions depending only on the final courses
-    grad = checkSimpleConditions(state.past, grad);
-
-    // Check language condition
-    state.past.forEach(function(id) {
-        let course = courses[id];
-        if (course.category==="World Languages") {
-            let language = languageFromName(course.short_name);
-            if (language in state.languages) {
-                state.languages[language] += 1;
-            }
-            else{
-                state.languages[language] = 1;
-            }
-        }
-    });
-    let max = 0;
-    for (language in state.languages) {
-        max = Math.max(max, state.languages[language]);
-    }
-    grad.lang = max;
+    var status = validate(current_courses, ms_courses);
 
     // Now display it
-    showGradState(grad);
+    showStatus(status.validity, current_courses);
+    showGradState(status.grad);
+    showLabStats(status.labs);
 
     // Sort the labs
     sortLabs()
+
+    // Update the save thing
+    saveToBox();
+    exportSummary();
 }
 
-function preUpdate($box, state) {
-    $box.children(".course:not(#lab_placeholder)").each(function (i) {
-        state.present.add($(this).attr("data-course-credit"));
-        state.present.add($(this).attr("data-course-id"));
+function readCourses() {
+    var result = [];
+    for(var i = 0; i<4; i++){
+        var column = [];
+        for(var j = 0; j<9; j++){
+            column.push(readBox($("#" + getBoxId(j, i+1))));
+        }
+        result.push(column);
+    }
+    return result;
+}
+
+function setCourses(course_list) {
+    for(var i = 0; i<4; i++){
+        for(var j = 0; j<8; j++){
+            let contents = course_list[i][j];
+            let $box = $("#" + getBoxId(j, i+1));
+            $box.find(".course").not("#lab_placeholder").remove();
+            for(var k = 0; k<contents.length; k++) {
+                $box.append(createCourseDraggable(courses[contents[k]]));
+            }
+        }
+    }
+}
+
+function readBox($box) {
+    var result = [];
+    $box.find(".course").each(function(){
+        let id = $(this).attr("data-course-id");
+        if(id){
+            result.push(id);
+        }
     });
+    return result;
 }
 
-function postUpdate($box, state) {
-    $box.children(".course:not(#lab_placeholder)").each(function (i) {
-        state.past.add($(this).attr("data-course-credit"));
-        state.past.add($(this).attr("data-course-id"));
-    });
-}
-
-function updateBox($box, state) {
-    $children = $box.children(".course:not(#lab_placeholder)");
-
-    if ($children.length == 1) {
-        updateElement($children[0].id, null, state);
-    } else if ($children.length == 2) {
-        updateElement($children[0].id, $children[1].getAttribute("data-course-id"), state);
-        updateElement($children[1].id, $children[0].getAttribute("data-course-id"), state);
+function showStatus(validity, current_courses) {
+    var location = {
+        year: 0,
+        index: 0
+    };
+    for(location.year = 0; location.year<4; location.year++){
+        updateBox($("#" + getBoxId("s", location.year+1)), current_courses[location.year][0], validity[location.year][0], location);
+        for(location.index = 1; location.index<8; location.index++){
+            updateBox($("#" + getBoxId(location.index, location.year+1)), current_courses[location.year][location.index], validity[location.year][location.index], location);
+        }
     }
 }
 
-function updateElement(id, other_sem, state) {
-    // Find the course
-    $course = $("#" + id);
-    course = courses[$course.attr("data-course-id")];
+function updateBox($box, box_courses, results, location) {
+    var to_update = $box.find(".course").not("#lab_placeholder");
+    for(var i = 0; i<to_update.length; i++){
+        updateCourse(to_update[i].id, box_courses[i], results[i], location);
+    }
+}
 
-    // Update requirements stuff
-    if ((state.year < 2 || (state.year === 2 && state.index === 0)) && course.category === "Computer Science") {
-        state.grad.cs += 1;
-    }
-    if (course.id == RS1 && state.rs_time === 0) {
-        state.rs_time = state.year*2 + ((state.index === 0)?1:2);
-    }
-    else if (course.category === "Mathematics" && (state.rs_time === 0 || state.rs_time >= state.year*2 + ((state.index === 0)?1:2)) && other_sem != RS1) {
-        state.grad.rs1 = 0;
-    }
-
-    // Update the status
-    result = checkTree(course.prereqs, state.past, state.present, other_sem);
+function updateCourse(id, course_id, result, location) {
+    course = courses[course_id];
     if (result.length === 0) {
-        if (!course.availability[state.year]) {
-            updateStatus(id, ICONS.CONDITIONAL, `This course is not offered in ${state.year+9}th grade, but this isn't a hard rule.`);
+        if (!course.availability[location.year]) {
+            updateStatus(id, ICONS.CONDITIONAL, `This course is not typically taken in ${location.year+9}th grade, but this isn't a hard rule.`);
         } else {
             updateStatus(id, ICONS.SUCCESS, "Prerequisites are met.");
         }
@@ -198,39 +128,6 @@ function updateElement(id, other_sem, state) {
         }
         updateStatus(id, ICONS.FAILURE, "Prerequisites not met:\n" + treeToString(result) + "\nClick to view prerequisites", reqFilter(set));
     }
-}
-
-function checkTree(tree, past, present, other_sem) {
-    if (tree === undefined || tree.length === 0) {
-        // No prerequisites? Let it go.
-        return [];
-    }
-    var total_unmet = [];
-    for (var i = 0; i < tree.length; i++) {
-        // Check every set for matching
-        let unmet = [];
-
-        for (var j = 0; j < tree[i].length; j++) {
-            let prereq = tree[i][j];
-            let isCoreq = false;
-            if (prereq.charAt(prereq.length-1) == 'C'){
-                prereq = prereq.substring(0, prereq.length-1);
-                isCoreq = true;
-            }
-            if (!(past.has(prereq) || prereq == other_sem || (present.has(prereq) && isCoreq))) {
-                unmet.push(prereq);
-            }
-        }
-
-        if (unmet.length > 0) {
-            total_unmet.push(unmet);
-        }
-        else {
-            return [];
-        }
-    }
-
-    return total_unmet;
 }
 
 function updateStatus(target_id, icon, text, clickFilter = null) {
@@ -258,4 +155,28 @@ function treeToString(x) {
     }
 
     return result.join("\n");
+}
+
+function showLabStats(labs) {
+    for (var lab_id in labs) {
+        var entry = $("#labs__"+lab_id);
+        var status = entry.find(".labs__status");
+        switch(labs[lab_id]) {
+            case 2:
+                entry.removeClass("table-success table-default");
+                entry.addClass("table-primary");
+                status.text("Recommended");
+                break;
+            case 1:
+                entry.removeClass("table-primary table-default");
+                entry.addClass("table-success");
+                status.text("Qualified");
+                break;
+            case 0:
+                entry.removeClass("table-primary table-success");
+                entry.addClass("table-default");
+                status.text("Unqualified");
+                break;
+        }
+    }
 }

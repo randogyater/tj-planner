@@ -30,6 +30,12 @@ function getCourseNameString(course) {
 }
 
 function getBoxId(r, c) {
+    if(r == 0) {
+        r = "s";
+    }
+    else if (r == 8) {
+        r = "o";
+    }
     return "cell-" + r + "-" + c;
 }
 
