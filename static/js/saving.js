@@ -4,7 +4,7 @@ function getSettings() {
         lang: $("#ms-lang").val(),
         lang_lvl: $("#ms-lang-level").val(),
         epf: $("#ms-epf-yes").prop("checked"),
-        mentorship: $("#mentorship-check")
+        mentorship: $("#mentorshipCheck").is(":checked")
     }; 
 }
 
@@ -93,5 +93,11 @@ function stringifyPeriod(period) {
     }
     else {
         return "";
+    }
+}
+
+function autosave() {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("autosaved", getString());
     }
 }

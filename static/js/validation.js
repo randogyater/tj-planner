@@ -49,6 +49,7 @@ function onUpdate() {
     // Update the save thing
     saveToBox();
     exportSummary();
+    autosave();
 }
 
 function readCourses() {

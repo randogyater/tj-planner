@@ -22,3 +22,4 @@ setMentorship = (state) ->
 
 updateMentorship = () ->
     setMentorship($("#mentorshipCheck").is(":checked"))
+    onUpdate()

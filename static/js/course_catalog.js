@@ -2,12 +2,20 @@ $.getJSON("static/data/courses.json", function (data) {
     courses = data;
     $.getJSON("static/data/labs.json", function (data) {
         labs = data;
-        $.getJSON("static/data/defaults.json", function (defaults) {
-
-            let default_courses = defaults.courses;
-            for (let i = 0; i < default_courses.length; i++) {
-                let item = default_courses[i];
-                $("#" + getBoxId(item.row, item.col)).append(createCourseDraggable(courses[item.course]));
+        $.getJSON("static/data/defaults.json", function (data) {
+            defaults = data
+            
+            if (typeof(Storage) !== "undefined") {
+                let saved = localStorage.getItem("autosaved");
+                if (saved) {
+                    loadString(saved);
+                }
+                else {
+                    loadJSON(defaults.states.minimal);
+                }
+            }
+            else {
+                loadJSON(defaults.states.minimal);
             }
 
             let hints = defaults.hints;
