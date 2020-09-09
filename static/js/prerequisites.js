@@ -23,13 +23,14 @@ function validate(grid, ms_courses) {
         for(course of year[0]){
             state.past.add(course);
         }
+        location.index = 0;
         year_results.push(checkBox(year[0], state, location));
         for(course of year[0]){
             state.present.add(course);
         }
 
         // The main courses + online
-        for(let i = 1; i<8; i++){
+        for(let i = 1; i<9; i++){
             for(course of year[i]){
                 state.past.add(course);
             }
@@ -37,10 +38,10 @@ function validate(grid, ms_courses) {
         if (location.year === 3) {
             state.labs = checkLabs(state);
         }
-        for(location.index = 1; location.index < 8; location.index++){
+        for(location.index = 1; location.index < 9; location.index++){
             year_results.push(checkBox(year[location.index], state, location));
         }
-        for(let i = 1; i<8; i++){
+        for(let i = 1; i<9; i++){
             for(course of year[i]){
                 state.present.add(course);
             }

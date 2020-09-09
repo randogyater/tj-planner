@@ -66,7 +66,7 @@ function readCourses() {
 
 function setCourses(course_list) {
     for(var i = 0; i<4; i++){
-        for(var j = 0; j<8; j++){
+        for(var j = 0; j<9; j++){
             let contents = course_list[i][j];
             let $box = $("#" + getBoxId(j, i+1));
             $box.find(".course").not("#lab_placeholder").remove();
@@ -95,7 +95,7 @@ function showStatus(validity, current_courses) {
     };
     for(location.year = 0; location.year<4; location.year++){
         updateBox($("#" + getBoxId("s", location.year+1)), current_courses[location.year][0], validity[location.year][0], location);
-        for(location.index = 1; location.index<8; location.index++){
+        for(location.index = 1; location.index<9; location.index++){
             updateBox($("#" + getBoxId(location.index, location.year+1)), current_courses[location.year][location.index], validity[location.year][location.index], location);
         }
     }
