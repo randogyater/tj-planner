@@ -49,14 +49,17 @@ function saveToBox() {
 
 function loadFromBox() {
     loadString($("#save-area").val());
+    alert("Loaded schedule string", "success");
 }
 
 function saveToClip() {
     navigator.clipboard.writeText(getString());
+    alert("Copied schedule to clipboard", "success");
 }
 
 function loadFromClip() {
     navigator.clipboard.readText().then(clipText => loadString(clipText));
+    alert("Loaded schedule from clipboard", "success"); // TODO Add a failure message if it fails
 }
 
 function exportSummary() {

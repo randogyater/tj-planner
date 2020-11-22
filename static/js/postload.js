@@ -10,6 +10,7 @@ $(function() {
                     let saved = localStorage.getItem("autosaved");
                     if (saved) {
                         loadString(saved);
+                        alert("Loaded an autosaved state. Press Reset to get default configuration.", "primary", 2000);
                     }
                     else {
                         loadJSON(defaults.states.minimal);
