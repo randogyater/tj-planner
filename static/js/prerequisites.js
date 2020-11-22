@@ -4,7 +4,6 @@ function validate(grid, ms_courses) {
         past: new Set(ms_courses),
         present: new Set(ms_courses),
         grad: grad,
-        rs_time: 0, // This is actually 2 + the current year * 2, minus 1 if it was in summer
         languages: {},
         validity: [],
         labs: null
@@ -50,7 +49,7 @@ function validate(grid, ms_courses) {
     }
 
     // Was RS taken at all?
-    if(state.rs_time === 0) {
+    if(!state.past.has(RS1)) {
         grad.rs1 = 0;
     }
 
@@ -102,10 +101,7 @@ function checkCourse(course_id, other, state, location) {
     if ((location.year < 2 || (location.year === 2 && location.index === 0)) && course.category === "Computer Science") {
         state.grad.cs += 1;
     }
-    if (course.id == RS1 && state.rs_time === 0) {
-        state.rs_time = location.year*2 + ((location.index === 0)?1:2);
-    }
-    else if (course.category === "Mathematics" && (state.rs_time === 0 || state.rs_time >= location.year*2 + ((location.index === 0)?1:2)) && other != RS1) {
+    if (course.category === "Mathematics" && !state.past.has(RS1) && other != RS1) {
         state.grad.rs1 = 0;
     }
 
