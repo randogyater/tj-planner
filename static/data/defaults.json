@@ -1,6 +1,9 @@
 {
     "states": {
         "minimal": {
+            "name": "Minimal",
+            "blurb": "required courses only",
+            "desc": "A preset with only required courses",
             "settings": {
                 "math": "0",
                 "lang": "none",

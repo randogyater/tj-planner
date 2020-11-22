@@ -104,3 +104,8 @@ function autosave() {
         localStorage.setItem("autosaved", getString());
     }
 }
+
+function loadPreset(preset) {
+    loadJSON(preset);
+    alert("Reset to " + preset.blurb, "secondary");
+}
