@@ -102,6 +102,18 @@
                                 <div id="desc-{{course.id}}" class="catalog__entry__description collapse" data-parent="#catalog">
                                     <p><em>{{ course.num }}</em></p>
                                     <p><strong>Prerequisites:</strong> {% if course.prereq_string|length > 0 %} {{ course.prereq_string }} {% else %} None {% endif %}</p>
+                                    <p>
+                                        <strong>Weighting:</strong> {{ 4.0 + course.weight }}
+                                        {% if course.weight == 0 %}
+                                            (regular)
+                                        {% endif %}
+                                        {% if course.weight == 0.5 %}
+                                            (honors)
+                                        {% endif %}
+                                        {% if course.weight == 1.0 %}
+                                            (AP/post)
+                                        {% endif %}
+                                    </p>
                                     <p><strong>Offered:</strong> {{ course.grades|join(', ') }}</p>
                                     <p><strong>Description:</strong> {{ course.description }}</p>
                                 </div>
