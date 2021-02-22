@@ -88,11 +88,9 @@
     "4420T2": {
         "full_name": "Chemical Analysis and Nanochemistry",
         "prereqs": [
-            [
-                "1394"
-            ]
         ],
         "recommended": [
+            ["1394"],
             ["6956"],
             ["1382"],
             ["1408"],
@@ -100,7 +98,7 @@
         ],
         "num": "4420T2",
         "short_name": "Chem Analysis",
-        "description": "The Chemical Analysis Research Laboratory integrates many aspects of Chemistry, including Inorganic and Organic Synthesis and Characterization, chemical nanotechnology, utilization of instrumentation such as Fluorescence, Fourier Transform-Infrared Spectroscopy (FT-IR), Gas Chromatography, Ultraviolet and Visible Spectroscopy, as well as Instrumentation Development. Such skills and experiences are valuable for those interested in pursuing careers in the natural and physical sciences or areas such as medicine. Students in Chemical Analysis will be expected to complete an independent or group research project."
+        "description": "<b>AP Chemistry is REQUIRED for this lab for Class of 2022</b>\nThe Chemical Analysis Research Laboratory integrates many aspects of Chemistry, including Inorganic and Organic Synthesis and Characterization, chemical nanotechnology, utilization of instrumentation such as Fluorescence, Fourier Transform-Infrared Spectroscopy (FT-IR), Gas Chromatography, Ultraviolet and Visible Spectroscopy, as well as Instrumentation Development. Such skills and experiences are valuable for those interested in pursuing careers in the natural and physical sciences or areas such as medicine. Students in Chemical Analysis will be expected to complete an independent or group research project."
     },
     "4520T4": {
         "full_name": "Quantum Physics and Optics",
@@ -170,7 +168,7 @@
         ],
         "num": "9826T9",
         "short_name": "Aut/Rob",
-        "description": "Students apply engineering concepts to the design and production of automated systems. They investigate the building blocks of robotic systems including sensors, analyzers, actuators, and drivers. Students solve problems which are aimed at integrating the concepts of automation and robotic systems, electronics, and computer programming. The laboratory accommodates both individual and group projects."
+        "description": "<b>For Class of 2023 and beyond: This lab has been merged into the Combined Engineering Research Lab.</b>\nStudents apply engineering concepts to the design and production of automated systems. They investigate the building blocks of robotic systems including sensors, analyzers, actuators, and drivers. Students solve problems which are aimed at integrating the concepts of automation and robotic systems, electronics, and computer programming. The laboratory accommodates both individual and group projects."
     },
     "9828T1": {
         "full_name": "Energy Systems",
@@ -201,7 +199,7 @@
         ],
         "num": "9828T3",
         "short_name": "Engineering Des",
-        "description": "The Computer Assisted Design Laboratory allows students to interact with the computer to produce various 3-Dimensional designs. Seniors conducting research projects in CAD are free to pursue their interests through independent studies in a variety of technical fields. Students turn their ideas into reality by accessing the various AutoDesk software packages from AutoCAD R to 3-D Studio MAX. 26."
+        "description": "<b>For Class of 2023 and beyond: This lab has been merged into the Combined Engineering Research Lab.</b>\nThe Computer Assisted Design Laboratory allows students to interact with the computer to produce various 3-Dimensional designs. Seniors conducting research projects in CAD are free to pursue their interests through independent studies in a variety of technical fields. Students turn their ideas into reality by accessing the various AutoDesk software packages from AutoCAD R to 3-D Studio MAX. 26."
     },
     "9828T6": {
         "full_name": "Prototyping and Engineering Materials",
@@ -216,6 +214,44 @@
         ],
         "num": "9828T6",
         "short_name": "Prototype Dev",
-        "description": "Prototype Development and Processing is helpful if the project requires extensive use of machines and tools. Nature of Materials is helpful if the project involves researching the nature of material and the testing of its physical properties. If no prerequisite has been taken, admission can be obtained from the instructor, based on the research topic; the instructor may elect to assign a topic that can be undertaken, given the student's background.Students are required to conduct research into the nature of a specific material, the processing of a material, or the usage of specific materials in scientific or industrial applications. The student's background and interests play a major role in the topic selection. If a student has a good background in chemistry, topics such as superconductors and semiconductors can be explored. If a student has a sports background and an interest in materials, research could take the form of examining the characteristics of modern composites and their applications to sporting equipment. In this same fashion, materials could be explored in musical, medical, or other applications. Students will always be able to elect to do an individual project, but on occasion, an individual class may undertake a larger group project."
+        "description": "<b>For Class of 2023 and beyond: This lab has been merged into the Combined Engineering Research Lab.</b>\nPrototype Development and Processing is helpful if the project requires extensive use of machines and tools. Nature of Materials is helpful if the project involves researching the nature of material and the testing of its physical properties. If no prerequisite has been taken, admission can be obtained from the instructor, based on the research topic; the instructor may elect to assign a topic that can be undertaken, given the student's background.Students are required to conduct research into the nature of a specific material, the processing of a material, or the usage of specific materials in scientific or industrial applications. The student's background and interests play a major role in the topic selection. If a student has a good background in chemistry, topics such as superconductors and semiconductors can be explored. If a student has a sports background and an interest in materials, research could take the form of examining the characteristics of modern composites and their applications to sporting equipment. In this same fashion, materials could be explored in musical, medical, or other applications. Students will always be able to elect to do an individual project, but on occasion, an individual class may undertake a larger group project."
+    },
+    "9828TX": {
+        "full_name": "Combined Engineering Research Lab",
+        "prereqs": [
+            ["10421"],
+            ["10422"],
+            ["10426"],
+            ["10427"],
+            ["10428"],
+            ["10429"],
+            ["10431"],
+            ["10433"],
+            ["10435"],
+            ["10436"],
+            ["10439"],
+            ["10440"],
+            ["10441"],
+            ["10650"]
+        ],
+        "recommended": [
+            ["10421"],
+            ["10422"],
+            ["10426"],
+            ["10427"],
+            ["10428"],
+            ["10429"],
+            ["10431"],
+            ["10433"],
+            ["10435"],
+            ["10436"],
+            ["10439"],
+            ["10440"],
+            ["10441"],
+            ["10650"]
+        ],
+        "num": "9828TX",
+        "short_name": "Combined Engineering",
+        "description": "Lab introduced for Class of 2023 and beyond, combines the Automation and Robotics, Prototyping and Engineering Materials, and Engineering Design labs. Details will be posted when available. ID is a placeholder."
     }
 }
