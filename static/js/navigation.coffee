@@ -15,7 +15,7 @@ filter = (condition) ->
         else if not $this.is(":hidden")
             $this.hide("fast")
     if first?
-        first.scrollIntoView();
+        first.scrollIntoView()
     $("#filter-status").text("Showing #{count} of #{$entries.length} courses")
 
 onSearch = () ->

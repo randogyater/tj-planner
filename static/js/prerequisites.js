@@ -3,6 +3,8 @@ function validate(grid, ms_courses) {
     var state = {
         past: new Set(ms_courses),
         present: new Set(ms_courses),
+        past_equiv: new Set(),
+        present_equiv: new Set(),
         grad: grad,
         languages: {},
         validity: [],
@@ -26,12 +28,14 @@ function validate(grid, ms_courses) {
         year_results.push(checkBox(year[0], state, location));
         for(course of year[0]){
             state.present.add(course);
+            state.present_equiv.add(courses[course].equivalent); // TODO: make equivalent optional
         }
 
         // The main courses + online
         for(let i = 1; i<9; i++){
             for(course of year[i]){
                 state.past.add(course);
+                state.past_equiv.add(courses[course].equivalent); // TODO: make equivalent optional
             }
         }
         if (location.year === 3) {
@@ -106,7 +110,7 @@ function checkCourse(course_id, other, state, location) {
     }
 
     // Update the status
-    return checkTree(course.prereqs, state.past, state.present, other);
+    return checkTree(course.prereqs, state, other);
 }
 
 function checkLabs(status) {
@@ -114,8 +118,8 @@ function checkLabs(status) {
     for (var lab_id in labs) {
         let requirements = labs[lab_id].prereqs;
         let recommendations = labs[lab_id].recommended;
-        let reqMet = checkTree(requirements, status.past, status.present, null);
-        let recMet = checkTree(recommendations, status.past, status.present, null);
+        let reqMet = checkTree(requirements, status, null);
+        let recMet = checkTree(recommendations, status, null);
         if (reqMet.length === 0) {
             if(recMet.length === 0) {
                 result[lab_id] = 2;
@@ -131,7 +135,7 @@ function checkLabs(status) {
     return result;
 }
 
-function checkTree(tree, past, present, other_sem) {
+function checkTree(tree, state, other_sem) {
     if (tree === undefined || tree.length === 0) {
         // No prerequisites? Let it go.
         return [];
@@ -148,7 +152,7 @@ function checkTree(tree, past, present, other_sem) {
                 prereq = prereq.substring(0, prereq.length-1);
                 isCoreq = true;
             }
-            if (!(past.has(prereq) || prereq == other_sem || (present.has(prereq) && isCoreq))) {
+            if (!checkReq(prereq, state, other_sem, isCoreq)) {
                 unmet.push(prereq);
             }
         }
@@ -162,4 +166,8 @@ function checkTree(tree, past, present, other_sem) {
     }
 
     return total_unmet;
+}
+
+function checkReq(prereq, state, other_sem, isCoreq) {
+    return state.past.has(prereq) || prereq == other_sem || state.past_equiv.has(prereq) || ((state.present.has(prereq) || state.present_equiv.has(prereq)) && isCoreq);
 }
