@@ -20,7 +20,7 @@ js = Bundle(
 assets.register('js_all', js)
 with open(CONFIG_LOC, 'r') as file:
     config = yaml.load(file, Loader=yaml.FullLoader)
-assets.config["coffee_bin"] = config["coffee_path"]
+assets.config["coffee_bin"] = config.get("coffee_path")
 
 
 def kebab(string):
@@ -86,3 +86,5 @@ def index():
                                 ("econ", "Economics", 1),
                                 ("rs1", "RS1 must be first Math class", 1),
                                 ("cs", "CS must be taken before 11th grade", 1),])
+if __name__ == "__main__":
+    app.run(port=8000,debug=True)
